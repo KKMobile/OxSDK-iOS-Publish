@@ -16,13 +16,13 @@ Pod::Spec.new do |spec|
   spec.description  = <<-DESC
   OxAdSdk for tools applications.OxAdSdk for tools applications.
                    DESC
-  spec.homepage     = "https://github.com/KKMobile/OxSDK-iOS-Publish"#github 上的仓库地址
+  spec.homepage     = "https://github.com/KKMobile/OxSDK-iOS-Publish.git"#github 上的仓库地址
   spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
   spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
   spec.platform     = :ios#支持平台
   spec.ios.deployment_target = "10.0"#支持iOS最低版本
   spec.swift_version = '4.0'
-  spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "#{spec.version}" }
   spec.ios.vendored_frameworks = 'FrameworkTools/OxSdkForTools.framework'#SDK相对本文件路径
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
