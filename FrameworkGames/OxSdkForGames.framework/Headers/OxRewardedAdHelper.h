@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) NSInteger retryAttempt;
 @property (nonatomic, assign) BOOL mReload;
+@property (nonatomic, assign) BOOL mIsReloadingInLoadFailed;
+@property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
 
 - (void)createAd;
 
