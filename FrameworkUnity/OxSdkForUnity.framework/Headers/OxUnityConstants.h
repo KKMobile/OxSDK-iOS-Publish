@@ -37,14 +37,10 @@ static NSString * const CALLBACK_TYPE_RV_DISPLAY_FAILED = @"OnRvDisplayFailedCal
 static NSString * const CALLBACK_TYPE_RV_CLICKED = @"OnRvClickedCallback";
 static NSString * const CALLBACK_TYPE_RV_OPENED = @"OnRvOpenedCallback";
 static NSString * const CALLBACK_TYPE_RV_CLOSED = @"OnRvClosedCallback";
-static NSString * const CALLBACK_TYPE_RV_STARTED = @"OnRvStartedCallback";
-static NSString * const CALLBACK_TYPE_RV_COMPLETED = @"OnRvCompletedCallback";
 static NSString * const CALLBACK_TYPE_RV_REWARDED = @"OnRvRewardedCallback";
 // Banner
 static NSString * const CALLBACK_TYPE_BANNER_LOADED = @"OnBannerLoadedCallback";
 static NSString * const CALLBACK_TYPE_BANNER_LOAD_FAILED = @"OnBannerLoadFailedCallback";
-static NSString * const CALLBACK_TYPE_BANNER_DISPLAYED = @"OnBannerDisplayedCallback";
-static NSString * const CALLBACK_TYPE_BANNER_DiSPLAY_FAILED = @"OnBannerDisplayFailedCallback";
 static NSString * const CALLBACK_TYPE_BANNER_CLICKED = @"OnBannerClickedCallback";
 static NSString * const CALLBACK_TYPE_BANNER_OPENED = @"OnBannerOpenedCallback";
 static NSString * const CALLBACK_TYPE_BANNER_CLOSED = @"OnBannerClosedCallback";
@@ -53,8 +49,6 @@ static NSString * const CALLBACK_TYPE_BANNER_COLLAPSED = @"OnBannerCollapsedCall
 // Mrec
 static NSString * const CALLBACK_TYPE_M_REC_LOADED = @"OnMRecLoadedCallback";
 static NSString * const CALLBACK_TYPE_M_REC_LOAD_FAILED = @"OnMRecLoadFailedCallback";
-static NSString * const CALLBACK_TYPE_M_REC_DISPLAYED = @"OnMRecDisplayedCallback";
-static NSString * const CALLBACK_TYPE_M_REC_DiSPLAY_FAILED = @"OnMRecDisplayFailedCallback";
 static NSString * const CALLBACK_TYPE_M_REC_CLICKED = @"OnMRecClickedCallback";
 static NSString * const CALLBACK_TYPE_M_REC_OPENED = @"OnMRecOpenedCallback";
 static NSString * const CALLBACK_TYPE_M_REC_CLOSED = @"OnMRecClosedCallback";
