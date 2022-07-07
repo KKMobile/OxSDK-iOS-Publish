@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.0.3"#版本号
+  spec.version      = "1.0.3-mintegral"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -45,6 +45,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.2.1.0'
   spec.dependency 'AppLovinMediationVerveAdapter', '2.9.1.0'
   spec.dependency 'AppLovinMediationVungleAdapter', '6.10.5.1'
+  spec.dependency 'AppLovinMediationMintegralAdapter', '7.1.6.0.0'
   spec.dependency 'AmazonPublisherServicesSDK'
   spec.dependency 'GoogleMobileAdsMediationFacebook','6.9.0.1'
   spec.dependency 'GoogleMobileAdsMediationAppLovin','11.2.1.0'
