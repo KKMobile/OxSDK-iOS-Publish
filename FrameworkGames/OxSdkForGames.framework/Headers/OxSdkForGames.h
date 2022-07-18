@@ -14,7 +14,6 @@
 #import "OxAdSdkConsentManager.h"
 #import "ConsentStatusDelegate.h"
 #import "OxAdShowLimitation.h"
-#import "OxUnityPlugin.h"
 #import "OxAdjustTokens.h"
 #import "OxAdjustTokensBuilder.h"
 
