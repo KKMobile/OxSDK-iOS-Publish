@@ -12,7 +12,6 @@
 #import "OxMrecAdHelper.h"
 #import "OxUnityConstants.h"
 #import "OxUnityUtils.h"
-#import "OxAdjustTokens.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -169,16 +168,6 @@ NS_ASSUME_NONNULL_BEGIN
      * @param limitation 限制本次广告展示的原因。
      */
 - (void)reportShowAdLimitedByClient:(NSString *)adId placement:(NSString *)placement limitation:(NSString *)limitation;
-
-- (void)setAdjustTokens:(OxAdjustTokens *)adjustTokens;
-
-- (void)setGameLevel:(int)currentLevel;
-
-- (void)setDeepUserLevel:(int)deepUserLevel;
-
-- (int)getFrequencyOfEvent:(CountedEvents)event;
-
-- (double)getLtAdValue;
 
 @end
 

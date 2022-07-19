@@ -26,8 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *mLoadPlacement;
 @property (nonatomic, strong) NSString *mShowPlacement;
 @property (nonatomic, strong) NSString *mAdStatus;
-@property (nonatomic, strong) NSString *mNetworkName;
-@property (nonatomic, strong) NSString *mCreativeId;
 
 - (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId NS_DESIGNATED_INITIALIZER;
 

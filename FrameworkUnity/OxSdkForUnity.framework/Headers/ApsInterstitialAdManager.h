@@ -23,8 +23,6 @@ typedef void (^OnApsFailedBlock)(DTBAdErrorInfo* errorInfo);
 
 - (void)loadApsInterstitialAd;
 
-- (bool)shouldLoadApsInterstitial;
-
 @end
 
 NS_ASSUME_NONNULL_END
