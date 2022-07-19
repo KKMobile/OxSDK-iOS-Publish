@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, EventLevel) {
     BASIC = 1,
     SDK = 2,
     MEDIATION = 3
- };
+};
 
 // NetWorkState
 typedef NS_ENUM(NSInteger, NetWorkState) {
@@ -61,6 +61,15 @@ typedef NS_ENUM(NSInteger, VPNState) {
 typedef NS_ENUM(NSInteger, Platform) {
     PlatForm_Max = 0,
     PlatForm_Admob
+};
+
+typedef NS_ENUM(NSInteger, CountedEvents) {
+    TOP10 = 1,
+    TOP20 = 2,
+    TOP30 = 3,
+    TOP40 = 4,
+    TOP50 = 5,
+    TOP60 = 6
 };
 
 //Basic

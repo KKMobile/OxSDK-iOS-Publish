@@ -14,7 +14,10 @@
 #import "OxAdSdkConsentManager.h"
 #import "ConsentStatusDelegate.h"
 #import "OxAdShowLimitation.h"
+#import "OxAdjustTokens.h"
+#import "OxAdjustTokensBuilder.h"
 #import "OxUnityPlugin.h"
+
 
 //! Project version number for OxSdkForUnity.
 FOUNDATION_EXPORT double OxSdkForUnityVersionNumber;

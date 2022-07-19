@@ -53,6 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)decorateLimitation:(nullable NSString*)limitation isReady:(BOOL)isReady;
 
++ (int)getFrequencyOfEvent:(CountedEvents)event;
 
 @end
 

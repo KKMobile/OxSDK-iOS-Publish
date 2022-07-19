@@ -12,6 +12,7 @@
 #import "OxMrecAdHelper.h"
 #import "OxUnityConstants.h"
 #import "OxUnityUtils.h"
+#import "OxAdjustTokens.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -169,13 +170,15 @@ NS_ASSUME_NONNULL_BEGIN
      */
 - (void)reportShowAdLimitedByClient:(NSString *)adId placement:(NSString *)placement limitation:(NSString *)limitation;
 
-- (void)setAdjustTokenDic:(NSDictionary *)adjustTokenDic;
+- (void)setAdjustTokens:(OxAdjustTokens *)adjustTokens;
 
 - (void)setGameLevel:(int)currentLevel;
 
 - (void)setDeepUserLevel:(int)deepUserLevel;
 
-- (void)initEventLoggers:(NSString*)adjustToken isProductionEnv:(bool)isProductionEnv;
+- (int)getFrequencyOfEvent:(CountedEvents)event;
+
+- (double)getLtAdValue;
 
 @end
 
