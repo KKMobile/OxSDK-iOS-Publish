@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.0.4-patch2"#版本号
+  spec.version      = "1.0.4-patch3"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -32,13 +32,13 @@ Pod::Spec.new do |spec|
     spec.dependency 'FirebaseAnalytics'
     spec.dependency 'Adjust'
     # Max pod depends
-    spec.dependency 'AppLovinSDK','11.2.1'
+    spec.dependency 'AppLovinSDK','11.4.0'
     spec.dependency 'AppLovinMediationAdColonyAdapter','4.7.2.0.0'
     spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
     spec.dependency 'AppLovinMediationChartboostAdapter','8.5.0.2'
     spec.dependency 'AppLovinMediationFyberAdapter','8.1.5.0'
-    spec.dependency 'AppLovinMediationGoogleAdManagerAdapter','9.1.0.0'
-    spec.dependency 'AppLovinMediationGoogleAdapter','9.1.0.0'
+    spec.dependency 'AppLovinMediationGoogleAdManagerAdapter','9.5.0.0'
+    spec.dependency 'AppLovinMediationGoogleAdapter','9.5.0.0'
     spec.dependency 'AppLovinMediationInMobiAdapter','10.0.1.1'
     spec.dependency 'AppLovinMediationIronSourceAdapter','7.1.14.0.0'
     spec.dependency 'AppLovinMediationFacebookAdapter','6.9.0.2'
@@ -53,6 +53,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinPubMaticAdapter', '1.0.0'
     # Admob pod depends
     spec.dependency 'GoogleMobileAdsMediationFacebook','6.9.0.1'
-    spec.dependency 'GoogleMobileAdsMediationAppLovin','11.2.1.0'
+    spec.dependency 'GoogleMobileAdsMediationAppLovin','11.4.0.0'
 
 end
