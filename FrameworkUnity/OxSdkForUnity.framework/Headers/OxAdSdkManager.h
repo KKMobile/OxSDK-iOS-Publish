@@ -7,16 +7,12 @@
 
 #import "BaseAdManager.h"
 #import "DataTools.h"
+#import "AdEventDelegate.h"
+@import Adjust;
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-typedef void (^logEventBlock)(NSString *key, NSDictionary* paramDic);
-
-@interface OxAdSdkManager : BaseAdManager
-
-
-@property (nonatomic, copy) logEventBlock logEventCallBlock;
+@interface OxAdSdkManager : BaseAdManager<AdjustDelegate>
 
 @property (nonatomic, assign) BOOL       tachiEnable; // 设置tachi是否启用，主要用于部分不需要打点的iOS的工具
 
@@ -24,13 +20,14 @@ typedef void (^logEventBlock)(NSString *key, NSDictionary* paramDic);
 @property(nonatomic, assign) BOOL    mMaxSdkInitialed;
 @property(nonatomic, assign) BOOL    enableDebug;
 
-
-@property (nonatomic, assign) EventLevel level;
-
-@property (nonatomic, strong) NSArray *topValuesConfig;
-
 + (nonnull instancetype)sharedInstance;
 
+@property (nonatomic, weak) id<AdEventDelegate> mAdEventDelegate;
+
+/**
+ 初始化 FirebaseAnalytics 和 Adjust。
+ */
+- (void)initEventLoggers:(NSString*)adjustToken isProductionEnv:(bool)isProductionEnv;
 
 /// 设置默认聚合平台，不设置默认为Admob，在SDK初始化之前调用
 /// @param defaultMediationPlatform 平台类型，枚举值 Admob/ Max
@@ -52,6 +49,8 @@ typedef void (^logEventBlock)(NSString *key, NSDictionary* paramDic);
 - (CGSize)getAdaptiveBannerAdSize;
 
 - (BOOL)shouldShowConsentDialog;
+
+-(void)setGameLevel:(int)level;
 
 @end
 

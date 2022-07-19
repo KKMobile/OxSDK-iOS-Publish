@@ -169,6 +169,14 @@ NS_ASSUME_NONNULL_BEGIN
      */
 - (void)reportShowAdLimitedByClient:(NSString *)adId placement:(NSString *)placement limitation:(NSString *)limitation;
 
+- (void)setAdjustTokenDic:(NSDictionary *)adjustTokenDic;
+
+- (void)setGameLevel:(int)currentLevel;
+
+- (void)setDeepUserLevel:(int)deepUserLevel;
+
+- (void)initEventLoggers:(NSString*)adjustToken isProductionEnv:(bool)isProductionEnv;
+
 @end
 
 NS_ASSUME_NONNULL_END
