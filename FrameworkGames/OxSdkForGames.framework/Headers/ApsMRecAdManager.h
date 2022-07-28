@@ -23,8 +23,6 @@ typedef void (^OnApsFailedBlock)(DTBAdErrorInfo* errorInfo);
 
 - (void)loadApsMRecAd;
 
-- (bool)shouldLoadApsMrec;
-
 @end
 
 NS_ASSUME_NONNULL_END

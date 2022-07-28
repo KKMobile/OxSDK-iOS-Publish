@@ -38,8 +38,6 @@ typedef void (^OnSdkInitComplete)(void);
 
 - (ALSdkConfiguration*)getSdkConfiguration;
 
-- (void)setGameLevel:(int)level;
-
 @end
 
 NS_ASSUME_NONNULL_END

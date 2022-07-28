@@ -23,8 +23,6 @@ typedef void (^OnApsFailedBlock)(DTBAdErrorInfo* errorInfo);
 
 - (void)loadApsBannerAd;
 
-- (bool)shouldLoadApsBanner;
-
 @end
 
 NS_ASSUME_NONNULL_END
