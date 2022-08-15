@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol IFullScreenAd <NSObject>
 
+- (instancetype)initWithAdUnitId:(NSString *)adunitId;
+
 - (void)showAd;
 
 - (void)showAd:(NSString *)placement;
