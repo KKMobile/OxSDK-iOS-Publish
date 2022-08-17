@@ -16,8 +16,6 @@ typedef void (^OnSdkInitComplete)(void);
 
 @interface BaseAdManager : NSObject
 
-@property (nonatomic, copy) OnSdkInitComplete initSuccessBlock;
-
 /// 广告初始化
 /// @param successBlock 初始化成功回调
 /// 当取到firebase的值后，先调用updateMediationType，然后需要调用该方法，监测是否需要初始化另外一个广告平台，

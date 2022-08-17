@@ -12,19 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol AdDelegate <NSObject>
 
 
-- (void)onAdLoaded;
+- (void)onAdLoaded:(NSString*)adUnitId;
 
 - (void)onAdLoadFailed:(NSString*)adunitId errorInfo:(NSString *)error;
 
-- (void)onAdDisplayed;
+- (void)onAdDisplayed:(NSString*)adUnitId;
 
 - (void)onAdDisplayFailed:(NSString*)adunitId errorInfo:(NSString *)error;
 
-- (void)onAdClicked;
+- (void)onAdClicked:(NSString*)adUnitId;
 
-- (void)onAdOpened;
+- (void)onAdOpened:(NSString*)adUnitId;
 
-- (void)onAdClosed;
+- (void)onAdClosed:(NSString*)adUnitId;
 @end
 
 NS_ASSUME_NONNULL_END
