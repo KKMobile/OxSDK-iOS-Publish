@@ -63,13 +63,16 @@ typedef NS_ENUM(NSInteger, Platform) {
     PlatForm_Admob
 };
 
-//Basic
+// Required
 static NSString * const EVENT_TOP10 = @"AdLTV_OneDay_Top10Percent";
 static NSString * const EVENT_TOP20 = @"AdLTV_OneDay_Top20Percent";
 static NSString * const EVENT_TOP30 = @"AdLTV_OneDay_Top30Percent";
 static NSString * const EVENT_TOP40 = @"AdLTV_OneDay_Top40Percent";
+static NSString * const EVENT_TOP50 = @"AdLTV_OneDay_Top50Percent";
+static NSString * const EVENT_TOP60 = @"AdLTV_OneDay_Top60Percent";
 static NSString * const EVENT_TOTAL_ADS_REVENUE_001 = @"Total_Ads_Revenue_001";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
+// Basic
 static NSString * const EVENT_AD_REQUEST = @"Ad_Request";
 static NSString * const EVENT_AD_LOADED = @"Ad_Loaded";
 static NSString * const EVENT_AD_FAILED = @"Ad_Failed";
@@ -108,6 +111,14 @@ static NSString * const PARAM_ERROR = @"Error";
 static NSString * const PARAM_FAILED_DURATION = @"FailedDuration";
 static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
+// Only for Firebase ad impression
+static NSString * const EVENT_FIREBASE_AD_IMPRESSION = @"ad_impression";
+static NSString * const PARAM_FIREBASE_AD_PLATFORM = @"ad_platform";
+static NSString * const PARAM_FIREBASE_AD_SOURCE = @"ad_source";
+static NSString * const PARAM_FIREBASE_AD_FORMAT = @"ad_format";
+static NSString * const PARAM_FIREBASE_AD_UIT_NAME = @"ad_unit_name";
+static NSString * const PARAM_FIREBASE_CURRENCY = @"currency";
+static NSString * const PARAM_FIREBASE_VALUE = @"value";
 
 
 

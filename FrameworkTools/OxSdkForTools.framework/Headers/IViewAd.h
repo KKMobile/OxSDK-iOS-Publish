@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol IViewAd <NSObject>
 
+- (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString *)adunitId;
+
 - (void)showAd:(UIView *)adContainerV;
 
 - (void)showAd:(UIView *)adContainerV placement:(NSString *)placement;

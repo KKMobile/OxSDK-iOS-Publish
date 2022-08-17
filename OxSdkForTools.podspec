@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.0.1-patch3"#版本号
+  spec.version      = "1.0.2-rc01"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -29,15 +29,21 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   
   spec.dependency 'PureLayout'
-  spec.dependency 'AFNetworking','4.0.1'
-  spec.dependency 'AppLovinSDK', '11.3.3'
-  spec.dependency 'AppLovinMediationFacebookAdapter', '6.10.0.3'
-  spec.dependency 'AppLovinMediationFyberAdapter', '8.1.4.1'
-  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '9.5.0.0'
-  spec.dependency 'AppLovinMediationGoogleAdapter', '9.5.0.0'
-  spec.dependency 'AppLovinMediationByteDanceAdapter', '4.5.1.3.0'
-  spec.dependency 'GoogleMobileAdsMediationFacebook', '6.9.0.1'
-  spec.dependency 'GoogleMobileAdsMediationAppLovin', '11.3.3.0'
+  spec.dependency 'AFNetworking', '4.0.1'
+  spec.dependency 'FirebaseAnalytics'
+  spec.dependency 'Adjust'
+  # Max pod depends
+  spec.dependency 'AppLovinSDK','11.3.3'
+  spec.dependency 'AppLovinMediationByteDanceAdapter','4.5.1.3.0'
+  spec.dependency 'AppLovinMediationFacebookAdapter','6.10.0.3'
+  spec.dependency 'AppLovinMediationFyberAdapter','8.1.4.1'
+  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter','9.5.0.0'
+  spec.dependency 'AppLovinMediationGoogleAdapter','9.5.0.0'
   spec.dependency 'AppLovinMediationSmaatoAdapter','21.7.5.1'
+  spec.dependency 'AppLovinMediationUnityAdsAdapter','4.3.0.0'
+  spec.dependency 'AppLovinMediationVungleAdapter','6.11.0.3'
+  # Pods for Admob
+  spec.dependency 'GoogleMobileAdsMediationFacebook','6.9.0.1'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin','11.3.3.0'
 
 end

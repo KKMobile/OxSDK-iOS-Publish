@@ -7,27 +7,17 @@
 
 #import "BaseAdManager.h"
 #import "DataTools.h"
+#import "AdEventDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-typedef void (^logEventBlock)(NSString *key, NSDictionary* paramDic);
-
 @interface OxAdSdkManager : BaseAdManager
 
-
-@property (nonatomic, copy) logEventBlock logEventCallBlock;
-
 @property (nonatomic, assign) BOOL       tachiEnable; // 设置tachi是否启用，主要用于部分不需要打点的iOS的工具
-
 @property(nonatomic, assign) BOOL    mAdmobSdkInitialed;
 @property(nonatomic, assign) BOOL    mMaxSdkInitialed;
 @property(nonatomic, assign) BOOL    enableDebug;
-
-
-@property (nonatomic, assign) EventLevel level;
-
-@property (nonatomic, strong) NSArray *topValuesConfig;
+@property (nonatomic, weak) id<AdEventDelegate> mAdEventDelegate;
 
 + (nonnull instancetype)sharedInstance;
 

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *mAdunitId;
 
-@property (nonatomic, strong) UIViewController *mViewController;
+@property (nonatomic, strong, nullable) UIViewController *mViewController;
 
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;
@@ -26,8 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *mLoadPlacement;
 @property (nonatomic, strong) NSString *mShowPlacement;
 @property (nonatomic, strong) NSString *mAdStatus;
-
-- (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId NS_DESIGNATED_INITIALIZER;
 
 - (void)loadAd;
 

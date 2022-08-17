@@ -16,6 +16,9 @@
 #import "MaxCustomNativeView.h"
 #import "OxAdSdkConsentManager.h"
 #import "OxAdShowLimitation.h"
+#import "AdEventDelegate.h"
+#import "OxAdjustTokensBuilder.h"
+#import "OxAdjustTokens.h"
 
 //! Project version number for OxSdkForTools.
 FOUNDATION_EXPORT double OxSdkForToolsVersionNumber;
