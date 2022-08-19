@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showAd:(NSString *)placement;
 
+- (void)showAdWithVC:(nullable UIViewController *)vc;
+
+- (void)showAdWithVC:(nullable UIViewController*)vc placement:(NSString *)placement;
+
 - (void)setReloadAfterFailed:(BOOL)reload;
 
 @end
