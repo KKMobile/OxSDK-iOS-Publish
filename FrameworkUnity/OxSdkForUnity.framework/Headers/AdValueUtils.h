@@ -36,9 +36,9 @@ static NSString* AD_PLATFORM_MAX = @"MAX";
 
 + (instancetype)shared;
 
-- (void)logMaxImpressionRevenue:(MAAd *)ad;
+- (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement;
 
-- (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue;
+- (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement;
 @end
 
 NS_ASSUME_NONNULL_END

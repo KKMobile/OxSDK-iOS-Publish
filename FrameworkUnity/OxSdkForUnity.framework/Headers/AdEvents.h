@@ -27,6 +27,12 @@ static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
 
+typedef NS_ENUM(NSInteger, DailyLevel) {
+    LOW = 0,
+    MEDIUM = 1,
+    HIGH = 2
+};
+
 // EventLevel
 typedef NS_ENUM(NSInteger, EventLevel) {
     NONE = 0,

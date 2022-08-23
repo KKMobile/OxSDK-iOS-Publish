@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;
 @property (nonatomic, assign) double mLastShowFailedTimestamp;
-@property (nonatomic, assign) double mShowFailedTimestamp;
 @property (nonatomic, strong) NSString *mLoadPlacement;
 @property (nonatomic, strong) NSString *mShowPlacement;
 @property (nonatomic, strong) NSString *mAdStatus;
@@ -67,6 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
      */
 - (void)clientInvokingShowAd:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
 
+- (NSString *)appendLimitation:(NSString *)limitation;
 
 @end
 

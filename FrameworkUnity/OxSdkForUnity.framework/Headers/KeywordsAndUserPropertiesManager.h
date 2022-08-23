@@ -16,13 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)initialize;
 
-- (void)setChannelAndCampaign:(ADJAttribution *)attribution;
-
-- (void)setTopAdValue:(nullable NSString*)topAdValue;
+- (void)setDailyLevel:(int)dailyLevel;
 
 - (void)setDeepUser:(bool)isDeepUser;
 
 - (void)checkUserProperties;
+
+- (void)configApplovinKeywords;
 
 @end
 

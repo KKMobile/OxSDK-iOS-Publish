@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForUnity"#SDK名称
-  spec.version      = "1.0.4-patch01"#版本号
+  spec.version      = "1.0.5.0-rc01-test01"#版本号
   spec.summary      = "OxAdSdk for unity applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -26,13 +26,17 @@ Pod::Spec.new do |spec|
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+  spec.resource_bundles = {
+    'OxSdkRes' => ['/*.xcassets']
+  }
 
   spec.dependency 'PureLayout'
-  spec.dependency 'AFNetworking','4.0.1'
+  spec.dependency 'AFNetworking'
+  spec.dependency 'SDWebImage'
   spec.dependency 'FirebaseAnalytics'
   spec.dependency 'Adjust'
   # Max pod depends
-  spec.dependency 'AppLovinSDK','11.4.0'
+  spec.dependency 'AppLovinSDK','11.4.3'
   spec.dependency 'AppLovinMediationAdColonyAdapter','4.7.2.0.0'
   spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
   spec.dependency 'AppLovinMediationChartboostAdapter','8.5.0.2'
@@ -53,6 +57,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinPubMaticAdapter', '1.0.0'
   # Admob pod depends
   spec.dependency 'GoogleMobileAdsMediationFacebook','6.9.0.1'
-  spec.dependency 'GoogleMobileAdsMediationAppLovin','11.4.0.0'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin','11.4.3.0'
 
 end

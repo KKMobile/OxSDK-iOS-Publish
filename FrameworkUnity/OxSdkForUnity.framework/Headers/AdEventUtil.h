@@ -51,8 +51,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdGottenCreditAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement networkName:(nullable NSString*)networkName
     waterfallName:(nullable NSString*)waterfullName networkResponses:(NSInteger)networkResponses creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
 
-+ (NSString *)decorateLimitation:(nullable NSString*)limitation isReady:(BOOL)isReady;
-
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 
 @end

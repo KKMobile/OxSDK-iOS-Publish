@@ -17,6 +17,8 @@
 #import "OxAdjustTokens.h"
 #import "OxAdjustTokensBuilder.h"
 #import "OxUnityPlugin.h"
+#import "ByteDanceNativeInterstitialAdapter.h"
+#import "ApplovinNativeInterstitialAdapter.h"
 
 
 //! Project version number for OxSdkForUnity.
