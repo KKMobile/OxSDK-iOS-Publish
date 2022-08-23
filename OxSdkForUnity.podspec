@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   spec.resource_bundles = {
-    'OxSdkRes' => ['/*.xcassets']
+    'OxSdkRes' => ['*.xcassets']
   }
 
   spec.dependency 'PureLayout'
