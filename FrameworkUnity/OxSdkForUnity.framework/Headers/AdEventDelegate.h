@@ -21,6 +21,12 @@
 
 - (int)getDeepUserLevel;
 
+- (int)getAllowedKeywordType;
+
+- (double)getAdLtvMedium;
+
+- (double)getAdLtvHigh;
+
 @end
 
 #endif /* AdEventDelegate_h */

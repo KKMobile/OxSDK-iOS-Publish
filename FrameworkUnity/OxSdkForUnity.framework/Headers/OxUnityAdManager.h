@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedSingleton;
 
+- (void)setInterstitialExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
+
 ///加载插屏广告
 - (void)loadInterstitial:(NSString *)adId placement:(NSString *)placement;
 
@@ -50,6 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedSingleton;
 
+- (void)setRewardedExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
+
 /// 加载RV
 - (void)loadRV:(NSString *)adId placement:(NSString *)placement;
 
@@ -73,6 +77,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString             *bannerId;
 
 + (instancetype)sharedSingleton;
+
+- (void)setBannerExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
 
 /// 加载Banner
 /// @param adid 广告ID
@@ -98,6 +104,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableDictionary  *adPositionDic;
 @property (nonatomic, strong) NSMutableDictionary  *mrecAdHelperDic;
 @property (nonatomic, strong) NSString             *mrecId;
+
+- (void)setMRecExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
 
 + (instancetype)sharedSingleton;
 
@@ -176,11 +184,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setDeepUserLevel:(int)deepUserLevel;
 
+- (void)setAllowedKeywordType:(int)type;
+
+- (void)setAdLtvMedium:(double)adLtvMedium;
+
+- (void)setAdLtvHigh:(double)adLtvHigh;
+
 - (int)getFrequencyOfEvent:(CountedEvents)event;
 
 - (double)getLtAdValue;
 
-- (void)setAllowedKeywordType:(NSInteger)type;
 
 @end
 

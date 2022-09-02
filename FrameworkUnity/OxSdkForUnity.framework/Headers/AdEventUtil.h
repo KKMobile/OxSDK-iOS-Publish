@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
 
-+ (NSArray *)getTopValuesConfig;
-
 // 请求广告
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement;
 
