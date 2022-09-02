@@ -50,10 +50,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (double)getLtAdValue;
 
-- (void)setAllowedKeywordType:(NSInteger)keywordType;
-
-- (NSInteger)getAllowecKeywordType;
-
 @end
 
 NS_ASSUME_NONNULL_END

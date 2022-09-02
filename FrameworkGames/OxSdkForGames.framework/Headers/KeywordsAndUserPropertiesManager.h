@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)configApplovinKeywords;
 
+- (void)setPropLtAdValue:(NSString *)propLtv;
+
 @end
 
 NS_ASSUME_NONNULL_END

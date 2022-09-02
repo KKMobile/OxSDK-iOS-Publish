@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *mNetworkName;
 @property (nonatomic, strong) NSString *mCreativeId;
 
+@property(nonatomic, strong)NSMutableDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
+
 - (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId NS_DESIGNATED_INITIALIZER;
 
 - (void)loadAd;
@@ -67,6 +69,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)clientInvokingShowAd:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
 
 - (NSString *)appendLimitation:(NSString *)limitation;
+
+-(void) setExtraParametersForMax:(NSString *)key value:(NSString *)value;
 
 @end
 
