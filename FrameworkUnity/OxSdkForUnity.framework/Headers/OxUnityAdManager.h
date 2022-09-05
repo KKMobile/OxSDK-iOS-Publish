@@ -20,8 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableDictionary  *interstitialAdHelperDic;
 
-@property (nonatomic, strong) NSString             *interId;
-
 + (instancetype)sharedSingleton;
 
 - (void)setInterstitialExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
@@ -48,7 +46,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UnityRewardedAdHelper : NSObject<RewardedAdDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary  *rewardedAdHelperDic;
-@property (nonatomic, strong) NSString             *rvId;
 
 + (instancetype)sharedSingleton;
 
@@ -74,7 +71,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableDictionary  *adPositionDic;
 @property (nonatomic, strong) NSMutableDictionary  *bannerAdHelperDic;
-@property (nonatomic, strong) NSString             *bannerId;
 
 + (instancetype)sharedSingleton;
 
@@ -103,7 +99,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableDictionary  *adPositionDic;
 @property (nonatomic, strong) NSMutableDictionary  *mrecAdHelperDic;
-@property (nonatomic, strong) NSString             *mrecId;
 
 - (void)setMRecExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
 

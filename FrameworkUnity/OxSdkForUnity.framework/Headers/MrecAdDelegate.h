@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol MrecAdDelegate <NSObject, AdDelegate>
 
-- (void)onAdExpanded;
+- (void)onAdExpanded:(NSString*)adUnitId;
 
-- (void)onAdCollapsed;
+- (void)onAdCollapsed:(NSString*)adUnitId;
 
 @end
 

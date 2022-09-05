@@ -19,8 +19,6 @@ typedef void (^OnApsFailedBlock)(DTBAdErrorInfo* errorInfo);
 @property (nonatomic, copy) OnApsSuccessBlock apsSuccessBlock;
 @property (nonatomic, copy) OnApsFailedBlock  apsFailedBlock;
 
-+ (nonnull instancetype)sharedInstance;
-
 - (void)loadApsRewardedAd;
 
 - (bool)shouldLoadApsRewarded;
