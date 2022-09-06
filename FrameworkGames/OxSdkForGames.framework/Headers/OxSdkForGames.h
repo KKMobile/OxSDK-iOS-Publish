@@ -20,7 +20,6 @@
 #import "ApplovinNativeInterstitialAdapter.h"
 #import "OxRemoteConfigKeys.h"
 
-
 //! Project version number for OxSdkForGames.
 FOUNDATION_EXPORT double OxSdkForGamesVersionNumber;
 
