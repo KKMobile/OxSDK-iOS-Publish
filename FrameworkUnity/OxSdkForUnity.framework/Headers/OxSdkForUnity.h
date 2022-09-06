@@ -21,7 +21,6 @@
 #import "ApplovinNativeInterstitialAdapter.h"
 #import "OxRemoteConfigKeys.h"
 
-
 //! Project version number for OxSdkForUnity.
 FOUNDATION_EXPORT double OxSdkForUnityVersionNumber;
 
