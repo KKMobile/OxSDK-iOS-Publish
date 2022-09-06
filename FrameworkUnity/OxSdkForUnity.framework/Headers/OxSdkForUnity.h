@@ -17,7 +17,7 @@
 #import "OxAdjustTokens.h"
 #import "OxAdjustTokensBuilder.h"
 #import "OxUnityPlugin.h"
-
+#import "ALGoogleMediationAdapter.h"
 
 //! Project version number for OxSdkForUnity.
 FOUNDATION_EXPORT double OxSdkForUnityVersionNumber;
