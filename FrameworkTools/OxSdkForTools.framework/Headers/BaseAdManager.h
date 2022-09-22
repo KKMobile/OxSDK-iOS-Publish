@@ -10,6 +10,7 @@
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import <FBAudienceNetwork/FBAudienceNetwork.h>
 #import "AdEvents.h"
+#import "ApsAdManager.h"
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^OnSdkInitComplete)(void);
@@ -35,6 +36,9 @@ typedef void (^OnSdkInitComplete)(void);
 
 - (ALSdkConfiguration*)getSdkConfiguration;
 
+- (void)setCoreLevel:(int)level;
+
 @end
 
 NS_ASSUME_NONNULL_END
+

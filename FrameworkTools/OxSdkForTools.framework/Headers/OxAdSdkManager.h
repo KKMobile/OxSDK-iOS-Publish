@@ -43,6 +43,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)shouldShowConsentDialog;
 
+-(void)setCoreLevel:(int)level;
+
+- (int)getFrequencyOfEvent:(CountedEvents)event;
+
+- (double)getLtAdValue;
+
 @end
 
 NS_ASSUME_NONNULL_END

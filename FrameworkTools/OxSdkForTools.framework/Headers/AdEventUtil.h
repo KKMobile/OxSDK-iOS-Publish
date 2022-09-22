@@ -7,10 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
+#import "OxAdShowLimitation.h"
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
-
-+ (NSArray *)getTopValuesConfig;
 
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
 
@@ -28,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdShowEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement      limitation:(nullable NSString*)limitation;
 
 // 客户端调用 showAd 后，Sdk 进行必要检查（比如 isReady（）），检查通过后调用 Mediation 的广告展示 API。
-+ (void)trackAdShowingEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement;
++ (void)trackAdShowingEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement networkNamee:(nullable NSString *) networkName creativeId:(nullable NSString *)creativeId;
 
 // 广告展示成功（Displayed 回调）。
 + (void)trackAdImpressionEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName
@@ -50,14 +49,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdGottenCreditAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement networkName:(nullable NSString*)networkName
     waterfallName:(nullable NSString*)waterfullName networkResponses:(NSInteger)networkResponses creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
 
-/**
- * 向 Firebase Analytics 上报 Max ad_impression 打点。
-*/
-+ (void)trackFirebaseAdImpressionForMaxAd:(MAAd *)ad;
-
-+ (NSString *)decorateLimitation:(nullable NSString*)limitation isReady:(BOOL)isReady;
-
++ (int)getFrequencyOfEvent:(CountedEvents)event;
 
 @end
 
 NS_ASSUME_NONNULL_END
+

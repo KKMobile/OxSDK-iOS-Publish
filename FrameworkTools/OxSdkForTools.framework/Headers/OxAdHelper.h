@@ -22,10 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;
 @property (nonatomic, assign) double mLastShowFailedTimestamp;
-@property (nonatomic, assign) double mShowFailedTimestamp;
 @property (nonatomic, strong) NSString *mLoadPlacement;
 @property (nonatomic, strong) NSString *mShowPlacement;
 @property (nonatomic, strong) NSString *mAdStatus;
+@property (nonatomic, strong) NSString *mNetworkName;
+@property (nonatomic, strong) NSString *mCreativeId;
+@property(nonatomic, strong)NSMutableDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
 
 - (void)loadAd;
 
@@ -63,8 +65,13 @@ NS_ASSUME_NONNULL_BEGIN
      */
 - (void)clientInvokingShowAd:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
 
+- (NSString *)appendLimitation:(NSString *)limitation;
+
+-(void) setExtraParametersForMax:(NSString *)key value:(NSString *)value;
+
 
 - (UIViewController *)mavlVisibleViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END
