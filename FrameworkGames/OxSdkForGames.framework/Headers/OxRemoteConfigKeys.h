@@ -23,6 +23,9 @@ extern NSString* const OX_CONFIG_DEPTH_USER_LEVEL;
 extern NSString* const OX_CONFIG_ADSDK_KEYWORD_TYPE;
 extern NSString* const OX_CONFIG_ADSDK_LTV_MEDIUM;
 extern NSString* const OX_CONFIG_ADSDK_LTV_HIGH;
+extern NSString* const OX_CONFIG_ADSDK_DAYS_OF_NEW_USER;
+extern NSString* const OX_CONFIG_ADSDK_UAC_CAMPAIGN;
+extern NSString* const OX_CONFIG_VALUE_DEFAULT_CAMPAIGN;
 
 @end
 
