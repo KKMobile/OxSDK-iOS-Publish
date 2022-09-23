@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KeywordsAndUserPropertiesManager : NSObject
 
+@property (nonatomic, copy) NSString *mKeywordChannel;
+
+@property (nonatomic, copy) NSString *mKeywordCampaign;
+
 + (nonnull instancetype)shared;
 
 - (void)initialize;

@@ -125,6 +125,8 @@ static NSString * const PARAM_ERROR = @"Error";
 static NSString * const PARAM_FAILED_DURATION = @"FailedDuration";
 static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
+static NSString * const PARAM_CHANNEL = @"Channel";
+static NSString * const PARAM_CAMPAIGN = @"Campaign";
 
 
 

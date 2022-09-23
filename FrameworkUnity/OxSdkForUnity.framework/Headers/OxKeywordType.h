@@ -19,5 +19,6 @@ typedef NS_ENUM(NSInteger, OxKeywordType) {
     KEYWORD_TYPE_USER_GROUP = 1 << 2,
     KEYWORD_TYPE_DEEP_USER = 1 << 3,
     KEYWORD_TYPE_AD_LTV = 1 << 4,
-    KEYWORD_TYPE_ALL = (1 << 5) - 1
+    KEYWORD_TYPE_IS_NEW_USER = 1 << 5,
+    KEYWORD_TYPE_ALL = (1 << 6) - 1
 };

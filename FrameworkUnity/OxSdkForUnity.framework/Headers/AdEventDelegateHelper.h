@@ -26,6 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (double)getAdLtvHigh;
 
++ (int)getDaysOfNewUser;
+
++ (int)getDayCountSinceInstall;
+
++ (nullable NSString *)getUacCampaign;
+
++ (void)onTrackEvent:(nonnull NSString *)name params:(nullable NSDictionary *)params;
+
 @end
 
 NS_ASSUME_NONNULL_END
