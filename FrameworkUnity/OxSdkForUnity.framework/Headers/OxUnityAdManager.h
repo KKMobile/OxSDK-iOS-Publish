@@ -185,6 +185,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setAdLtvHigh:(double)adLtvHigh;
 
+- (void)setDaysOfNewUser:(int)days;
+
+- (void)setDayCountSinceInstall:(int)dayCount;
+
+- (void)setUacCampaign:(nullable NSString *)uacCampaign;
+
 - (int)getFrequencyOfEvent:(CountedEvents)event;
 
 - (double)getLtAdValue;
