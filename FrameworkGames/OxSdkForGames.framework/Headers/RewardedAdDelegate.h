@@ -12,11 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol RewardedAdDelegate <NSObject, AdDelegate>
 
-- (void)onRewardedVideoStarted:(NSString*)adUnitId;
+- (void)onRewardedVideoStarted;
 
-- (void)onRewardedVideoCompleted:(NSString*)adUnitId;
+- (void)onRewardedVideoCompleted;
 
-- (void)onUserRewarded:(NSString*)adUnitId reward:(AdReward *) reward;
+- (void)onUserRewarded:(AdReward *) reward;
 
 @end
 

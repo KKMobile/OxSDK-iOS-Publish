@@ -27,12 +27,6 @@ static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
 
-typedef NS_ENUM(NSInteger, DailyLevel) {
-    LOW = 0,
-    MEDIUM = 1,
-    HIGH = 2
-};
-
 // EventLevel
 typedef NS_ENUM(NSInteger, EventLevel) {
     NONE = 0,
@@ -125,8 +119,6 @@ static NSString * const PARAM_ERROR = @"Error";
 static NSString * const PARAM_FAILED_DURATION = @"FailedDuration";
 static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
-static NSString * const PARAM_CHANNEL = @"Channel";
-static NSString * const PARAM_CAMPAIGN = @"Campaign";
 
 
 

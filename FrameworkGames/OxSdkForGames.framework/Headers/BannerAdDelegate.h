@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol BannerAdDelegate <NSObject, AdDelegate>
 
-- (void)onAdExpanded:(NSString*)adUnitId;
+- (void)onAdExpanded;
 
-- (void)onAdCollapsed:(NSString*)adUnitId;
+- (void)onAdCollapsed;
 
 @end
 
