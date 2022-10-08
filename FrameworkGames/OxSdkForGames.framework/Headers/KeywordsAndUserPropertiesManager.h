@@ -12,17 +12,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KeywordsAndUserPropertiesManager : NSObject
 
+@property (nonatomic, copy) NSString *mKeywordChannel;
+
+@property (nonatomic, copy) NSString *mKeywordCampaign;
+
 + (nonnull instancetype)shared;
 
 - (void)initialize;
 
-- (void)setChannelAndCampaign:(ADJAttribution *)attribution;
-
-- (void)setTopAdValue:(nullable NSString*)topAdValue;
+- (void)setDailyLevel:(int)dailyLevel;
 
 - (void)setDeepUser:(bool)isDeepUser;
 
 - (void)checkUserProperties;
+
+- (void)configApplovinKeywords;
+
+- (void)setPropLtAdValue:(NSString *)propLtv;
 
 @end
 

@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
 
-+ (NSArray *)getTopValuesConfig;
-
 // 请求广告
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement;
 
@@ -50,8 +48,6 @@ NS_ASSUME_NONNULL_BEGIN
 // 获得 RV 奖励。
 + (void)trackAdGottenCreditAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement networkName:(nullable NSString*)networkName
     waterfallName:(nullable NSString*)waterfullName networkResponses:(NSInteger)networkResponses creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
-
-+ (NSString *)decorateLimitation:(nullable NSString*)limitation isReady:(BOOL)isReady;
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 
