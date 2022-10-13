@@ -39,7 +39,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinSDK', '11.4.3'
   spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
   spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
-  spec.dependency 'AppLovinMediationByteDanceAdapter', '4.5.2.3.0'
+  spec.dependency 'AppLovinMediationByteDanceAdapter', '4.7.0.4.0'
   spec.dependency 'AppLovinMediationFacebookAdapter', '6.10.0.3'
   spec.dependency 'AppLovinMediationFyberAdapter', '8.1.4.1'
   spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '9.5.0.0'
