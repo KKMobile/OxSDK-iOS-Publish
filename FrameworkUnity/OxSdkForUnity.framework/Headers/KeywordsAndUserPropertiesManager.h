@@ -30,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setPropLtAdValue:(NSString *)propLtv;
 
+/// 输出格式化之后的 mKeywordChannel
+- (NSString *)getFormattedChannel;
+/// 输出格式化之后的 mKeywordCampaign
+- (NSString *)getFormattedCampaign;
 @end
 
 NS_ASSUME_NONNULL_END
