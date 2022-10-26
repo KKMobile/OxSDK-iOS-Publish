@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForUnity"#SDK名称
-  spec.version      = "1.0.5.6-prop-keyword-optimize"#版本号
+  spec.version      = "1.0.5.6-202210261036"#版本号
   spec.summary      = "OxAdSdk for unity applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -50,7 +50,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationByteDanceAdapter','4.5.2.3.0'
   spec.dependency 'AppLovinMediationSmaatoAdapter','21.7.0.0'
   spec.dependency 'AppLovinMediationUnityAdsAdapter','4.2.1.0'
-  spec.dependency 'AppLovinMediationVerveAdapter','2.9.1.0'
+  spec.dependency 'AppLovinMediationVerveAdapter','2.16.0.0'
   spec.dependency 'AppLovinMediationVungleAdapter','6.10.5.1'
   spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
   spec.dependency 'OpenWrapSDK', '2.6.0'
