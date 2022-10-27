@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.0.6-rc01-202210271145-test05"#版本号
+  spec.version      = "1.0.6-rc01-202210271437-test01"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "10.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
-  spec.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
+  spec.ios.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
@@ -34,9 +34,33 @@ Pod::Spec.new do |spec|
   spec.dependency 'FirebaseAnalytics'
   spec.dependency 'Adjust'
   #Max Mediation
-
+  spec.dependency 'AppLovinSDK', '11.4.4'
+  spec.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.2'
+  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'  #由于最新版本需要支持iOS12 所以先升级
+  spec.dependency 'AppLovinMediationChartboostAdapter', '9.1.0.0'
+  spec.dependency 'AppLovinMediationFyberAdapter', '8.1.6.0'
+  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '9.11.0.4'
+  spec.dependency 'AppLovinMediationGoogleAdapter', '9.11.0.4'
+  spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.0.2'
+  spec.dependency 'AppLovinMediationIronSourceAdapter', '7.2.5.1.0'
+  spec.dependency 'AppLovinMediationFacebookAdapter', '6.12.0.0'
+  spec.dependency 'AppLovinMediationOguryPresageAdapter', '2.6.2.1'
+  spec.dependency 'AppLovinMediationByteDanceAdapter', '4.7.0.4.0'
+  spec.dependency 'AppLovinMediationSmaatoAdapter', '21.7.8.0'
+  spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.4.1.0'
+  spec.dependency 'AppLovinMediationVerveAdapter', '2.16.0.0'
+  spec.dependency 'AppLovinMediationVungleAdapter', '6.12.0.3'
+  spec.dependency 'AmazonPublisherServicesSDK','4.4.3' #由于最新版本需要支持iOS12 所以先升级
+  spec.dependency 'OpenWrapSDK', '2.6.2 '
+  spec.dependency 'AppLovinPubMaticAdapter', '1.0.1'
 
   #Admob Mediation
-
+  spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.0'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin','11.4.4.0'
+  #spec.dependency 'GoogleMobileAdsMediationInMobi','10.1.0.0'  #目前的最高版本不能兼容
+  spec.dependency 'GoogleMobileAdsMediationUnity','4.4.1.0'
+  spec.dependency 'GoogleMobileAdsMediationFyber','8.1.6.0'
+  #spec.dependency 'GoogleMobileAdsMediationPangle','4.7.0.6.0'  #目前的最高版本不能兼容
+  spec.dependency 'GoogleMobileAdsMediationVungle','6.12.0.0'
 
 end
