@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.0.6-rc01-202210271145"#版本号
+  spec.version      = "1.0.6-rc01-202210271145-test01"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "10.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
-  spec.ios.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
+  spec.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
   #spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
