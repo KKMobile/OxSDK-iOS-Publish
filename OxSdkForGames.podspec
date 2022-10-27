@@ -25,7 +25,9 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
-  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+  #spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.resources = ["ResBundle/OxSdkRes.bundle","ResBundle/Language.bundle"]
 
   spec.dependency 'PureLayout'
