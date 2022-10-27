@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForUnity"#SDK名称
-  spec.version      = "1.0.6-rc01-202210271145"#版本号
+  spec.version      = "1.0.6-rc01-202210272111"#版本号
   spec.summary      = "OxAdSdk for unity applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -64,5 +64,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationFyber','8.1.6.0'
   #spec.dependency 'GoogleMobileAdsMediationPangle','4.7.0.6.0'  #目前的最高版本不能兼容
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.0.0'
+  spec.dependency 'GoogleMobileAdsMediationTestSuite'
 
 end
