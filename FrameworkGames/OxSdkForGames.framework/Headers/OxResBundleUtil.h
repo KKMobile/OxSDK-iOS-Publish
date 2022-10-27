@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OxResBundleUtil : NSObject
 
 + (UIImage *)getImage:(NSString *)name;
++ (NSString *)localizedString:(NSString *)key;
 
 @end
 

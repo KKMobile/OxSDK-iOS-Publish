@@ -14,6 +14,10 @@
 #define OXLog(...)
 #endif
 
+#define OX_IS_IPAD  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+#define OX_FACTOR_WIDTH (OX_IS_IPAD ? 1: (OX_SCREEN_WIDTH / 375.0))
+#define OX_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+
 // Adformat
 static NSString * const AdFormat_BANNER = @"banner";
 static NSString * const AdFormat_MREC = @"mrec";
@@ -127,7 +131,6 @@ static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
 static NSString * const PARAM_CHANNEL = @"Channel";
 static NSString * const PARAM_CAMPAIGN = @"Campaign";
-
 
 
 #endif /* AdEvents_h */
