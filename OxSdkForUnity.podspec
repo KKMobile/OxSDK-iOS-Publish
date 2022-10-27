@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForUnity"#SDK名称
-  spec.version      = "1.0.6-rc01-202210272111"#版本号
+  spec.version      = "1.0.6-rc01-202210272153"#版本号
   spec.summary      = "OxAdSdk for unity applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
