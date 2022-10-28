@@ -177,6 +177,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setGameLevel:(int)currentLevel;
 
+- (void)setUserId:(NSString *)userIdentifier;
+
 - (void)setDeepUserLevel:(int)deepUserLevel;
 
 - (void)setAllowedKeywordType:(int)type;

@@ -40,6 +40,11 @@ typedef void (^OnSdkInitComplete)(void);
 
 - (void)setGameLevel:(int)level;
 
+/**
+* Note that the user ID is neither the user’s IDFA nor the device ID; it is your own proprietary user identifier.
+*/
+- (void)setUserId:(NSString *)userIdentifier;
+
 @end
 
 NS_ASSUME_NONNULL_END
