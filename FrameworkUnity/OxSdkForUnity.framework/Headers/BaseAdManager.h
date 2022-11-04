@@ -45,6 +45,11 @@ typedef void (^OnSdkInitComplete)(void);
 */
 - (void)setUserId:(NSString *)userIdentifier;
 
+/**
+ * 为广告 Sdk 设置属性。
+ */
+- (void)setExtraParameter:(NSString *)key value:(NSString *)value;
+
 @end
 
 NS_ASSUME_NONNULL_END

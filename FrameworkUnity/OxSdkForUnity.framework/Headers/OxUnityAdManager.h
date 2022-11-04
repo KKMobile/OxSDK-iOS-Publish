@@ -179,6 +179,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setUserId:(NSString *)userIdentifier;
 
+- (void)setExtraParameter:(NSString *)key value:(NSString *)value;
+
 - (void)setDeepUserLevel:(int)deepUserLevel;
 
 - (void)setAllowedKeywordType:(int)type;
