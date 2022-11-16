@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForUnity"#SDK名称
-  spec.version      = "1.0.5.5-202210271848"#版本号
+  spec.version      = "1.0.5.7-202211162217"#版本号
   spec.summary      = "OxAdSdk for unity applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -41,8 +41,8 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
   spec.dependency 'AppLovinMediationChartboostAdapter','8.5.0.2'
   spec.dependency 'AppLovinMediationFyberAdapter','8.1.5.0'
-  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter','9.5.0.0'
-  spec.dependency 'AppLovinMediationGoogleAdapter','9.5.0.0'
+  #spec.dependency 'AppLovinMediationGoogleAdManagerAdapter','9.5.0.0'
+  #spec.dependency 'AppLovinMediationGoogleAdapter','9.5.0.0'
   spec.dependency 'AppLovinMediationInMobiAdapter','10.0.1.1'
   spec.dependency 'AppLovinMediationIronSourceAdapter','7.2.4.0.0'
   spec.dependency 'AppLovinMediationFacebookAdapter','6.9.0.2'
