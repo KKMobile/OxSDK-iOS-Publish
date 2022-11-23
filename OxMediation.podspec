@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxMediation"#SDK名称
-  spec.version      = "1.0.4-alpha01-202211231425"#版本号
+  spec.version      = "1.0.4-alpha01-202211231521"#版本号
   spec.summary      = "This is OxMediation"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -23,6 +23,8 @@ Pod::Spec.new do |spec|
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "o-#{spec.version}" }
   spec.ios.vendored_frameworks = 'FrameworkOxMediation/OpenMediation.framework'#SDK相对本文件路径
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'armv7 arm64'}#支持架构配置
