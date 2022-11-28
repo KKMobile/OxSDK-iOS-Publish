@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMAdMobAdapter"#SDK名称
-  spec.version      = "1.0.4.0-RC01-202211281200"#版本号
+  spec.version      = "9.5.0.0-202211281200"#版本号
   spec.summary      = "This is OMAdMobAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
