@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |spec|
 
-  spec.name         = "OxMediation"#SDK名称
-  spec.version      = "1.0.4.0-rc01-202211281200"#版本号
-  spec.summary      = "This is OxMediation"#概要
+  spec.name         = "OMAdMobAdapter"#SDK名称
+  spec.version      = "1.0.4-alpha01-202211281209"#版本号
+  spec.summary      = "This is OxMediationAdmobAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
-  This is OxMediation.This is OxMediation.
+  This is OMAdMobAdapter.This is OMAdMobAdapter.
                    DESC
   spec.homepage     = "https://github.com/KKMobile/OxSDK-iOS-Publish.git"#github 上的仓库地址
   spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "12.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "o-#{spec.version}" }
-  spec.ios.vendored_frameworks = 'FrameworkOxMediation/OpenMediation.framework'#SDK相对本文件路径
+  spec.ios.vendored_frameworks = 'FrameworkOxMediation/adapters/OMAdMobAdapter.framework'#SDK相对本文件路径
   #spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   #spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
