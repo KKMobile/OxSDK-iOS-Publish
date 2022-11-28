@@ -11,7 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableDictionary *nativeBuilderDic;
 
-+ (instancetype)sharedInstance;
+//+ (instancetype)sharedInstance;
+- (instancetype)initWithPlacementID:(NSString *)placementID;
 
 /// Add delegate
 - (void)addDelegate:(id<OMNativeDelegate>)delegate;

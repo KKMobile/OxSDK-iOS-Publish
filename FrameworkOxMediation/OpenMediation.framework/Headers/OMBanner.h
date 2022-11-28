@@ -29,12 +29,15 @@ typedef NS_ENUM(NSInteger, OMBannerLayoutAttribute) {
 @interface OMBanner : UIView
 
 @property(nonatomic, readonly, nullable) NSString *placementID;
+@property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
 
 /// the delegate
 @property (nonatomic, weak)id<OMBannerDelegate> delegate;
 
 /// The banner's ad placement ID.
 - (NSString*)placementID;
+
+- (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
 
 /// This is a method to initialize an OMBanner.

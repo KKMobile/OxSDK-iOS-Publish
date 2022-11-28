@@ -3,41 +3,24 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OMAdSingletonInterface.h"
 #import "OMRewardedVideoDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
+@interface OMRewardedVideo : NSObject
 
-/// A modal view controller to represent a rewarded video ad. This is a full-screen ad shown in your application.
-@interface OMRewardedVideo : OMAdSingletonInterface
+@property (nonatomic, weak)id<OMRewardedVideoDelegate> delegate;
+@property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
 
-/// Returns the singleton instance.
-+ (instancetype)sharedInstance;
+- (instancetype)initWithPlacementId:(NSString *)placementId;
 
-/// Add delegate
-- (void)addDelegate:(id<OMRewardedVideoDelegate>)delegate;
+- (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
-/// Remove delegate
-- (void)removeDelegate:(id<OMRewardedVideoDelegate>)delegate;
+- (void)loadAd;
 
-/// Indicates whether the rewarded video is ready to show ad.
 - (BOOL)isReady;
 
-/// Indicates whether the scene has reached the display frequency.
-- (BOOL)isCappedForScene:(NSString *)sceneName;
+- (void)showWithViewController:(UIViewController *)viewController;
 
-/// Presents the rewarded video ad modally from the specified view controller.
-/// Parameter viewController: The view controller that will be used to present the video ad.
-/// Parameter sceneName: The name of th ad scene.
-- (void)showWithViewController:(UIViewController *)viewController scene:(NSString *)sceneName;
-
-/// Presents the rewarded video ad modally from the specified view controller.
-/// Parameter viewController: The view controller that will be used to present the video ad.
-/// Parameter sceneName: The name of th ad scene. Default scene if null.
-/// Parameter extraParams: Exciting video Id.
-- (void)showWithViewController:(UIViewController *)viewController scene:(NSString *)sceneName extraParams:(NSString*)extraParams;
-
-- (void)preload;
 
 @end
 

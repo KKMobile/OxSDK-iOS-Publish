@@ -10,8 +10,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OMSplash : NSObject
 
 @property (nonatomic, weak)id<OMSplashDelegate> delegate;
+@property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
 
 - (instancetype)initWithPlacementId:(NSString *)placementId adSize:(CGSize)size;
+
+- (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
 - (void)loadAd;
 

@@ -2,37 +2,39 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import "OMScene.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class OMRewardedVideo;
 
 @protocol OMRewardedVideoDelegate <NSObject>
 
 @optional
 
-/// Invoked when a rewarded video is available.
-- (void)omRewardedVideoChangedAvailability:(BOOL)available;
+- (void)omRewardedVideoDidLoad:(OMRewardedVideo *)interstitial;
+
+- (void)omRewardedVideoFailToLoad:(OMRewardedVideo *)interstitial withError:(NSError *)error;
 
 /// Sent immediately when a rewarded video is opened.
-- (void)omRewardedVideoDidOpen:(OMScene*)scene;
+- (void)omRewardedVideoDidOpen:(OMRewardedVideo*)rewardedVideo;
 
 /// Sent immediately when a rewarded video starts to play.
-- (void)omRewardedVideoPlayStart:(OMScene*)scene;
+- (void)omRewardedVideoPlayStart:(OMRewardedVideo*)rewardedVideo;
 
 /// Send after a rewarded video has been completed.
-- (void)omRewardedVideoPlayEnd:(OMScene*)scene;
+- (void)omRewardedVideoPlayEnd:(OMRewardedVideo*)rewardedVideo;
 
 /// Sent after a rewarded video has been clicked.
-- (void)omRewardedVideoDidClick:(OMScene*)scene;
+- (void)omRewardedVideoDidClick:(OMRewardedVideo*)rewardedVideo;
 
 /// Sent after a user has been granted a reward.
-- (void)omRewardedVideoDidReceiveReward:(OMScene*)scene;
+- (void)omRewardedVideoDidReceiveReward:(OMRewardedVideo*)rewardedVideo;
 
 /// Sent after a rewarded video has been closed.
-- (void)omRewardedVideoDidClose:(OMScene*)scene;
+- (void)omRewardedVideoDidClose:(OMRewardedVideo*)rewardedVideo;
 
 /// Sent after a rewarded video has failed to play.
-- (void)omRewardedVideoDidFailToShow:(OMScene*)scene withError:(NSError *)error;
+- (void)omRewardedVideoDidFailToShow:(OMRewardedVideo*)rewardedVideo withError:(NSError *)error;
 
 @end
 

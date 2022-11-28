@@ -3,35 +3,26 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OMAdSingletonInterface.h"
 #import "OMInterstitialDelegate.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMInterstitial : OMAdSingletonInterface
+@interface OMInterstitial : NSObject
 
-/// Returns the singleton instance.
-+ (instancetype)sharedInstance;
+@property (nonatomic, weak)id<OMInterstitialDelegate> delegate;
+@property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
 
-/// Add delegate
-- (void)addDelegate:(id<OMInterstitialDelegate>)delegate;
+- (instancetype)initWithPlacementId:(NSString *)placementId;
 
-/// Remove delegate
-- (void)removeDelegate:(id<OMInterstitialDelegate>)delegate;
+- (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
-/// Indicates whether the interstitial video is ready to show ad.
+- (void)loadAd;
+
 - (BOOL)isReady;
 
-/// Indicates whether the scene has reached the display frequency.
-- (BOOL)isCappedForScene:(NSString *)sceneName;
+- (void)showWithViewController:(UIViewController *)viewController;
 
-/// Presents the interstitial video ad modally from the specified view controller.
-/// Parameter viewController: The view controller that will be used to present the video ad.
-/// Parameter sceneName: The name of th ad scene. Default scene if null.
-- (void)showWithViewController:(UIViewController *)viewController scene:(NSString *)sceneName;
-
-- (void)preload;
 
 @end
 

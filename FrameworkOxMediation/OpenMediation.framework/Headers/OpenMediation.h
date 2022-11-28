@@ -37,6 +37,8 @@ extern NSString *kOpenMediatonInitSuccessNotification;
 /// Initializes OpenMediation's SDK with the requested ad types.
 + (void)initWithAppKey:(NSString *)appKey baseHost:(NSString*)host adFormat:(OpenMediationAdFormat)initAdFormats;
 
++ (void)initWithAppKey:(NSString*)appKey baseHost:(NSString*)host completionHandler:(initCompletionHandler)completionHandler;
+
 /// Check that `OpenMediation` has been initialized
 + (BOOL)isInitialized;
 

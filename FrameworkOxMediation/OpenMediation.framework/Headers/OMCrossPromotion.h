@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMCrossPromotion : OMAdSingletonInterface
 /// Returns the singleton instance.
-+ (instancetype)sharedInstance;
+ - (instancetype)initWithPlacementID:(NSString *)placementID;
 
 /// Add delegate
 - (void)addDelegate:(id<OMCrossPromotionDelegate>)delegate;
