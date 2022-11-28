@@ -1,0 +1,6 @@
+framework module OMGoogleAdAdapter {
+  umbrella header "OMGoogleAdAdapter.h"
+
+  export *
+  module * { export * }
+}
