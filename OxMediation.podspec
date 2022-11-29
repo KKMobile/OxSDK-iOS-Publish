@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "10.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "om-#{spec.version}" }
-  spec.ios.vendored_frameworks = 'FrameworkOxMediation/OpenMediation.framework'#SDK相对本文件路径
+  spec.ios.vendored_frameworks = 'FrameworkOxMediation/OxMediation.framework'#SDK相对本文件路径
   #spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   #spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
