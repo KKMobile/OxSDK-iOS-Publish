@@ -51,6 +51,8 @@ typedef NS_ENUM(NSInteger, OMBannerLayoutAttribute) {
 /// Begins loading the OMBanner content. And to show with default controller([UIApplication sharedApplication].keyWindow.rootViewController) when load success.
 - (void)loadAndShow;
 
+- (void)startAutoRefresh;
+
 @end
 
 NS_ASSUME_NONNULL_END
