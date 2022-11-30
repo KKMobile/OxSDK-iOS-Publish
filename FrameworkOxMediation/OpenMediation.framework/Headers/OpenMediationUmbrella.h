@@ -4,6 +4,7 @@
  
 // Header files.
 #import <OpenMediation/OpenMediation.h>
+#import <OpenMediation/OMConfig.h>
 
 #import <OpenMediation/OMBanner.h>
 

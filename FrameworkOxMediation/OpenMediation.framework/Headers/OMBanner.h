@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger, OMBannerLayoutAttribute) {
 - (void)loadAndShow;
 
 - (void)startAutoRefresh;
+- (void)stopAutoRefresh;
 
 @end
 

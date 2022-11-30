@@ -3,8 +3,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <OMRewardedVideoDelegate.h>
-#import <OMRewardedVideoAd.h>
+#import "OMRewardedVideoDelegate.h"
+#import "OMRewardedVideoAd.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface OMRewardedVideo : NSObject <RewardedVideoDelegate>

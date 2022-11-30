@@ -3,8 +3,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <OMInterstitialDelegate.h>
-#import <OMInterstitialAd.h>
+#import "OMInterstitialDelegate.h"
+#import "OMInterstitialAd.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
