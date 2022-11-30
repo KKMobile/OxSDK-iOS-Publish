@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-- (void)omRewardedVideoDidLoad:(OMRewardedVideo *)interstitial;
+- (void)omRewardedVideoDidLoad:(OMRewardedVideo *)rewarded;
 
-- (void)omRewardedVideoFailToLoad:(OMRewardedVideo *)interstitial withError:(NSError *)error;
+- (void)omRewardedVideoFailToLoad:(OMRewardedVideo *)rewarded withError:(NSError *)error;
 
 /// Sent immediately when a rewarded video is opened.
 - (void)omRewardedVideoDidOpen:(OMRewardedVideo*)rewardedVideo;

@@ -3,15 +3,17 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OMInterstitialDelegate.h"
+#import <OMInterstitialDelegate.h>
+#import <OMInterstitialAd.h>
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMInterstitial : NSObject
+@interface OMInterstitial : NSObject <InterstitialDelegate>
 
-@property (nonatomic, weak)id<OMInterstitialDelegate> delegate;
+@property (nonatomic, weak) id<OMInterstitialDelegate> delegate;
 @property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
+@property (nonatomic, strong) OMInterstitialAd *interstitialAd;
 
 - (instancetype)initWithPlacementId:(NSString *)placementId;
 

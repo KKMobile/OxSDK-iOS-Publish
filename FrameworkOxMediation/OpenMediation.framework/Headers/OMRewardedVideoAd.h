@@ -1,9 +1,9 @@
 // Copyright 2020 ADTIMING TECHNOLOGY COMPANY LIMITED
 // Licensed under the GNU Lesser General Public License Version 3
 
-#import "OMAdBasePrivate.h"
-#import "OMAdBase.h"
-#import "OMRewardedVideoCustomEvent.h"
+#import <OMAdBasePrivate.h>
+#import <OMAdBase.h>
+#import <OMRewardedVideoCustomEvent.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OMRewardedVideoAd : OMAdBase <rewardedVideoCustomEventDelegate>
 
 @property (nonatomic, weak)id<RewardedVideoDelegate> delegate;
+
 - (instancetype)initWithPlacementID:(NSString*)placementID;
 - (void)show:(UIViewController*)viewController;
 @end

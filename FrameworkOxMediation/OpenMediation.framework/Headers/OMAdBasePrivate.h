@@ -48,6 +48,8 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 
 @property (nonatomic, strong) OMScene *scene;
 
+@property (nonatomic, assign) float revenue;
+@property (nonatomic, copy) NSString *netWorkName;
 
 - (instancetype)initWithPlacementID:(NSString*)placementID size:(CGSize)size;
 - (instancetype)initWithPlacementID:(NSString*)placementID size:(CGSize)size rootViewController:(UIViewController*)rootViewController;
@@ -68,5 +70,6 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 - (void)adReceiveReward:(id)instanceAdapter;
 
 - (void)addEvent:(NSInteger)eventID instance:(NSString*)instanceID extraData:(NSDictionary*) data;
+
 @end
 #endif /* OMAdBasePrivate_h */

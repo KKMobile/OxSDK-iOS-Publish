@@ -4,6 +4,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "OMBannerDelegate.h"
+#import "OMBannerAd.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,6 +31,7 @@ typedef NS_ENUM(NSInteger, OMBannerLayoutAttribute) {
 
 @property(nonatomic, readonly, nullable) NSString *placementID;
 @property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
+@property (nonatomic, strong) OMBannerAd *bannerAd;
 
 /// the delegate
 @property (nonatomic, weak)id<OMBannerDelegate> delegate;

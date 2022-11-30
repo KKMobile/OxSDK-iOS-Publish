@@ -3,9 +3,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OMBidResponse.h"
-#import "OMBidCustomEvent.h"
-#import "OpenMediationAdFormats.h"
+#import <OMBidResponse.h>
+#import <OMBidCustomEvent.h>
+#import <OpenMediationAdFormats.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

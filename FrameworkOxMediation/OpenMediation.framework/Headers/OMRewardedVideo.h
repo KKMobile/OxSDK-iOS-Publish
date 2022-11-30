@@ -3,13 +3,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OMRewardedVideoDelegate.h"
+#import <OMRewardedVideoDelegate.h>
+#import <OMRewardedVideoAd.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@interface OMRewardedVideo : NSObject
+@interface OMRewardedVideo : NSObject <RewardedVideoDelegate>
 
 @property (nonatomic, weak)id<OMRewardedVideoDelegate> delegate;
 @property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
+@property (nonatomic, strong) OMRewardedVideoAd *rewardedVideoAd;
 
 - (instancetype)initWithPlacementId:(NSString *)placementId;
 
