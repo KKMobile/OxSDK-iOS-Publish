@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMGoogleAdAdapter"#SDK名称
-  spec.version      = "9.5.0.0-202211301226"#版本号
+  spec.version      = "9.5.0.0-202212131150"#版本号
   spec.summary      = "This is OMGoogleAdAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC

@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMUnityAdapter"#SDK名称
-  spec.version      = "4.2.1.0-202211292106"#版本号
+  spec.version      = "4.2.1.0-202212131150"#版本号
   spec.summary      = "This is OMUnityAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
