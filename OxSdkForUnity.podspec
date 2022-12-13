@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForUnity"#SDK名称
-  spec.version      = "1.0.6-rc02-202211041455"#版本号
+  spec.version      = "2.0.0.0-202212231535"#版本号
   spec.summary      = "OxAdSdk for unity applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -33,7 +33,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'SDWebImage'
   spec.dependency 'FirebaseAnalytics'
   spec.dependency 'Adjust'
-  #Max Mediation
+  # Max Mediation
   spec.dependency 'AppLovinSDK', '11.5.3'
   spec.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.2'
   spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
@@ -53,7 +53,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
   spec.dependency 'OpenWrapSDK', '2.6.2 '
   spec.dependency 'AppLovinPubMaticAdapter', '1.0.1'
-
+  
   #Admob Mediation
   spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.0'
   spec.dependency 'GoogleMobileAdsMediationAppLovin','11.5.3.0'
@@ -62,5 +62,22 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationFyber','8.1.6.0'
   spec.dependency 'GoogleMobileAdsMediationPangle','4.6.2.2.0'
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.0.0'
+
+  # OM
+  spec.dependency 'OxMediation','1.0.4.0-RC01-202212131150'
+  spec.dependency 'OMAdMobAdapter','9.5.0.0-202212131150'
+  spec.dependency 'OMApsAdapter','4.5.5.0-202212131150'
+  spec.dependency 'OMFacebookAdapter','6.9.0.0-202212131150'
+  spec.dependency 'OMFyberAdapter','7.5.4.0-202212131150'
+  spec.dependency 'OMGoogleAdAdapter','9.5.0.0-202212131150'
+  spec.dependency 'ChartboostHelium','3.3.0'
+  spec.dependency 'OMHeliumAdapter','3.2.0.0-202212131150'
+  spec.dependency 'OMInMobiAdapter','10.0.7.0-202212131150'
+  spec.dependency 'OMIronSourceAdapter','7.2.2.1.0-202212131150'
+  spec.dependency 'OMMaxAdapter','11.5.3.0-202212131150'
+  spec.dependency 'OMPangleAdapter','4.8.0.6.0-202212131150'
+  spec.dependency 'OMPubMaticAdapter','2.6.2.0-202212131150'
+  spec.dependency 'OMUnityAdapter','4.2.1.0-202212131150'
+  spec.dependency 'OMVungleAdapter','6.11.0.0-202212131150'
 
 end
