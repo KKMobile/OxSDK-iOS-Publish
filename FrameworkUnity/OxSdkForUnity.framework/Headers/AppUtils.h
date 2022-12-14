@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)getAdapterAppId:(NSString *)key;
 
+- (BOOL)getAdpterAppEnvironment:(NSString *)key;
+
 - (NSString *)getStringFromPlist:(NSString *)key;
 
 - (NSNumber *)getNumberFormPlist:(NSString *)key;

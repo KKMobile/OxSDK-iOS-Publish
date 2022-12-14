@@ -1,24 +1,52 @@
 //
 //  OxMrecAdHelper.h
-//  SwithMediationDemo
+//  OxSDK-Game
 //
-//  Created by Rober on 2022/4/12.
+//  Created by BJMM100001 on 2022/11/24.
 //
 
-#import "OxAdHelper.h"
-#import "IBannerAd.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "MrecAdDelegate.h"
-#import "MrecInternalAdDelegate.h"
+#import "OxAdUnitIds.h"
+#import "AdEvents.h"
+
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxMrecAdHelper : OxAdHelper<IBannerAd>
+@interface OxMrecAdHelper : NSObject
 
-@property (nonatomic, weak) id<MrecInternalAdDelegate>  mInternalAddelegate;
-@property (nonatomic, weak)id<MrecAdDelegate> mAddelegate;
-@property (nonatomic, assign) bool  mIsReady;
-@property (nonatomic, assign) bool  mAutoRefresh;
-@property (nonatomic, strong) NSString *loadPlacement;
-- (void)createAd;
+@property (nonatomic, weak) id<MrecAdDelegate> mAddelegate;
+
+- (instancetype)initWithCurrentVC:(UIViewController *)VC adUnitIds:(OxAdUnitIds *)adUnitIds;
+
+- (void)loadAd;
+
+- (void)loadAd:(NSString *)placement;
+
+- (void)loadAdWithPlatform:(Platform)platform;
+
+- (void)loadAdWithPlatform:(Platform)platform placement:(NSString *)placement;
+
+- (void)startAutoRefresh;
+
+- (void)stopAutoRefresh;
+
+- (void)hideAd;
+
+- (void)showAd:(nonnull UIView *)adContainerV;
+
+- (void)showAd:(nonnull UIView *)adContainerV placement:(nonnull NSString *)placement;
+
+- (void)destoryAd;
+
+- (BOOL)isReady;
+
+- (void)onClientShowingLimitation:(NSString *)limitation;
+
+- (void)onClientShowingLimitation:(NSString *)placement limitation:(NSString *)limitation;
+
+- (void)setExtraParameters:(NSString *)key value:(NSString *)value;
 
 @end
 

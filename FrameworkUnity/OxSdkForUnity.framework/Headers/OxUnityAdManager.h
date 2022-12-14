@@ -13,6 +13,8 @@
 #import "OxUnityConstants.h"
 #import "OxUnityUtils.h"
 #import "OxAdjustTokens.h"
+#import "OxAdSdkManager.h"
+#import "OxOpenAdHelper.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -22,10 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedSingleton;
 
-- (void)setInterstitialExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
+- (void)setInterstitialExtraParameters:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
 
 ///加载插屏广告
-- (void)loadInterstitial:(NSString *)adId placement:(NSString *)placement;
+- (void)loadInterstitial:(OxAdUnitIds *)adIds platform:(Platform)platform placement:(nonnull NSString *)placement;
 
 /**
     * 判断是否存在 adId 对应的可用的插屏广告。
@@ -49,10 +51,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedSingleton;
 
-- (void)setRewardedExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
+- (void)setRewardedExtraParameters:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
 
 /// 加载RV
-- (void)loadRV:(NSString *)adId placement:(NSString *)placement;
+- (void)loadRv:(OxAdUnitIds *)adIds platform:(Platform)platform placement:(nonnull NSString *)placement;
 
 /// 判断是否存在adid 可用的广告
 - (BOOL)isRVReady:(NSString *)adId;
@@ -67,6 +69,28 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface UnityOpenAdHelper : NSObject<OpenAdDelegate>
+
+@property (nonatomic, strong) NSMutableDictionary  *openAdHelperDic;
+
++ (instancetype)sharedSingleton;
+
+- (void)setOpenAdExtraParameters:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
+
+/// 加载RV
+- (void)loadOpenAd:(OxAdUnitIds *)adIds platform:(Platform)platform placement:(nonnull NSString *)placement;
+
+/// 判断是否存在adid 可用的广告
+- (BOOL)isOpenAdReady:(NSString *)adId;
+
+/// 展示RV
+- (void)showOpenAd:(NSString *)adId placement:(NSString *)placement;
+
+/// 销毁ID对应的Rv
+- (void)destoryOpenAd:(NSString *)adId;
+
+@end
+
 @interface UnityBannerAdHelper : NSObject<BannerAdDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary  *adPositionDic;
@@ -74,12 +98,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedSingleton;
 
-- (void)setBannerExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
+- (void)setBannerExtraParameters:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
 
 /// 加载Banner
-/// @param adid 广告ID
+/// @param adIds 广告ID
 /// @param position 位置
-- (void)loadBanner:(NSString *)adid position:(OxAdPosition)position placement:(NSString *)placement;
+- (void)loadBanner:(OxAdUnitIds *)adIds platform:(Platform)platform position:(OxAdPosition)position placement:(nonnull NSString *)placement;
 
 ///banner是否加载完毕
 - (BOOL)isBannerReady:(NSString *)adId;
@@ -100,14 +124,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableDictionary  *adPositionDic;
 @property (nonatomic, strong) NSMutableDictionary  *mrecAdHelperDic;
 
-- (void)setMRecExtraParametersForMax:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
+- (void)setMRecExtraParameters:(NSString *)adId key:(NSString *)key value:(nullable NSString *)value;
 
 + (instancetype)sharedSingleton;
 
 /// 加载Mrec
-/// @param adid 广告ID
+/// @param adIds 广告ID
 /// @param position 位置
-- (void)loadMrec:(NSString *)adid position:(OxAdPosition)position placement:(NSString *)placement;
+- (void)loadMrec:(OxAdUnitIds *)adIds platform:(Platform)platform position:(OxAdPosition)position placement:(nonnull NSString *)placement;
 
 ///banner是否加载完毕
 - (BOOL)isMrecReady:(NSString *)adId;
@@ -198,6 +222,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (int)getFrequencyOfEvent:(CountedEvents)event;
 
 - (double)getLtAdValue;
+
 
 
 @end

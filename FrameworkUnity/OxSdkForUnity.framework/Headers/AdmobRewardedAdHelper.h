@@ -5,11 +5,11 @@
 //  Created by Rober on 2022/4/20.
 //
 
-#import "OxRewardedAdHelper.h"
+#import "BaseRewardedAdHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdmobRewardedAdHelper : OxRewardedAdHelper
+@interface AdmobRewardedAdHelper : BaseRewardedAdHelper
 
 @end
 

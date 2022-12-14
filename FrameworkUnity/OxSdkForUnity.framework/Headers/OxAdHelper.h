@@ -32,9 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId NS_DESIGNATED_INITIALIZER;
 
-- (void)loadAd;
+- (void)loadAd:(Platform)platform;
 
-- (void)loadAd:(NSString *)placement;
+- (void)loadAdWithPlatform:(Platform)platform placement:(NSString *)placement;
 
 - (double)getDuration:(double)latestTimestamp;
 
@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)appendLimitation:(NSString *)limitation;
 
--(void) setExtraParametersForMax:(NSString *)key value:(NSString *)value;
+-(void) setExtraParameters:(NSString *)key value:(NSString *)value;
 
 @end
 

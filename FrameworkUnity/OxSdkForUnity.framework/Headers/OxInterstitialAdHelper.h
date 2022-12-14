@@ -1,25 +1,47 @@
 //
 //  OxInterstitialAdHelper.h
-//  SwithMediationDemo
+//  OxSDK-Game
 //
-//  Created by Rober on 2022/4/13.
+//  Created by BJMM100001 on 2022/11/24.
 //
 
-#import "OxAdHelper.h"
-#import "IFullScreenAd.h"
+#import "Foundation/Foundation.h"
+#import <UIKit/UIKit.h>
 #import "InterstitialAdDelegate.h"
-#import "InterstitialInternalAdDelegate.h"
+#import "OxAdUnitIds.h"
+#import "AdEvents.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxInterstitialAdHelper : OxAdHelper <IFullScreenAd>
+@interface OxInterstitialAdHelper : NSObject
 
 @property (nonatomic, weak) id<InterstitialAdDelegate> mAddelegate;
-@property (nonatomic, weak) id<InterstitialInternalAdDelegate> mInternalAddelegate;
-@property (nonatomic, assign) NSInteger retryAttempt;
-@property (nonatomic, assign) BOOL mReload;
-@property (nonatomic, assign) BOOL mIsReloadingInLoadFailed;
-@property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
-- (void)createAd;
+
+- (instancetype)initWithCurrentVC:(UIViewController *)VC adUnitIds:(OxAdUnitIds *)adUnitIds;
+
+- (void)loadAd;
+
+- (void)loadAd:(NSString *)placement;
+
+- (void)loadAdWithPlatform:(Platform)platform;
+
+- (void)loadAdWithPlatform:(Platform)platform placement:(NSString *)placement;
+
+- (void)showAd;
+
+- (void)showAd:(NSString *)placement;
+
+- (void)destoryAd;
+
+- (BOOL)isReady;
+
+- (void) setReloadAfterFailed:(BOOL)reload;
+
+- (void)onClientShowingLimitation:(NSString *)limitation;
+
+- (void)onClientShowingLimitation:(NSString *)placement limitation:(NSString *)limitation;
+
+- (void)setExtraParameters:(NSString *)key value:(NSString *)value;
 
 @end
 

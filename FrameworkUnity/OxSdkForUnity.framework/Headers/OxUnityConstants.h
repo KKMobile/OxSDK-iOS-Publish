@@ -38,6 +38,14 @@ static NSString * const CALLBACK_TYPE_RV_CLICKED = @"OnRvClickedCallback";
 static NSString * const CALLBACK_TYPE_RV_OPENED = @"OnRvOpenedCallback";
 static NSString * const CALLBACK_TYPE_RV_CLOSED = @"OnRvClosedCallback";
 static NSString * const CALLBACK_TYPE_RV_REWARDED = @"OnRvRewardedCallback";
+// OpenAds
+static NSString * const CALLBACK_TYPE_OPEN_ADS_LOADED = @"OnOpenAdsLoadedCallback";
+static NSString * const CALLBACK_TYPE_OPEN_ADS_LOAD_FAILED = @"OnOpenAdsLoadFailedCallback";
+static NSString * const CALLBACK_TYPE_OPEN_ADS_DISPLAYED = @"OnOpenAdsDisplayedCallback";
+static NSString * const CALLBACK_TYPE_OPEN_ADS_DISPLAY_FAILED = @"OnOpenAdsDisplayFailedCallback";
+static NSString * const CALLBACK_TYPE_OPEN_ADS_CLICKED = @"OnOpenAdsClickedCallback";
+static NSString * const CALLBACK_TYPE_OPEN_ADS_OPENED = @"OnOpenAdsOpenedCallback";
+static NSString * const CALLBACK_TYPE_OPEN_ADS_CLOSED = @"OnOpenAdsClosedCallback";
 // Banner
 static NSString * const CALLBACK_TYPE_BANNER_LOADED = @"OnBannerLoadedCallback";
 static NSString * const CALLBACK_TYPE_BANNER_LOAD_FAILED = @"OnBannerLoadFailedCallback";
