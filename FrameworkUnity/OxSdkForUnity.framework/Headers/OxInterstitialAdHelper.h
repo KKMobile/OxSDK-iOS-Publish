@@ -5,7 +5,7 @@
 //  Created by BJMM100001 on 2022/11/24.
 //
 
-#import "Foundation/Foundation.h"
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "InterstitialAdDelegate.h"
 #import "OxAdUnitIds.h"
