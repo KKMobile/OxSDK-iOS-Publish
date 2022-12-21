@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForUnity"#SDK名称
-  spec.version      = "2.0.0.0-RC01-202212161436"#版本号
+  spec.version      = "2.0.0.0-RC01-202212211237"#版本号
   spec.summary      = "OxAdSdk for unity applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.0.0'
 
   # OM
-  spec.dependency 'OxMediation','1.0.4.0-RC01-202212131150'
+  spec.dependency 'OxMediation','1.0.4.0-RC01-20221211231'
   spec.dependency 'OMAdMobAdapter','9.5.0.0-202212131150'
   spec.dependency 'OMApsAdapter','4.5.5.0-202212131150'
   spec.dependency 'OMFacebookAdapter','6.9.0.0-202212131150'
