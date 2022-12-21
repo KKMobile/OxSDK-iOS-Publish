@@ -57,7 +57,7 @@ typedef NS_ENUM(NSInteger, OMInitState) {
 @property (nonatomic, assign) BOOL impressionDataCallBack;
 @property (nonatomic, assign) OxMediationAdFormat useCacheAdFormat;
 @property (nonatomic, assign) BOOL autoCache;
-@property (nonatomic, strong) NSMutableArray *showLogs;
+//@property (nonatomic, strong) NSMutableArray *showLogs;
 
 + (instancetype)sharedInstance;
 
