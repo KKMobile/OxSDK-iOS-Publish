@@ -24,6 +24,7 @@ static NSString * const AdFormat_MREC = @"mrec";
 static NSString * const AdFormat_INTERSTITIAL = @"interstitial";
 static NSString * const AdFormat_NATIVE = @"native";
 static NSString * const AdFormat_REWARDED = @"rewarded";
+static NSString * const AdFormat_OPEN_ADS = @"OpenAds";
 
 static NSString * const AdStatus_IDLE = @"Ad is idle";
 static NSString * const AdStatus_LOADING = @"Ad is loading";
@@ -70,7 +71,8 @@ typedef NS_ENUM(NSInteger, VPNState) {
 
 typedef NS_ENUM(NSInteger, Platform) {
     PlatForm_Max = 0,
-    PlatForm_Admob
+    PlatForm_Admob,
+    PlatForm_OM
 };
 
 typedef NS_ENUM(NSInteger, CountedEvents) {

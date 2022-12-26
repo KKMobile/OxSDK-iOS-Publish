@@ -10,6 +10,7 @@
 #import <AppLovinSDK/AppLovinSDK.h>
 #import "OxAdSdkManager.h"
 #import "AdEventUtil.h"
+@import OxMediation;
 NS_ASSUME_NONNULL_BEGIN
 
 static NSString* PARAM_KEY_VALUE = @"value";
@@ -39,6 +40,8 @@ static NSString* AD_PLATFORM_MAX = @"MAX";
 - (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement;
 
 - (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement;
+
+- (void)logOMOMImpressionData:(OMImpressionData *)impressionData;
 @end
 
 NS_ASSUME_NONNULL_END

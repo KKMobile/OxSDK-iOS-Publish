@@ -50,6 +50,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (double)getLtAdValue;
 
+- (BOOL)isSdkInitialed:(Platform)platform;
+
+- (void)initialize:(Platform)platform successBlock:(OnSdkInitComplete)successBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

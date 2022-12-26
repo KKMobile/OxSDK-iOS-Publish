@@ -19,6 +19,8 @@
 #import "ByteDanceNativeInterstitialAdapter.h"
 #import "ApplovinNativeInterstitialAdapter.h"
 #import "OxRemoteConfigKeys.h"
+#import "ALGoogleAdManagerMediationAdapter.h"
+#import "ALGoogleMediationAdapter.h"
 
 //! Project version number for OxSdkForGames.
 FOUNDATION_EXPORT double OxSdkForGamesVersionNumber;
