@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.1.0.0-RC01-202302092130"#版本号
+  spec.version      = "1.1.0.0-RC01-202302092134"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -28,42 +28,42 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   spec.resources = ["ResBundle/OxSdkRes.bundle","ResBundle/Language.bundle"]
 
-  s.frameworks = 'UIKit'
-  s.dependency 'PureLayout'
-  s.dependency 'AFNetworking'
-  s.dependency 'SDWebImage'
-  s.dependency 'FirebaseAnalytics'
-  s.dependency 'Adjust'
-  s.dependency 'FirebaseRemoteConfig'
+  spec.frameworks = 'UIKit'
+  spec.dependency 'PureLayout'
+  spec.dependency 'AFNetworking'
+  spec.dependency 'SDWebImage'
+  spec.dependency 'FirebaseAnalytics'
+  spec.dependency 'Adjust'
+  spec.dependency 'FirebaseRemoteConfig'
   # Max Mediation
-  s.dependency 'AppLovinSDK', '11.7.0'
-  s.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.2'
-  s.dependency 'AmazonPublisherServicesSDK','4.4.3' #由于最新版本需要支持iOS12 所以先不升级
-  s.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'  #由于最新版本需要支持iOS12 所以先不升级
-  s.dependency 'AppLovinMediationChartboostAdapter', '9.1.0.0'
-  s.dependency 'AppLovinMediationFyberAdapter', '8.1.9.0'
-  s.dependency 'AppLovinMediationGoogleAdManagerAdapter', '9.14.0.2'
-  s.dependency 'AppLovinMediationGoogleAdapter', '9.14.0.2'
-  s.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.5'
-  s.dependency 'AppLovinMediationIronSourceAdapter', '7.2.7.0.0'
-  s.dependency 'AppLovinMediationFacebookAdapter', '6.12.0.0'
-  s.dependency 'AppLovinMediationMobileFuseAdapter', '1.4.0.0'
-  s.dependency 'AppLovinMediationOguryPresageAdapter', '4.0.0.0'
-  s.dependency 'AppLovinMediationByteDanceAdapter', '4.8.1.0.1'
-  s.dependency 'AppLovinMediationSmaatoAdapter', '21.7.9.1'
-  s.dependency 'AppLovinMediationUnityAdsAdapter', '4.5.0.2'
-  s.dependency 'AppLovinMediationVerveAdapter', '2.17.0.0'
-  s.dependency 'AppLovinMediationVungleAdapter', '6.12.1.2'
-  s.dependency 'OpenWrapSDK', '2.7.0'
-  s.dependency 'AppLovinPubMaticAdapter', '1.0.2'
+  spec.dependency 'AppLovinSDK', '11.7.0'
+  spec.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.2'
+  spec.dependency 'AmazonPublisherServicesSDK','4.4.3' #由于最新版本需要支持iOS12 所以先不升级
+  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'  #由于最新版本需要支持iOS12 所以先不升级
+  spec.dependency 'AppLovinMediationChartboostAdapter', '9.1.0.0'
+  spec.dependency 'AppLovinMediationFyberAdapter', '8.1.9.0'
+  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '9.14.0.2'
+  spec.dependency 'AppLovinMediationGoogleAdapter', '9.14.0.2'
+  spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.5'
+  spec.dependency 'AppLovinMediationIronSourceAdapter', '7.2.7.0.0'
+  spec.dependency 'AppLovinMediationFacebookAdapter', '6.12.0.0'
+  spec.dependency 'AppLovinMediationMobileFuseAdapter', '1.4.0.0'
+  spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.0.0.0'
+  spec.dependency 'AppLovinMediationByteDanceAdapter', '4.8.1.0.1'
+  spec.dependency 'AppLovinMediationSmaatoAdapter', '21.7.9.1'
+  spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.5.0.2'
+  spec.dependency 'AppLovinMediationVerveAdapter', '2.17.0.0'
+  spec.dependency 'AppLovinMediationVungleAdapter', '6.12.1.2'
+  spec.dependency 'OpenWrapSDK', '2.7.0'
+  spec.dependency 'AppLovinPubMaticAdapter', '1.0.2'
   #Admob Mediation
-  s.dependency 'Google-Mobile-Ads-SDK', '9.14.0'
-  s.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.0'
-  #s.dependency 'GoogleMobileAdsMediationAppLovin','11.7.0.0' # Admob Sdk 版本冲突（based on Admob 10.0.0+）。
-  s.dependency 'GoogleMobileAdsMediationInMobi','10.1.2.1'
-  s.dependency 'GoogleMobileAdsMediationUnity','4.5.0.0'
-  s.dependency 'GoogleMobileAdsMediationFyber','8.1.9.0'
-  s.dependency 'GoogleMobileAdsMediationPangle','4.8.1.0.0'
-  s.dependency 'GoogleMobileAdsMediationVungle','6.12.1.1'
+  spec.dependency 'Google-Mobile-Ads-SDK', '9.14.0'
+  spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.0'
+  #spec.dependency 'GoogleMobileAdsMediationAppLovin','11.7.0.0' # Admob Sdk 版本冲突（based on Admob 10.0.0+）。
+  spec.dependency 'GoogleMobileAdsMediationInMobi','10.1.2.1'
+  spec.dependency 'GoogleMobileAdsMediationUnity','4.5.0.0'
+  spec.dependency 'GoogleMobileAdsMediationFyber','8.1.9.0'
+  spec.dependency 'GoogleMobileAdsMediationPangle','4.8.1.0.0'
+  spec.dependency 'GoogleMobileAdsMediationVungle','6.12.1.1'
 
 end
