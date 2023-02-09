@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.1.0.0-RC01-202302092134"#版本号
+  spec.version      = "1.1.0.0-RC01-202302092139"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -28,7 +28,6 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   spec.resources = ["ResBundle/OxSdkRes.bundle","ResBundle/Language.bundle"]
 
-  spec.frameworks = 'UIKit'
   spec.dependency 'PureLayout'
   spec.dependency 'AFNetworking'
   spec.dependency 'SDWebImage'
