@@ -24,7 +24,6 @@ static NSString * const AdFormat_MREC = @"mrec";
 static NSString * const AdFormat_INTERSTITIAL = @"interstitial";
 static NSString * const AdFormat_NATIVE = @"native";
 static NSString * const AdFormat_REWARDED = @"rewarded";
-static NSString * const AdFormat_OPEN_ADS = @"OpenAds";
 
 static NSString * const AdStatus_IDLE = @"Ad is idle";
 static NSString * const AdStatus_LOADING = @"Ad is loading";
@@ -71,8 +70,7 @@ typedef NS_ENUM(NSInteger, VPNState) {
 
 typedef NS_ENUM(NSInteger, Platform) {
     PlatForm_Max = 0,
-    PlatForm_Admob,
-    PlatForm_OM
+    PlatForm_Admob
 };
 
 typedef NS_ENUM(NSInteger, CountedEvents) {
@@ -93,6 +91,7 @@ static NSString * const EVENT_TOP50 = @"AdLTV_OneDay_Top50Percent";
 static NSString * const EVENT_TOP60 = @"AdLTV_OneDay_Top60Percent";
 static NSString * const EVENT_TOTAL_ADS_REVENUE_001 = @"Total_Ads_Revenue_001";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
+static NSString * const EVENT_AD_MEMORY_LIMITED = @"Ad_Memory_Limited";
 static NSString * const EVENT_AD_REQUEST = @"Ad_Request";
 static NSString * const EVENT_AD_LOADED = @"Ad_Loaded";
 static NSString * const EVENT_AD_FAILED = @"Ad_Failed";
@@ -133,6 +132,8 @@ static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
 static NSString * const PARAM_CHANNEL = @"Channel";
 static NSString * const PARAM_CAMPAIGN = @"Campaign";
+static NSString * const PARAM_MEMORY_LIMIT_TYPE = @"MemoryLimitType";
+
 
 
 #endif /* AdEvents_h */

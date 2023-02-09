@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<AdEventDelegate> mAdEventDelegate;
 
+
 /// 设置默认聚合平台，不设置默认为Admob，在SDK初始化之前调用
 /// @param defaultMediationPlatform 平台类型，枚举值 Admob/ Max
 - (void)setDefaultMediationPlatform:(Platform)defaultMediationPlatform;
@@ -30,6 +31,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 更改广告聚合平台，主要作用firebase取到更新的值更新本地记录的值
 /// @param platform Platform
 - (void)switchMediationPlatform:(Platform)platform successBlock:(OnSdkInitComplete)block;
+
+/// Remote Config 获取成功之后，将 OxSdk 切换到对应的 Mediation
+- (Platform)switchMediationPlatformByRemoteConfig:(OnSdkInitComplete)block;
+
 
 
 /// 获取当前的sdk 聚合平台
@@ -49,10 +54,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (int)getFrequencyOfEvent:(CountedEvents)event;
 
 - (double)getLtAdValue;
-
-- (BOOL)isSdkInitialed:(Platform)platform;
-
-- (void)initialize:(Platform)platform successBlock:(OnSdkInitComplete)successBlock;
 
 @end
 

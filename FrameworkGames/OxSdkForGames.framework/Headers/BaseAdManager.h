@@ -17,6 +17,7 @@ typedef void (^OnSdkInitComplete)(void);
 
 @interface BaseAdManager : NSObject
 
+@property (nonatomic, copy) OnSdkInitComplete initSuccessBlock;
 
 /// 广告初始化
 /// @param successBlock 初始化成功回调

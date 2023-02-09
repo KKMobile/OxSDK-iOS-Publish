@@ -10,6 +10,8 @@
 #import "OxAdSdkManager.h"
 #import "AdDelegate.h"
 #import "AdValueUtils.h"
+#import "AdEventDelegateHelper.h"
+#import "AppUtils.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -32,9 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId NS_DESIGNATED_INITIALIZER;
 
-- (void)loadAd:(Platform)platform;
+- (void)loadAd;
 
-- (void)loadAdWithPlatform:(Platform)platform placement:(NSString *)placement;
+- (void)loadAd:(NSString *)placement;
 
 - (double)getDuration:(double)latestTimestamp;
 
@@ -70,7 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)appendLimitation:(NSString *)limitation;
 
--(void) setExtraParameters:(NSString *)key value:(NSString *)value;
+-(void) setExtraParametersForMax:(NSString *)key value:(NSString *)value;
 
 @end
 

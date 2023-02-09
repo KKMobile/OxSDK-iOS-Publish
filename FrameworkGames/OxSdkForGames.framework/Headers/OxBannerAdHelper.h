@@ -1,51 +1,26 @@
 //
 //  OxBannerAdHelper.h
-//  OxSDK-Game
+//  SwithMediationDemo
 //
-//  Created by BJMM100001 on 2022/11/24.
+//  Created by Rober on 2022/4/12.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "OxAdHelper.h"
+#import "IBannerAd.h"
 #import "BannerAdDelegate.h"
-#import "OxAdUnitIds.h"
-#import "AdEvents.h"
-
+#import "BannerInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxBannerAdHelper : NSObject
-
+@interface OxBannerAdHelper : OxAdHelper<IBannerAd>
+@property (nonatomic, weak) id<BannerInternalAdDelegate>  mInternalAddelegate;
 @property (nonatomic, weak) id<BannerAdDelegate> mAdDelegate;
+@property (nonatomic, assign) bool  mIsReady;
+@property (nonatomic, assign) bool  mAutoRefresh;
+@property (nonatomic, strong) NSString *loadPlacement;
+@property (nonatomic, assign) bool mAdaptive;
 
-- (instancetype)initWithCurrentVC:(UIViewController *)VC adUnitIds:(OxAdUnitIds *)adUnitIds;
+- (void)createAd;
 
-- (void)loadAd;
-
-- (void)loadAd:(NSString *)placement;
-
-- (void)loadAdWithPlatform:(Platform)platform;
-
-- (void)loadAdWithPlatform:(Platform)platform placement:(NSString *)placement;
-
-- (void)startAutoRefresh;
-
-- (void)stopAutoRefresh;
-
-- (void)hideAd;
-
-- (void)showAd:(nonnull UIView *)adContainerV;
-
-- (void)showAd:(nonnull UIView *)adContainerV placement:(nonnull NSString *)placement;
-
-- (void)destoryAd;
-
-- (BOOL)isReady;
-
-- (void)onClientShowingLimitation:(NSString *)limitation;
-
-- (void)onClientShowingLimitation:(NSString *)placement limitation:(NSString *)limitation;
-
-- (void)setExtraParameters:(NSString *)key value:(NSString *)value;
 
 @end
 

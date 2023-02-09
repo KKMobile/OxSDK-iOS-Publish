@@ -5,10 +5,10 @@
 //  Created by Rober on 2022/4/20.
 //
 
-#import "BaseBannerAdHelper.h"
+#import "OxBannerAdHelper.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdmobBannerAdHelper : BaseBannerAdHelper
+@interface AdmobBannerAdHelper : OxBannerAdHelper
 
 @end
 

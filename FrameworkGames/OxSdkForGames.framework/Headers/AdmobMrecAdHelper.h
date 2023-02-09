@@ -5,11 +5,11 @@
 //  Created by Rober on 2022/4/20.
 //
 
-#import "BaseMrecAdHelper.h"
+#import "OxMrecAdHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdmobMrecAdHelper : BaseMrecAdHelper
+@interface AdmobMrecAdHelper : OxMrecAdHelper
 
 @end
 

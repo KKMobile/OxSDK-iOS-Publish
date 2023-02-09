@@ -5,11 +5,11 @@
 //  Created by Rober on 2022/4/20.
 //
 
-#import "BaseInterstitialAdHelper.h"
+#import "OxInterstitialAdHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdmobInterstitialAdHelper : BaseInterstitialAdHelper
+@interface AdmobInterstitialAdHelper : OxInterstitialAdHelper
 
 @end
 

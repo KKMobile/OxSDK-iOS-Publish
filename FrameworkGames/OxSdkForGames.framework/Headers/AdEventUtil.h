@@ -33,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdImpressionEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName
     waterfallName:(nullable NSString*)waterfullName networkResponses:(NSInteger)networkResponses latencyMillis:(double)latencyMillis creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
 
+/// 达到限制
++ (void)trackAdMemoryLimitedEvent:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement;
+
 // 广告展示失败（DisplayFailed 回调）。
 + (void)trackAdShowFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName
     waterfallName:(nullable NSString*)waterfullName networkResponses:(NSInteger)networkResponses creativeId:(nullable NSString*)creativeId error:(nullable NSString*)error failedDuration:(double)failedDuration;

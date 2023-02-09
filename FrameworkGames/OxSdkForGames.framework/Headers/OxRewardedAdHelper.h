@@ -1,47 +1,32 @@
 //
 //  OxRewardedAdHelper.h
-//  OxSDK-Game
+//  SwithMediationDemo
 //
-//  Created by BJMM100001 on 2022/11/24.
+//  Created by Rober on 2022/4/13.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "OxAdHelper.h"
+#import "IFullScreenAd.h"
 #import "RewardedAdDelegate.h"
-#import "OxAdUnitIds.h"
-#import "AdEvents.h"
-
+#import "RewardedInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxRewardedAdHelper : NSObject
+@interface OxRewardedAdHelper : OxAdHelper<IFullScreenAd>
 
 @property (nonatomic, weak) id<RewardedAdDelegate> mAddelegate;
+@property (nonatomic, weak) id<RewardedInternalAdDelegate> mInternalAddelegate;
 
-- (instancetype)initWithCurrentVC:(UIViewController *)VC adUnitIds:(OxAdUnitIds *)adUnitIds;
+@property (nonatomic, assign) bool mUserRewarded;
 
-- (void)loadAd;
+@property (nonatomic, assign) double mOnRewardedVideoStartedTime;
 
-- (void)loadAd:(NSString *)placement;
+@property (nonatomic, assign) NSInteger retryAttempt;
+@property (nonatomic, assign) BOOL mReload;
+@property (nonatomic, assign) BOOL mIsReloadingInLoadFailed;
+@property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
 
-- (void)loadAdWithPlatform:(Platform)platform;
+- (void)createAd;
 
-- (void)loadAdWithPlatform:(Platform)platform placement:(NSString *)placement;
-
-- (void)showAd;
-
-- (void)showAd:(NSString *)placement;
-
-- (void)destoryAd;
-
-- (BOOL)isReady;
-
-- (void) setReloadAfterFailed:(BOOL)reload;
-
-- (void)onClientShowingLimitation:(NSString *)limitation;
-
-- (void)onClientShowingLimitation:(NSString *)placement limitation:(NSString *)limitation;
-
-- (void)setExtraParameters:(NSString *)key value:(NSString *)value;
 
 @end
 

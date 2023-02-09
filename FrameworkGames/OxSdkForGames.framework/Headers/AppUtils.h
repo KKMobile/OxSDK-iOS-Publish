@@ -16,11 +16,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)getAdapterAppId:(NSString *)key;
 
-- (BOOL)getAdpterAppEnvironment:(NSString *)key;
-
 - (NSString *)getStringFromPlist:(NSString *)key;
 
 - (NSNumber *)getNumberFormPlist:(NSString *)key;
+
+// app 内存显示
++ (double)getAppMemoryLimit;
+// 应用剩余内存
++ (double)getFreeSize;
+// app 已用内存
++ (double)memoryUsage;
+// 可用内存
++ (double)getAvailableMemory;
 
 @end
 
