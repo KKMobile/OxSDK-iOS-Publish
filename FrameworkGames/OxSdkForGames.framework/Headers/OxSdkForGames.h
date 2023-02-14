@@ -16,6 +16,7 @@
 #import "OxAdShowLimitation.h"
 #import "OxAdjustTokensBuilder.h"
 #import "OxAdjustTokens.h"
+#import "OxRemoteConfigHelper.h"
 #import "ByteDanceNativeInterstitialAdapter.h"
 #import "ApplovinNativeInterstitialAdapter.h"
 
