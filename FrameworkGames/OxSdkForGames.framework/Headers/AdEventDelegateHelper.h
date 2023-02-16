@@ -21,8 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)onTrackEvent:(nonnull NSString *)name params:(nullable NSDictionary *)params;
 
-+ (NSArray *)getTopValuesConfig;
-
 @end
 
 NS_ASSUME_NONNULL_END

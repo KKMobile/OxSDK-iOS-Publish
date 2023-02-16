@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<AdEventDelegate> mAdEventDelegate;
 
+- (void)initialize:(Platform)platform successBlock:(OnSdkInitComplete)successBlock;
 
 /// 设置默认聚合平台，不设置默认为Admob，在SDK初始化之前调用
 /// @param defaultMediationPlatform 平台类型，枚举值 Admob/ Max

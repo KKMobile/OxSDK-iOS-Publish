@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxRemoteConfigHelper : NSObject
 
++ (NSArray *)getTopValuesConfig;
+
 /// 打点等级。 OX_CONFIG_ADSDK_LOG_LEVEL
 + (int)getEventLevel;
 
