@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *mAdunitId;
 
-@property (nonatomic, strong, nullable) UIViewController *mViewController;
+@property (nonatomic, weak, nullable) UIViewController *mViewController;
 
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;

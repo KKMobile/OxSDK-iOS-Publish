@@ -7,6 +7,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "OxAdSdkConsentManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,8 +21,9 @@ typedef void (^SaveClick)(BOOL);
 @property (nonatomic, strong) UIView* blackBgV;
 @property (nonatomic, strong) UIView* alertV;
 
-- (instancetype)initWithBackClicked:(BackClick)backClick
-                saveClick:(SaveClick)saveClick;
+- (instancetype)initWithEntryType:(ConsentEntryType)entryType
+                      backClicked:(BackClick)backClick
+                        saveClick:(SaveClick)saveClick;
 /**
 *  AlertView显示
 */

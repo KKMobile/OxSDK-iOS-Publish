@@ -14,17 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (OxAdjustTokens *)getAdjustTokens;
 
-+ (NSArray *)getTopValuesConfig;
-
-+ (int)getEventLevel;
-
-+ (int)getDeepUserLevel;
-
-+ (int)getAllowedKeywordType;
-
-+ (double)getAdLtvMedium;
-
-+ (double)getAdLtvHigh;
++ (void)onTrackEvent:(nonnull NSString *)name params:(nullable NSDictionary *)params;
 
 @end
 

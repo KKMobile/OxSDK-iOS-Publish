@@ -30,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param platform Platform
 - (void)switchMediationPlatform:(Platform)platform successBlock:(OnSdkInitComplete)block;
 
+/// Remote Config 获取成功之后，将 OxSdk 切换到对应的 Mediation
+- (Platform)switchMediationPlatformByRemoteConfig:(OnSdkInitComplete)block;
+
 
 /// 获取当前的sdk 聚合平台
 - (Platform)getMediationPlatform;

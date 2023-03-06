@@ -11,21 +11,16 @@
 
 @protocol AdEventDelegate<NSObject>
 
-- (NSArray *)getTopValuesConfig;
-
-@optional
-
-- (int)getEventLevel;
-
 - (OxAdjustTokens *)getAdjustTokens;
 
-- (int)getDeepUserLevel;
-
-- (int)getAllowedKeywordType;
-
-- (double)getAdLtvMedium;
-
-- (double)getAdLtvHigh;
+@optional
+/**
+* Sdk 内部进行事件上报时，将事件信息暴露给客户端，客户端可根据需求进行利用。
+* @param name 事件名称。
+* @param params 相关参数。
+*/
+- (void) onTrackEvent:(nonnull NSString *)name params:(nullable nullable NSDictionary *)params;
+         
 
 @end
 

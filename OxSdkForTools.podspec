@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.0.5.0-RC01-202212161718"#版本号
+  spec.version      = "1.1.0.0-rc01-202303061230"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-  spec.resources = ["ResBundle/OxSdkRes.bundle","ResBundle/Language.bundle"]
+  spec.resources = ["ResBundle/Tools/OxSdkRes.bundle","ResBundle/Tools/Language.bundle"]
   
   spec.dependency 'PureLayout'
   spec.dependency 'SDWebImage'

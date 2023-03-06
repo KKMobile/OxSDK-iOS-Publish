@@ -8,6 +8,11 @@
 #import <Foundation/Foundation.h>
 #import "ConsentStatusDelegate.h"
 
+typedef enum : NSUInteger {
+    ConsentEntryTypeNormal,
+    ConsentEntryTypeAbout,
+} ConsentEntryType;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAdSdkConsentManager : NSObject
@@ -18,7 +23,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showPrivacyDialog;
 
+// 需要在主线程中操作
+- (BOOL)isShowPrivace;
+
 - (void)showConsentDialog;
+
+// 需要在主线程中操作
+- (BOOL)isShowConsent;
+
+- (void)showConsentDialog:(ConsentEntryType)entryType;
 
 - (BOOL)isGDPRSupported;
 

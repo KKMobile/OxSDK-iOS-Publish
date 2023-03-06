@@ -1,6 +1,0 @@
-framework module OxSdkForTools {
-  umbrella header "OxSdkForTools.h"
-
-  export *
-  module * { export * }
-}
