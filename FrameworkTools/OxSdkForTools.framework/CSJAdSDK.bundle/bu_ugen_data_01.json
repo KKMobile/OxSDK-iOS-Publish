@@ -1,0 +1,56 @@
+
+{
+"text":"穿山甲",
+"image_url": "http://sf3-be-pack.pglstatp-toutiao.com/img/web.business.image/202203255d0ddc30751d1e9a4ac8b076~noop.webp",
+"icon": "https://sf6-be-pack.pglstatp-toutiao.com/obj/ad-app-package/c515ba2a1a687810ebda128db4d8e23d",
+"title": "经典老歌500首，百听不厌",
+"button_text": "立即下载",
+"rich_text": "<h1>我是富文本组件</h1><a>我是富文本组件</a> <a href=\"https://baidu.com\"> 这是一个超链接</a> ",
+"video_url": "http://sf1-ttcdn-tos.pstatp.com/obj/ttfe/adfe/union_endcard/union_test_tool.mp4",
+"bg_url": "http://sf1-ttcdn-tos.pstatp.com/obj/ttfe/pattern/splash_img/3.png",
+"hintText": "请输入文本",
+"hintPhone": "请输入您的手机号",
+
+"swipe_up": {
+"asset": "lottie/swipe_up/swipeUp.json",
+"imagePath": "lottie/swipe_up/images",
+"loop": "true"
+},
+"swipe_upDown": {
+"asset": "lottie/swipe_upDown/swipeUpDown.json",
+"imagePath": "lottie/swipe_upDown/images",
+"loop": "true"
+},
+"swipe_right": {
+"asset": "lottie/swipe_right/swipeRight.json",
+"imagePath": "lottie/swipe_right/images",
+"loop": "true"
+},
+"swipe_left": {
+"asset": "lottie/swipe_left/swipeLeft.json",
+"imagePath": "lottie/swipe_left/images",
+"loop": "true"
+},
+"swipe_down": {
+"asset": "lottie/swipe_down/swipe_down.json",
+"imagePath": "lottie/swipe_down/images",
+"loop": "true"
+},
+"swipe_leftRight": {
+"asset": "lottie/swipe_leftRight/swipeLeftRight.json",
+"imagePath": "lottie/swipe_leftRight/images",
+"loop": "true"
+},
+"pointer": {
+"asset": "lottie/pointer/pointer.json",
+"imagePath": "lottie/pointer/images",
+"loop": "true"
+},
+"tap": {
+"asset": "lottie/tap/tap.json",
+"imagePath": "lottie/tap/images",
+"loop": "true"
+}
+}
+
+

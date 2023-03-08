@@ -1,0 +1,212 @@
+{
+    "template_info":{
+        "sdk_version":"1.0.0"
+    },
+    "main_template":{
+        "id":"frame_layout",
+        "name":"FrameLayout",
+        "width":"match_parent",
+        "height":"match_parent",
+        "marginTop":"0",
+        "background":"#000000",
+        "onTap":[{
+            "type":"clickEvent"
+        }],
+        "children": [
+            {
+                "id":"VideoPlaceholder",
+                "name":"VideoPlaceholder",
+                "width":"match_parent",
+                "height":"match_parent",
+                "layoutGravity": "center",
+                "coverSrc":"${image[0].url}",
+                "src":"https://tosv.byted.org/obj/eden-internal/bvognupqhbo/pg-moho.mp4",
+                "onTap":[{
+                    
+                }]
+            },
+            {
+                "id":"mute_image",
+                "name":"Image",
+                "width":"30",
+                "height":"30",
+                "marginLeft":"15",
+                "marginTop":"15",
+                "padding": "7",
+                "scaleType":"fitXY",
+                "background":"#70222435",
+                "layoutGravity": "left|top",
+                "borderRadius":"15",
+                "src":"${setting.voice_control == 1 ? 'http://sf3-fe-tos.pglstatp-toutiao.com/obj/csj-sdk-static/resources/bu_voice_silent.png' : 'http://sf3-fe-tos.pglstatp-toutiao.com/obj/csj-sdk-static/resources/bu_voice.png'}",
+                "onTap":[{
+                    "type":"muteVideo",
+                    "video_control":"1",
+                    "muteSrc":"http://sf3-fe-tos.pglstatp-toutiao.com/obj/csj-sdk-static/resources/bu_voice_silent.png",
+                    "unmuteSrc":"http://sf3-fe-tos.pglstatp-toutiao.com/obj/csj-sdk-static/resources/bu_voice.png"
+                    
+                }]
+            },
+            {
+                "id":"dislike",
+                "name":"Text",
+                "width":"wrap_content",
+                "height":"wrap_content",
+                "text":"反馈",
+                "marginLeft":"55",
+                "marginTop":"15",
+                "paddingLeft":"8",
+                "paddingRight":"8",
+                "paddingTop":"6",
+                "paddingBottom":"6",
+                "layoutGravity": "left|top",
+                "textColor":"#ffffff",
+                "background":"#70222435",
+                "textAlign":"center",
+                "textSize":"14",
+                "borderRadius":"14",
+                "maxLines":"1",
+                "visibility": "${dislike_control == 1 ? 'visible' : 'gone'}",
+                "onTap":[{
+                    "type":"dislike"
+                }]
+            },
+            {
+                "id":"countDownSkip",
+                "name":"CountDownSkip",
+                "height":"30",
+                "width":"82",
+                "marginTop":"15",
+                "marginRight":"15",
+                "paddingLeft":"8",
+                "paddingRight":"8",
+                "paddingTop":"5",
+                "paddingBottom":"5",
+                "layoutGravity": "right|top",
+                "textColor":"#ffffff",
+                "background":"#70222435",
+                "textAlign":"center",
+                "textSize":"14",
+                "borderRadius":"14",
+                "maxLines":"1"
+            },
+            {
+                "id": "banner_container",
+                "name": "FrameLayout",
+                "width": "match_parent",
+                "height": "100",
+                "layoutGravity": "bottom",
+                "background": "#dfffffff",
+                "onTap":[{
+                    "type":"clickEvent"
+                }],
+                "children": [
+                    {
+                        "id": "ll_container_banner",
+                        "name": "FlexLayout",
+                        "width": "match_parent",
+                        "height": "wrap_content",
+                        "flexDirection": "row",
+                        "marginLeft": "10",
+                        "marginRight": "10",
+                        "marginTop": "8",
+                        "marginBottom": "8",
+                        "layoutGravity": "center",
+                        "alignItems": "center",
+                        "onTap":[{
+                            "type":"clickEvent"
+                        }],
+                        "children": [
+                            {
+                                "id": "banner_icon",
+                                "name": "Image",
+                                "width": "61",
+                                "height": "61",
+                                "scaleType": "fitXY",
+                                "src": "${icon.url}",
+                                "borderRadius": "9",
+                                "onTap":[{
+                                    "type":"clickEvent"
+                                }]
+                            },
+                            {
+                                "id": "text_container",
+                                "name": "FlexLayout",
+                                "width": "wrap_content",
+                                "height": "40",
+                                "flexDirection": "column",
+                                "marginLeft": "10",
+                                "marginRight": "10",
+                                "justifyContent": "space_around",
+                                "flexGrow":"1",
+                                "onTap":[{
+                                    "type":"clickEvent"
+                                }],
+                                "children": [
+                                    {
+                                        "id": "title",
+                                        "name": "Text",
+                                        "width": "160",
+                                        "height": "wrap_content",
+                                        "text": "${source != nil ? source : app.app_name}",
+                                        "textSize": "17",
+                                        "maxLines": "1",
+                                        "textColor": "#000000",
+                                        "textStyle": "bold"
+                                    },
+                                    {
+                                        "id": "description",
+                                        "name": "RatingBar",
+                                        "width": "wrap_content",
+                                        "height": "wrap_content",
+                                        "size": "10",
+                                        "highLightColor": "#F5A623",
+                                        "score":"${app.score == null || app.score == '' ? 5:app.score}"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "download_button",
+                                "name": "Text",
+                                "width": "90",
+                                "height": "36",
+                                "padding": "5",
+                                "marginRight": "0",
+                                "text": "${button_text}",
+                                "textColor": "#ffffff",
+                                "background": "#007AFF",
+                                "borderRadius": "5",
+                                "textAlign": "center",
+                                "textSize": "15",
+                                "maxLines": "1",
+                                "alignSelf": "center",
+                                "onTap":[{
+                                    "type":"clickEvent"
+                                }]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ad_logo",
+                        "name": "Image",
+                        "width": "35",
+                        "height": "17",
+                        "src": "http://sf3-fe-tos.pglstatp-toutiao.com/obj/csj-sdk-static/resources/bu_logoAd.png",
+                        "marginLeft": "10",
+                        "marginBottom": "2",
+                        "layoutGravity": "left|bottom",
+                        "onTap":[{
+                            "type":"openPolicy"
+                        }]
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
+
+
+
+
+
