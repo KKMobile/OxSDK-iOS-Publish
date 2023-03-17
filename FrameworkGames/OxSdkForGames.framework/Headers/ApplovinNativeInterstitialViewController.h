@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ApplovinNativeInterstitialViewController : UIViewController
 
+- (id)initWithUiStyle:(int)uiStyle;
+
 @end
 
 NS_ASSUME_NONNULL_END

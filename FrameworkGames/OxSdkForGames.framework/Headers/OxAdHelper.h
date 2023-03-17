@@ -17,10 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAdHelper : NSObject
 
-@property (nonatomic, strong) NSString *mAdunitId;
-
 @property (nonatomic, strong) UIViewController *mViewController;
-
+@property (nonatomic, strong) NSString *mAdunitId;
+@property (nonatomic, assign) BOOL mDisplayCalled;
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;
 @property (nonatomic, assign) double mLastShowFailedTimestamp;
