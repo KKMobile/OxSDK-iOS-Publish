@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMFacebookAdapter"#SDK名称
-  spec.version      = "6.9.0.0-202212131150"#版本号
+  spec.version      = "6.12.0.0-202303301207"#版本号
   spec.summary      = "This is OMFacebookAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -27,6 +27,6 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-  spec.dependency 'FBAudienceNetwork'
+  spec.dependency 'FBAudienceNetwork','6.12.0'
 
 end
