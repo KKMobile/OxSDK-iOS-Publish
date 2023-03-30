@@ -1,0 +1,6 @@
+framework module OMPubMaticAdapter {
+  umbrella header "OMPubMaticAdapter.h"
+
+  export *
+  module * { export * }
+}
