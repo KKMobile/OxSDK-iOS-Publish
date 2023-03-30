@@ -1,0 +1,6 @@
+framework module OMVungleAdapter {
+  umbrella header "OMVungleAdapter.h"
+
+  export *
+  module * { export * }
+}
