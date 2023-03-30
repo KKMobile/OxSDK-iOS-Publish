@@ -55,6 +55,8 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 @property (nonatomic, strong) OMScene *scene;
 
 @property (nonatomic, strong) OMInstance *optimalFillInstance;
+@property (nonatomic, assign) float revenue;
+@property (nonatomic, copy) NSString *netWorkName;
 
 
 - (instancetype)initWithPlacementID:(NSString*)placementID size:(CGSize)size;
