@@ -1,0 +1,6 @@
+framework module OMHeliumAdapter {
+  umbrella header "OMHeliumAdapter.h"
+
+  export *
+  module * { export * }
+}
