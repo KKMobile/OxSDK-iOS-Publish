@@ -7,6 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "OMCustomEventDelegate.h"
+#import "OMInstanceContainer.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -24,8 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
-+ (void)bidWithNetworkItem:(OMBidNetworkItem*)networkItem adFormat:(NSString*)format adSize:(CGSize)size responseCallback:(void(^)(NSDictionary *bidResponseData))callback;
-+ (void)bidWithNetworkItem:(OMBidNetworkItem*)networkItem bidParameter:(id)bidParameter adFormat:(NSString*)format adSize:(CGSize)size responseCallback:(void(^)(NSDictionary *bidResponseData))callback;
++ (void)bidWithNetworkItem:(OMBidNetworkItem*)networkItem adFormat:(NSString*)format adSize:(CGSize)size instanceContainer:(OMInstanceContainer *)instanceContainer localExtraParameter:(NSDictionary<NSString *,id> *)localExtraParameter responseCallback:(void(^)(NSDictionary *bidResponseData))callback;
 + (NSString*)bidderToken;
 @end
 

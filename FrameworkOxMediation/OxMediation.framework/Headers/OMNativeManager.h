@@ -2,25 +2,18 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import "OMAdSingletonInterface.h"
 #import "OMNativeDelegate.h"
+#import "OMAdHelperCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMNativeManager : OMAdSingletonInterface
+@interface OMNativeManager : NSObject <OMNativeDelegate,OMAdHelperCustomEvent>
 
-@property (nonatomic, strong) NSMutableDictionary *nativeBuilderDic;
+@property (nonatomic, weak) id<OMNativeDelegate> delegate;
+@property (nonatomic, strong) OMNative *native;
 
-//+ (instancetype)sharedInstance;
-- (instancetype)initWithPlacementID:(NSString *)placementID;
-
-/// Add delegate
-- (void)addDelegate:(id<OMNativeDelegate>)delegate;
-
-/// Remove delegate
-- (void)removeDelegate:(id<OMNativeDelegate>)delegate;
-
-- (void)loadWithPlacementID:(NSString*)placementID;
+- (instancetype)initWithPlacementId:(NSString *)placementId;
+- (void)loadAd;
 
 @end
 

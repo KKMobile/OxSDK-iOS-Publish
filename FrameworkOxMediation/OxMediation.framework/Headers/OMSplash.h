@@ -5,19 +5,17 @@
 #import <Foundation/Foundation.h>
 #import "OMSplashDelegate.h"
 #import "OMSplashAd.h"
+#import "OMAdHelperCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMSplash : NSObject <splashDelegate>
+@interface OMSplash : NSObject <splashDelegate,OMAdHelperCustomEvent>
 
 @property (nonatomic, weak)id<OMSplashDelegate> delegate;
-@property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
 @property (nonatomic, strong) OMSplashAd *splashAd;
 
 
 - (instancetype)initWithPlacementId:(NSString *)placementId adSize:(CGSize)size;
-
-- (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
 - (void)loadAd;
 

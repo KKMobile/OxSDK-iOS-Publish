@@ -5,17 +5,15 @@
 #import <UIKit/UIKit.h>
 #import "OMRewardedVideoDelegate.h"
 #import "OMRewardedVideoAd.h"
+#import "OMAdHelperCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@interface OMRewardedVideo : NSObject <RewardedVideoDelegate>
+@interface OMRewardedVideo : NSObject <RewardedVideoDelegate,OMAdHelperCustomEvent>
 
 @property (nonatomic, weak)id<OMRewardedVideoDelegate> delegate;
-@property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
 @property (nonatomic, strong) OMRewardedVideoAd *rewardedVideoAd;
 
 - (instancetype)initWithPlacementId:(NSString *)placementId;
-
-- (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
 - (void)loadAd;
 

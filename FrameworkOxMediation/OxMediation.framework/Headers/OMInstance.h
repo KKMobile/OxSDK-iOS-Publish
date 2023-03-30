@@ -7,11 +7,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMInstance : NSObject
+@interface OMInstance : NSObject <NSCopying>
 
 @property (nonatomic, copy) NSString *unitID;
 @property (nonatomic, copy) NSString *instanceID;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *netWorkName;
 @property (nonatomic, assign) OMAdNetwork adnID;
 @property (nonatomic, copy) NSString *adnPlacementID;
 @property (nonatomic, assign) NSInteger frequencryCap;

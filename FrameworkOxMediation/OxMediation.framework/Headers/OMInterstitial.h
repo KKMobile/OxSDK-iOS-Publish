@@ -5,19 +5,17 @@
 #import <UIKit/UIKit.h>
 #import "OMInterstitialDelegate.h"
 #import "OMInterstitialAd.h"
+#import "OMAdHelperCustomEvent.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMInterstitial : NSObject <InterstitialDelegate>
+@interface OMInterstitial : NSObject <InterstitialDelegate,OMAdHelperCustomEvent>
 
 @property (nonatomic, weak) id<OMInterstitialDelegate> delegate;
-@property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
 @property (nonatomic, strong) OMInterstitialAd *interstitialAd;
 
 - (instancetype)initWithPlacementId:(NSString *)placementId;
-
-- (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
 
 - (void)loadAd;
 

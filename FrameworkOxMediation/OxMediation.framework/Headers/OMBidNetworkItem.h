@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger maxTimeOutMS;
 @property (nonatomic, assign) BOOL testMode;
 @property (nonatomic, strong) NSDictionary *extraData;
+@property (nonatomic, strong) NSArray *bidInfos;
 
 + (OMBidNetworkItem *)networkItemWithName:(NSString*)adnName
                                    appKey:(NSString*)key

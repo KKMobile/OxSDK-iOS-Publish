@@ -38,6 +38,7 @@ typedef NS_ENUM(NSInteger, OMAdNetwork) {
     OMAdNetworkPubMatic = 34,
     OMAdNetworkAps = 35,
     OMAdNetworkOmInterstitialOpenAds = 36,
+    OMAdNetworkOmNativeBanner = 37,
 };
 
 #endif /* OxMediationConstant_h */

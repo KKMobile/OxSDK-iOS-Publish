@@ -8,10 +8,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OMSmartLoad : OMLoad
 
 
-@property (nonatomic, strong, nullable) NSTimer *checkCacheTimer;
-
-
-
 @end
 
 NS_ASSUME_NONNULL_END

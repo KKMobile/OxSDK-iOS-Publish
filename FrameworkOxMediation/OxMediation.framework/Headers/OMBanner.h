@@ -5,6 +5,7 @@
 #import <Foundation/Foundation.h>
 #import "OMBannerDelegate.h"
 #import "OMBannerAd.h"
+#import "OMAdHelperCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,10 +28,9 @@ typedef NS_ENUM(NSInteger, OMBannerLayoutAttribute) {
 };
 
 /// A customized UIView to represent a OxMediation ad (banner ad).
-@interface OMBanner : UIView
+@interface OMBanner : UIView <OMAdHelperCustomEvent>
 
 @property(nonatomic, readonly, nullable) NSString *placementID;
-@property (nonatomic, strong) NSMutableDictionary<NSString*,id> *extraParameters;
 @property (nonatomic, strong) OMBannerAd *bannerAd;
 
 /// the delegate
@@ -38,9 +38,6 @@ typedef NS_ENUM(NSInteger, OMBannerLayoutAttribute) {
 
 /// The banner's ad placement ID.
 - (NSString*)placementID;
-
-- (void)setExtraParameterForKey:(NSString *)key value:(nullable NSString *)value;
-
 
 /// This is a method to initialize an OMBanner.
 /// type: The size of the ad. Default is OMBannerTypeDefault.

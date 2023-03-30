@@ -79,6 +79,7 @@ typedef NS_ENUM(NSInteger, OMInstanceLoadState) {
 - (void)notifyNoFill;
 - (void)notifyLoadEnd;
 - (void)addEvent:(NSInteger)eventID extraData:data;
+- (NSString *)getIntanceState:(OMInstanceLoadState)state;
 
 @end
 

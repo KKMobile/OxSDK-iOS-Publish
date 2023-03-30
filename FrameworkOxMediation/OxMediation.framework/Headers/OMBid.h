@@ -6,6 +6,7 @@
 #import "OMBidResponse.h"
 #import "OMBidCustomEvent.h"
 #import "OxMediationAdFormats.h"
+#import "OMInstanceContainer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,14 +20,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@class OMAdBase;
+
 @interface OMBid : NSObject
 @property (nonatomic, strong) NSArray *bidNetworkItems;
 @property (nonatomic, strong) NSMutableDictionary *bidResponses;
 @property (nonatomic, strong) NSTimer *bidTimer;
 @property (nonatomic, assign) BOOL bidding;
 @property (nonatomic, weak) id<OMBidDelegate> delegate;
+@property (nonatomic, strong) OMInstanceContainer *instanceContainer;
 
-- (void)bidWithNetworkItems:(NSArray*)networkItems adFormat:(NSString*)format adSize:(CGSize)size;
+- (void)bidWithNetworkItems:(NSArray*)networkItems adFormat:(NSString*)format adSize:(CGSize)size localExtraParameter:(NSDictionary<NSString *,id> *)localExtraParameter;
 
 @end
 

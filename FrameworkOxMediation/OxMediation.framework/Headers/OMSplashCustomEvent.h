@@ -1,10 +1,7 @@
 // Copyright 2020 ADTIMING TECHNOLOGY COMPANY LIMITED
 // Licensed under the GNU Lesser General Public License Version 3
 
-#import <Foundation/Foundation.h>
-#import "OMCustomEventDelegate.h"
-#import <UIKit/UIKit.h>
-#import "OMBidCustomEvent.h"
+#import "OMBaseCustomEvent.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol OMSplashCustomEvent;
@@ -17,13 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)splashCustomEventFailToShow:(id<OMSplashCustomEvent>)adapter error:(NSError*)error;
 @end
 
-@protocol OMSplashCustomEvent<NSObject>
+@protocol OMSplashCustomEvent<OMBaseCustomEvent>
 @property(nonatomic, weak, nullable) id<splashCustomEventDelegate> delegate;
 - (instancetype)initWithParameter:(NSDictionary *)adParameter adSize:(CGSize)size;
 @optional
-- (void)setBidDelegate:(id<OMBidCustomEventDelegate>)bidDelegate;
-- (void)loadAd;
-- (void)loadAdWithBidPayload:(NSString*)bidPayload;
 - (BOOL)isReady;
 - (void)showWithWindow:(UIWindow *)window customView:(UIView *)customView;
 @end

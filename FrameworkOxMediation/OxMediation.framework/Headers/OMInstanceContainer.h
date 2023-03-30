@@ -12,7 +12,6 @@ typedef id _Nullable (^mInstanceInitBlock)(void);
 @interface OMInstanceContainer : NSObject
 @property (nonatomic, strong) NSMutableDictionary *instanceMap;
 @property (nonatomic, strong) NSMutableDictionary *placementCacheMap;
-+ (instancetype)sharedInstance;
 - (id)getInstance:(NSString*)instanceID block:(mInstanceInitBlock)mInstanceInitBlock;
 - (void)removeImpressionInstance:(NSString*)instanceID;
 @end

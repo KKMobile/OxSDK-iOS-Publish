@@ -1,10 +1,7 @@
 // Copyright 2020 ADTIMING TECHNOLOGY COMPANY LIMITED
 // Licensed under the GNU Lesser General Public License Version 3
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "OMCustomEventDelegate.h"
-#import "OMBidCustomEvent.h"
+#import "OMBaseCustomEvent.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol OMInterstitialCustomEvent;
@@ -19,16 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@protocol OMInterstitialCustomEvent<NSObject>
+@protocol OMInterstitialCustomEvent<OMBaseCustomEvent>
 @property(nonatomic, weak, nullable) id<interstitialCustomEventDelegate> delegate;
 - (instancetype)initWithParameter:(NSDictionary*)adParameter;
 @optional
-- (void)setBidDelegate:(id<OMBidCustomEventDelegate>)bidDelegate;
-- (void)loadAd;
-- (void)loadAdWithBidPayload:(NSString*)bidPayload;
 - (BOOL)isReady;
 - (void)show:(UIViewController*)rootViewController;
-- (void)setBidParameters:(id)parameters;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,6 +14,9 @@
 #import "OMLoad.h"
 #import "OMSmartLoad.h"
 #import "OMScene.h"
+#import "OMInstanceContainer.h"
+#import "OMInstance.h"
+#import "OMConfig.h"
 
 typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 
@@ -22,6 +25,9 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) OxMediationAdFormat adFormat;
 @property (nonatomic, weak) UIViewController *rootViewController;
+@property (nonatomic, strong) OMInstanceContainer *instanceContainer;
+
+@property (nonatomic, strong) NSMutableDictionary *instanceMap; // key instanceid, value adapter
 @property (nonatomic, strong) NSMutableDictionary<NSString*,id> *instanceAdapters; // key instanceid, value adapter
 @property (nonatomic, strong) NSMutableDictionary<NSString*,id> *didLoadAdObjects; //key instance, value ad
 @property (nonatomic, strong) NSMutableDictionary<NSString*,NSString*> *didLoadAdnName; //key instance, value adn name
@@ -38,18 +44,18 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 @property (nonatomic, assign) NSInteger abTestId;
 @property (nonatomic, strong) NSDictionary *wfRule; //Waterfall rule data
 @property (nonatomic, copy) NSDictionary *wfInsRevenueData; //Waterfall instance revenue data
-@property (nonatomic, strong) NSMutableArray *wfInsList;//instance revenue data
 @property (nonatomic, strong) NSArray *wfInsPriority;//waterfall instance priority;
 //for bid
 @property (nonatomic, strong) OMBid *bid;
 @property (nonatomic, strong) NSMutableDictionary *wfAllBidResonses; //waterfall all bid responses(c2s && s2s)
 @property (nonatomic, strong) NSMutableDictionary *loadedInstanceBidResponses; //loaded instance bid response
-@property (nonatomic, strong) NSMutableDictionary *bidExtension; //bid Extension
+@property (nonatomic, strong) NSMutableDictionary<NSString *,id> *localExtraParameter; //loaded instance bid response
+
 
 @property (nonatomic, strong) OMScene *scene;
 
-@property (nonatomic, assign) float revenue;
-@property (nonatomic, copy) NSString *netWorkName;
+@property (nonatomic, strong) OMInstance *optimalFillInstance;
+
 
 - (instancetype)initWithPlacementID:(NSString*)placementID size:(CGSize)size;
 - (instancetype)initWithPlacementID:(NSString*)placementID size:(CGSize)size rootViewController:(UIViewController*)rootViewController;
@@ -70,6 +76,11 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 - (void)adReceiveReward:(id)instanceAdapter;
 
 - (void)addEvent:(NSInteger)eventID instance:(NSString*)instanceID extraData:(NSDictionary*) data;
+
+- (OMInstance *)getInstanceByinstanceID:(NSString*)instanceID;
+
+- (void)setLocalExtraParameter:(id)object key:(NSString *)key;
+
 
 @end
 #endif /* OMAdBasePrivate_h */

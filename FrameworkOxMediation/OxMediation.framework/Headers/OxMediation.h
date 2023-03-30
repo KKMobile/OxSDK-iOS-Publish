@@ -32,7 +32,9 @@ extern NSString *kOpenMediatonInitSuccessNotification;
 
 + (instancetype)sharedInstance;
 
-- (void)initWithAppKey:(NSString*)appKey baseHost:(NSString*)host completionHandler:(initCompletionHandler)completionHandler;
+- (void)initWithAppKey:(NSString*)appKey isProductEnv:(BOOL)isProductEnv completionHandler:(initCompletionHandler)completionHandler;
+
+- (void)checkSDKInit;
 
 /// Check that `OpenMediation` has been initialized
 + (BOOL)isInitialized;
@@ -104,6 +106,11 @@ extern NSString *kOpenMediatonInitSuccessNotification;
 
 /// set auto cache,default is YES
 + (void)setAutoCache:(BOOL)autoCache;
+
+ //MARK: keyWords
++ (void)setKeywords:(NSArray<NSString *> *)keywords;
++ (NSArray<NSString *> *)getKeywords;
+
 
 @end
 

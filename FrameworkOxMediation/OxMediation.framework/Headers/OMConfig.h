@@ -47,17 +47,14 @@ typedef NS_ENUM(NSInteger, OMInitState) {
 @property (nonatomic, strong) NSMutableDictionary *adUnitMap;
 @property (nonatomic, strong) NSDictionary *cachedUnitMap;
 @property (nonatomic, strong) NSMutableDictionary *instanceMap;
-//@property (nonatomic, strong) NSMutableDictionary *instanceProfileMap;
 @property (nonatomic, strong) NSMutableDictionary *adnPlacementMap;
 @property (nonatomic, strong) NSMutableDictionary *conversionData;
-@property (nonatomic, strong) NSMutableDictionary *extensionDict;
 @property (nonatomic, strong) NSMutableDictionary *apsDict;
-@property (nonatomic, strong) NSMutableDictionary *bidParameters;  // 特殊段需要bid参数的处理  如APS
 @property (nonatomic, assign) BOOL clickOpenAppStore;
 @property (nonatomic, assign) BOOL impressionDataCallBack;
 @property (nonatomic, assign) OxMediationAdFormat useCacheAdFormat;
 @property (nonatomic, assign) BOOL autoCache;
-//@property (nonatomic, strong) NSMutableArray *showLogs;
+@property (nonatomic, strong) NSArray<NSString *> *keywords;
 
 + (instancetype)sharedInstance;
 
@@ -79,6 +76,10 @@ typedef NS_ENUM(NSInteger, OMInitState) {
 
 - (NSString *)adnSignatureID:(OMAdNetwork)adnID;
 
+//MARK: - keyWords
+
+- (NSString *)getKeywordParam;
+
 //MARK: - AdUinit
 - (void)loadAdUnits:(NSArray *)adUnits;
 
@@ -93,17 +94,8 @@ typedef NS_ENUM(NSInteger, OMInitState) {
 - (BOOL)isValidAdUnitId:(NSString*)unitID forAdFormat:(OxMediationAdFormat)adFormat;
 
 //MARK: - Instance
-- (NSArray *)allInstanceInAdUnit:(NSString*)unitID;
-
-- (BOOL)isHBInstance:(NSString*)instanceID;
-
-- (OMInstance *)getInstanceByinstanceID:(NSString*)instanceID;
-
-- (NSString *)getInstanceAdnPlacementID:(NSString*)instanceID;
-
 - (OMAdNetwork)getInstanceAdNetwork:(NSString*)instanceID;
-
-- (NSString *)checkinstanceIDWithAdNetwork:(OMAdNetwork)adnID adnPlacementID:(NSString *)placementID;
+- (OMInstance *)getInstanceByinstanceID:(NSString*)instanceID;
 
 //MARK: - Scene
 - (OMScene *)getSceneWithSceneID:(NSString*)sceneID inAdUnit:(NSString*)unitID;

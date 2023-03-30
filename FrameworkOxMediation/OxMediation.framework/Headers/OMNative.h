@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OMAdBase.h"
+#import "OMAdBasePrivate.h"
 #import "OMNativeDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// the delegate
 @property(nonatomic, weak, nullable) id<OMNativeDelegate> delegate;
+@property(nonatomic, strong) UIView *maxNativeView;
 
 /// The native's ad placement ID.
 - (NSString*)placementID;
@@ -28,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Begins loading the OMNative content.
 - (void)loadAd;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END
