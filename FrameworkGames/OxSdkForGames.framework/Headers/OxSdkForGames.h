@@ -14,6 +14,7 @@
 #import "OxAdSdkConsentManager.h"
 #import "ConsentStatusDelegate.h"
 #import "OxAdShowLimitation.h"
+#import "AdEventDelegate.h"
 #import "OxAdjustTokensBuilder.h"
 #import "OxAdjustTokens.h"
 #import "OxRemoteConfigHelper.h"
