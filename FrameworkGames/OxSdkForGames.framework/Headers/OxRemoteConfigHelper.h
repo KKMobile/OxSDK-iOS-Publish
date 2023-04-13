@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getString:(NSString *)key defaultValue:(NSString *)defaultValue;
 + (double)getDouble:(NSString *)key defaultValue:(double)defaultValue;
 + (int)getInt:(NSString *)key defaultValue:(int)defaultValue;
-+ (BOOL)getBool:(NSString *)key;
++ (BOOL)getBool:(NSString *)key defaultValue:(bool)defaultValue;
 
 @end
 
