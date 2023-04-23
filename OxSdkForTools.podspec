@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.1.0.0-FB-202304232012"#版本号
+  spec.version      = "1.1.0.0-FB-202304232020"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -36,6 +36,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'Adjust'
   spec.dependency 'FirebaseAnalytics', '>=8.0.0'
   spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
+  spec.dependency 'FBSDKCoreKit'
   # Max Mediation
   spec.dependency 'AppLovinSDK', '11.7.0'
   spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
