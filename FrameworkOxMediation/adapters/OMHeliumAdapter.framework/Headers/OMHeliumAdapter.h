@@ -2,11 +2,12 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <HeliumSdk/HeliumSdk.h>
 #import "OMMediationAdapter.h"
-#import "OMHeliumClass.h"
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const HeliumAdapterVersion = @"3.2.0";
+static NSString * const HeliumAdapterVersion = @"1.1.2";
 
 
 @interface OMHeliumAdapter : NSObject<OMMediationAdapter,HeliumSdkDelegate>

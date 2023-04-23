@@ -2,8 +2,8 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import "OMMediatedNativeAd.h"
-#import "OMGoogleAdNativeClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -2,12 +2,12 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "OMMediationAdapter.h"
-#import "OMMaxClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const MaxAdapterVersion = @"1.0.0";
+static NSString * const MaxAdapterVersion = @"1.1.2";
 
 @interface OMMaxAdapter : NSObject<OMMediationAdapter>
 + (NSString*)adapterVerison;

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <InMobiSDK/InMobiSDK.h>
 #import "OMNativeCustomEvent.h"
 #import "OMBidCustomEvent.h"
-#import "OMInMobiNativeClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

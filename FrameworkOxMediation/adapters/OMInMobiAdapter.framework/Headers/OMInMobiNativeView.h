@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <InMobiSDK/InMobiSDK.h>
 #import "OMNativeViewCustomEvent.h"
-#import "OMInMobiNativeClass.h"
 #import "OMInMobiNativeAd.h"
 NS_ASSUME_NONNULL_BEGIN
 

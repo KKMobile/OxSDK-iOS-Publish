@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 #import "OMBannerCustomEvent.h"
-#import "OMIronSourceClass.h"
+#import <IronSource/IronSource.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

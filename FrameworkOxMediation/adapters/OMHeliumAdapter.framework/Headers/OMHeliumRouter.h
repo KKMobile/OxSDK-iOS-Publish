@@ -2,7 +2,7 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import "OMHeliumClass.h"
+#import <HeliumSdk/HeliumSdk.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol OMHeliumAdapterDelegate <NSObject>

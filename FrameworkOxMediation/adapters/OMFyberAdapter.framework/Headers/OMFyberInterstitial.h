@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OMFyberBannerClass.h"
+#import <Fyber_Marketplace_SDK/IASDKCore-Bridging-Header.h>
 #import "OMInterstitialCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN

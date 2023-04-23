@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "OMMediationAdapter.h"
-#import "OMPubMaticClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const PubMaticAdapter = @"1.0.0";
+static NSString * const PubMaticAdapter = @"1.1.2";
 
 @interface OMPubMaticAdapter : NSObject<OMMediationAdapter>
 

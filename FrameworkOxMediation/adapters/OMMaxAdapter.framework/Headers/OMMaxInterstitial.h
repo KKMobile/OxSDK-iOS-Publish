@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OMInterstitialCustomEvent.h"
-#import "OMMaxnterstitialClass.h"
+#import <AppLovinSDK/AppLovinSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

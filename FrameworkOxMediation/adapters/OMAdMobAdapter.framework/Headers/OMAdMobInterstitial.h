@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OMInterstitialCustomEvent.h"
-#import "OMAdMobInterstitialClass.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

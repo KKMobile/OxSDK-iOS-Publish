@@ -2,9 +2,9 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <UIKit/UIKit.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import <Foundation/Foundation.h>
 #import "OMBannerCustomEvent.h"
-#import "OMGoogleAdBannerClass.h"
 
 
 NS_ASSUME_NONNULL_BEGIN

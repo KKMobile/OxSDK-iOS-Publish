@@ -3,7 +3,7 @@
 
 #import <UIKit/UIKit.h>
 #import "OMBannerCustomEvent.h"
-#import "OMUnityBannerClass.h"
+#import <UnityAds/UnityAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

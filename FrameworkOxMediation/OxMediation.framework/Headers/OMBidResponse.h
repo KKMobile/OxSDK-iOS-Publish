@@ -41,8 +41,9 @@ typedef NS_ENUM (NSInteger, OMBidLossedReasonCode) {
 
 
 - (void)win;
-
+- (void)notifyDisplay;
 - (void)notifyLossWithReasonCode:(OMBidLossedReasonCode)lossReasonCode;
+
 
 @end
 

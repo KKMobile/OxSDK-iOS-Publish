@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <InMobiSDK/InMobiSDK.h>
 #import "OMMediatedNativeAd.h"
-#import "OMInMobiNativeClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

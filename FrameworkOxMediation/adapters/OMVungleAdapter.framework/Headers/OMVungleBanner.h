@@ -2,7 +2,6 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import "OMVungleClass.h"
 #import "OMVungleRouter.h"
 #import "OMBannerCustomEvent.h"
 

@@ -4,7 +4,7 @@
 #import <UIKit/UIKit.h>
 #import "OMNativeViewCustomEvent.h"
 #import "OMAdMobNativeAd.h"
-#import "OMAdMobNativeClass.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

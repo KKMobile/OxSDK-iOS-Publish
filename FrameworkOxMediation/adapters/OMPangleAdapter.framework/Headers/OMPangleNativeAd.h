@@ -2,8 +2,9 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
+#import <BUAdSDK/BUAdSDK.h>
+#import <PAGAdSDK/PAGAdSDK.h>
 #import "OMMediatedNativeAd.h"
-#import "OMPangleNativeClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

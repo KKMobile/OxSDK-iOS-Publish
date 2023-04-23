@@ -4,9 +4,13 @@
 #import <UIKit/UIKit.h>
 #import "OMMediationAdapter.h"
 
-static NSString * const VungleAdapterVersion = @"2.0.7";
+NS_ASSUME_NONNULL_BEGIN
+
+static NSString * const VungleAdapterVersion = @"1.1.2";
 
 @interface OMVungleAdapter : NSObject<OMMediationAdapter>
+
+@property (nonatomic, copy, nullable) OMMediationAdapterInitCompletionBlock initBlock;
 
 + (NSString*)adapterVerison;
 
@@ -15,4 +19,10 @@ static NSString * const VungleAdapterVersion = @"2.0.7";
 + (void)setConsent:(BOOL)consent;
 + (void)setUSPrivacyLimit:(BOOL)privacyLimit;
 + (void)setUserAgeRestricted:(BOOL)restricted;
+
++ (void)vungleSDKDidInitialize;
++ (void)vungleSDKFailedToInitializeWithError:(NSError *)error;
+
 @end
+
+NS_ASSUME_NONNULL_END

@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMVungleAdapter"#SDK名称
-  spec.version      = "6.12.0.0-202303301550"#版本号
+  spec.version      = "6.12.0.0-202304231600"#版本号
   spec.summary      = "This is OMVungleAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC

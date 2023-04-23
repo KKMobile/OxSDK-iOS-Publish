@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OMMediationAdapter.h"
-#import "OMAdMobClass.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

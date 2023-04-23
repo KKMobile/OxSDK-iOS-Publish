@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const ApsAdapterVersion = @"1.0.0";
+static NSString * const ApsAdapterVersion = @"1.1.2";
 
 @interface OMApsAdapter : NSObject<OMMediationAdapter>
 + (NSString*)adapterVerison;

@@ -3,7 +3,6 @@
 
 #import <Foundation/Foundation.h>
 #import "OMMediationAdapter.h"
-#import "OMIronSourceClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<nativeCustomEventDelegate> delegate;
 
 - (instancetype)initWithParameter:(NSDictionary*)adParameter rootVC:(UIViewController*)rootViewController;
-- (void)loadAdWithLocalExtraParameter:(NSDictionary<NSString *,id> *)localExtraParameter;
 - (void)loadAdWithBidPayload:(NSString *)bidPayload localExtraParameter:(NSDictionary<NSString *,id> *)localExtraParameter;
 
 @end

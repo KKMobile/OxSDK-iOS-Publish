@@ -3,9 +3,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import "OMBannerCustomEvent.h"
-#import "OMAdMobBannerClass.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 

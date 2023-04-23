@@ -2,7 +2,8 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import "OMPangleInterstitialClass.h"
+#import <BUAdSDK/BUAdSDK.h>
+#import <PAGAdSDK/PAGAdSDK.h>
 #import "OMInterstitialCustomEvent.h"
 #import "OMBidCustomEvent.h"
 NS_ASSUME_NONNULL_BEGIN

@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OMMediatedNativeAd.h"
-#import "OMAdMobNativeClass.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

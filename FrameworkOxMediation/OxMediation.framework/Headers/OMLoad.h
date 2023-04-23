@@ -48,9 +48,9 @@ typedef NS_ENUM(NSInteger, OMInstanceLoadState) {
 @property (nonatomic, assign) OMLoadAction loadAction;
 
 @property (nonatomic, assign) NSInteger timeoutSecond;
-@property (nonatomic, strong) NSArray *priorityList;
-@property (nonatomic, strong) NSMutableDictionary *instanceLoadState;
-@property (nonatomic, strong) NSArray *loadGroups;
+@property (nonatomic, strong) NSArray *priorityList;  // 所有请求的ID
+@property (nonatomic, strong) NSMutableDictionary *instanceLoadState;  // 根据ID 存储他的请求状态
+@property (nonatomic, strong) NSArray *loadGroups;  // 分组ID
 @property (nonatomic, copy) NSString *optimalFillInstance;
 @property (nonatomic, assign) BOOL notifyLoadResult;
 @property (nonatomic, assign) BOOL loading;

@@ -27,6 +27,8 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 @property (nonatomic, weak) UIViewController *rootViewController;
 @property (nonatomic, strong) OMInstanceContainer *instanceContainer;
 
+
+@property (nonatomic, strong) NSMutableDictionary *omInstanceLoadStateDic; // key instanceid, value adapter
 @property (nonatomic, strong) NSMutableDictionary *instanceMap; // key instanceid, value adapter
 @property (nonatomic, strong) NSMutableDictionary<NSString*,id> *instanceAdapters; // key instanceid, value adapter
 @property (nonatomic, strong) NSMutableDictionary<NSString*,id> *didLoadAdObjects; //key instance, value ad
@@ -52,11 +54,15 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 @property (nonatomic, strong) NSMutableDictionary<NSString *,id> *localExtraParameter; //loaded instance bid response
 
 
+@property (nonatomic, strong) NSArray<NSDictionary *> *requestC2SBids; //所有请求的instance
+@property (nonatomic, strong) NSArray<NSDictionary *> *requestWfs; //所有请求的instance
+
 @property (nonatomic, strong) OMScene *scene;
 
 @property (nonatomic, strong) OMInstance *optimalFillInstance;
 @property (nonatomic, assign) float revenue;
 @property (nonatomic, copy) NSString *netWorkName;
+@property (nonatomic, assign) double mStartLoadTime;
 
 
 - (instancetype)initWithPlacementID:(NSString*)placementID size:(CGSize)size;
@@ -76,6 +82,9 @@ typedef void(^hbRequestCompletionHandler)(NSArray *bidInstances);
 - (void)adVideoComplete:(id)instanceAdapter;
 - (void)adClose:(id)instanceAdapter;
 - (void)adReceiveReward:(id)instanceAdapter;
+
+- (void)omDidLoad;
+- (void)omDidFail:(NSError*)error;
 
 - (void)addEvent:(NSInteger)eventID instance:(NSString*)instanceID extraData:(NSDictionary*) data;
 

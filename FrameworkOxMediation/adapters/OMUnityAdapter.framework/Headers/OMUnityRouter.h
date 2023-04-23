@@ -2,9 +2,8 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <UIKit/UIKit.h>
-
 #import "OMMediationAdapter.h"
-#import "OMUnityClass.h"
+#import <UnityAds/UnityAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

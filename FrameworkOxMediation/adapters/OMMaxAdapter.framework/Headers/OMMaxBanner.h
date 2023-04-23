@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "OMBannerCustomEvent.h"
-#import "OMMaxBannerClass.h"
+#import <AppLovinSDK/AppLovinSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

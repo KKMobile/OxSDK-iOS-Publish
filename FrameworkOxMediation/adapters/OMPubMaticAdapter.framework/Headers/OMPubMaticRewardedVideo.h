@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <OpenWrapSDK/OpenWrapSDK.h>
 #import "OMRewardedVideoCustomEvent.h"
-#import "OMPubMaticRewardedVideoClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -3,11 +3,11 @@
 
 #import <Foundation/Foundation.h>
 #import "OMMediationAdapter.h"
-#import "OMUnityClass.h"
+#import <UnityAds/UnityAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const UnityAdapterVersion = @"2.0.8";
+static NSString * const UnityAdapterVersion = @"1.1.2";
 
 @interface OMUnityAdapter : NSObject<OMMediationAdapter,UnityAdsInitializationDelegate>
 @property (nonatomic, copy, nullable) OMMediationAdapterInitCompletionBlock initBlock;

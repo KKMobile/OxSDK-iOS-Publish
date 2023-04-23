@@ -3,7 +3,6 @@
 
 #import <Foundation/Foundation.h>
 #import "OMBidCustomEvent.h"
-#import "OMInMobiClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

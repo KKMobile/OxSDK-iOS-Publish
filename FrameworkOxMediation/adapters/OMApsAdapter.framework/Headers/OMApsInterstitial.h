@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <DTBiOSSDK/DTBiOSSDK.h>
 #import "OMInterstitialCustomEvent.h"
-#import "OMApsClass.h"
-#import "OMApsInterstitialClass.h"
-#import "OMApsBannerClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -2,8 +2,8 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import "OMVungleClass.h"
-#import "OMVungleBidClass.h"
+#import <UIKit/UIKit.h>
+#import <VungleSDK/VungleSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,11 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface OMVungleRouter : NSObject<VungleSDKDelegate,VungleSDKHeaderBidding>
+@interface OMVungleRouter : NSObject<VungleSDKDelegate>
 
 @property (nonatomic, assign) BOOL isAdPlaying;
 @property (nonatomic, strong) NSMapTable *placementDelegateMap;
-@property (nonatomic, strong) id vungleSDK;
+@property (nonatomic, strong) VungleSDK *vungleSDK;
 @property (nonatomic, assign) BOOL sdkInitialized; // vungle sdk init status
 
 + (instancetype)sharedInstance;

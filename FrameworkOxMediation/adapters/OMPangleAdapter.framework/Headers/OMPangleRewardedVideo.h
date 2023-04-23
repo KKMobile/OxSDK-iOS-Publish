@@ -3,7 +3,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OMPangleRewardedVideoClass.h"
+#import <BUAdSDK/BUAdSDK.h>
+#import <PAGAdSDK/PAGAdSDK.h>
 #import "OMRewardedVideoCustomEvent.h"
 #import "OMBidCustomEvent.h"
 

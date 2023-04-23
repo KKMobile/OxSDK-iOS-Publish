@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OMSplashCustomEvent.h"
-#import "OMAdMobSplashClass.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

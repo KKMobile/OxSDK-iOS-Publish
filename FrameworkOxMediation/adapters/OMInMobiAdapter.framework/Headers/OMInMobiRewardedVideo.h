@@ -3,8 +3,8 @@
 
 
 #import <Foundation/Foundation.h>
+#import <InMobiSDK/InMobiSDK.h>
 #import "OMRewardedVideoCustomEvent.h"
-#import "OMInMobiInterstitialClass.h"
 #import "OMBidCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN

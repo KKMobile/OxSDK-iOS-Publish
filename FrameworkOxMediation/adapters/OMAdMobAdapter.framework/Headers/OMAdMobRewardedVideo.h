@@ -3,7 +3,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OMRewardedVideoCustomEvent.h"
-#import "OMAdMobRewardedVideoClass.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

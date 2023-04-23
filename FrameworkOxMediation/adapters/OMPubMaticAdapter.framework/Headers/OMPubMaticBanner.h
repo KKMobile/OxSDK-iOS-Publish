@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <OpenWrapSDK/OpenWrapSDK.h>
 #import "OMBannerCustomEvent.h"
 #import "OMBidCustomEvent.h"
-#import "OMPubMaticClass.h"
-#import "OMPubMaticBannerClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

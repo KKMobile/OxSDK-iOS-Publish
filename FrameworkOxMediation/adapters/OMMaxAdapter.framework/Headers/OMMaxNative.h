@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OMMaxNativeClass.h"
-#import "OMMaxBannerClass.h"
 #import "OMNativeCustomEvent.h"
+#import <AppLovinSDK/AppLovinSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

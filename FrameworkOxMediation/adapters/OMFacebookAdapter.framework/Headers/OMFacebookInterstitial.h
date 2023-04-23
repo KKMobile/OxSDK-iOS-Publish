@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
 
 - (instancetype)initWithParameter:(NSDictionary*)adParameter;
-- (void)loadAdWithLocalExtraParameter:(NSDictionary<NSString *,id> *)localExtraParameter;
 - (void)loadAdWithBidPayload:(NSString *)bidPayload localExtraParameter:(NSDictionary<NSString *,id> *)localExtraParameter;
 - (BOOL)isReady;
 - (void)show:(UIViewController*)vc;

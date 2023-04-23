@@ -2,8 +2,8 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import "OMSplashCustomEvent.h"
-#import "OMGoogleAdSplashClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

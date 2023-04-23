@@ -3,8 +3,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <InMobiSDK/InMobiSDK.h>
 #import "OMBannerCustomEvent.h"
-#import "OMInMobiBannerClass.h"
 #import "OMBidCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN

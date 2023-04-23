@@ -2,8 +2,9 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <UIKit/UIKit.h>
-#import "OMPangleClass.h"
-#import "OMPangleBannerClass.h"
+#import <BUAdSDK/BUAdSDK.h>
+#import <PAGAdSDK/PAGAdSDK.h>
+
 #import "OMBannerCustomEvent.h"
 #import "OMBidCustomEvent.h"
 

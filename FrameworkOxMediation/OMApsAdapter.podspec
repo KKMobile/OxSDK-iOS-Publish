@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMApsAdapter"#SDK名称
-  spec.version      = "4.5.5.0-202303301427"#版本号
+  spec.version      = "4.4.3.0-202304231600"#版本号
   spec.summary      = "This is OMApsAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
 
- spec.dependency 'AmazonPublisherServicesSDK','4.5.5'
- spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.5.5.0'
+ spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
+ spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
 
 end

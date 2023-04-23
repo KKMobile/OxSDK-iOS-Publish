@@ -3,11 +3,10 @@
 
 #import <Foundation/Foundation.h>
 #import "OMMediationAdapter.h"
-#import "OMFyberClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *  const FyberAdapterVersion = @"2.0.3";
+static NSString *  const FyberAdapterVersion = @"1.1.2";
 
 @interface OMFyberAdapter : NSObject
 

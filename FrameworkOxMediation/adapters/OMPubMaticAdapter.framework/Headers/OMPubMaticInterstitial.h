@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <OpenWrapSDK/OpenWrapSDK.h>
 #import "OMInterstitialCustomEvent.h"
-#import "OMPubMaticInterstitialClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

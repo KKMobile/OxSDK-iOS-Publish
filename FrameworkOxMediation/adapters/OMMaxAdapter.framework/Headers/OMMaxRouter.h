@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OMRewardedVideoCustomEvent.h"
-#import "OMMaxRewardedVideoClass.h"
+#import <AppLovinSDK/AppLovinSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OMHeliumClass.h"
+#import <HeliumSdk/HeliumSdk.h>
 #import "OMBannerCustomEvent.h"
 #import "OMHeliumRouter.h"
 #import "OMBidCustomEvent.h"
