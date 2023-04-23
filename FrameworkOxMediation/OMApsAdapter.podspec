@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMApsAdapter"#SDK名称
-  spec.version      = "4.4.3.0-202304231600"#版本号
+  spec.version      = "4.4.3.0-202304231800"#版本号
   spec.summary      = "This is OMApsAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
   spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
   spec.platform     = :ios#支持平台
-  spec.ios.deployment_target = "12.0"#支持iOS最低版本
+  spec.ios.deployment_target = "11.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "om-aps-#{spec.version}" }
   spec.ios.vendored_frameworks = 'FrameworkOxMediation/adapters/OMApsAdapter.framework'#SDK相对本文件路径
