@@ -133,6 +133,7 @@ static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
 static NSString * const PARAM_CHANNEL = @"Channel";
 static NSString * const PARAM_CAMPAIGN = @"Campaign";
-
+static NSString * const PARAM_REQUEST_SOURCE = @"RequestSource";
+static NSString * const PARAM_LOADED_SOURCE = @"LoadedSource";
 
 #endif /* AdEvents_h */

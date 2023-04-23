@@ -10,6 +10,9 @@
 #import "OxAdSdkManager.h"
 #import "AdDelegate.h"
 #import "AdValueUtils.h"
+#import "OxAdRequestSource.h"
+#import "OXAdLoadedSource.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -17,8 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *mAdunitId;
 
-@property (nonatomic, strong) UIViewController *mViewController;
+@property (nonatomic, weak) UIViewController *mViewController;
 
+@property (nonatomic, assign) BOOL mIsLoading;
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;
 @property (nonatomic, assign) double mLastShowFailedTimestamp;

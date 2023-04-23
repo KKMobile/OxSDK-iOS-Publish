@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdEvents.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -13,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(nonnull instancetype)utilShareInstance;
 
-- (void)saveMediationPlatform:(NSInteger)platform;
+- (void)saveMediationPlatform:(Platform)platform;
 
-- (NSInteger)getMediationPlatform;
+- (Platform)getMediationPlatform;
 
 @end
 

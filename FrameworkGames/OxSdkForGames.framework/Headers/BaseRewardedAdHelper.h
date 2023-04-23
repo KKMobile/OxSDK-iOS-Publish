@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
 
 - (void)createAd:(Platform)platform;
+- (void)resetLoadStatus:(NSString *)placement;
+- (void)resetLoadStatus:(NSString *)placement requestSource:(nullable NSString *)requestSource;
 
 
 @end

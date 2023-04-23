@@ -17,20 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) BOOL    mAdmobSdkInitialed;
 @property(nonatomic, assign) BOOL    mMaxSdkInitialed;
+@property(nonatomic, assign) BOOL    otherConfigInitialized;
 @property(nonatomic, assign) BOOL    enableDebug;
 
 + (nonnull instancetype)sharedInstance;
 
 @property (nonatomic, weak) id<AdEventDelegate> mAdEventDelegate;
-
-/// 设置默认聚合平台，不设置默认为Admob，在SDK初始化之前调用
-/// @param defaultMediationPlatform 平台类型，枚举值 Admob/ Max
-- (void)setDefaultMediationPlatform:(Platform)defaultMediationPlatform;
-
-/// 更改广告聚合平台，主要作用firebase取到更新的值更新本地记录的值
-/// @param platform Platform
-- (void)switchMediationPlatform:(Platform)platform successBlock:(OnSdkInitComplete)block;
-
 
 /// 获取当前的sdk 聚合平台
 - (Platform)getMediationPlatform;
@@ -50,9 +42,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (double)getLtAdValue;
 
-- (BOOL)isSdkInitialed:(Platform)platform;
-
+- (void)initialize:(OnSdkInitComplete)successBlock;
 - (void)initialize:(Platform)platform successBlock:(OnSdkInitComplete)successBlock;
+
+
+/// 初始化第三方广告 Mediation，仅 OxSdk 内部使用。
+- (void)initThirdPartyAdManger:(Platform)platform successBlock:(OnSdkInitComplete)successBlock;
+
+/// 判断第三方 Mediation 是否初始化完成，仅 OxSdk 内部使用
+- (BOOL)isThirdPartySdkInitialed:(Platform)platform;
 
 @end
 

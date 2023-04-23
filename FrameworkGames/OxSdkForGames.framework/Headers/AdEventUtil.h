@@ -15,10 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 请求广告
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement;
++ (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestSource:(nullable NSString *)requestSource;
 
 // 加载成功
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement      loadedDuration:(double)loadedDuration bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName
     waterfallName:(nullable NSString*)waterfullName networkResponses:(NSInteger)networkResponses latencyMillis:(double)latencyMillis creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
++ (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration bannerSize:(NSString *)bannerSize networkName:(NSString *)networkName waterfallName:(NSString *)waterfullName networkResponses:(NSInteger)networkResponses latencyMillis:(double)latencyMillis creativeId:(NSString *)creativeId revenue:(double)revenue loadedSource:(nullable NSString *)loadedSource;
 
 // 加载失败
 + (void)trackAdLoadFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement error:(nullable NSString*)error failedDuration:(double)failedDuration;

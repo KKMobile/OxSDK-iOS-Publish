@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol AdInternalAdDelegate <NSObject>
 
-- (void)onAdLoaded:(nonnull NSString*)adunitId placement:(nullable NSString*)placement loadedDuration:(double)loadedDuration bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName waterfallName:(nullable NSString*)waterfallName networkResponses:(NSInteger)networkResponses latencyMillis:(double)latencyMillis creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
+- (void)onAdLoaded:(nonnull NSString*)adunitId placement:(nullable NSString*)placement loadedDuration:(double)loadedDuration bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName waterfallName:(nullable NSString*)waterfallName networkResponses:(NSInteger)networkResponses latencyMillis:(double)latencyMillis creativeId:(nullable NSString*)creativeId revenue:(double)revenue loadedSource:(nullable NSString *)loadedSource;
 
 - (void)onAdLoadFailed:(nonnull NSString*)adunitId errorInfo:(NSString *)error placement:(nullable NSString*)placement failedDuration:(double)failedDuration;
 
