@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)logEventWithName:(nonnull NSString *)eventName params: (nullable NSDictionary<NSString*, NSObject*>*) params;
 
++ (void)logFacebookEventWithName:(NSString*)eventName params:(nullable NSDictionary<NSString*, NSObject*>*)params;
+
 @end
 
 NS_ASSUME_NONNULL_END
