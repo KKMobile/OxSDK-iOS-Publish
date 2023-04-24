@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "2.0.2.0-RC01-202304232220"#版本号
+  spec.version      = "2.0.2.0-RC01-202304241200"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
   spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
   spec.platform     = :ios#支持平台
-  spec.ios.deployment_target = "11.0"#支持iOS最低版本
+  spec.ios.deployment_target = "10.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
   spec.ios.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
@@ -64,20 +64,20 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.0.0'
 
   # OM
-  spec.dependency 'OxMediation', '1.1.2.0-RC01-202304232000'
-  spec.dependency 'OMAdMobAdapter', '9.11.0.1-202304231800'
-  spec.dependency 'OMApsAdapter', '4.4.3.0-202304231800'
-  spec.dependency 'OMFacebookAdapter', '6.12.0.0-202304231800'
-  spec.dependency 'OMFyberAdapter', '8.1.6.0-202304231800'
-  spec.dependency 'OMGoogleAdAdapter', '9.11.0.1-202304231800'
-  spec.dependency 'OMHeliumAdapter', '3.3.0.0-202304231800'
-  spec.dependency 'OMInMobiAdapter', '10.1.0.0-202304231800'
-  spec.dependency 'OMIronSourceAdapter', '7.2.5.1.0-202304231800'
-  spec.dependency 'OMMaxAdapter', '11.5.3.0-202304231800'
-  spec.dependency 'OMPangleAdapter', '4.6.2.2.0-202304231800'
-  spec.dependency 'OMPubMaticAdapter', '2.6.2.0-202304231800'
-  spec.dependency 'OMUnityAdapter', '4.4.1.0-202304231800'
-  spec.dependency 'OMVungleAdapter', '6.12.0.0-202304231800'
+  spec.dependency 'OxMediation', '1.1.2.0-RC01-202304241200'
+  spec.dependency 'OMAdMobAdapter', '9.11.0.1-202304241200'
+  spec.dependency 'OMApsAdapter', '4.4.3.0-202304241200'
+  spec.dependency 'OMFacebookAdapter', '6.12.0.0-202304241200'
+  spec.dependency 'OMFyberAdapter', '8.1.6.0-202304241200'
+  spec.dependency 'OMGoogleAdAdapter', '9.11.0.1-202304241200'
+  spec.dependency 'OMHeliumAdapter', '3.3.0.0-202304241200'
+  spec.dependency 'OMInMobiAdapter', '10.1.0.0-202304241200'
+  spec.dependency 'OMIronSourceAdapter', '7.2.5.1.0-202304241200'
+  spec.dependency 'OMMaxAdapter', '11.5.3.0-202304241200'
+  spec.dependency 'OMPangleAdapter', '4.6.2.2.0-202304241200'
+  spec.dependency 'OMPubMaticAdapter', '2.6.2.0-202304241200'
+  spec.dependency 'OMUnityAdapter', '4.4.1.0-202304241200'
+  spec.dependency 'OMVungleAdapter', '6.12.0.0-202304241200'
   spec.dependency 'ChartboostHelium','3.3.0'
 
 end
