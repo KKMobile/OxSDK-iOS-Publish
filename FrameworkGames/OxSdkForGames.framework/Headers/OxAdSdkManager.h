@@ -56,6 +56,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (double)getLtAdValue;
 
+/**
+ * 客户端辅助 OxSdk 完善打点信息。
+ */
+- (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
+
 @end
 
 NS_ASSUME_NONNULL_END
