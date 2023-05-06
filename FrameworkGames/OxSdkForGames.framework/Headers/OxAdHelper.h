@@ -12,9 +12,9 @@
 #import "AdValueUtils.h"
 #import "OxAdRequestSource.h"
 #import "OXAdLoadedSource.h"
+@import OxMediation;
 
 NS_ASSUME_NONNULL_BEGIN
-
 
 @interface OxAdHelper : NSObject
 
