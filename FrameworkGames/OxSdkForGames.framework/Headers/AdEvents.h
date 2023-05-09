@@ -133,7 +133,6 @@ static NSString * const PARAM_LIMITATION = @"Limitation";
 static NSString * const PARAM_CHANNEL = @"Channel";
 static NSString * const PARAM_CAMPAIGN = @"Campaign";
 static NSString * const PARAM_MEMORY_LIMIT_TYPE = @"MemoryLimitType";
-
-
+static NSString * const PARAM_ATT_ACCEPTED = @"IsAttAccepted";
 
 #endif /* AdEvents_h */
