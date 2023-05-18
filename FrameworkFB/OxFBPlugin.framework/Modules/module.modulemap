@@ -1,0 +1,6 @@
+framework module OxFBPlugin {
+  umbrella header "OxFBPlugin.h"
+
+  export *
+  module * { export * }
+}
