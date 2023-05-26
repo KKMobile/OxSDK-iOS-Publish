@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) UIViewController *mViewController;
 @property (nonatomic, strong) NSString *mAdunitId;
-@property (nonatomic, assign) BOOL mDisplayCalled;
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;
 @property (nonatomic, assign) double mLastShowFailedTimestamp;
