@@ -133,7 +133,6 @@ static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
 static NSString * const PARAM_MEMORY_LIMIT_TYPE = @"MemoryLimitType";
 // Only for Firebase ad impression
-static NSString * const EVENT_FIREBASE_AD_IMPRESSION = @"ad_impression";
 static NSString * const PARAM_FIREBASE_AD_PLATFORM = @"ad_platform";
 static NSString * const PARAM_FIREBASE_AD_SOURCE = @"ad_source";
 static NSString * const PARAM_FIREBASE_AD_FORMAT = @"ad_format";

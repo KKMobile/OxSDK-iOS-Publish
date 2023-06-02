@@ -57,10 +57,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 
-/**
- * 向 Firebase Analytics 上报 Max ad_impression 打点。
-*/
-+ (void)trackFirebaseAdImpressionForMaxAd:(MAAd *)ad;
 
 @end
 
