@@ -34,6 +34,24 @@ Pod::Spec.new do |spec|
   spec.dependency 'Adjust'
   spec.dependency 'FirebaseAnalytics', '>=8.0.0'
   spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
-   
+  
+  # Max Mediation
+  spec.dependency 'AppLovinSDK', '11.8.2'
+  spec.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
+  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.3.0.1'
+  spec.dependency 'AppLovinMediationGoogleAdapter', '10.3.0.1'
+  spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
+  spec.dependency 'ALInMobiCustomAdapterFramework', '10.1.2.0'
+  spec.dependency 'AppLovinMediationFacebookAdapter','6.12.0.1'
+  spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.1.1.3'
+  spec.dependency 'AppLovinMediationByteDanceAdapter', '5.1.0.9.0'
+  spec.dependency 'AppLovinMediationSmaatoAdapter','22.1.1.0'
+  spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.6.1.0'
+  spec.dependency 'AppLovinMediationVerveAdapter', '2.18.0.0'
+  spec.dependency 'AppLovinMediationMintegralAdapter', '7.3.5.0.0'
+
+  #Admob Mediation
+  pec.dependency 'Google-Mobile-Ads-SDK', '10.3.0'
+  spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.1'
 
 end

@@ -30,28 +30,9 @@ Pod::Spec.new do |spec|
 
   spec.resources = ["ResBundle/Tools/OxSdkRes.bundle","ResBundle/Tools/Language.bundle"]
   
-  spec.dependency 'PureLayout'
-  spec.dependency 'SDWebImage'
-  spec.dependency 'AFNetworking'
-  spec.dependency 'Adjust'
-  spec.dependency 'FirebaseAnalytics', '>=8.0.0'
-  spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
-  # Max Mediation
-  spec.dependency 'AppLovinSDK', '11.8.2'
+    # Max Mediation
   spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
   spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
-  spec.dependency 'AppLovinMediationByteDanceAdapter', '5.1.0.9.0'
-  spec.dependency 'AppLovinMediationFacebookAdapter','6.12.0.1'
-  spec.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
-  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.3.0.1'
-  spec.dependency 'AppLovinMediationGoogleAdapter', '10.3.0.1'
-  spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
-  spec.dependency 'ALInMobiCustomAdapterFramework', '10.1.2.0'
-  spec.dependency 'AppLovinMediationSmaatoAdapter','22.1.1.0'
-  spec.dependency 'AppLovinMediationUnityAdsAdapter','4.6.1.0'
-  spec.dependency 'AppLovinMediationVungleAdapter','6.12.3.0'
-  spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.1.1.3'
-  spec.dependency 'AppLovinMediationMintegralAdapter', '7.3.5.0.0'
-  spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.1'
-  
+
+    
 end
