@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios#支持平台
   spec.ios.deployment_target = "11.0"#支持iOS最低版本
   spec.swift_version = '4.0'
-  spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
+  spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "core-#{spec.version}" }
   spec.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
