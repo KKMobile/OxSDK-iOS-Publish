@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint OxSdkForTools.podspec' to ensure this is a
+#  Be sure to run `pod spec lint OxFBPlugin.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "11.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "fb-#{spec.version}" }
-  spec.ios.vendored_frameworks = 'FrameworkFB/OxFBPlugin.framework'#SDK相对本文件路径
+  spec.ios.vendored_frameworks = 'Frameworks/OxFBPlugin.framework'#SDK相对本文件路径
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置

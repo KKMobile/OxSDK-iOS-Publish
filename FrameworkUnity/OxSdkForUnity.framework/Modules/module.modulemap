@@ -1,6 +1,0 @@
-framework module OxSdkForUnity {
-  umbrella header "OxSdkForUnity.h"
-
-  export *
-  module * { export * }
-}

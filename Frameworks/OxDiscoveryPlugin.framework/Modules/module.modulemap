@@ -1,0 +1,6 @@
+framework module OxDiscoveryPlugin {
+  umbrella header "OxDiscoveryPlugin.h"
+
+  export *
+  module * { export * }
+}
