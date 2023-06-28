@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "OxAdSdk for discovery applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
-  OxAdSdk for discovery applications.OxAdSdk for FB applications.
+  OxAdSdk for discovery applications.OxAdSdk for discovery applications.
                    DESC
   spec.homepage     = "https://github.com/KKMobile/OxSDK-iOS-Publish.git"#github 上的仓库地址
   spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
