@@ -23,10 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxDiscovery : NSObject
 
-@property(nonatomic,weak) id<OxDiscoveryDelegate> delegate;
 @property(nonatomic,strong) NSDictionary<NSString *,NSString *> *adjustTokenDic;
 @property(nonatomic,strong) NSArray<NSString *> *firebaseEvents;
 @property(nonatomic,strong) NSArray<NSString *> *adjustEvents;
+
+- (void)setDiscoveryDelegate:(id<OxDiscoveryDelegate>)delegate;
 
 + (nonnull instancetype)sharedInstance;
 

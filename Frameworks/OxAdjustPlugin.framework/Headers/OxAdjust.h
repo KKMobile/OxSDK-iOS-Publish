@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define OxAdjustPlugin_SDK_VERSION    @"1.0.0-202306281600"
+#define OxAdjustPlugin_SDK_VERSION    @"1.0.0-202306281900"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAdjust : NSObject
 
-@property(nonatomic, weak) id<OxAdjustDelegate> delegate;
+- (void)setAdjustDelegate:(id<OxAdjustDelegate>)delegate;
 
 + (nonnull instancetype)sharedInstance;
 

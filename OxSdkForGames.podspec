@@ -39,8 +39,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationMobileFuseAdapter', '1.4.4.0'
   spec.dependency 'AppLovinMediationVungleAdapter', '6.12.3.0'
   spec.dependency 'AppLovinMediationLineAdapter', '2.6.20230215'
-  spec.dependency 'OpenWrapSDK', '2.7.0'
-  spec.dependency 'AppLovinPubMaticAdapter', '1.0.2'
 
   #Admob Mediation
   spec.dependency 'Google-Mobile-Ads-SDK', '10.3.0'

@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAdjust : NSObject
 
-@property(nonatomic, weak) id<OxAdjustDelegate> delegate;
+- (void)setAdjustDelegate:(id<OxAdjustDelegate>)delegate;
 
 + (nonnull instancetype)sharedInstance;
 

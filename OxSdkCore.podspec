@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkCore"#SDK名称
-  spec.version      = "1.2.0.0-RC01-202306281600"#版本号
+  spec.version      = "1.2.0.0-RC01-202306281900"#版本号
   spec.summary      = "OxAdSdk for core applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -51,6 +51,8 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.6.1.0'
   spec.dependency 'AppLovinMediationVerveAdapter', '2.18.0.0'
   spec.dependency 'AppLovinMediationMintegralAdapter', '7.3.5.0.0'
+  spec.dependency 'OpenWrapSDK', '2.7.0'
+  spec.dependency 'AppLovinPubMaticAdapter', '1.0.2'
 
   #Admob Mediation
   spec.dependency 'Google-Mobile-Ads-SDK', '10.3.0'
