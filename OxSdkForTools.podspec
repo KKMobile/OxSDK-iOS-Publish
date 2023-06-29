@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "t-#{spec.version}" }
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+  spec.source_files = 'OxSdkForTools/OxSdkForTools.h'
 
     # Max Mediation
   spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
