@@ -66,4 +66,14 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationUnity','4.6.1.0'
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.3.0'
 
+  s.dependency 'GoogleMobileAdsMediationAdColony','4.9.0.2'
+  s.dependency 'GoogleMobileAdsMediationAppLovin','11.8.2.0'
+  s.dependency 'GoogleMobileAdsMediationChartboost','9.2.0.0'
+  s.dependency 'GoogleMobileAdsMediationIronSource','7.2.7.0.1'
+
+  s.dependency 'MobileFuseAdMobAdapter','1.4.4.0'
+  s.dependency 'OguryMediationGoogleMobileAds','4.1.1.0'
+  s.dependency 'AdMobPubMaticAdapter','2.1.1'
+  s.dependency 'FiveGADAdapter','1.5.0'
+
 end
