@@ -69,7 +69,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationAdColony','4.9.0.2'
   spec.dependency 'GoogleMobileAdsMediationAppLovin','11.8.2.0'
   spec.dependency 'GoogleMobileAdsMediationChartboost','9.2.0.0'
-  s.dependency 'GoogleMobileAdsMediationIronSource','7.2.7.0.1'
+  spec.dependency 'GoogleMobileAdsMediationIronSource','7.2.7.0.1'
 
   spec.dependency 'MobileFuseAdMobAdapter','1.4.4.0'
   spec.dependency 'OguryMediationGoogleMobileAds','4.1.1.0'
