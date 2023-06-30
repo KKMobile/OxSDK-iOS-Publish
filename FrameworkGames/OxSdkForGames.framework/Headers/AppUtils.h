@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 可用内存
 + (double)getAvailableMemory;
 
++ (UIViewController *)mavlVisibleViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END
