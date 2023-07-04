@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL tachiEnable; // 设置tachi是否启用，主要用于部分不需要打点的iOS的工具
 @property (nonatomic, assign) BOOL isSdkInitialized;
-@property (nonatomic, strong) BaseAdManager  *mAdManager;
+@property (nonatomic, strong) BaseAdManager  *mAdManager; // 当前的聚合平台adManager
+@property (nonatomic, assign) OxSdkMediationType currentMediationType; // 当前的聚合平台
 @property (nonatomic, copy) OnSdkInitComplete sdkInitComplete;
 
 // consentDialog 监听
@@ -43,8 +44,6 @@ NS_ASSUME_NONNULL_BEGIN
 ///  判断第三方 Mediation 是否初始化完成，仅 OxSdk 内部使用。
 /// - Parameter mediationType: 聚合平台类型
 - (BOOL)isMediationInitialized:(OxSdkMediationType)mediationType;
-
-- (OxSdkMediationType)getCurrentMediationType;
 
 /// RemoteConfig 获取完成。
 - (void)onRemoteConfigFetchCompleted;
