@@ -38,8 +38,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationLineAdapter', '2.6.20230215'
 
   #Admob Mediation
-  spec.dependency 'Google-Mobile-Ads-SDK', '10.3.0'
-  spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.1'
   spec.dependency 'GoogleMobileAdsMediationUnity','4.6.1.0'
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.3.0'
   
