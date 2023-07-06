@@ -44,7 +44,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationGoogleAdapter', '10.3.0.1'
   spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
   spec.dependency 'ALInMobiCustomAdapterFramework', '10.1.2.0'
-  spec.dependency 'AppLovinMediationFacebookAdapter','6.12.0.1'
+  spec.dependency 'AppLovinMediationFacebookAdapter','6.12.0.2'
   spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.1.1.3'
   spec.dependency 'AppLovinMediationByteDanceAdapter', '5.1.0.9.0'
   spec.dependency 'AppLovinMediationSmaatoAdapter','22.1.1.0'
