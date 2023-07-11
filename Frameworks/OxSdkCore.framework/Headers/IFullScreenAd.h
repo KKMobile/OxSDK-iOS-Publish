@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showAd:(NSString *)placement;
 
-- (void)setReloadAfterFailed:(BOOL)reload;
-
 @end
 
 NS_ASSUME_NONNULL_END

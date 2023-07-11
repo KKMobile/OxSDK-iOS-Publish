@@ -30,6 +30,8 @@ static NSString * const AdStatus_IDLE = @"Ad is idle";
 static NSString * const AdStatus_LOADING = @"Ad is loading";
 static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
+static NSString * const AdStatus_LOAD_CLOSE = @"Ad load close";
+static NSString * const AdStatus_LOAD_DESPLAYFAILED = @"Ad load display failed";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
 
 typedef enum : NSUInteger {

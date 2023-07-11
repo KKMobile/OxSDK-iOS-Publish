@@ -13,6 +13,15 @@
 #import "AdEventUtil.h"
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    OxAdLoadState_wait = 0,
+    OxAdLoadState_loading,
+    OxAdLoadState_success,
+    OxAdLoadState_canShow,
+    OxAdLoadState_closed,
+    OxAdLoadState_failed,
+    OxAdLoadState_displayFailed,
+} OxAdLoadState;
 
 @interface OxAdHelper : NSObject
 
@@ -23,11 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) double mLastShowFailedTimestamp;
 @property (nonatomic, strong) NSString *mLoadPlacement;
 @property (nonatomic, strong) NSString *mShowPlacement;
-@property (nonatomic, strong) NSString *mAdStatus;
 @property (nonatomic, strong) NSString *mNetworkName;
 @property (nonatomic, strong) NSString *mCreativeId;
 @property (nonatomic, strong) NSString *adUnitName; // 记录创建 adhelper 的 adUnitName
 @property (nonatomic, strong) NSString *adFormat; // 记录创建 adhelper 的 adUnitName
+@property (nonatomic, assign) OxAdLoadState adLoadState; // 记录创建 adhelper 的 adUnitName
 
 @property(nonatomic, strong)NSMutableDictionary<NSString*, NSString*>* mExtraParameterMap;
 

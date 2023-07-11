@@ -43,6 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter adFormat: 达到内存限制的广告格式
 + (BOOL)isMemoryLimitReached:(NSString *)adFormat;
 
+/// 获取 max 关闭的ID
++ (NSArray<NSString *> *)getDisableIds;
+
 + (NSArray*)getKeywords;
 
 + (NSString *)getString:(NSString *)key defaultValue:(NSString *)defaultValue;

@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.0.0-RC01-202307061900"#版本号
+  spec.version      = "1.2.0.0-RC02-202307111800"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
   spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
   
-  spec.dependency 'OxSdkCore','1.2.0.0-RC01-202307061900'
+  spec.dependency 'OxSdkCore','1.2.0.0-RC02-202307111800'
   spec.dependency 'OxDiscoveryPlugin','1.0.0-202306291800'
     
 end
