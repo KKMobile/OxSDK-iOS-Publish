@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)onRewardedVideoCompleted:(NSString*)adUnitId;
 
-- (void)onUserRewarded:(NSString*)adUnitId reward:(AdReward *) reward ;
+- (void)onUserRewarded:(NSString*)adUnitId reward:(AdReward *) reward;
 
 @end
 
