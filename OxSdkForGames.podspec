@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.2.0.0-RC02-202307211600"#版本号
+  spec.version      = "1.2.0.0-RC03-202308041200"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -27,21 +27,36 @@ Pod::Spec.new do |spec|
 
 
   # Max Mediation
+  spec.dependency 'AmazonPublisherServicesSDK','4.7.2.0'
+  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.2.0'
   spec.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.4'
-  spec.dependency 'AmazonPublisherServicesSDK','4.6.0'
-  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.6.0.0'
   spec.dependency 'AppLovinMediationBidMachineAdapter', '2.1.0.0.1'
-  spec.dependency 'AppLovinMediationChartboostAdapter', '9.2.0.0'
-  spec.dependency 'AppLovinMediationIronSourceAdapter', '7.2.7.0.1'
-  spec.dependency 'AppLovinMediationMobileFuseAdapter', '1.4.4.0'
+  spec.dependency 'AppLovinMediationChartboostAdapter', '9.3.1.0'
+  spec.dependency 'AppLovinMediationIronSourceAdapter', '7.3.0.0.0'
+  spec.dependency 'AppLovinMediationMobileFuseAdapter', '1.5.2.0'
   spec.dependency 'AppLovinMediationVungleAdapter', '6.12.3.0'
-  spec.dependency 'AppLovinMediationLineAdapter', '2.6.20230215'
+  spec.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
+  spec.dependency 'MolocoCustomAdapterAppLovin','1.1.0.1'
+  spec.dependency 'AppLovinMediationHyprMXAdapter','6.2.0.1'
+  
 
   #Admob Mediation
-  spec.dependency 'GoogleMobileAdsMediationUnity','4.6.1.0'
+  spec.dependency 'GoogleMobileAdsMediationUnity','4.8.0.0'
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.3.0'
+  spec.dependency 'GoogleMobileAdsMediationAdColony','4.9.0.2'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin','11.10.1.0'
+  spec.dependency 'GoogleMobileAdsMediationChartboost','9.3.1.0'
+  spec.dependency 'GoogleMobileAdsMediationIronSource','7.3.0.0.0'
+  spec.dependency 'GoogleMobileAdsMediationFyber','8.2.2.0'
+  spec.dependency 'GoogleMobileAdsMediationMintegral','7.3.9.0'
+  spec.dependency 'GoogleMobileAdsMediationPangle','5.3.1.0.0'
   
-  spec.dependency 'OxSdkCore','1.2.0.0-RC02-202307211600'
+  spec.dependency 'MobileFuseAdMobAdapter','1.5.2.0'
+  spec.dependency 'OguryMediationGoogleMobileAds','4.1.2.0'
+  spec.dependency 'AdMobPubMaticAdapter','2.1.1'
+  spec.dependency 'FiveGADAdapter','1.5.0'
+  
+  spec.dependency 'OxSdkCore','1.2.0.0-RC03-202308041200'
   spec.dependency 'OxDiscoveryPlugin','1.0.0-202306291800'
 
 end

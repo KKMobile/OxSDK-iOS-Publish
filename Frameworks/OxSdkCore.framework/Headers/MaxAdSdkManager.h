@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nonnull instancetype)sharedInstance;
 
-- (BOOL)shouldShowConsentDialog;
-
 @end
 
 NS_ASSUME_NONNULL_END

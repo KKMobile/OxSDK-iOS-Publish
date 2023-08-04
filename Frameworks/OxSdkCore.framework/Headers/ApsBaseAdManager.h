@@ -20,7 +20,7 @@ typedef void (^OnApsFailedBlock)(DTBAdErrorInfo* errorInfo);
 @property (nonatomic, copy) OnApsSuccessBlock apsSuccessBlock;
 @property (nonatomic, copy) OnApsFailedBlock  apsFailedBlock;
 
-- (BOOL)shouldLoadAps:(NSString *)adUnitID;
+- (BOOL)shouldLoadAps;
 - (void)loadApsAd;
 
 @end

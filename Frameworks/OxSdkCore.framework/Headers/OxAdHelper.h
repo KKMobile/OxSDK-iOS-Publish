@@ -19,6 +19,7 @@ typedef enum : NSUInteger {
     OxAdLoadState_success,
     OxAdLoadState_canShow,
     OxAdLoadState_closed,
+    OxAdLoadState_timeout,
     OxAdLoadState_failed,
     OxAdLoadState_displayFailed,
 } OxAdLoadState;

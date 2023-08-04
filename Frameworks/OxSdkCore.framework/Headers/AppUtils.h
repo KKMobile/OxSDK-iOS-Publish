@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "AdEvents.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -36,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (OxSdkMediationType)formatMediationType:(NSInteger)mediation;
 /// 判断 mediation 是否在区域中
 + (BOOL)isMediationInRange:(NSInteger)mediation;
+
++ (UIViewController *)mavlVisibleViewController;
 
 @end
 

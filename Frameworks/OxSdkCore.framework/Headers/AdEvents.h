@@ -94,12 +94,6 @@ typedef NS_ENUM(NSInteger, CountedEvents) {
     TOP60 = 6
 };
 
-typedef enum : NSUInteger {
-    GDPR_STATE_CONSENT_UNSET = 0,
-    GDPR_STATE_CONSENT_REGECTED,
-    GDPR_STATE_CONSENT_ACCEPTED,
-} GDPR_STATUS;
-
 
 //Basic
 static NSString * const EVENT_TOP10 = @"AdLTV_OneDay_Top10Percent";

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
 
-#define OxSDK_VERSION    @"1.2.0.0-RC02-202307211600"
+#define OxSDK_VERSION    @"1.2.0.0-RC03-202308041200"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -47,9 +47,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 展示测试套件，目前仅支持 Max 聚合平台。
 + (void)showMediationDebugger;
 
-/// 设置用户是否在 ConsentDialog 中选择接收。
-+ (void)setHasUserConsent:(BOOL)hasUserConsent;
-
 ///      RewardedVideo 广告展示时，初始静音状态。
 ///      仅对部分广告网络生效。
 + (void)setMute:(BOOL)mute;
@@ -80,13 +77,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 客户端上报商业化相关打点。
 + (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
-
-/// 判断是否应展示 ConsentDialog，需要在 {@link ConsentDialogListener#onConsentDialogResult(boolean)} 之后调用。
-+ (BOOL)shouldShowConsentDialog;
-
-/// 设置 ConsentDialog 监听器，接收到 {@link ConsentDialogListener#onConsentDialogResult(boolean)} ()} 回调时，
-/// 若 shouldShow 参数为 true，则应当展示 ConsentDialog。
-+ (void)setConsentDialogDelegate:(id<OxConsentDialogDelegate>)delegate;
 
 /// 获取google的adaptive Banner的尺寸，方便页面布局
 + (CGSize)getAdaptiveBannerAdSize;

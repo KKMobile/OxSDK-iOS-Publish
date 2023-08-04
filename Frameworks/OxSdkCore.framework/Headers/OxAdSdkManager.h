@@ -21,11 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) OxSdkMediationType currentMediationType; // 当前的聚合平台
 @property (nonatomic, copy) OnSdkInitComplete sdkInitComplete;
 
-// consentDialog 监听
-@property (nonatomic, weak) id<OxConsentDialogDelegate> consentDialogDelegate;
 
 + (nonnull instancetype)sharedInstance;
-
 
 /// 初始化 OxSdk
 /// @param delayInMills 延迟 n 毫秒执行初始化。
