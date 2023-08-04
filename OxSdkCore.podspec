@@ -50,14 +50,14 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationSmaatoAdapter','22.2.1.0'
     spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.8.0.1'
     spec.dependency 'AppLovinMediationVerveAdapter', '2.18.1.1'
-    spec.dependency 'AppLovinMediationMintegralAdapter', '7.3.9.0.0'
-    spec.dependency 'OpenWrapSDK', '3.0.0'
-    spec.dependency 'AppLovinPubMaticAdapter', '1.0.2'
+    #spec.dependency 'AppLovinMediationMintegralAdapter', '7.3.9.0.0'
+    #spec.dependency 'OpenWrapSDK', '3.0.0'
+    #spec.dependency 'AppLovinPubMaticAdapter', '1.0.2'
 
     #Admob Mediation
     spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.1'
     
     #GDPR
-    spec.dependency 'AppConsent','4.2.2'
+    #spec.dependency 'AppConsent','4.2.2'
 
 end
