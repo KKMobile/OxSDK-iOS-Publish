@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
 
-#define OxSDK_VERSION    @"1.2.0.0-RC03-202308041200"
+#define OxSDK_VERSION    @"1.2.0.0-RC03-202308041700"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -80,6 +80,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取google的adaptive Banner的尺寸，方便页面布局
 + (CGSize)getAdaptiveBannerAdSize;
+
+/// 设置用户是否在 ConsentDialog 中选择接收。
++ (void)setHasUserConsent:(BOOL)hasUserConsent DEPRECATED_MSG_ATTRIBUTE("请使用 OxConsentMananger Api");
 
 
 @end
