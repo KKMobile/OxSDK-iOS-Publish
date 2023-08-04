@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
     spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
     spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
     spec.platform     = :ios#支持平台
-    spec.ios.deployment_target = "11.0"#支持iOS最低版本
+    spec.ios.deployment_target = "12.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "core-#{spec.version}" }
     spec.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
@@ -36,26 +36,29 @@ Pod::Spec.new do |spec|
     spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 
     # Max Mediation
-    spec.dependency 'AppLovinSDK', '11.8.2'
+    spec.dependency 'AppLovinSDK', '11.10.1'
     spec.dependency 'AmazonPublisherServicesSDK'
     spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter'
     spec.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
-    spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.3.0.1'
-    spec.dependency 'AppLovinMediationGoogleAdapter', '10.3.0.1'
-    spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
-    spec.dependency 'ALInMobiCustomAdapterFramework', '10.1.2.0'
-    spec.dependency 'AppLovinMediationFacebookAdapter','6.12.0.2'
-    spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.1.1.3'
-    spec.dependency 'AppLovinMediationByteDanceAdapter', '5.1.0.9.0'
-    spec.dependency 'AppLovinMediationSmaatoAdapter','22.1.1.0'
-    spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.6.1.0'
-    spec.dependency 'AppLovinMediationVerveAdapter', '2.18.0.0'
-    spec.dependency 'AppLovinMediationMintegralAdapter', '7.3.5.0.0'
-    spec.dependency 'OpenWrapSDK', '2.7.0'
+    spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.7.0.0'
+    spec.dependency 'AppLovinMediationGoogleAdapter', '10.7.0.0'
+    spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.4.1'
+    spec.dependency 'ALInMobiCustomAdapterFramework', '10.1.4.0'
+    spec.dependency 'AppLovinMediationFacebookAdapter','6.12.0.3'
+    spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.1.4.0'
+    spec.dependency 'AppLovinMediationByteDanceAdapter', '5.3.1.0.0'
+    spec.dependency 'AppLovinMediationSmaatoAdapter','22.2.1.0'
+    spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.8.0.1'
+    spec.dependency 'AppLovinMediationVerveAdapter', '2.18.1.1'
+    spec.dependency 'AppLovinMediationMintegralAdapter', '7.3.9.0.0'
+    spec.dependency 'OpenWrapSDK', '3.0.0'
     spec.dependency 'AppLovinPubMaticAdapter', '1.0.2'
 
     #Admob Mediation
-    spec.dependency 'Google-Mobile-Ads-SDK', '10.3.0'
     spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.1'
+    
+    #GDPR
+    #spec.dependency 'AppConsent','4.2.2'
+
 
 end
