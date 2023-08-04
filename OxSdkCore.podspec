@@ -58,6 +58,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.1'
     
     #GDPR
-    spec. 'AppConsent','4.2.2'
+    spec.dependency 'AppConsent','4.2.2'
 
 end
