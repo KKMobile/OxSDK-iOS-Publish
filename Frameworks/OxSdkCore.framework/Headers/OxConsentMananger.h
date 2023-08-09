@@ -7,9 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BaseConsentManager.h"
-#import "GoogleConsentManager.h"
-#import "SFBXConsentManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
