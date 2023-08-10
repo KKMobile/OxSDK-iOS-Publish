@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
 
-#define OxSDK_VERSION    @"1.2.0.0-RC03-202308091030"
+#define OxSDK_VERSION    @"1.2.0.0-RC03-202308101030"
 
 NS_ASSUME_NONNULL_BEGIN
 

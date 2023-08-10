@@ -17,7 +17,7 @@ typedef void (^GDPRDismiss)(void);
 
 + (nonnull instancetype)sharedInstance;
 
-- (void)initialize:(NSInteger)googleWeight sfbxWeight:(double)sfbxWeight sfbxAppKey:(NSString *)sfbxAppKey consentCheckResultCallback:(void (^)(BOOL isSubjectToGDRP))consentCheckResultCallback;
+- (void)initialize:(NSInteger)googleWeight sfbxWeight:(NSInteger)sfbxWeight sfbxAppKey:(NSString *)sfbxAppKey consentCheckResultCallback:(void (^)(BOOL isSubjectToGDRP))consentCheckResultCallback;
 
 /// 展示 GDPRUI
 /// - Parameters:
