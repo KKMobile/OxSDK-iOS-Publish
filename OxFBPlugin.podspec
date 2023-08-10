@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxFBPlugin"#SDK名称
-  spec.version      = "1.0.1-202305291630"#版本号
+  spec.version      = "1.0.2-202308101930"#版本号
   spec.summary      = "OxAdSdk for FBP applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC

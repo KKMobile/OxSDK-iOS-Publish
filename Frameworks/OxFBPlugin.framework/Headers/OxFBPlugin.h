@@ -2,11 +2,11 @@
 //  OxFBPlugin.h
 //  OxFBPlugin
 //
-//  Created by 耿志向 on 2023/5/18.
+//  Created by Mavl_2023_100272 on 2023/6/5.
+//  Copyright © 2023 耿志向. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "OxFBEventTracker.h"
 
 //! Project version number for OxFBPlugin.
 FOUNDATION_EXPORT double OxFBPluginVersionNumber;
