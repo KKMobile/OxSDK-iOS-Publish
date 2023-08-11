@@ -20,17 +20,26 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
   spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
   spec.platform     = :ios#支持平台
-  spec.ios.deployment_target = "11.0"#支持iOS最低版本
+  spec.ios.deployment_target = "12.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "t-#{spec.version}" }
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
   # Max Mediation
-  spec.dependency 'AmazonPublisherServicesSDK','4.4.3'
-  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.4.3.0'
+  spec.dependency 'AmazonPublisherServicesSDK','4.7.2.0'
+  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.2.0'
   
-  spec.dependency 'OxSdkCore','1.2.0.0-RC02-20230811150'
+  spec.dependency 'GoogleMobileAdsMediationUnity','4.8.0.0'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin','11.10.1.0'
+  spec.dependency 'GoogleMobileAdsMediationFyber','8.2.2.0'
+  spec.dependency 'GoogleMobileAdsMediationMintegral','7.3.9.0'
+  spec.dependency 'GoogleMobileAdsMediationPangle','5.3.1.0.0'
+  spec.dependency 'OguryMediationGoogleMobileAds','4.1.2.0'
+  spec.dependency 'AdMobPubMaticAdapter','2.1.1'
+  spec.dependency 'FiveGADAdapter','1.5.0'
+
+  spec.dependency 'OxSdkCore','1.2.0.0-RC03-202308101030'
   spec.dependency 'OxDiscoveryPlugin','1.0.1-202308081830'
     
 end
