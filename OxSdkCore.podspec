@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkCore"#SDK名称
-    spec.version      = "1.2.0.0-RC03-202308101030"#版本号
+    spec.version      = "1.2.0.0-RC03-20230811150"#版本号
     spec.summary      = "OxAdSdk for core applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
     spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
     spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
     spec.platform     = :ios#支持平台
-    spec.ios.deployment_target = "12.0"#支持iOS最低版本
+    spec.ios.deployment_target = "11.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "core-#{spec.version}" }
     spec.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
@@ -56,6 +56,15 @@ Pod::Spec.new do |spec|
 
     #Admob Mediation
     spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.1'
+    spec.dependency 'GoogleMobileAdsMediationUnity','4.8.0.0'
+    spec.dependency 'GoogleMobileAdsMediationAppLovin','11.10.1.0'
+    spec.dependency 'GoogleMobileAdsMediationFyber','8.2.2.0'
+    spec.dependency 'GoogleMobileAdsMediationMintegral','7.3.9.0'
+    spec.dependency 'GoogleMobileAdsMediationPangle','5.3.1.0.0'
+    spec.dependency 'OguryMediationGoogleMobileAds','4.1.2.0'
+    spec.dependency 'AdMobPubMaticAdapter','2.1.1'
+    spec.dependency 'FiveGADAdapter','1.5.0'
+    
     
     #GDPR
     spec.dependency 'AppConsent','4.2.2'
