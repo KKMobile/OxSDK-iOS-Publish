@@ -29,5 +29,6 @@ Pod::Spec.new do |spec|
   
   spec.dependency 'AppLovinSDK', '11.8.2'
   spec.dependency 'FirebaseAnalytics'
+  spec.dependency 'FirebaseRemoteConfig'
 
 end
