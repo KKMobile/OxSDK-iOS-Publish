@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMGoogleAdNativeView : UIView <OMNativeViewCustomEvent>
 
-@property (nonatomic, strong) OMGoogleAdNativeAd *nativeAd;
+@property (nonatomic, weak) OMGoogleAdNativeAd *nativeAd;
 @property (nonatomic, strong) GADNativeAdView *gadNativeView;
 @property (nonatomic, strong) GADMediaView *mediaView;
 @property(nonatomic, strong) NSLayoutConstraint *heightConstraint;

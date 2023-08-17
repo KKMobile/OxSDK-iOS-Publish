@@ -51,6 +51,8 @@ extern NSString *kOpenMediatonInitSuccessNotification;
 /// Get custom user id
 + (NSString*)getUserID;
 
++ (void)setLevel:(NSInteger)level;
+
 /// Set custom tag
 + (void)setCustomTag:(NSString*)tag withString:(NSString*)value;
 

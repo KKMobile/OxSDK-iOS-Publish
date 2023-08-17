@@ -2,7 +2,7 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <UIKit/UIKit.h>
-#import <Fyber_Marketplace_SDK/IASDKCore-Bridging-Header.h>
+#import <IASDKCore/IASDKCore.h>
 #import "OMBannerCustomEvent.h"
 NS_ASSUME_NONNULL_BEGIN
 

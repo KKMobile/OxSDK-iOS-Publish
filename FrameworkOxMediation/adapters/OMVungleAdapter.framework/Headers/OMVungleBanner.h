@@ -8,7 +8,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMVungleBanner : UIView <OMBannerCustomEvent,OMVungleAdapterDelegate>
+@interface OMVungleBanner : UIView <OMBannerCustomEvent>
 
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, strong) UIView *renderView;
@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<bannerCustomEventDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame adParameter:(NSDictionary *)adParameter rootViewController:(UIViewController *)rootViewController;
-
 - (void)loadAdWithLocalExtraParameter:(NSDictionary<NSString *,id> *)localExtraParameter;
 
 @end

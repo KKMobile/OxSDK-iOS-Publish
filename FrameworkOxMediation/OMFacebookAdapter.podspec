@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMFacebookAdapter"#SDK名称
-  spec.version      = "6.12.0.0-202304241200"#版本号
+  spec.version      = "6.12.0.0-202308172100"#版本号
   spec.summary      = "This is OMFacebookAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC

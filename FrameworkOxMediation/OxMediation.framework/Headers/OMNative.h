@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// the delegate
 @property(nonatomic, weak, nullable) id<OMNativeDelegate> delegate;
-@property(nonatomic, strong) UIView *maxNativeView;
 
 /// The native's ad placement ID.
 - (NSString*)placementID;

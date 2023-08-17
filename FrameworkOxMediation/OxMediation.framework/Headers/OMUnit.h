@@ -34,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableDictionary *sceneMapKeyName;
 @property (nonatomic, strong) OMScene *defaultScene;
 @property (nonatomic, assign) NSInteger hb;
+@property (nonatomic, assign) NSInteger hbt;
+@property (nonatomic, assign) NSInteger wftn;
 
 - (instancetype)initWithUnitData:(NSDictionary*)unitData;
 - (void)updateWithUnitData:(NSDictionary*)unitData;

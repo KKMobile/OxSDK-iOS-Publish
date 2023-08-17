@@ -2,13 +2,12 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import "OMHeliumRouter.h"
 #import "OMRewardedVideoCustomEvent.h"
 #import "OMBidCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMHeliumRewardedVideo : NSObject <OMRewardedVideoCustomEvent,OMHeliumAdapterDelegate>
+@interface OMHeliumRewardedVideo : NSObject <OMRewardedVideoCustomEvent>
 
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, weak) id<rewardedVideoCustomEventDelegate> delegate;

@@ -6,7 +6,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const VungleAdapterVersion = @"1.1.2";
+static NSString * const VungleAdapterVersion = @"1.1.4";
 
 @interface OMVungleAdapter : NSObject<OMMediationAdapter>
 

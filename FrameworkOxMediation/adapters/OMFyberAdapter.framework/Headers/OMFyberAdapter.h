@@ -6,9 +6,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *  const FyberAdapterVersion = @"1.1.2";
+static NSString *  const FyberAdapterVersion = @"1.1.4";
 
-@interface OMFyberAdapter : NSObject
+@interface OMFyberAdapter : NSObject <OMMediationAdapter>
+
+@property(nonatomic, strong) NSNumber *userAge;
+@property(nonatomic, assign) NSInteger userGender;
+
++ (instancetype)sharedInstance;
 
 + (NSString*)adapterVerison;
 

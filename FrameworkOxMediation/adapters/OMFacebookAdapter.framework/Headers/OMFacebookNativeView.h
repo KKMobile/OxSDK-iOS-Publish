@@ -9,12 +9,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMFacebookNativeView : UIView<FBMediaViewDelegate,OMNativeViewCustomEvent>
 
-@property (nonatomic, strong) OMFacebookNativeAd *nativeAd;
+@property (nonatomic, weak) OMFacebookNativeAd *nativeAd;
 @property (nonatomic, strong) FBAdChoicesView *adChoicesView;
 @property (nonatomic, strong) FBMediaView *mediaView;
 
 - (instancetype)initWithFrame:(CGRect)frame;
-
+- (void)setClickableViews:(NSArray<UIView *> *)clickableViews;
 
 
 @end

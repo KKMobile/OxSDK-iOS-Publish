@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const PubMaticAdapter = @"1.1.2";
+static NSString * const PubMaticAdapter = @"1.1.4";
 
 @interface OMPubMaticAdapter : NSObject<OMMediationAdapter>
 

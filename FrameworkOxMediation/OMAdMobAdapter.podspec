@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMAdMobAdapter"#SDK名称
-  spec.version      = "9.11.0.1-202304241200"#版本号
+  spec.version      = "10.3.0-202308172100"#版本号
   spec.summary      = "This is OMAdMobAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -27,6 +27,6 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-  spec.dependency 'Google-Mobile-Ads-SDK','9.11.0.1'
+  spec.dependency 'Google-Mobile-Ads-SDK','10.3.0'
 
 end

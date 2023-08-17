@@ -3,16 +3,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <BUAdSDK/BUAdSDK.h>
 #import <PAGAdSDK/PAGAdSDK.h>
 #import "OMRewardedVideoCustomEvent.h"
 #import "OMBidCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMPangleRewardedVideo : NSObject<BUNativeExpressRewardedVideoAdDelegate,OMRewardedVideoCustomEvent,PAGRewardedAdDelegate>
+@interface OMPangleRewardedVideo : NSObject<OMRewardedVideoCustomEvent,PAGRewardedAdDelegate>
 @property (nonatomic, copy) NSString *pid;
-@property (nonatomic, strong) BUNativeExpressRewardedVideoAd *rewardedVideoAd;
 @property (nonatomic, assign) BOOL adReadyFlag;
 @property (nonatomic, weak) id<rewardedVideoCustomEventDelegate> delegate;
 @property (nonatomic, weak) id<OMBidCustomEventDelegate> bidDelegate;

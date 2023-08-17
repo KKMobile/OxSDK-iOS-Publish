@@ -7,15 +7,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const MaxAdapterVersion = @"1.1.2";
+static NSString * const MaxAdapterVersion = @"1.1.4";
 
 @interface OMMaxAdapter : NSObject<OMMediationAdapter>
-+ (NSString*)adapterVerison;
-+ (void)initSDKWithConfiguration:(NSDictionary *)configuration completionHandler:(OMMediationAdapterInitCompletionBlock)completionHandler;
-+ (UIWindow *)currentWindow;
-+ (void)setConsent:(BOOL)consent;
-+ (void)setUSPrivacyLimit:(BOOL)privacyLimit;
-+ (void)setUserAgeRestricted:(BOOL)restricted;
+
 @end
 
 NS_ASSUME_NONNULL_END

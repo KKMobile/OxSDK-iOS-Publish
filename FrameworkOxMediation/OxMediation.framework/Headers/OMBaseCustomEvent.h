@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "OMBidCustomEvent.h"
 #import "OMCustomEventDelegate.h"
+#import "OMLogMoudle.h"
 
 @protocol OMBaseCustomEvent <NSObject>
 

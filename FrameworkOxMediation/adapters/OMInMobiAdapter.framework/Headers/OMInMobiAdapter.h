@@ -6,7 +6,7 @@
 #import "OMMediationAdapter.h"
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const InMobiAdapterVersion = @"1.1.2";
+static NSString * const InMobiAdapterVersion = @"1.1.4";
 
 @interface OMInMobiAdapter : NSObject<OMMediationAdapter>
 

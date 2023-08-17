@@ -7,20 +7,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class OMBannerAd;
+
 @protocol bannerDelegate<NSObject>
-- (void)bannerDidLoad:(NSString *)instanceID;
-- (void)bannerDidFailToLoadWithError:(NSError *)error;
-- (void)bannerWillExposure;
-- (void)bannerDidClick;
-- (void)bannerWillPresentScreen;
-- (void)bannerDidDissmissScreen;
-- (void)bannerWillLeaveApplication;
+- (void)bannerDidLoad:(OMBannerAd *)bannerAd;
+- (void)bannerDidFailToLoad:(OMBannerAd *)bannerAd error:(NSError *)error;
+- (void)bannerWillExposure:(OMBannerAd *)bannerAd;
+- (void)bannerDidClick:(OMBannerAd *)bannerAd;
+- (void)bannerWillPresentScreen:(OMBannerAd *)bannerAd;
+- (void)bannerDidDissmissScreen:(OMBannerAd *)bannerAd;
+- (void)bannerWillLeaveApplication:(OMBannerAd *)bannerAd;
 @end
 
 @interface OMBannerAd : OMAdBase<bannerCustomEventDelegate>
 
 @property (nonatomic, weak)id<bannerDelegate> delegate;
 @property (nonatomic, assign) BOOL impr;
+
+- (UIView *)bannerView;
 
 @end
 

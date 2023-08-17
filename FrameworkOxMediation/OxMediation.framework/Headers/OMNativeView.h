@@ -16,6 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) OMNativeMediaView *mediaView;
 @property (nonatomic, strong) OMNativeAdView *nativeAdView;
 
+@property (nonatomic, strong) UIImageView *iconView;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *bodyLabel;
+@property (nonatomic, strong) UILabel *action;
+@property (nonatomic, strong) NSData *iconData;
+@property (nonatomic, strong) UILabel *advertiserLabel;
+@property (nonatomic, strong) UIView *optionsContentView;
+
 /// This is a method to initialize an OMNativeView.
 /// Parameter frame: the OMNativeView frame.
 - (instancetype)initWithFrame:(CGRect)frame;

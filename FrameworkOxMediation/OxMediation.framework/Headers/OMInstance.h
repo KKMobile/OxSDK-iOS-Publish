@@ -19,7 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger frequencryUnit;
 @property (nonatomic, assign) NSInteger frequencryIntercal;
 @property (nonatomic, assign) BOOL hb;  //headbidding
-@property (nonatomic, assign) NSInteger hbt;    //headbidding maxtimeoutms
+@property (nonatomic, assign) NSInteger hbt;    //headbidding timeout
+@property (nonatomic, assign) NSInteger wftn;    //waterfull timeout
 @property (nonatomic, copy) NSString *wfReqId;  //requestId;
 @property (nonatomic, assign) NSInteger ruleId;  //ruleId;
 @property (nonatomic,copy) NSString *ruleName;
@@ -34,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger expiredTime;
 @property (nonatomic, copy) NSString *config_hash;
 @property (nonatomic, copy) NSString *profile_id;
+@property (nonatomic, assign) float fp; //底价
+
 
 - (instancetype)initWithUnitID:(NSString *)unitID instanceData:(NSDictionary *)instanceData;
 - (void)updateWithInstanceData:(NSDictionary*)instanceData;

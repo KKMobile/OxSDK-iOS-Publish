@@ -55,6 +55,8 @@ typedef NS_ENUM(NSInteger, OMInitState) {
 @property (nonatomic, assign) OxMediationAdFormat useCacheAdFormat;
 @property (nonatomic, assign) BOOL autoCache;
 @property (nonatomic, strong) NSArray<NSString *> *keywords;
+@property (nonatomic, copy) NSString *uid;
+
 
 + (instancetype)sharedInstance;
 

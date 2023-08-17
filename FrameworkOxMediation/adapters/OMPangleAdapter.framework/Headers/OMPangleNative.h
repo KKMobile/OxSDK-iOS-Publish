@@ -2,16 +2,14 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import <BUAdSDK/BUAdSDK.h>
 #import <PAGAdSDK/PAGAdSDK.h>
 #import "OMNativeCustomEvent.h"
 #import "OMBidCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMPangleNative : NSObject<OMNativeCustomEvent,BUNativeExpressAdViewDelegate,PAGLNativeAdDelegate>
+@interface OMPangleNative : NSObject<OMNativeCustomEvent,PAGLNativeAdDelegate>
 
-@property (nonatomic, strong) BUNativeExpressAdManager *adLoader;
 @property (nonatomic, weak, readwrite) UIViewController *rootVC;
 
 // 海外

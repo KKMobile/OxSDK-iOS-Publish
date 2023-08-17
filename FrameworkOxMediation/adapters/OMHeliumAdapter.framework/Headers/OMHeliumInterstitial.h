@@ -2,14 +2,12 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import "OMHeliumRouter.h"
 #import "OMInterstitialCustomEvent.h"
 #import "OMBidCustomEvent.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMHeliumInterstitial : NSObject <OMInterstitialCustomEvent,OMHeliumAdapterDelegate>
+@interface OMHeliumInterstitial : NSObject <OMInterstitialCustomEvent>
 
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, weak) id<interstitialCustomEventDelegate> delegate;

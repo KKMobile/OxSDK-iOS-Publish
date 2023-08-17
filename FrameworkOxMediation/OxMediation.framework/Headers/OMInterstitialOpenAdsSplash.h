@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OMInterstitialOpenAdsSplash : NSObject <OMSplashCustomEvent>
 
 @property (nonatomic, weak) id<splashCustomEventDelegate>delegate;
+@property (nonatomic, weak) id<OMBidCustomEventDelegate> bidDelegate;
 @property (nonatomic, copy) NSString *pid;
 
 - (instancetype)initWithParameter:(NSDictionary *)adParameter adSize:(CGSize)size;

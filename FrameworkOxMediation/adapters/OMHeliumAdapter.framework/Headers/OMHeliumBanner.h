@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <HeliumSdk/HeliumSdk.h>
 #import "OMBannerCustomEvent.h"
-#import "OMHeliumRouter.h"
 #import "OMBidCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN

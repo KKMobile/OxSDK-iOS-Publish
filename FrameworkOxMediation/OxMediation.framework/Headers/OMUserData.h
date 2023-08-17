@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) double lifeTimeValue;
 
+@property (nonatomic, copy) NSString *appStoreAppID;
+
 + (instancetype)sharedInstance;
 
 -(void)userPurchase:(CGFloat)amout currency:(NSString*)currencyUnit;

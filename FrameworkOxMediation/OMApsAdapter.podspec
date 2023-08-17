@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OMApsAdapter"#SDK名称
-  spec.version      = "4.4.3.0-202304241200"#版本号
+  spec.version      = "4.4.3.0-202308172100"#版本号
   spec.summary      = "This is OMApsAdapter"#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC

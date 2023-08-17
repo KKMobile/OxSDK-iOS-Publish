@@ -7,7 +7,7 @@
 #import "OMMediationAdapter.h"
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const HeliumAdapterVersion = @"1.1.2";
+static NSString * const HeliumAdapterVersion = @"1.1.4";
 
 
 @interface OMHeliumAdapter : NSObject<OMMediationAdapter,HeliumSdkDelegate>

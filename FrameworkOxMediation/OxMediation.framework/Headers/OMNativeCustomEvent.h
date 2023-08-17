@@ -17,10 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<nativeCustomEventDelegate> delegate;
 - (instancetype)initWithParameter:(NSDictionary*)adParameter rootVC:(UIViewController*)rootViewController;
-
-@optional
-// Max 专用
-- (void)setViewBinder:(UIView *)view;
 @end
 
 NS_ASSUME_NONNULL_END

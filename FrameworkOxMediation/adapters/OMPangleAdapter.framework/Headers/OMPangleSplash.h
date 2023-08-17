@@ -2,21 +2,15 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import <BUAdSDK/BUAdSDK.h>
 #import <PAGAdSDK/PAGAdSDK.h>
-#import <BUAdSDK/BUSplashAdView.h>
 #import "OMSplashCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMPangleSplash : NSObject<OMSplashCustomEvent,BUSplashAdDelegate,PAGLAppOpenAdDelegate>
+@interface OMPangleSplash : NSObject<OMSplashCustomEvent,PAGLAppOpenAdDelegate>
 
 @property (nonatomic, weak) id <splashCustomEventDelegate>delegate;
 @property (nonatomic, copy) NSString *pid;
-
-@property (nonatomic, strong) BUSplashAdView *buSplashAd;
-@property (nonatomic, assign) CGRect AdFrame;
-@property (nonatomic, assign) BOOL isSplashAdReady;
 
 // 海外
 @property (nonatomic, strong) PAGLAppOpenAd *splashAd;

@@ -17,9 +17,19 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)OMIronSourceVideoEnd;
 - (void)OMIronSourceDidFinish;
 - (void)OMIronSourceDidFailToShow:(NSError *)error;
+
+- (void)OMIronSourceBannerDidload:(ISDemandOnlyBannerView *)bannerView;
 @end
 
-@interface OMIronSourceRouter : NSObject<ISDemandOnlyInterstitialDelegate,ISDemandOnlyRewardedVideoDelegate>
+@protocol OMIronSourceBannerAdapterDelegate <NSObject>
+
+- (void)OMIronSourceDidFailToLoad:(NSError*)error;
+- (void)OMIronSourceDidClick;
+- (void)OMIronSourceBannerDidload:(ISDemandOnlyBannerView *)bannerView;
+@end
+
+
+@interface OMIronSourceRouter : NSObject<ISDemandOnlyInterstitialDelegate,ISDemandOnlyRewardedVideoDelegate,ISDemandOnlyBannerDelegate>
 
 @property (nonatomic, strong) NSMapTable *placementDelegateMap;
 

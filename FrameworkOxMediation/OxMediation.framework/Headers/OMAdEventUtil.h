@@ -10,27 +10,22 @@
 #import "OMAdBasePrivate.h"
 
 // NetWorkState
-typedef NS_ENUM(NSInteger, NetWorkState) {
-    UNAVAILABLE = 0,
-    AVAILABLE = 1
+typedef NS_ENUM(NSInteger, OMNetWorkState) {
+    OM_UNAVAILABLE = 0,
+    OM_AVAILABLE = 1
 };
 
 // NetWorkType
-typedef NS_ENUM(NSInteger, NetWorkType) {
-    UNWORK = 0,
-    DATA_2G,
-    DATA_3G,
-    DATA_4G,
-    DATA_5G,
-    WIFI,
-    DATA
+typedef NS_ENUM(NSInteger, OMNetWorkType) {
+    OM_UNWORK = 0,
+    OM_DATA_2G,
+    OM_DATA_3G,
+    OM_DATA_4G,
+    OM_DATA_5G,
+    OM_WIFI,
+    OM_DATA
 };
 
-//VPNState
-typedef NS_ENUM(NSInteger, VPNState) {
-    DISCONNECTED = 0,
-    CONNECTED = 10
-};
 
 NS_ASSUME_NONNULL_BEGIN
 

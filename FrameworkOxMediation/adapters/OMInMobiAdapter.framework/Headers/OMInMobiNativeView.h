@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OMInMobiNativeView : UIView <OMNativeViewCustomEvent>
-@property (nonatomic, strong) OMInMobiNativeAd *nativeAd;
+@property (nonatomic, weak) OMInMobiNativeAd *nativeAd;
 @property (nonatomic, strong) UIView *mediaView;
 - (instancetype)initWithFrame:(CGRect)frame;
 

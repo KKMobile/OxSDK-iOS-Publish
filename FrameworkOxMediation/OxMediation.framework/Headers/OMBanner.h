@@ -30,14 +30,13 @@ typedef NS_ENUM(NSInteger, OMBannerLayoutAttribute) {
 /// A customized UIView to represent a OxMediation ad (banner ad).
 @interface OMBanner : UIView <OMAdHelperCustomEvent>
 
-@property(nonatomic, readonly, nullable) NSString *placementID;
-@property (nonatomic, strong) OMBannerAd *bannerAd;
-
 /// the delegate
 @property (nonatomic, weak)id<OMBannerDelegate> delegate;
 
 /// The banner's ad placement ID.
 - (NSString*)placementID;
+
+- (float)revenue;
 
 /// This is a method to initialize an OMBanner.
 /// type: The size of the ad. Default is OMBannerTypeDefault.

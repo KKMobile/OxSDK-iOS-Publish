@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define OxMediation_SDK_VERSION    @"1.1.2"
+#define OxMediation_SDK_VERSION    @"1.1.4"
 
 typedef NS_ENUM(NSInteger, OMAdNetwork) {
     OMAdNetworkAdTiming = 1,
@@ -39,6 +39,7 @@ typedef NS_ENUM(NSInteger, OMAdNetwork) {
     OMAdNetworkAps = 35,
     OMAdNetworkOmInterstitialOpenAds = 36,
     OMAdNetworkOmNativeBanner = 37,
+    OMAdNetworkVerve = 38,
 };
 
 #endif /* OxMediationConstant_h */

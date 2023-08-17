@@ -2,18 +2,16 @@
 // Licensed under the GNU Lesser General Public License Version 3
 
 #import <Foundation/Foundation.h>
-#import <BUAdSDK/BUAdSDK.h>
 #import <PAGAdSDK/PAGAdSDK.h>
 #import "OMInterstitialCustomEvent.h"
 #import "OMBidCustomEvent.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
-@interface OMPangleInterstitial : NSObject<OMInterstitialCustomEvent,BUNativeExpressFullscreenVideoAdDelegate,PAGLInterstitialAdDelegate>
+@interface OMPangleInterstitial : NSObject<OMInterstitialCustomEvent,PAGLInterstitialAdDelegate>
 
 @property (nonatomic, copy) NSString *pid;
 @property (nonatomic, assign) BOOL adReadyFlag;
-@property (nonatomic, strong) BUNativeExpressFullscreenVideoAd *fullscreenVideoAd;
 @property (nonatomic, strong) PAGLInterstitialAd *pagInterstitialAd;
 @property (nonatomic, weak) id<interstitialCustomEventDelegate> delegate;
 @property (nonatomic, weak) id<OMBidCustomEventDelegate> bidDelegate;

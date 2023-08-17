@@ -3,6 +3,7 @@
 
 #import <UIKit/UIKit.h>
 #import "OMMediatedNativeAd.h"
+#import "OMLogMoudle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -12,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setNativeAd:(id<OMMediatedNativeAd>)nativeAd;
 - (void)setMediaViewWithFrame:(CGRect)frame;
 - (UIView*)mediaView;
+
+@optional
+- (void)setClickableViews:(NSArray<UIView *> *)clickableViews;
 
 @end
 

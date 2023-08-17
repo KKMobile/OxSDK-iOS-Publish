@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithParameter:(NSDictionary*)adParameter rootVC:(UIViewController*)rootViewController;
 - (void)loadAdWithLocalExtraParameter:(NSDictionary<NSString *,id> *)localExtraParameter;
-- (void)setViewBinder:(UIView *)view;
 
 @end
 
