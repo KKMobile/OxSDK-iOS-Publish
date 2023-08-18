@@ -3,7 +3,6 @@
 
 #import <UIKit/UIKit.h>
 #import "OMMediatedNativeAd.h"
-#import "OMLogMoudle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
