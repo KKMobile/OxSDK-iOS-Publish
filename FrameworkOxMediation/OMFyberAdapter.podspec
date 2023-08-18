@@ -28,6 +28,4 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
   spec.dependency 'Fyber_Marketplace_SDK','8.2.2'
-  spec.dependency 'OxMediation', '1.1.4.0-RC01-202308172100'
-
 end

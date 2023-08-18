@@ -30,6 +30,5 @@ Pod::Spec.new do |spec|
 
  spec.dependency 'AmazonPublisherServicesSDK','4.6.0'
  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.6.0.0'
- spec.dependency 'OxMediation', '1.1.4.0-RC01-202308172100'
 
 end

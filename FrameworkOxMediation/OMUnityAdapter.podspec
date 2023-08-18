@@ -28,5 +28,5 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
   spec.dependency 'UnityAds','4.6.1'
-  spec.dependency 'OxMediation', '1.1.4.0-RC01-202308172100'
+
 end
