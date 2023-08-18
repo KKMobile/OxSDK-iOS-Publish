@@ -5,6 +5,7 @@
 // Header files.
 #import <OxMediation/OxMediation.h>
 #import <OxMediation/OMConfig.h>
+#import <OxMediation/OMLogMoudle.h>
 
 #import <OxMediation/OMBanner.h>
 
