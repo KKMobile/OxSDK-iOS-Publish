@@ -1,0 +1,6 @@
+framework module OMPangleAdapter {
+  umbrella header "OMPangleAdapter.h"
+
+  export *
+  module * { export * }
+}

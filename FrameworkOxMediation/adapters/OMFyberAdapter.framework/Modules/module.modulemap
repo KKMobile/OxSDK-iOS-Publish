@@ -1,0 +1,6 @@
+framework module OMFyberAdapter {
+  umbrella header "OMFyberAdapter.h"
+
+  export *
+  module * { export * }
+}

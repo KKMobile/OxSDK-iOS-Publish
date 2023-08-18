@@ -1,0 +1,6 @@
+framework module OMFacebookAdapter {
+  umbrella header "OMFacebookAdapter.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module OMIronSourceAdapter {
+  umbrella header "OMIronSourceAdapter.h"
+
+  export *
+  module * { export * }
+}

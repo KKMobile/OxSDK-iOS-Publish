@@ -1,0 +1,6 @@
+framework module OMUnityAdapter {
+  umbrella header "OMUnityAdapter.h"
+
+  export *
+  module * { export * }
+}
