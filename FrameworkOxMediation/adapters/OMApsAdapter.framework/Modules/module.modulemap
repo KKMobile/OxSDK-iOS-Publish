@@ -1,6 +1,0 @@
-framework module OMApsAdapter {
-  umbrella header "OMApsAdapter.h"
-
-  export *
-  module * { export * }
-}

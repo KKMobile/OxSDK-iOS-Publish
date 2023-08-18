@@ -1,6 +1,0 @@
-framework module OMVerveAdapter {
-  umbrella header "OMVerveAdapter.h"
-
-  export *
-  module * { export * }
-}

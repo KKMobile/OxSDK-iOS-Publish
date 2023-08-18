@@ -1,6 +1,0 @@
-framework module OMAdMobAdapter {
-  umbrella header "OMAdMobAdapter.h"
-
-  export *
-  module * { export * }
-}

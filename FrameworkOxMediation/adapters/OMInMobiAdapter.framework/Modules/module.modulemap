@@ -1,6 +1,0 @@
-framework module OMInMobiAdapter {
-  umbrella header "OMInMobiAdapter.h"
-
-  export *
-  module * { export * }
-}
