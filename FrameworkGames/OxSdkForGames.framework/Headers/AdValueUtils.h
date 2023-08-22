@@ -12,6 +12,8 @@
 #import "AdEventUtil.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@import IronSource;
+
 static NSString* PARAM_KEY_VALUE = @"value";
 static NSString* PARAM_KEY_CURRENCY = @"currency";
 static NSString* PARAM_KEY_REVENUE = @"revenue";
@@ -38,6 +40,8 @@ static NSString* AD_PLATFORM_MAX = @"MAX";
 - (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement;
 
 - (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement;
+
+- (void)logLevelPlayImpressionRevenue:(ISImpressionData *)ad ;
 @end
 
 NS_ASSUME_NONNULL_END

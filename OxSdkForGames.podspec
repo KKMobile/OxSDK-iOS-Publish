@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.1.2.1"#版本号
+  spec.version      = "1.1.2.1-LevelPlay-RC01-202308221800"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -22,11 +22,19 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "12.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
-  spec.ios.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
+  spec.ios.vendored_frameworks =
+                        'FrameworkGames/OxSdkForGames.framework',
+                        'FrameworkGames/ISMintegralAdapter.xcframework',
+                        'FrameworkGames/ISAppLovinAdapter.xcframework',
+                        'FrameworkGames/ISAPSAdapter.xcframework',
+                        'FrameworkGames/ISPangleAdapter.xcframework',
+                        'FrameworkGames/ISUnityAdsAdapter.xcframework',
+                        'FrameworkGames/ISAdMobAdapter.xcframework',
+
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-  spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
+  spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle","ResBundle/Games/ISAdMobResources.bundle"]
 
   spec.dependency 'PureLayout'
   spec.dependency 'AFNetworking'
@@ -46,7 +54,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationGoogleAdapter', '10.3.0.1'
   spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
   spec.dependency 'ALInMobiCustomAdapterFramework', '10.1.2.0'
-  spec.dependency 'AppLovinMediationIronSourceAdapter', '7.2.7.0.1'
+  spec.dependency 'IronSourceSDK', '7.3.1.0'
   spec.dependency 'AppLovinMediationFacebookAdapter', '6.12.0.2'
   spec.dependency 'AppLovinMediationMobileFuseAdapter', '1.4.4.0'
   spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.1.1.3'
@@ -69,11 +77,15 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationAdColony','4.9.0.2'
   spec.dependency 'GoogleMobileAdsMediationAppLovin','11.8.2.0'
   spec.dependency 'GoogleMobileAdsMediationChartboost','9.2.0.0'
-  spec.dependency 'GoogleMobileAdsMediationIronSource','7.2.7.0.1'
 
   spec.dependency 'MobileFuseAdMobAdapter','1.4.4.0'
   spec.dependency 'OguryMediationGoogleMobileAds','4.1.1.0'
   spec.dependency 'AdMobPubMaticAdapter','2.1.1'
   spec.dependency 'FiveGADAdapter','1.5.0'
-
+  
+  #LevelPlay Mediation
+  spec.dependency 'IronSourceChartboostAdapter','4.3.14.1'
+  spec.dependency 'IronSourceFyberAdapter','4.3.30.1'
+  spec.dependency 'IronSourceAdQualitySDK','7.13.0'
+ 
 end
