@@ -30,6 +30,7 @@ static NSString* PARAM_KEY_ADNETWORK = @"adNetwork";
 static NSString* PARAM_KEY_CORE_LEVEL= @"core_level";
 static NSString* AD_PLATFORM_ADMOB = @"AdMob";
 static NSString* AD_PLATFORM_MAX = @"MAX";
+static NSString* AD_PLATFORM_LEVELPLAY = @"Level_Play";
 
 @interface AdValueUtils : NSObject
 
