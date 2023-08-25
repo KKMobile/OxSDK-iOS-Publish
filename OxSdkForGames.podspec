@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "2.0.3.0-RC01-202308251130"#版本号
+  spec.version      = "2.0.3.0-RC01-202308251200"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -87,5 +87,8 @@ Pod::Spec.new do |spec|
   spec.dependency 'OMUnityAdapter', '4.6.1-202308172100'
   spec.dependency 'OMVerveAdapter', '2.18.0-202308172100'
   spec.dependency 'OMVungleAdapter', '6.12.3-202308172100'
+  
+  # DiscoveryPlugin
+  spec.dependency 'OxDiscoveryPlugin','1.0.1-OM-2O2308251100'
 
 end
