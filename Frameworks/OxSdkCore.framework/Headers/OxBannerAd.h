@@ -5,7 +5,8 @@
 //  Created by Rober on 2022/4/12.
 //
 
-#import "OxAdHelper.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "BannerAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
