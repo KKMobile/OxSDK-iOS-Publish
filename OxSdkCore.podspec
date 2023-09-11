@@ -51,6 +51,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.8.0.1'
     spec.dependency 'AppLovinMediationVerveAdapter', '2.18.1.1'
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.3.9.0.0'
+    spec.dependency 'BidMachine', '2.3.0.2'
     spec.dependency 'OpenWrapSDK', '3.0.0'
     spec.dependency 'AppLovinPubMaticAdapter', '1.0.2'
 
