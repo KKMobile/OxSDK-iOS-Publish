@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "OxAdSdk.h"
 
 typedef enum : NSUInteger {
     GDPRTool_Max = 0,
@@ -34,6 +35,9 @@ typedef void (^GDPRDismiss)(void);
 
 /// 是否是可以展示GDPR的地区/国家
 - (BOOL)isSubjectGDPR;
+
+/// Max 下 SDK 初始化成功
+- (void)onMediationInitialized:(OxSdkMediationType)mediation;
 
 @end
 

@@ -11,9 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-typedef void (^OnApsSuccessBlock)(DTBAdResponse *response);
+typedef void (^OnApsSuccessBlock)(DTBAdResponse  * _Nullable response);
 
-typedef void (^OnApsFailedBlock)(DTBAdErrorInfo* errorInfo);
+typedef void (^OnApsFailedBlock)(DTBAdErrorInfo  * _Nullable errorInfo);
 
 @interface ApsBaseAdManager : NSObject<DTBAdCallback>
 
@@ -22,6 +22,8 @@ typedef void (^OnApsFailedBlock)(DTBAdErrorInfo* errorInfo);
 
 - (BOOL)shouldLoadAps;
 - (void)loadApsAd;
+- (void)checkApsInit:(void (^)(BOOL isInitialized))callback;
+
 
 @end
 

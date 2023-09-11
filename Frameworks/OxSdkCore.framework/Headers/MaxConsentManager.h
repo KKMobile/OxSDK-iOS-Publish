@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MaxConsentManager : BaseConsentManager
 
+- (void)onMediationInitialized:(OxSdkMediationType)mediation;
+
 //
 + (BOOL)isConsentRejected;
 
