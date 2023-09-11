@@ -22,3 +22,4 @@ static NSString* const PARAM_SFBX_ALL_ALLOWED = @"sfbx_all_allowed";
 
 static NSString* const VALUE_GOOGLE = @"google";
 static NSString* const VALUE_SFBX = @"sfbx";
+static NSString* const VALUE_MAX = @"max";

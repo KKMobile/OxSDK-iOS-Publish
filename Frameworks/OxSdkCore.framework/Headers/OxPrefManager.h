@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nonnull instancetype)sharedInstance;
 
 // 1 Google UMP  2 SFBX
-@property (nonatomic,assign) NSInteger gdprTool;
+@property (nonatomic,assign) int gdprTool;
 @property (nonatomic,assign) NSInteger core_level;
 @property (nonatomic,assign) BOOL isUnityAdsGdprSet;
 @property (nonatomic,assign) BOOL isPrefMigrated;

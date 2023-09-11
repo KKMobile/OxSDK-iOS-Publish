@@ -34,6 +34,8 @@ extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_REWARDED;
 extern NSString* const OX_CONFIG_FORCE_SWITCH_MEDIATION;
 extern NSString* const OX_CONFIG_DISABLE_IDS;
 extern NSString* const OX_CONFIG_ADSDK_CMP_STYLE;
+extern NSString* const OX_CONFIG_GDPR_STYLE;
+
 @end
 
 NS_ASSUME_NONNULL_END

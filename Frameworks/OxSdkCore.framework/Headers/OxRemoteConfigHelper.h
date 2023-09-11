@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "AdEvents.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxRemoteConfigHelper : NSObject
@@ -48,6 +49,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取 max 关闭的ID
 + (NSArray<NSString *> *)getDisableIds;
+
+// 获取 后台配置的 GDPR
++ (int)getGdprStyle;
 
 + (NSArray*)getKeywords;
 

@@ -8,16 +8,22 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    GDPRTool_Max = 0,
+    GDPRTool_Admob = 1,
+} GDPRTool;
+
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^GDPRDismiss)(void);
 
 @interface OxConsentMananger : NSObject
 
+@property(nonatomic, copy)NSString *privacyPolicyLink;
 
 + (nonnull instancetype)sharedInstance;
 
-- (void)initialize:(NSInteger)googleWeight sfbxWeight:(NSInteger)sfbxWeight sfbxAppKey:(NSString *)sfbxAppKey consentCheckResultCallback:(void (^)(BOOL isSubjectToGDRP))consentCheckResultCallback;
+- (void)initialize:(GDPRTool)defaultGDPRTool privacyPolicyLink:(NSString *)privacyPolicyLink consentCheckResultCallback:(void (^)(BOOL))consentCheckResultCallback;
 
 /// 展示 GDPRUI
 /// - Parameters:
