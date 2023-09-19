@@ -36,6 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Remote Config 获取成功之后，将 OxSdk 切换到对应的 Mediation
 - (Platform)switchMediationPlatformByRemoteConfig:(OnSdkInitComplete)block;
 
+- (BOOL)isMediationInitialized:(Platform)mediation;
 
 
 /// 获取当前的sdk 聚合平台
@@ -60,6 +61,9 @@ NS_ASSUME_NONNULL_BEGIN
  * 客户端辅助 OxSdk 完善打点信息。
  */
 - (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
+
+/// RemoteConfig 获取完成。
+- (void)onRemoteConfigFetchCompleted;
 
 @end
 

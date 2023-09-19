@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// uac campaign 信息。OX_CONFIG_ADSDK_UAC_CAMPAIGN
 + (nullable NSString *)getUacCampaign;
-
++ (int)getGdprStyle;
 /// 是否达到内存限制
 /// - Parameter adFormat: 达到内存限制的广告格式
 + (BOOL)isMemoryLimitReached:(NSString *)adFormat;
