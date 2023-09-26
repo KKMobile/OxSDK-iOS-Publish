@@ -33,8 +33,8 @@ typedef void (^GDPRDismiss)(void);
 ///   - dismiss: 关闭回调
 - (BOOL)showConsentDialog:(UIViewController *)viewController force:(BOOL)force dismiss:(nullable GDPRDismiss)dismiss;
 
-/// 是否是可以展示GDPR的地区/国家
-- (BOOL)isSubjectGDPR;
+/// 是否是可以展示GDPR的地区/国家  在设置界面使用的时候需要客户端自己判断ATT状态
+- (BOOL)isSubjectToGDPR;
 
 /// Max 下 SDK 初始化成功
 - (void)onMediationInitialized:(OxSdkMediationType)mediation;
