@@ -24,9 +24,15 @@ typedef void (^GDPRDismiss)(void);
 
 + (nonnull instancetype)sharedInstance;
 
+/// 初始化GDPR
+/// - Parameters:
+///   - defaultGDPRTool: 默认使用的 GDPR 平台
+///   - privacyPolicyLink: Max GDPR 的隐私政策链接
+///   - consentCheckResultCallback: 是否受到GDPR影响回到
 - (void)initialize:(GDPRTool)defaultGDPRTool privacyPolicyLink:(NSString *)privacyPolicyLink consentCheckResultCallback:(void (^)(BOOL isSubjectGDPR))consentCheckResultCallback;
 
 /// 展示 GDPRUI
+/// ATT请求回调里面调用不要判断ATT状态
 /// - Parameters:
 ///   - viewController: 需要展示的界面
 ///   - force: 是否为设置界面 (YES=设置界面)
