@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.2.0-RC05-202309281630"#版本号
+  spec.version      = "1.2.0.0-RC05-202309281630"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -46,7 +46,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationIronSource','7.3.0.0.0'
   spec.dependency 'MobileFuseAdMobAdapter','1.5.2.0'
   
-  spec.dependency 'OxSdkCore','1.2.0-RC05-202309281630'
+  spec.dependency 'OxSdkCore','1.2.0.0-RC05-202309281630'
   spec.dependency 'OxDiscoveryPlugin','1.0.1-202308081830'
 
 end
