@@ -9,6 +9,8 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
+#define OXSDK_VERSION "1.1.3.0"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAdSdkManager : BaseAdManager
