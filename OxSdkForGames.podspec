@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.3.3-Base-RC01-202311092345"#版本号
+    spec.version      = "1.1.3.3-Base-RC01-202311100020"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -24,7 +24,6 @@ Pod::Spec.new do |spec|
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
-    spec.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames.framework','FrameworkSize/OxSdkForGames_Base.framework'#SDK相对本文件路径
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
 
@@ -47,11 +46,16 @@ Pod::Spec.new do |spec|
     spec.dependency 'GoogleMobileAdsMediationUnity','4.6.1.0'
   
     spec.subspec 'Base' do |ss|
-      
+        ss.ios.vendored_frameworks =
+        'FrameworkSize/OxSdkForGames.framework',
+        'FrameworkSize/OxSdkForGames_Base.framework'
     end
   
     spec.subspec 'Lite1' do |ss|
-        ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames_Lite1.framework'#SDK相对本文件路径
+        ss.ios.vendored_frameworks =
+        'FrameworkSize/OxSdkForGames.framework',
+        'FrameworkSize/OxSdkForGames_Base.framework',
+        'FrameworkSize/OxSdkForGames_Lite1.framework'
                    
         ss.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
         ss.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
@@ -75,7 +79,11 @@ Pod::Spec.new do |spec|
 
 
     spec.subspec 'Lite2' do |ss|
-        ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames_Lite1.framework','FrameworkSize/OxSdkForGames_Lite2.framework'#SDK相对本文件路径
+        ss.ios.vendored_frameworks =
+        'FrameworkSize/OxSdkForGames.framework',
+        'FrameworkSize/OxSdkForGames_Base.framework',
+        'FrameworkSize/OxSdkForGames_Lite1.framework',
+        'FrameworkSize/OxSdkForGames_Lite2.framework'
     
         ss.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
         ss.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
