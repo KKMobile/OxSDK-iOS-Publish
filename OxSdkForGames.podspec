@@ -75,7 +75,7 @@ Pod::Spec.new do |spec|
 
 
     spec.subspec 'Lite2' do |ss|
-        ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames_Lite1.framework',''FrameworkSize/OxSdkForGames_Lite2.framework'#SDK相对本文件路径
+        ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames_Lite1.framework','FrameworkSize/OxSdkForGames_Lite2.framework'#SDK相对本文件路径
     
         ss.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
         ss.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
