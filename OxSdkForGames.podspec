@@ -46,12 +46,12 @@ Pod::Spec.new do |spec|
     spec.dependency 'GoogleMobileAdsMediationUnity','4.6.1.0'
   
     spec.subspec 'OxSdkForGames_Base' do |ss|
-      ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames.framework,FrameworkSize/OxSdkForGames_Base.framework'#SDK相对本文件路径
+      ss.ios.vendored_frameworks = ['FrameworkSize/OxSdkForGames.framework,FrameworkSize/OxSdkForGames_Base.framework']#SDK相对本文件路径
     
     end
   
     spec.subspec 'OxSdkForGames_Lite1' do |ss|
-        ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames.framework,FrameworkSize/OxSdkForGames_Lite1.framework'#SDK相对本文件路径
+        ss.ios.vendored_frameworks = ['FrameworkSize/OxSdkForGames.framework,FrameworkSize/OxSdkForGames_Lite1.framework']#SDK相对本文件路径
                            
         ss.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
         ss.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
@@ -74,7 +74,7 @@ Pod::Spec.new do |spec|
 
 
     spec.subspec 'OxSdkForGames_Lite2' do |ss|
-        ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames.framework,FrameworkSize/OxSdkForGames_Lite2.framework'#SDK相对本文件路径
+        ss.ios.vendored_frameworks = ['FrameworkSize/OxSdkForGames.framework,FrameworkSize/OxSdkForGames_Lite2.framework']#SDK相对本文件路径
         ss.dependency 'AppLovinMediationChartboostAdapter', '9.2.0.0'
         ss.dependency 'AppLovinMediationMobileFuseAdapter', '1.4.4.0'
         ss.dependency 'AppLovinMediationSmaatoAdapter', '22.0.2.0'
