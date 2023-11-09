@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.3.3-Base-RC01-202311092330"#版本号
+    spec.version      = "1.1.3.3-Base-RC01-202311092345"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -46,11 +46,11 @@ Pod::Spec.new do |spec|
     spec.dependency 'GoogleMobileAdsMediationFacebook','6.12.0.1'
     spec.dependency 'GoogleMobileAdsMediationUnity','4.6.1.0'
   
-    spec.subspec 'OxSdkForGames_Base' do |ss|
+    spec.subspec 'Base' do |ss|
       
     end
   
-    spec.subspec 'OxSdkForGames_Lite1' do |ss|
+    spec.subspec 'Lite1' do |ss|
         ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames_Lite1.framework'#SDK相对本文件路径
                    
         ss.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
@@ -74,7 +74,7 @@ Pod::Spec.new do |spec|
 
 
 
-    spec.subspec 'OxSdkForGames_Lite2' do |ss|
+    spec.subspec 'Lite2' do |ss|
         ss.ios.vendored_frameworks = 'FrameworkSize/OxSdkForGames_Lite1.framework',''FrameworkSize/OxSdkForGames_Lite2.framework'#SDK相对本文件路径
     
         ss.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
