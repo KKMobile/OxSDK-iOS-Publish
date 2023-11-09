@@ -22,7 +22,6 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = "12.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
-    spec.ios.vendored_frameworks = 'Games_Size/OxSdkForGames.framework'#SDK相对本文件路径
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
@@ -47,18 +46,12 @@ Pod::Spec.new do |spec|
     spec.dependency 'GoogleMobileAdsMediationUnity','4.6.1.0'
   
     spec.subspec 'OxSdkForGames_Base' do |ss|
+      ss.ios.vendored_frameworks = 'Games_Size/OxSdkForGames.framework,OxSdkForGames_Base.framework'#SDK相对本文件路径
     
     end
   
     spec.subspec 'OxSdkForGames_Lite1' do |ss|
-        ss.source_files = ['Games_Size/Adapter/Google/GADMFyberAdapter/*',
-                           'Games_Size/Adapter/Google/GADMInMobiAdapter/*',
-                           'Games_Size/Adapter/Google/GADMPangleAdapter/*',
-                           'Games_Size/Adapter/Google/GADMVerveAdapter/*',
-                           'Games_Size/Adapter/Max/Pangle/*',
-                           'Games_Size/Adapter/Max/BidMachineAdapter/*',
-                           'Games_Size/Adapter/Max/Fyber/*',
-                           ]
+        ss.ios.vendored_frameworks = 'Games_Size/OxSdkForGames.framework,OxSdkForGames_Lite1.framework'#SDK相对本文件路径
                            
         ss.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
         ss.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
@@ -81,9 +74,7 @@ Pod::Spec.new do |spec|
 
 
     spec.subspec 'OxSdkForGames_Lite2' do |ss|
-        ss.source_files = ['Games_Size/Adapter/Google/GADMSmaatoAdapter/*',
-                           'Games_Size/Adapter/Google/GADMMintegralAdapter/*',
-                           'Games_Size/Adapter/Max/Mintegral/*']
+        ss.ios.vendored_frameworks = 'Games_Size/OxSdkForGames.framework,OxSdkForGames_Lite2.framework'#SDK相对本文件路径
         ss.dependency 'AppLovinMediationChartboostAdapter', '9.2.0.0'
         ss.dependency 'AppLovinMediationMobileFuseAdapter', '1.4.4.0'
         ss.dependency 'AppLovinMediationSmaatoAdapter', '22.0.2.0'
