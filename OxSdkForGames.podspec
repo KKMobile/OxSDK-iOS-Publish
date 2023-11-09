@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
-  spec.source_files = ['Games_Size/Adapter/Max/UnityAds/*']
+  #spec.source_files = ['Games_Size/Adapter/Max/UnityAds/*']
 
   spec.dependency 'PureLayout'
   spec.dependency 'AFNetworking'
