@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.1.3.3-Lite1"#版本号
+  spec.version      = "1.1.3.3-Lite1-RCO1-20231109"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -25,17 +25,17 @@ Pod::Spec.new do |spec|
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-  spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
-  spec.source_files = ['Games_Size/Google/GADMFyberAdapter/*',
-                       'Games_Size/Google/GADMInMobiAdapter/*',
-                       'Games_Size/Google/GADMPangleAdapter/*',
-                       'Games_Size/Google/GADMVerveAdapter/*',
-                       'Games_Size/Max/Pangle/*',
-                       'Games_Size/Max/BidMachineAdapter/*',
-                       'Games_Size/Max/Fyber/*',
+  spec.resources = ["ResBundle/Adapter/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
+  spec.source_files = ['Games_Size/Adapter/Google/GADMFyberAdapter/*',
+                       'Games_Size/Adapter/Google/GADMInMobiAdapter/*',
+                       'Games_Size/Adapter/Google/GADMPangleAdapter/*',
+                       'Games_Size/Adapter/Google/GADMVerveAdapter/*',
+                       'Games_Size/Adapter/Max/Pangle/*',
+                       'Games_Size/Adapter/Max/BidMachineAdapter/*',
+                       'Games_Size/Adapter/Max/Fyber/*',
                        ]
 
-  spec.dependency 'OxSdkForGames','1.1.3.3-Base'
+  spec.dependency 'OxSdkForGames','1.1.3.3-Base-RCO1-20231109'
   spec.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
   spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
   spec.dependency 'ALInMobiCustomAdapterFramework', '10.1.2.0'
