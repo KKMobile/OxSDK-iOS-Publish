@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.1.3.3-Lite1-RCO1-20231109"#版本号
+  spec.version      = "1.1.3.3-Lite1-RCO1-202311091900"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
                        'Games_Size/Adapter/Max/Fyber/*',
                        ]
 
-  spec.dependency 'OxSdkForGames','1.1.3.3-Base-RCO1-20231109'
+  spec.dependency 'OxSdkForGames','1.1.3.3-Base-RCO1-202311091900'
   spec.dependency 'AppLovinMediationFyberAdapter', '8.2.2.0'
   spec.dependency 'AppLovinMediationInMobiAdapter', '10.1.2.7'
   spec.dependency 'ALInMobiCustomAdapterFramework', '10.1.2.0'
