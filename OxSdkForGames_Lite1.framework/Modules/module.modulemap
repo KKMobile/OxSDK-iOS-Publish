@@ -1,6 +1,0 @@
-framework module OxSdkForGames_Lite1 {
-  umbrella header "OxSdkForGames_Lite1.h"
-
-  export *
-  module * { export * }
-}
