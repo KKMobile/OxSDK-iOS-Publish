@@ -5,28 +5,22 @@
 //  Created by Rober on 2022/4/13.
 //
 
-#import "OxAdHelper.h"
-#import "IFullScreenAd.h"
+#import "OxBaseAd.h"
 #import "RewardedAdDelegate.h"
-#import "RewardedInternalAdDelegate.h"
+#import "BaseRewaedAdHelper.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxRewardedAdHelper : OxAdHelper<IFullScreenAd>
+@interface OxRewardedAdHelper : OxBaseAd
 
-@property (nonatomic, weak) id<RewardedAdDelegate> mAddelegate;
-@property (nonatomic, weak) id<RewardedInternalAdDelegate> mInternalAddelegate;
+@property (nonatomic, weak) id<RewardedAdDelegate> mAdDelegate;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *,BaseRewaedAdHelper *> *mAdHelpersMap;
 
-@property (nonatomic, assign) bool mUserRewarded;
+- (void)showAd:(NSString *)placement;
+- (void)showAd;
+- (BOOL)isReady;
 
-@property (nonatomic, assign) double mOnRewardedVideoStartedTime;
-
-@property (nonatomic, assign) NSInteger retryAttempt;
-@property (nonatomic, assign) BOOL mReload;
-@property (nonatomic, assign) BOOL mIsReloadingInLoadFailed;
-@property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
-
-- (void)createAd;
-
+- (void)setReloadAfterFailed:(BOOL)reload;
 
 @end
 

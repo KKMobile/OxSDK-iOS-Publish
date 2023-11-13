@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AdInternalAdDelegate.h"
+#import "AdReward.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol RewardedInternalAdDelegate <NSObject, AdInternalAdDelegate>

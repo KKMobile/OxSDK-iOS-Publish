@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSArray *)getTopValuesConfig;
 
+/// 是否强制切换 Mediation 即是否忽略 ad_sdk_config.json 中 AdUnit 中的 mediation 配置。
++ (BOOL)isForceSwitchMediation;
+
+
 /// 打点等级。 OX_CONFIG_ADSDK_LOG_LEVEL
 + (int)getEventLevel;
 

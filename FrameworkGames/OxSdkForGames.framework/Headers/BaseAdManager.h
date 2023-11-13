@@ -13,9 +13,20 @@
 #import "ApsAdManager.h"
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    OxSdkInitStatus_NOT_INITIALIZED,
+    OxSdkInitStatus_INITIALIZING,
+    OxSdkInitStatus_INIT_SUCCESS,
+    OxSdkInitStatus_INIT_FAILED,
+} OxSdkInitStatus;
+
+
 typedef void (^OnSdkInitComplete)(void);
 
 @interface BaseAdManager : NSObject
+
+
+@property (nonatomic, assign) OxSdkInitStatus initStatus;
 
 @property (nonatomic, copy) OnSdkInitComplete initSuccessBlock;
 

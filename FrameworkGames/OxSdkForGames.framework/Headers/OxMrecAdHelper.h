@@ -1,24 +1,27 @@
 //
-//  OxMrecAdHelper.h
+//  OxBannerAdHelper.h
 //  SwithMediationDemo
 //
 //  Created by Rober on 2022/4/12.
 //
 
-#import "OxAdHelper.h"
-#import "IBannerAd.h"
+#import "OxBaseAd.h"
+#import "BaseMrecAdHelper.h"
 #import "MrecAdDelegate.h"
-#import "MrecInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxMrecAdHelper : OxAdHelper<IBannerAd>
+@interface OxMrecAdHelper : OxBaseAd
 
-@property (nonatomic, weak) id<MrecInternalAdDelegate>  mInternalAddelegate;
-@property (nonatomic, weak)id<MrecAdDelegate> mAddelegate;
-@property (nonatomic, assign) bool  mIsReady;
-@property (nonatomic, assign) bool  mAutoRefresh;
-@property (nonatomic, strong) NSString *loadPlacement;
-- (void)createAd;
+@property (nonatomic, weak) id<MrecAdDelegate> mAdDelegate;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *,BaseMrecAdHelper *> *mAdHelpersMap;
+
+- (void)showAd:(nonnull UIView *)adContainerV;
+- (void)showAd:(nonnull UIView *)adContainerV placement:(nonnull NSString *)placement;
+- (void)hideAd;
+- (BOOL)isReady;
+- (void)startAutoRefresh;
+- (void)stopAutoRefresh;
+
 
 @end
 

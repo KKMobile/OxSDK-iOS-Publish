@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdMobAdSdkManager : BaseAdManager
 
 + (nonnull instancetype)sharedInstance;
+- (void)initialize:(OnSdkInitComplete)successBlock;
 
 @end
 
