@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.1.3.3-AppLovin-RC01-202311151630"
+#define OXSDK_VERSION "1.1.3.3-iOS17FIxed"
 
 NS_ASSUME_NONNULL_BEGIN
 
