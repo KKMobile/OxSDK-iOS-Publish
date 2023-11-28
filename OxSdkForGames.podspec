@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.5.0-RC01-202311272230"#版本号
+    spec.version      = "1.1.5.0-RC01-202311281739"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'FirebaseAnalytics', '>=8.0.0'
     spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
     # Max Mediation
-    spec.dependency 'AppLovinSDK', '11.11.4'
+       spec.dependency 'AppLovinSDK', '11.11.4'
     spec.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.4'
     spec.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
     spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
@@ -44,7 +44,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
     spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
     spec.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
-    spec.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
     spec.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
     spec.dependency 'AppLovinMediationIronSourceAdapter', '7.5.1.0.0'
     spec.dependency 'AppLovinMediationFacebookAdapter', '6.14.0.0'
@@ -53,13 +52,15 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
     spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
     spec.dependency 'AppLovinMediationVerveAdapter', '2.20.0.0'
-    spec.dependency 'AppLovinMediationVungleAdapter', '7.1.0.2'
+    spec.dependency 'VungleAds','7.1.0'
     spec.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
+    spec.dependency 'smaato-ios-sdk','22.4.0'
     spec.dependency 'YandexMobileAds', '5.9.1'
     spec.dependency 'MolocoCustomAdapterAppLovin','1.3.0.0'
     spec.dependency 'OpenWrapSDK', '3.2.0'
     spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
+
     #Admob Mediation
     spec.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
     spec.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'  #1
@@ -72,12 +73,10 @@ Pod::Spec.new do |spec|
     spec.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
     spec.dependency 'GoogleMobileAdsMediationPangle','5.5.0.9.0'
     spec.dependency 'GoogleMobileAdsMediationMintegral','7.4.7.0'
-    #
     spec.dependency 'MobileFuseAdMobAdapter','1.6.5.0'
     spec.dependency 'OguryMediationGoogleMobileAds','4.2.2.0'
     spec.dependency 'AdMobPubMaticAdapter','2.2.0'
     spec.dependency 'FiveGADAdapter','1.5.0'
     spec.dependency 'GoogleMobileAds-HyBid-Adapters','2.20.0.0'
-
 
 end
