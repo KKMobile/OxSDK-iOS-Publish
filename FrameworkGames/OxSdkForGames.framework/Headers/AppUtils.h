@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIViewController *)mavlVisibleViewController;
 
+/// 是否是大于 iOS 13  包含 iOS13
++ (BOOL)isGreateriOS13;
+
 @end
 
 NS_ASSUME_NONNULL_END
