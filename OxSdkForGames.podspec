@@ -40,8 +40,8 @@ Pod::Spec.new do |spec|
   #Admob Mediation
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.3.0'
   spec.dependency 'GoogleMobileAdsMediationAdColony','4.9.0.2'
-  spec.dependency 'GoogleMobileAdsMediationChartboost','9.3.1.0'
-  spec.dependency 'GoogleMobileAdsMediationIronSource','7.3.0.0.0'
+  spec.dependency 'GoogleMobileAdsMediationChartboost','9.2.0.0'
+  spec.dependency 'GoogleMobileAdsMediationIronSource','7.2.7.0.1'
   spec.dependency 'MobileFuseAdMobAdapter','1.4.4.0'
   
   spec.dependency 'OxSdkCore','1.2.0.0-RC09-202312261630'
