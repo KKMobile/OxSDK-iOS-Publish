@@ -30,8 +30,6 @@ static NSString * const AdStatus_IDLE = @"Ad is idle";
 static NSString * const AdStatus_LOADING = @"Ad is loading";
 static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
-static NSString * const AdStatus_LOAD_CLOSE = @"Ad load close";
-static NSString * const AdStatus_LOAD_DESPLAYFAILED = @"Ad load display failed";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
 
 typedef enum : NSUInteger {
@@ -93,6 +91,12 @@ typedef NS_ENUM(NSInteger, CountedEvents) {
     TOP50 = 5,
     TOP60 = 6
 };
+
+typedef enum : NSUInteger {
+    GDPR_STATE_CONSENT_UNSET = 0,
+    GDPR_STATE_CONSENT_REGECTED,
+    GDPR_STATE_CONSENT_ACCEPTED,
+} GDPR_STATUS;
 
 
 //Basic
@@ -157,6 +161,7 @@ static NSString * const PARAM_MAX = @"MAX";
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
 
 static NSString * const FAIL_KEY_ADSDK = @"AdSdkDiscovery";
+static NSString * const UKD_SWITCH_MEDIATION = @"UKD_SWITCH_MEDIATION";
 
 
 #endif /* AdEvents_h */

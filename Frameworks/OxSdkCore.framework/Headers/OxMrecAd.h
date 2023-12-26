@@ -5,8 +5,7 @@
 //  Created by Rober on 2022/4/12.
 //
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+#import "OxAdHelper.h"
 #import "MrecAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 

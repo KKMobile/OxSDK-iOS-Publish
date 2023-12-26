@@ -8,8 +8,6 @@
 #import <Foundation/Foundation.h>
 #import "OxAdUnit.h"
 
-#define  GROUPTIMEOUT 60
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxSdkConfig : NSObject

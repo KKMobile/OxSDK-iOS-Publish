@@ -7,14 +7,14 @@
 
 #import "OxAdHelper.h"
 #import "INativeViewAd.h"
+#import "NativeAdDelegate.h"
 #import "NativeInternalAdDelegate.h"
-#import "NativeAdGroupDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseNativeAdHelper : OxAdHelper<INativeViewAd,NativeInternalAdDelegate>
 
-@property (nonatomic, weak) id<NativeAdGroupDelegate> mAdDelegate;
+@property (nonatomic, weak) id<NativeAdDelegate> mAdDelegate;
 @property (nonatomic, assign) bool  mIsReady;
 @property (nonatomic, strong) NSString *loadPlacement;
 

@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.0.0-RC07-202312041600"#版本号
+  spec.version      = "1.2.0.0-RC09-202312261630"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -25,12 +25,8 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "t-#{spec.version}" }
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-
-  # Max Mediation
-  spec.dependency 'AmazonPublisherServicesSDK','4.7.2.0'
-  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.2.0'
   
-  spec.dependency 'OxSdkCore','1.2.0.0-RC07-202312041600'
+  spec.dependency 'OxSdkCore','1.2.0.0-RC09-202312261630'
   spec.dependency 'OxDiscoveryPlugin','1.0.3-202312041600'
     
 end
