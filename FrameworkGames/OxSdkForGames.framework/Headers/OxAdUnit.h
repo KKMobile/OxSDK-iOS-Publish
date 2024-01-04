@@ -16,11 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) Platform mediation;
 @property (nonatomic, copy) NSString* maxAdUnitId;
 @property (nonatomic, copy) NSString* admobAdUnitId;
+@property (nonatomic, copy) NSString* levelPlayUnitId;
 
 
-+ (OxAdUnit *)OxAdUnitWithAdmobAdUnitId:(NSString *)admobAdUnitId maxAdUnitId:(NSString *)maxAdUnitId adUnitName:(NSString *)adUnitName;
-
-+ (OxAdUnit *)OxAdUnitWithAdmobAdUnitId:(NSString *)admobAdUnitId maxAdUnitId:(NSString *)maxAdUnitId adUnitName:(NSString *)adUnitName meidation:(Platform)mediation;
++ (OxAdUnit *)OxAdUnitWithAdmobAdUnitId:(NSString *)admobAdUnitId
+                            maxAdUnitId:(NSString *)maxAdUnitId
+                             adUnitName:(NSString *)adUnitName;
 
 - (Platform)getTargetMediation;
 

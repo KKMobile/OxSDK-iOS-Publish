@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.5.1"#版本号
+    spec.version      = "1.1.5.0-LevelPlay-RC01-202401041830"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,7 +26,13 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-    spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
+    spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle","ResBundle/Games/ISAdMobResources.bundle"]
+    
+    spec.vendored_frameworks =
+                'FrameworkGames/ISAdMobAdapter.xcframework',
+                'FrameworkGames/ISAPSAdapter.xcframework',
+                'FrameworkGames/ISPangleAdapter.xcframework',
+                'FrameworkGames/ISUnityAdsAdapter.xcframework',
 
     spec.dependency 'PureLayout'
     spec.dependency 'AFNetworking'
@@ -79,4 +85,13 @@ Pod::Spec.new do |spec|
     spec.dependency 'FiveGADAdapter','1.5.0'
     spec.dependency 'GoogleMobileAds-HyBid-Adapters','2.20.0.0'
 
+    spec.dependency 'IronSourceAdQualitySDK','7.14.3'
+    spec.dependency 'IronSourceAppLovinAdapter', '4.3.41.0'
+    spec.dependency 'IronSourceChartboostAdapter','4.3.16.0'
+    spec.dependency 'IronSourceFyberAdapter','4.3.31.2'
+    spec.dependency 'IronSourceFacebookAdapter','4.3.43.1'
+    spec.dependency 'IronSourceInMobiAdapter','4.3.20.0'
+    spec.dependency 'IronSourceVungleAdapter','4.3.29.1'
+    spec.dependency 'IronSourceMintegralAdapter', '4.3.18.1'
+    spec.dependency 'IronSourcePubMaticAdapter', '1.3.0'
 end

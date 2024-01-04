@@ -5,23 +5,12 @@
 //  Created by BJMM100001 on 2022/5/16.
 //
 
-#import <Foundation/Foundation.h>
-#import <DTBiOSSDK/DTBiOSSDK.h>
+#import "ApsBaseAdManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^OnApsSuccessBlock)(DTBAdResponse *response);
+@interface ApsBannerAdManager : ApsBaseAdManager
 
-typedef void (^OnApsFailedBlock)(DTBAdErrorInfo* errorInfo);
-
-@interface ApsBannerAdManager : NSObject<DTBAdCallback>
-
-@property (nonatomic, copy) OnApsSuccessBlock apsSuccessBlock;
-@property (nonatomic, copy) OnApsFailedBlock  apsFailedBlock;
-
-- (void)loadApsBannerAd;
-
-- (bool)shouldLoadApsBanner;
 
 @end
 
