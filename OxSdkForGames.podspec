@@ -28,11 +28,11 @@ Pod::Spec.new do |spec|
     spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle","ResBundle/Games/ISAdMobResources.bundle"]
     
     spec.ios.vendored_frameworks =
-                'FrameworkGames/ISAdMobAdapter.xcframework',
+                ['FrameworkGames/ISAdMobAdapter.xcframework',
                 'FrameworkGames/ISAPSAdapter.xcframework',
                 'FrameworkGames/ISPangleAdapter.xcframework',
                 'FrameworkGames/ISUnityAdsAdapter.xcframework',
-                'FrameworkGames/OxSdkForGames.framework'
+                'FrameworkGames/OxSdkForGames.framework']
 
     spec.dependency 'PureLayout'
     spec.dependency 'AFNetworking'
