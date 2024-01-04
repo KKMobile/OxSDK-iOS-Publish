@@ -22,17 +22,17 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = "12.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
-    spec.ios.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle","ResBundle/Games/ISAdMobResources.bundle"]
     
-    spec.vendored_frameworks =
+    spec.ios.vendored_frameworks =
                 'FrameworkGames/ISAdMobAdapter.xcframework',
                 'FrameworkGames/ISAPSAdapter.xcframework',
                 'FrameworkGames/ISPangleAdapter.xcframework',
                 'FrameworkGames/ISUnityAdsAdapter.xcframework',
+                'FrameworkGames/OxSdkForGames.framework'
 
     spec.dependency 'PureLayout'
     spec.dependency 'AFNetworking'
