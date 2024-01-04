@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.5.0"#版本号
+    spec.version      = "1.1.5.1"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -36,7 +36,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
     # Max Mediation
     spec.dependency 'AppLovinSDK', '11.11.4'
-    spec.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.4'
     spec.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
     spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
     spec.dependency 'AppLovinMediationBidMachineAdapter', '2.3.0.2'
@@ -64,7 +63,6 @@ Pod::Spec.new do |spec|
     #Admob Mediation
     spec.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
     spec.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'  #1
-    spec.dependency 'GoogleMobileAdsMediationAdColony','4.9.0.2'
     spec.dependency 'GoogleMobileAdsMediationChartboost','9.5.1.0'
     spec.dependency 'GoogleMobileAdsMediationFyber','8.2.4.0'
     spec.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'    #1
