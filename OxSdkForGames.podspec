@@ -36,7 +36,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
   # Max Mediation
   spec.dependency 'AppLovinSDK', '11.8.2'
-  spec.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.4'
   spec.dependency 'AmazonPublisherServicesSDK','4.6.0'
   spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.6.0.0'
   spec.dependency 'BidMachine', '2.0.0.6'
@@ -66,7 +65,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationUnity','4.6.1.0'
   spec.dependency 'GoogleMobileAdsMediationVungle','6.12.3.0'
 
-  spec.dependency 'GoogleMobileAdsMediationAdColony','4.9.0.2'
   spec.dependency 'GoogleMobileAdsMediationAppLovin','11.8.2.0'
   spec.dependency 'GoogleMobileAdsMediationChartboost','9.2.0.0'
   spec.dependency 'GoogleMobileAdsMediationIronSource','7.2.7.0.1'
