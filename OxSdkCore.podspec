@@ -52,6 +52,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationVerveAdapter', '2.20.0.0'
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
     spec.dependency 'AppLovinMediationBidMachineAdapter', '2.3.0.2'
+    spec.dependency 'YandexMobileAds', '5.9.1'
     spec.dependency 'OpenWrapSDK', '3.2.0'
     spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
 
