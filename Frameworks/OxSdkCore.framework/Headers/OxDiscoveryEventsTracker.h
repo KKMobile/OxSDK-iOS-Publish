@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement coreLevel:(NSInteger)coreLevel;
 - (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement coreLevel:(NSInteger)coreLevel;
+- (void)trackAdjustEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 
 @end
 

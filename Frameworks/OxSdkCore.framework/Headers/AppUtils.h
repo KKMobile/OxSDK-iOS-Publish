@@ -6,9 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "AdEvents.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class MAAdWaterfallInfo;
 
 @interface AppUtils : NSObject
 
@@ -32,10 +35,17 @@ NS_ASSUME_NONNULL_BEGIN
 // 可用内存
 + (double)getAvailableMemory;
 
++ (UIViewController *)mavlVisibleViewController;
+
 /// 格式化 mediation
 + (OxSdkMediationType)formatMediationType:(NSInteger)mediation;
 /// 判断 mediation 是否在区域中
 + (BOOL)isMediationInRange:(NSInteger)mediation;
+
+/// 是否是大于 iOS 13  包含 iOS13
++ (BOOL)isGreateriOS13;
+
++(void)showMaxAdMsg:(MAAdWaterfallInfo *)waterfall;
 
 @end
 

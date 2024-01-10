@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import "BaseAdManager.h"
 #import "AdEventDelegate.h"
-#import "OxConsentDialogDelegate.h"
 #import "OnMediationInitDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -20,9 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) BaseAdManager  *mAdManager; // 当前的聚合平台adManager
 @property (nonatomic, assign) OxSdkMediationType currentMediationType; // 当前的聚合平台
 @property (nonatomic, copy) OnSdkInitComplete sdkInitComplete;
-
-// consentDialog 监听
-@property (nonatomic, weak) id<OxConsentDialogDelegate> consentDialogDelegate;
 
 + (nonnull instancetype)sharedInstance;
 

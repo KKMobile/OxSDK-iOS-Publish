@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
+#import "OxGamesEventUtil.h"
 
-#define OxSDK_VERSION    @"1.2.0.0-RC09-202312261630"
+#define OxSDK_VERSION    @"1.2.0.0-RC10-202401101930"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -80,6 +81,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 客户端上报商业化相关打点。
 + (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
+
+/// 客户端上报商业化相关打点。 用户游戏 过关 死局等
+/// - Parameters:
+///   - eventType: 打点类型
+///   - value: 打点的值，如果是custom value 直接传 eventname
+///   - params: params
++ (void)trackGamesEvent:(GamesEventType)eventType value:(NSString *)value params:(nullable NSDictionary *)params;
 
 /// 获取google的adaptive Banner的尺寸，方便页面布局
 + (CGSize)getAdaptiveBannerAdSize;

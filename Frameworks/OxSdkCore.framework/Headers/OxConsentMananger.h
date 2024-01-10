@@ -16,7 +16,7 @@ typedef enum : NSUInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^GDPRDismiss)(void);
+typedef void (^GDPRDismiss)(NSError * _Nullable error);;
 
 @interface OxConsentMananger : NSObject
 
