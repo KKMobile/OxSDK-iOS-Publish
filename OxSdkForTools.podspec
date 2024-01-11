@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.0.0-RC10-202401101930"#版本号
+  spec.version      = "1.2.0.0-RC10-202401111100"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   
-  spec.dependency 'OxSdkCore','1.2.0.0-RC10-202401101930'
+  spec.dependency 'OxSdkCore','1.2.0.0-RC10-202401111100'
   spec.dependency 'OxDiscoveryPlugin','1.0.3-202312041600'
     
 end
