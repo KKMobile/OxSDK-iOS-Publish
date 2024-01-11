@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.5.1"#版本号
+    spec.version      = "1.1.5.2-RC01-202401111600"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -51,12 +51,11 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.2.2.0'
     spec.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
     spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
-    spec.dependency 'AppLovinMediationVerveAdapter', '2.20.0.0'
+    spec.dependency 'AppLovinMediationVerveAdapter', '2.18.0.0'
     spec.dependency 'AppLovinMediationVungleAdapter', '7.1.0.2'
     spec.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
     spec.dependency 'AppLovinMediationSmaatoAdapter', '22.4.0.0'
-    spec.dependency 'YandexMobileAds', '5.9.1'
     spec.dependency 'MolocoCustomAdapterAppLovin','1.3.0.0'
     spec.dependency 'OpenWrapSDK', '3.2.0'
     spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
@@ -77,6 +76,5 @@ Pod::Spec.new do |spec|
     spec.dependency 'OguryMediationGoogleMobileAds','4.2.2.0'
     spec.dependency 'AdMobPubMaticAdapter','2.2.0'
     spec.dependency 'FiveGADAdapter','1.5.0'
-    spec.dependency 'GoogleMobileAds-HyBid-Adapters','2.20.0.0'
 
 end
