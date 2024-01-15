@@ -57,96 +57,96 @@ Pod::Spec.new do |spec|
     end
 
 
-    spec.subspec 'InMobi' do |ss|
-    	ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
-    	ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
-    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMInMobiAdapter/*']
-    end
+    # spec.subspec 'InMobi' do |ss|
+    # 	ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
+    # 	ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
+    # 	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMInMobiAdapter/*']
+    # end
 
-    spec.subspec 'FaceBook' do |ss|
-    	ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
-    	ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
-    end
+    # spec.subspec 'FaceBook' do |ss|
+    # 	ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
+    # 	ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
+    # end
 
-    spec.subspec 'UnityAds' do |ss|
-    	ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
-    	ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
-    	ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
-    end
+    # spec.subspec 'UnityAds' do |ss|
+    # 	ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
+    # 	ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
+    # 	ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
+    # end
 
-    spec.subspec 'OguryPresage' do |ss|
-    	ss.dependency 'AppLovinMediationOguryPresageAdapter', '4.2.2.0'
-    	ss.dependency 'OguryMediationGoogleMobileAds','4.2.2.0'
-    end
+    # spec.subspec 'OguryPresage' do |ss|
+    # 	ss.dependency 'AppLovinMediationOguryPresageAdapter', '4.2.2.0'
+    # 	ss.dependency 'OguryMediationGoogleMobileAds','4.2.2.0'
+    # end
 
-    spec.subspec 'Pangle' do |ss|
-    	ss.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
-    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMPangleAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Pangle/*']
-    end
+    # spec.subspec 'Pangle' do |ss|
+    # 	ss.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
+    # 	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMPangleAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Pangle/*']
+    # end
 
 
-    spec.subspec 'Smaato' do |ss|
-    	ss.dependency 'AppLovinMediationSmaatoAdapter','22.4.0.0'
-    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMSmaatoAdapter/*']
-    end
+    # spec.subspec 'Smaato' do |ss|
+    # 	ss.dependency 'AppLovinMediationSmaatoAdapter','22.4.0.0'
+    # 	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMSmaatoAdapter/*']
+    # end
 
-    spec.subspec 'Verve' do |ss|
-    	ss.dependency 'AppLovinMediationVerveAdapter', '2.20.0.0'
-    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMVerveAdapter/*']
-    end
+    # spec.subspec 'Verve' do |ss|
+    # 	ss.dependency 'AppLovinMediationVerveAdapter', '2.20.0.0'
+    # 	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMVerveAdapter/*']
+    # end
 
-    spec.subspec 'Mintegral' do |ss|
-    	ss.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
-    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMMintegralAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Mintegral/*']
-    end
+    # spec.subspec 'Mintegral' do |ss|
+    # 	ss.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
+    # 	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMMintegralAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Mintegral/*']
+    # end
 
-    spec.subspec 'BidMachine' do |ss|
-    	ss.dependency 'AppLovinMediationBidMachineAdapter', '2.3.0.2'
-    end
+    # spec.subspec 'BidMachine' do |ss|
+    # 	ss.dependency 'AppLovinMediationBidMachineAdapter', '2.3.0.2'
+    # end
 
-    spec.subspec 'IronSource' do |ss|
-    	ss.dependency 'AppLovinMediationIronSourceAdapter', '7.5.1.0.0'
-    	ss.dependency 'GoogleMobileAdsMediationIronSource','7.5.1.0'
-    end
+    # spec.subspec 'IronSource' do |ss|
+    # 	ss.dependency 'AppLovinMediationIronSourceAdapter', '7.5.1.0.0'
+    # 	ss.dependency 'GoogleMobileAdsMediationIronSource','7.5.1.0'
+    # end
 
-    spec.subspec 'Yandex' do |ss|
-    	ss.dependency 'YandexMobileAds', '5.9.1'
-    	ss.source_files = ['Frameworks/MaxCustomAdapter/YandexAdapyer/*']
-    end
+    # spec.subspec 'Yandex' do |ss|
+    # 	ss.dependency 'YandexMobileAds', '5.9.1'
+    # 	ss.source_files = ['Frameworks/MaxCustomAdapter/YandexAdapyer/*']
+    # end
 
-    spec.subspec 'Pubmatic' do |ss|
-    	ss.dependency 'OpenWrapSDK', '3.2.0'
-    	ss.dependency 'AppLovinPubMaticAdapter', '1.1.0'
-    	ss.dependency 'AdMobPubMaticAdapter','2.2.0'
-    end
+    # spec.subspec 'Pubmatic' do |ss|
+    # 	ss.dependency 'OpenWrapSDK', '3.2.0'
+    # 	ss.dependency 'AppLovinPubMaticAdapter', '1.1.0'
+    # 	ss.dependency 'AdMobPubMaticAdapter','2.2.0'
+    # end
 
-    spec.subspec 'Chartboost' do |ss|
-    	ss.dependency 'AppLovinMediationChartboostAdapter', '9.5.1.0'
-    	ss.dependency 'GoogleMobileAdsMediationChartboost','9.5.1.0'
-    end
+    # spec.subspec 'Chartboost' do |ss|
+    # 	ss.dependency 'AppLovinMediationChartboostAdapter', '9.5.1.0'
+    # 	ss.dependency 'GoogleMobileAdsMediationChartboost','9.5.1.0'
+    # end
     
-    spec.subspec 'MobileFuse' do |ss|
-    	ss.dependency 'AppLovinMediationMobileFuseAdapter', '1.6.5.0'
-    	ss.dependency 'MobileFuseAdMobAdapter','1.6.5.0'
-    end
+    # spec.subspec 'MobileFuse' do |ss|
+    # 	ss.dependency 'AppLovinMediationMobileFuseAdapter', '1.6.5.0'
+    # 	ss.dependency 'MobileFuseAdMobAdapter','1.6.5.0'
+    # end
 
-    spec.subspec 'Vungle' do |ss|
-    	ss.dependency 'AppLovinMediationVungleAdapter', '7.1.0.2'
-    	ss.dependency 'GoogleMobileAdsMediationVungle','7.1.0.0'
-    end
+    # spec.subspec 'Vungle' do |ss|
+    # 	ss.dependency 'AppLovinMediationVungleAdapter', '7.1.0.2'
+    # 	ss.dependency 'GoogleMobileAdsMediationVungle','7.1.0.0'
+    # end
 
-    spec.subspec 'Line' do |ss|
-    	ss.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
-    	ss.dependency 'FiveGADAdapter','1.5.0'
-    end
+    # spec.subspec 'Line' do |ss|
+    # 	ss.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
+    # 	ss.dependency 'FiveGADAdapter','1.5.0'
+    # end
 
-    spec.subspec 'Moloco' do |ss|
-    	ss.dependency 'MolocoCustomAdapterAppLovin','1.3.0.0'
-    end
+    # spec.subspec 'Moloco' do |ss|
+    # 	ss.dependency 'MolocoCustomAdapterAppLovin','1.3.0.0'
+    # end
 
-    spec.subspec 'HyprMX' do |ss|
-    	ss.dependency 'AppLovinMediationHyprMXAdapter','6.3.0.0'
-    end
+    # spec.subspec 'HyprMX' do |ss|
+    # 	ss.dependency 'AppLovinMediationHyprMXAdapter','6.3.0.0'
+    # end
 
     #Admob Mediation    
 
