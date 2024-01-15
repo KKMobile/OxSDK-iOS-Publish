@@ -36,9 +36,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'FirebaseAnalytics', '>=8.0.0'
     spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 
-    spec.dependency 'AppLovinSDK', '11.11.4'
-    spec.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
-    
     spec.subspec 'Base' do |ss|
 	    ss.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
 	    
@@ -48,10 +45,15 @@ Pod::Spec.new do |spec|
 	    ss.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
 	    ss.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
 	    ss.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'
+
+	    ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
+    	ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
+    	ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
     end
 
 
     spec.subspec 'Fyber' do |ss|
+    	ss.dependency 'OxSdkCore/Base'
     	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMFyberAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
     	ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
     end
