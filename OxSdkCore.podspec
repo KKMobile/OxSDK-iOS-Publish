@@ -29,33 +29,41 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
     spec.subspec 'Base' do |ss|
+
+	    ss.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
+	    ss.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
+
     	ss.dependency 'PureLayout'
 	    ss.dependency 'AFNetworking'
 	    ss.dependency 'SDWebImage'
 	    ss.dependency 'Adjust'
 	    ss.dependency 'FirebaseAnalytics', '>=8.0.0'
 	    ss.dependency 'FirebaseRemoteConfig', '>=8.0.0'
-
-
-	    ss.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
-	    ss.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
 	    
 	    # Base
 	    ss.dependency 'AppLovinSDK', '11.11.4'
+	    ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
 	    ss.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
 	    ss.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
+
 	    ss.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
 	    ss.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
+
 	    ss.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'
-	    ss.dependency 'UnityAds', '4.9.0'
-	    ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
+
+        # UnityAds
+	    ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
+    	ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
+    	ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
+	    
+
     end
 
-    spec.subspec 'Fyber' do |ss|
-    	ss.dependency 'OxSdkCore/Base'
-    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMFyberAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
-    	ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
-    end
+    # spec.subspec 'Fyber' do |ss|
+    # 	ss.dependency 'OxSdkCore/Base'
+    # 	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMFyberAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
+    # 	ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
+    # end
 
 
     # spec.subspec 'InMobi' do |ss|
@@ -69,13 +77,6 @@ Pod::Spec.new do |spec|
     # 	ss.dependency 'OxSdkCore/Base'
     # 	ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
     # 	ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
-    # end
-
-    # spec.subspec 'UnityAds' do |ss|
-    # 	ss.dependency 'OxSdkCore/Base'
-    # 	ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
-    # 	ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
-    # 	ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
     # end
 
     # spec.subspec 'OguryPresage' do |ss|
