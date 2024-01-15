@@ -42,6 +42,8 @@ Pod::Spec.new do |spec|
 	    
 	    # Base
 	    ss.dependency 'AppLovinSDK', '11.11.4'
+	    ss.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
+	    ss.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
 	    ss.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
 	    ss.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
 	    ss.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'
