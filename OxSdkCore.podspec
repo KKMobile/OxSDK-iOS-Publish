@@ -57,7 +57,7 @@ Pod::Spec.new do |spec|
         # UnityAds
         ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
         ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
-        ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
+        #ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
     end
 
 
