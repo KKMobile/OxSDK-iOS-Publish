@@ -65,17 +65,17 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'Fyber' do |ss|
     	ss.dependency 'OxSdkCore/Base'
-    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMFyberAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
     	ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
+    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMFyberAdapter/*','Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
     end
 
 
-    spec.subspec 'InMobi' do |ss|
-    	ss.dependency 'OxSdkCore/Base'
-    	ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
-    	ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
-    	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMInMobiAdapter/*']
-    end
+    # spec.subspec 'InMobi' do |ss|
+    # 	ss.dependency 'OxSdkCore/Base'
+    # 	ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
+    # 	ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
+    # 	ss.source_files = ['Frameworks/GoodleAdmobAdapter/GADMInMobiAdapter/*']
+    # end
 
     spec.subspec 'FaceBook' do |ss|
     	ss.dependency 'OxSdkCore/Base'
