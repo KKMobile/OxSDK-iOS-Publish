@@ -36,10 +36,9 @@ Pod::Spec.new do |spec|
     spec.dependency 'FirebaseAnalytics', '>=8.0.0'
     spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 
-    ss.dependency 'AppLovinSDK', '11.11.4'
-    ss.dependency 'GoogleMobileAds', '10.13.0.'
+    spec.dependency 'AppLovinSDK', '11.11.4'
+    spec.dependency 'GoogleMobileAds', '10.13.0.'
     
-
     spec.subspec 'Base' do |ss|
 	    ss.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
 	    
