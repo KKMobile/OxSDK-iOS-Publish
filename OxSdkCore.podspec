@@ -22,22 +22,21 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = "12.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "core-#{spec.version}" }
-  
-    spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
-    spec.requires_arc = true#是否时自动内存管理
-    spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-    spec.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
-    spec.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
-    
-    spec.dependency 'PureLayout'
-    spec.dependency 'AFNetworking'
-    spec.dependency 'SDWebImage'
-    spec.dependency 'Adjust'
-    spec.dependency 'FirebaseAnalytics', '>=8.0.0'
-    spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
-
 
     spec.subspec 'Base' do |ss|
+      
+        ss.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
+        ss.requires_arc = true#是否时自动内存管理
+        ss.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+        ss.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
+        ss.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
+    
+        ss.dependency 'PureLayout'
+        ss.dependency 'AFNetworking'
+        ss.dependency 'SDWebImage'
+        ss.dependency 'Adjust'
+        ss.dependency 'FirebaseAnalytics', '>=8.0.0'
+        ss.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 
         # Base
         ss.dependency 'AppLovinSDK', '11.11.4'
@@ -57,7 +56,7 @@ Pod::Spec.new do |spec|
         # UnityAds
         ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
         ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
-        #ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
+        ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/*']
     end
 
 
@@ -78,11 +77,11 @@ Pod::Spec.new do |spec|
     #     ss.dependency 'GoogleMobileAdsMediationInMobi','10.6.0.0'
     # end
 
-    spec.subspec 'FaceBook' do |ss|
-    	ss.dependency 'OxSdkCore/Base'
-    	ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
-    	ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
-    end
+    # spec.subspec 'FaceBook' do |ss|
+    # 	ss.dependency 'OxSdkCore/Base'
+    # 	ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
+    # 	ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
+    # end
 
     # spec.subspec 'OguryPresage' do |ss|
     # 	ss.dependency 'OxSdkCore/Base'
