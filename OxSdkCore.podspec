@@ -88,7 +88,7 @@ Pod::Spec.new do |spec|
     	ss.dependency 'OxSdkCore/Base'
     	ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
         ss.dependency 'GoogleMobileAdsMediationFyber','8.2.4.0'
-    	ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
+    	# ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
     end
 
 
