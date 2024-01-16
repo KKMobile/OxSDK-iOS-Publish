@@ -38,6 +38,7 @@ Pod::Spec.new do |spec|
     # Max Mediation
     spec.dependency 'AppLovinSDK', '11.11.4'
     spec.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
+    spec.dependency 'UnityAds', '4.9.0'
 
     spec.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
     spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
