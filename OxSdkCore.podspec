@@ -26,6 +26,7 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+    spec.
 
 
     # spec.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
@@ -82,7 +83,7 @@ Pod::Spec.new do |spec|
 
 
     spec.subspec 'Fyber' do |ss|
-    	#ss.dependency 'OxSdkCore/Base'
+    	ss.dependency 'OxSdkCore/Base'
     	ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
         ss.dependency 'GoogleMobileAdsMediationFyber','8.2.4.0'
     	ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
@@ -90,14 +91,14 @@ Pod::Spec.new do |spec|
 
 
     spec.subspec 'InMobi' do |ss|
-    	#ss.dependency 'OxSdkCore/Base'
+    	ss.dependency 'OxSdkCore/Base'
     	ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
     	ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
         ss.dependency 'GoogleMobileAdsMediationInMobi','10.6.0.0'
     end
 
     spec.subspec 'FaceBook' do |ss|
-    	# ss.dependency 'OxSdkCore/Base'
+    	ss.dependency 'OxSdkCore/Base'
     	ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
     	ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
     end
