@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkCore"#SDK名称
-    spec.version      = "1.2.0.0-RC10-202401161010"#版本号
+    spec.version      = "1.2.0.0-RC10-202401161230"#版本号
     spec.summary      = "OxAdSdk for core applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -22,28 +22,10 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = "12.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "core-#{spec.version}" }
-    spec.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
+    
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-    spec.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
-    
-    spec.dependency 'PureLayout'
-    spec.dependency 'AFNetworking'
-    spec.dependency 'SDWebImage'
-    spec.dependency 'Adjust'
-    spec.dependency 'FirebaseAnalytics', '>=8.0.0'
-    spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
-
-    # Max Mediation
-    spec.dependency 'AppLovinSDK', '11.11.4'
-    spec.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
-    spec.dependency 'UnityAds', '4.9.0'
-    spec.dependency 'FBAudienceNetwork', '6.14.0'
-
-    spec.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
-    spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
-
 
 
     # spec.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
@@ -72,68 +54,53 @@ Pod::Spec.new do |spec|
     # spec.dependency 'FiveGADAdapter','1.5.0'
 
 
-    # spec.subspec 'Base' do |ss|
-    
+    spec.subspec 'Base' do |ss|
+
+
+        ss.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
+        ss.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
         
-    #     ss.dependency 'PureLayout'
-    #     ss.dependency 'AFNetworking'
-    #     ss.dependency 'SDWebImage'
-    #     ss.dependency 'Adjust'
-    #     ss.dependency 'FirebaseAnalytics', '>=8.0.0'
-    #     ss.dependency 'FirebaseRemoteConfig', '>=8.0.0'
+        ss.dependency 'PureLayout'
+        ss.dependency 'AFNetworking'
+        ss.dependency 'SDWebImage'
+        ss.dependency 'Adjust'
+        ss.dependency 'FirebaseAnalytics', '>=8.0.0'
+        ss.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 
-    #     # Base
-    #     ss.dependency 'AppLovinSDK', '11.11.4'
-    #     ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
+        # Max Mediation
+        ss.dependency 'AppLovinSDK', '11.11.4'
+        ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
+        ss.dependency 'UnityAds', '4.9.0'
+        ss.dependency 'FBAudienceNetwork', '6.14.0'
 
-    #     # APS
-    #     ss.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
-    #     ss.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
+        ss.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
+        ss.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
 
-    #     # Google Admob
-    #     ss.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
-    #     ss.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
-
-    #     # Admob_Applovin
-    #     ss.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'
-
-    #     # UnityAds
-    #     ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
-    #     ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
-    #     ss.source_files = 'Frameworks/MaxCustomAdapter/CustomAdapter/UnityAds/**/*.{h,m}'
-      
-    #     ss.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
-    #     ss.requires_arc = true#是否时自动内存管理
-    #     ss.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
-    #     ss.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
-        
-    #     ss.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/OxSdkCore/module', 'VALID_ARCHS' => 'x86_64 armv7 arm64'}
-    #     ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/OxSdkCore/module' }
-    # end
+    end
 
 
 
 
-    # spec.subspec 'Fyber' do |ss|
-    # 	#ss.dependency 'OxSdkCore/Base'
-    # 	ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
-    #     ss.dependency 'GoogleMobileAdsMediationFyber','8.2.4.0'
-    # 	#ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
-    # end
+    spec.subspec 'Fyber' do |ss|
+    	#ss.dependency 'OxSdkCore/Base'
+    	ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
+        ss.dependency 'GoogleMobileAdsMediationFyber','8.2.4.0'
+    	ss.source_files = ['Frameworks/MaxCustomAdapter/CustomAdapter/Fyber/*']
+    end
 
 
-    # spec.subspec 'InMobi' do |ss|
-    # 	#ss.dependency 'OxSdkCore/Base'
-    # 	ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
-    # 	ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
-    #     ss.dependency 'GoogleMobileAdsMediationInMobi','10.6.0.0'
-    # end
+    spec.subspec 'InMobi' do |ss|
+    	#ss.dependency 'OxSdkCore/Base'
+    	ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
+    	ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
+        ss.dependency 'GoogleMobileAdsMediationInMobi','10.6.0.0'
+    end
 
-    # spec.subspec 'FaceBook' do |ss|
-    # 	# ss.dependency 'OxSdkCore/Base'
-    # 	ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
-    # 	ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
-    # end
+    spec.subspec 'FaceBook' do |ss|
+    	# ss.dependency 'OxSdkCore/Base'
+    	ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
+    	ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
+    end
 
     # spec.subspec 'OguryPresage' do |ss|
     # 	ss.dependency 'OxSdkCore/Base'
