@@ -26,7 +26,6 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-    spec.
 
 
     # spec.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
@@ -57,8 +56,7 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'Base' do |ss|
 
-
-        ss.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
+        ss.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
         ss.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
         
         ss.dependency 'PureLayout'
