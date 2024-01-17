@@ -60,6 +60,12 @@ Pod::Spec.new do |spec|
         ss.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
     end
 
+    spec.subspec 'AdColony' do |ss|
+        ss.dependency 'OxSdkCore/Base'
+        ss.dependency 'AppLovinMediationAdColonyAdapter', '4.9.0.0.4'
+        ss.dependency 'GoogleMobileAdsMediationAdColony','4.9.0.2'
+    end
+
     spec.subspec 'UnityAds' do |ss|
         ss.dependency 'OxSdkCore/Base'
         ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
@@ -184,14 +190,13 @@ Pod::Spec.new do |spec|
         ss.dependency 'OxSdkCore/Base'
         ss.dependency 'OxSdkCore/Admob'
         ss.dependency 'OxSdkCore/Facebook'
-        ss.dependency 'OxSdkCore/DT_Exchange'
-        ss.dependency 'OxSdkCore/Ogury'
+        ss.dependency 'OxSdkCore/Fyber'
+        ss.dependency 'OxSdkCore/OguryPresage'
         ss.dependency 'OxSdkCore/Pangle'
         ss.dependency 'OxSdkCore/Smaato'
-        ss.dependency 'OxSdkCore/Inmobi'
+        ss.dependency 'OxSdkCore/InMobi'
         ss.dependency 'OxSdkCore/Verve'
         ss.dependency 'OxSdkCore/Pubmatic'
-        ss.dependency 'OxSdkCore/OguryPresage'
 
         ss.dependency 'OxSdkCore/AdColony'
         ss.dependency 'OxSdkCore/BidMachine'
@@ -209,14 +214,13 @@ Pod::Spec.new do |spec|
         ss.dependency 'OxSdkCore/Base'
         ss.dependency 'OxSdkCore/Admob'
         ss.dependency 'OxSdkCore/Facebook'
-        ss.dependency 'OxSdkCore/DT_Exchange'
-        ss.dependency 'OxSdkCore/Ogury'
+        ss.dependency 'OxSdkCore/Fyber'
+        ss.dependency 'OxSdkCore/OguryPresage'
         ss.dependency 'OxSdkCore/Pangle'
         ss.dependency 'OxSdkCore/Smaato'
-        ss.dependency 'OxSdkCore/Inmobi'
+        ss.dependency 'OxSdkCore/InMobi'
         ss.dependency 'OxSdkCore/Verve'
         ss.dependency 'OxSdkCore/Pubmatic'
-        ss.dependency 'OxSdkCore/OguryPresage'
     end
 
 
