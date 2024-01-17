@@ -83,7 +83,7 @@ Pod::Spec.new do |spec|
         ss.dependency 'GoogleMobileAdsMediationInMobi','10.6.0.0'
     end
 
-    spec.subspec 'FaceBook' do |ss|
+    spec.subspec 'Facebook' do |ss|
         ss.dependency 'OxSdkCore/Base'
         ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
         ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
