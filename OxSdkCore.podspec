@@ -100,7 +100,6 @@ Pod::Spec.new do |spec|
     spec.subspec 'Smaato' do |ss|
         ss.dependency 'OxSdkCore/Base'
         ss.dependency 'AppLovinMediationSmaatoAdapter','22.4.0.0'
-        ss.dependency 'GoogleMobileAdsMediationSmaato','22.4.0.0'
     end
 
     spec.subspec 'Verve' do |ss|
