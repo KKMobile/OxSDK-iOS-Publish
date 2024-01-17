@@ -54,6 +54,12 @@ Pod::Spec.new do |spec|
     end
 
 
+    spec.subspec 'Admob' do |ss|
+        ss.dependency 'OxSdkCore/Base'
+        ss.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
+        ss.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
+    end
+
     spec.subspec 'UnityAds' do |ss|
         ss.dependency 'OxSdkCore/Base'
         ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
@@ -172,6 +178,46 @@ Pod::Spec.new do |spec|
         ss.dependency 'AppLovinMediationHyprMXAdapter','6.3.0.0'
     end
 
+
+
+    spec.subspec 'Games' do |ss|
+        ss.dependency 'OxSdkCore/Base'
+        ss.dependency 'OxSdkCore/Admob'
+        ss.dependency 'OxSdkCore/Facebook'
+        ss.dependency 'OxSdkCore/DT_Exchange'
+        ss.dependency 'OxSdkCore/Ogury'
+        ss.dependency 'OxSdkCore/Pangle'
+        ss.dependency 'OxSdkCore/Smaato'
+        ss.dependency 'OxSdkCore/Inmobi'
+        ss.dependency 'OxSdkCore/Verve'
+        ss.dependency 'OxSdkCore/Pubmatic'
+        ss.dependency 'OxSdkCore/OguryPresage'
+
+        ss.dependency 'OxSdkCore/AdColony'
+        ss.dependency 'OxSdkCore/BidMachine'
+        ss.dependency 'OxSdkCore/Chartboost'
+        ss.dependency 'OxSdkCore/IronSource'
+        ss.dependency 'OxSdkCore/MobileFuse'
+        ss.dependency 'OxSdkCore/Vungle'
+        ss.dependency 'OxSdkCore/Line'
+        ss.dependency 'OxSdkCore/HyprMX'
+        ss.dependency 'OxSdkCore/Moloco'
+    end
+
+
+    spec.subspec 'Tools' do |ss|
+        ss.dependency 'OxSdkCore/Base'
+        ss.dependency 'OxSdkCore/Admob'
+        ss.dependency 'OxSdkCore/Facebook'
+        ss.dependency 'OxSdkCore/DT_Exchange'
+        ss.dependency 'OxSdkCore/Ogury'
+        ss.dependency 'OxSdkCore/Pangle'
+        ss.dependency 'OxSdkCore/Smaato'
+        ss.dependency 'OxSdkCore/Inmobi'
+        ss.dependency 'OxSdkCore/Verve'
+        ss.dependency 'OxSdkCore/Pubmatic'
+        ss.dependency 'OxSdkCore/OguryPresage'
+    end
 
 
     spec.dependency 'OxDiscoveryPlugin','1.0.3-202312041600'
