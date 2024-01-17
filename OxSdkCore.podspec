@@ -26,10 +26,12 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
+
     spec.subspec 'APS' do |ss|
         ss.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
         ss.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
     end
+
 
     spec.subspec 'Base' do |ss|
 
@@ -48,12 +50,11 @@ Pod::Spec.new do |spec|
         ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
         ss.dependency 'UnityAds', '4.9.0'
         ss.dependency 'FBAudienceNetwork', '6.14.0'
-
-        ss.dependency 'APS'
+        ss.dependency 'OxSdkCore/APS'
     end
 
 
-    spec.subspec 'Unity' do |ss|
+    spec.subspec 'UnityAds' do |ss|
         ss.dependency 'OxSdkCore/Base'
         ss.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
         ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
@@ -174,4 +175,5 @@ Pod::Spec.new do |spec|
 
 
 
+    spec.dependency 'OxDiscoveryPlugin','1.0.3-202312041600'
 end
