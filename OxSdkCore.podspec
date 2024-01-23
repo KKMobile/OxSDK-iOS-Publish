@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkCore"#SDK名称
-    spec.version      = "1.2.0.0-RC11-ADN-202401231500"#版本号
+    spec.version      = "1.2.0.0-RC11-ADN-202401231600"#版本号
     spec.summary      = "OxAdSdk for core applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -197,6 +197,9 @@ Pod::Spec.new do |spec|
         ss.dependency 'OxSdkCore/InMobi'
         ss.dependency 'OxSdkCore/Verve'
         ss.dependency 'OxSdkCore/Pubmatic'
+        ss.dependency 'OxSdkCore/Mintegral'
+        ss.dependency 'OxSdkCore/UnityAds'
+        
 
         ss.dependency 'OxSdkCore/AdColony'
         ss.dependency 'OxSdkCore/BidMachine'
@@ -221,6 +224,8 @@ Pod::Spec.new do |spec|
         ss.dependency 'OxSdkCore/InMobi'
         ss.dependency 'OxSdkCore/Verve'
         ss.dependency 'OxSdkCore/Pubmatic'
+        ss.dependency 'OxSdkCore/Mintegral'
+        ss.dependency 'OxSdkCore/UnityAds'
     end
 
 
