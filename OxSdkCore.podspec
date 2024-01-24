@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkCore"#SDK名称
-    spec.version      = "1.2.0.0-RC11-ADN-202401231600"#版本号
+    spec.version      = "1.2.0.0-RC11-ADN-202401241800"#版本号
     spec.summary      = "OxAdSdk for core applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -33,6 +33,11 @@ Pod::Spec.new do |spec|
     end
 
 
+    spec.subspec 'Admob_Applovin' do |ss|
+        ss.dependency 'OxSdkCore/Base'
+        ss.dependency 'GoogleMobileAdsMediationAppLovin', '11.11.4.0'
+    end
+
     spec.subspec 'Base' do |ss|
 
         ss.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
@@ -51,6 +56,7 @@ Pod::Spec.new do |spec|
         ss.dependency 'UnityAds', '4.9.0'
         ss.dependency 'FBAudienceNetwork', '6.14.0'
         ss.dependency 'OxSdkCore/APS'
+        ss.dependency 'OxSdkCore/Admob_Applovin'
     end
 
 
@@ -187,45 +193,70 @@ Pod::Spec.new do |spec|
 
 
     spec.subspec 'Games' do |ss|
-        ss.dependency 'OxSdkCore/Base'
-        ss.dependency 'OxSdkCore/Admob'
-        ss.dependency 'OxSdkCore/Facebook'
-        ss.dependency 'OxSdkCore/Fyber'
-        ss.dependency 'OxSdkCore/OguryPresage'
-        ss.dependency 'OxSdkCore/Pangle'
-        ss.dependency 'OxSdkCore/Smaato'
-        ss.dependency 'OxSdkCore/InMobi'
-        ss.dependency 'OxSdkCore/Verve'
-        ss.dependency 'OxSdkCore/Pubmatic'
-        ss.dependency 'OxSdkCore/Mintegral'
-        ss.dependency 'OxSdkCore/UnityAds'
-        
 
-        ss.dependency 'OxSdkCore/AdColony'
-        ss.dependency 'OxSdkCore/BidMachine'
-        ss.dependency 'OxSdkCore/Chartboost'
-        ss.dependency 'OxSdkCore/IronSource'
-        ss.dependency 'OxSdkCore/MobileFuse'
-        ss.dependency 'OxSdkCore/Vungle'
-        ss.dependency 'OxSdkCore/Line'
+    	ss.dependency 'OxSdkCore/Base'
+
+    	ss.subspec 'Base' do |s|
+	        s.dependency 'OxSdkCore/Admob'
+	        s.dependency 'OxSdkCore/Facebook'
+	        s.dependency 'OxSdkCore/UnityAds'
+    	end
+
+    	ss.subspec 'Lite1' do |s|
+    		s.dependency 'OxSdkCore/Games/Base'
+
+            s.dependency 'OxSdkCore/Fyber'
+	        s.dependency 'OxSdkCore/InMobi'
+	        s.dependency 'OxSdkCore/IronSource'
+	        s.dependency 'OxSdkCore/OguryPresage'
+	        s.dependency 'OxSdkCore/Pangle'
+	        s.dependency 'OxSdkCore/Verve'
+	        ss.dependency 'OxSdkCore/Vungle'
+	        s.dependency 'OxSdkCore/Pubmatic'
+	        s.dependency 'OxSdkCore/BidMachine'
+	        s.dependency 'OxSdkCore/Moloco'
+    	end
+
+    	ss.subspec 'Lite2' do |s|
+    		s.dependency 'OxSdkCore/Games/Base'
+    		s.dependency 'OxSdkCore/Games/Lite1'
+
+	        s.dependency 'OxSdkCore/Chartboost'
+	        s.dependency 'OxSdkCore/MobileFuse'
+	        s.dependency 'OxSdkCore/Smaato'
+	        s.dependency 'OxSdkCore/Mintegral'
+	        s.dependency 'OxSdkCore/Line'
+    	end
+
+        ss.dependency 'OxSdkCore/Yandex'
         ss.dependency 'OxSdkCore/HyprMX'
-        ss.dependency 'OxSdkCore/Moloco'
+
     end
 
 
     spec.subspec 'Tools' do |ss|
-        ss.dependency 'OxSdkCore/Base'
-        ss.dependency 'OxSdkCore/Admob'
-        ss.dependency 'OxSdkCore/Facebook'
-        ss.dependency 'OxSdkCore/Fyber'
-        ss.dependency 'OxSdkCore/OguryPresage'
-        ss.dependency 'OxSdkCore/Pangle'
-        ss.dependency 'OxSdkCore/Smaato'
-        ss.dependency 'OxSdkCore/InMobi'
-        ss.dependency 'OxSdkCore/Verve'
-        ss.dependency 'OxSdkCore/Pubmatic'
-        ss.dependency 'OxSdkCore/Mintegral'
-        ss.dependency 'OxSdkCore/UnityAds'
+    	ss.dependency 'OxSdkCore/Base'
+
+    	ss.subspec 'Base' do |s|
+	        s.dependency 'OxSdkCore/Admob'
+	        s.dependency 'OxSdkCore/Facebook'
+    	end
+
+    	ss.subspec 'Lite1' do |s|
+    		s.dependency 'OxSdkCore/Tools/Base'
+
+	        s.dependency 'OxSdkCore/Pangle'
+    	end
+
+    	ss.subspec 'Lite2' do |s|
+    		s.dependency 'OxSdkCore/Tools/Lite1'
+    		
+	        s.dependency 'OxSdkCore/Fyber'
+	        s.dependency 'OxSdkCore/InMobi'
+	        s.dependency 'OxSdkCore/OguryPresage'
+	        s.dependency 'OxSdkCore/UnityAds'
+	        s.dependency 'OxSdkCore/Vungle'
+    	end
     end
 
 
