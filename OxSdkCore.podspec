@@ -34,7 +34,6 @@ Pod::Spec.new do |spec|
 
 
     spec.subspec 'Admob_Applovin' do |ss|
-        ss.dependency 'OxSdkCore/Base'
         ss.dependency 'GoogleMobileAdsMediationAppLovin', '11.11.4.0'
     end
 
