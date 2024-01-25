@@ -10,7 +10,7 @@
 #import "OxAdSdkManager.h"
 #import "OxGamesEventUtil.h"
 
-#define OxSDK_VERSION    @"1.2.0.0-RC11-ADN-202401231500"
+#define OxSDK_VERSION    @"1.2.0.0-RC11-ADN-202401241900"
 
 NS_ASSUME_NONNULL_BEGIN
 
