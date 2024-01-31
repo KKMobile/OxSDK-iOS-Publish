@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'Base' do |ss|
         ss.ios.vendored_frameworks =
-        'FrameworkSize/OxSdkForGames.framework','FrameworkSize/OxCustomUnityAdsAdapter.framework'
+        'FrameworkGames/OxSdkForGames.framework','FrameworkGames/OxCustomUnityAdsAdapter.framework'
 
         ss.dependency 'AppLovinSDK', '11.11.4'
         ss.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
@@ -56,9 +56,9 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'Lite1' do |ss|
         ss.dependency 'OxSdkForGames/Base'
-        ss.ios.vendored_frameworks = 'FrameworkSize/GADMVerveAdapter.framework',
-                                    'FrameworkSize/OxCustomFyberAdapter.framework',
-                                    'FrameworkSize/OxCustomPangleAdapter.framework'
+        ss.ios.vendored_frameworks = 'FrameworkGames/GADMVerveAdapter.framework',
+                                    'FrameworkGames/OxCustomFyberAdapter.framework',
+                                    'FrameworkGames/OxCustomPangleAdapter.framework'
 
         ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
         ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
@@ -100,7 +100,7 @@ Pod::Spec.new do |spec|
 
     spec.subspec 'Full' do |ss|
         ss.dependency 'OxSdkForGames/Lite2'
-        ss.ios.vendored_frameworks = 'FrameworkSize/MaxYandexAdapyer.framework'
+        ss.ios.vendored_frameworks = 'FrameworkGames/MaxYandexAdapyer.framework'
         ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
     end
 
