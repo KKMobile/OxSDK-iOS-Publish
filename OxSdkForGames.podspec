@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.5.2-Size"#版本号
+    spec.version      = "1.1.5.2-Size-RC01"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -53,55 +53,55 @@ Pod::Spec.new do |spec|
         ss.dependency 'GoogleMobileAdsMediationUnity','4.9.0.0'
     end
 
-    spec.subspec 'Lite1' do |ss|
-        ss.dependency 'OxSdkForGames/Base'
-        ss.ios.vendored_frameworks = 'FrameworkGames/GADMVerveAdapter.framework',
-                                    'FrameworkGames/OxCustomFyberAdapter.framework',
-                                    'FrameworkGames/OxCustomPangleAdapter.framework'
+    # spec.subspec 'Lite1' do |ss|
+    #     ss.dependency 'OxSdkForGames/Base'
+    #     ss.ios.vendored_frameworks = 'FrameworkGames/GADMVerveAdapter.framework',
+    #                                 'FrameworkGames/OxCustomFyberAdapter.framework',
+    #                                 'FrameworkGames/OxCustomPangleAdapter.framework'
 
-        ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
-        ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
-        ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
-        ss.dependency 'AppLovinMediationIronSourceAdapter', '7.5.1.0.0'
-        ss.dependency 'AppLovinMediationOguryPresageAdapter', '4.2.2.0'
-        ss.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
-        ss.dependency 'AppLovinMediationVerveAdapter', '2.18.0.0'
-        ss.dependency 'AppLovinMediationVungleAdapter', '7.1.0.2'
-        ss.dependency 'AppLovinPubMaticAdapter', '1.1.0'
-        ss.dependency 'AppLovinMediationBidMachineAdapter', '2.3.0.2'
-        ss.dependency 'MolocoCustomAdapterAppLovin','1.3.0.0'
+    #     ss.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
+    #     ss.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
+    #     ss.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
+    #     ss.dependency 'AppLovinMediationIronSourceAdapter', '7.5.1.0.0'
+    #     ss.dependency 'AppLovinMediationOguryPresageAdapter', '4.2.2.0'
+    #     ss.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
+    #     ss.dependency 'AppLovinMediationVerveAdapter', '2.18.0.0'
+    #     ss.dependency 'AppLovinMediationVungleAdapter', '7.1.0.2'
+    #     ss.dependency 'AppLovinPubMaticAdapter', '1.1.0'
+    #     ss.dependency 'AppLovinMediationBidMachineAdapter', '2.3.0.2'
+    #     ss.dependency 'MolocoCustomAdapterAppLovin','1.3.0.0'
 
-        ss.dependency 'GoogleMobileAdsMediationFyber','8.2.4.0'
-        ss.dependency 'GoogleMobileAdsMediationInMobi','10.6.0.0'
-        ss.dependency 'GoogleMobileAdsMediationIronSource',' 7.5.1.0'  #1
-        ss.dependency 'OguryMediationGoogleMobileAds','4.2.2.0'
-        ss.dependency 'GoogleMobileAdsMediationPangle','5.5.0.9.0'
-        ss.dependency 'GoogleMobileAdsMediationVungle','7.1.0.0'   #1
-        ss.dependency 'AdMobPubMaticAdapter','2.2.0'
-    end
+    #     ss.dependency 'GoogleMobileAdsMediationFyber','8.2.4.0'
+    #     ss.dependency 'GoogleMobileAdsMediationInMobi','10.6.0.0'
+    #     ss.dependency 'GoogleMobileAdsMediationIronSource',' 7.5.1.0'  #1
+    #     ss.dependency 'OguryMediationGoogleMobileAds','4.2.2.0'
+    #     ss.dependency 'GoogleMobileAdsMediationPangle','5.5.0.9.0'
+    #     ss.dependency 'GoogleMobileAdsMediationVungle','7.1.0.0'   #1
+    #     ss.dependency 'AdMobPubMaticAdapter','2.2.0'
+    # end
 
-    spec.subspec 'Lite2' do |ss|
-        ss.dependency 'OxSdkForGames/Lite1'
+    # spec.subspec 'Lite2' do |ss|
+    #     ss.dependency 'OxSdkForGames/Lite1'
 
-        ss.dependency 'AppLovinMediationChartboostAdapter', '9.5.1.0'
-        ss.dependency 'AppLovinMediationMobileFuseAdapter', '1.6.5.0'
-        ss.dependency 'AppLovinMediationSmaatoAdapter', '22.4.0.0'
-        ss.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
-        ss.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
+    #     ss.dependency 'AppLovinMediationChartboostAdapter', '9.5.1.0'
+    #     ss.dependency 'AppLovinMediationMobileFuseAdapter', '1.6.5.0'
+    #     ss.dependency 'AppLovinMediationSmaatoAdapter', '22.4.0.0'
+    #     ss.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
+    #     ss.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
 
 
-        ss.dependency 'GoogleMobileAdsMediationChartboost','9.5.1.0'
-        ss.dependency 'MobileFuseAdMobAdapter','1.6.5.0'
-        ss.dependency 'GoogleMobileAdsMediationMintegral','7.4.7.0'
-        ss.dependency 'FiveGADAdapter','1.5.0'
+    #     ss.dependency 'GoogleMobileAdsMediationChartboost','9.5.1.0'
+    #     ss.dependency 'MobileFuseAdMobAdapter','1.6.5.0'
+    #     ss.dependency 'GoogleMobileAdsMediationMintegral','7.4.7.0'
+    #     ss.dependency 'FiveGADAdapter','1.5.0'
 
-    end
+    # end
 
-    spec.subspec 'Full' do |ss|
-        ss.dependency 'OxSdkForGames/Lite2'
-        ss.ios.vendored_frameworks = 'FrameworkGames/MaxYandexAdapyer.framework'
-        ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
-    end
+    # spec.subspec 'Full' do |ss|
+    #     ss.dependency 'OxSdkForGames/Lite2'
+    #     ss.ios.vendored_frameworks = 'FrameworkGames/MaxYandexAdapyer.framework'
+    #     ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
+    # end
 
 
 end
