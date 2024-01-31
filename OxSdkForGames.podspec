@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.5.2-Size-RC02"#版本号
+    spec.version      = "1.1.5.2-Size"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -80,22 +80,22 @@ Pod::Spec.new do |spec|
         ss.dependency 'AdMobPubMaticAdapter','2.2.0'
     end
 
-    # spec.subspec 'Lite2' do |ss|
-    #     ss.dependency 'OxSdkForGames/Lite1'
+    spec.subspec 'Lite2' do |ss|
+        ss.dependency 'OxSdkForGames/Lite1'
 
-    #     ss.dependency 'AppLovinMediationChartboostAdapter', '9.5.1.0'
-    #     ss.dependency 'AppLovinMediationMobileFuseAdapter', '1.6.5.0'
-    #     ss.dependency 'AppLovinMediationSmaatoAdapter', '22.4.0.0'
-    #     ss.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
-    #     ss.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
+        ss.dependency 'AppLovinMediationChartboostAdapter', '9.5.1.0'
+        ss.dependency 'AppLovinMediationMobileFuseAdapter', '1.6.5.0'
+        ss.dependency 'AppLovinMediationSmaatoAdapter', '22.4.0.0'
+        ss.dependency 'AppLovinMediationLineAdapter', '2.6.20230609.0'
+        ss.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
 
 
-    #     ss.dependency 'GoogleMobileAdsMediationChartboost','9.5.1.0'
-    #     ss.dependency 'MobileFuseAdMobAdapter','1.6.5.0'
-    #     ss.dependency 'GoogleMobileAdsMediationMintegral','7.4.7.0'
-    #     ss.dependency 'FiveGADAdapter','1.5.0'
+        ss.dependency 'GoogleMobileAdsMediationChartboost','9.5.1.0'
+        ss.dependency 'MobileFuseAdMobAdapter','1.6.5.0'
+        ss.dependency 'GoogleMobileAdsMediationMintegral','7.4.7.0'
+        ss.dependency 'FiveGADAdapter','1.5.0'
 
-    # end
+    end
 
     # spec.subspec 'Full' do |ss|
     #     ss.dependency 'OxSdkForGames/Lite2'
