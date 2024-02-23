@@ -20,7 +20,6 @@
 #import "ApplovinNativeInterstitialAdapter.h"
 #import "OxUnitAdsGdprUtil.h"
 
-
 //! Project version number for OxSdkForGames.
 FOUNDATION_EXPORT double OxSdkForGamesVersionNumber;
 
