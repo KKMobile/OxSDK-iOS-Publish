@@ -97,11 +97,11 @@ Pod::Spec.new do |spec|
 
     end
 
-    # spec.subspec 'Full' do |ss|
-    #     ss.dependency 'OxSdkForGames/Lite2'
-    #     ss.ios.vendored_frameworks = 'FrameworkGames/MaxYandexAdapyer.framework'
-    #     ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
-    # end
+    spec.subspec 'Full' do |ss|
+        ss.dependency 'OxSdkForGames/Lite2'
+        ss.ios.vendored_frameworks = 'FrameworkGames/MaxYandexAdapyer.framework'
+        ss.dependency 'Google-Mobile-Ads-SDK', '10.13.0'
+    end
 
 
 end
