@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.1.3.5"
+#define OXSDK_VERSION "1.1.4.1-RC01-202403071830"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL    mAdmobSdkInitialed;
 @property(nonatomic, assign) BOOL    mMaxSdkInitialed;
 @property(nonatomic, assign) BOOL    enableDebug;
+@property(nonatomic, assign) BOOL    enableFBEvents;
+@property(nonatomic, assign) BOOL    enableTAEvents;
 
 + (nonnull instancetype)sharedInstance;
 
