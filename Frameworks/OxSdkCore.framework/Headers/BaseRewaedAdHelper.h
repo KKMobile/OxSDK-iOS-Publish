@@ -6,14 +6,14 @@
 //
 
 #import "BaseFullscreenAdHelper.h"
-#import "RewardedAdDelegate.h"
 #import "RewardedInternalAdDelegate.h"
+#import "RewardedAdGroupDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseRewaedAdHelper : BaseFullscreenAdHelper <IFullScreenAd,RewardedInternalAdDelegate>
 
-@property (nonatomic, weak) id<RewardedAdDelegate> mAdDelegate;
+@property (nonatomic, weak) id<RewardedAdGroupDelegate> mAdDelegate;
 @property (nonatomic, assign) bool mUserRewarded;
 @property (nonatomic, assign) double mOnRewardedVideoStartedTime;
 

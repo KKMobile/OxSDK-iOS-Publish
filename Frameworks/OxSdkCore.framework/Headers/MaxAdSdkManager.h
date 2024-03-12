@@ -12,9 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nonnull instancetype)sharedInstance;
 
-@property (nonatomic, strong) ALSdk *alSdk;
-
-
 @end
 
 NS_ASSUME_NONNULL_END

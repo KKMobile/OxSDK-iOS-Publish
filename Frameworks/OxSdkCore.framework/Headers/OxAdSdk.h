@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
-#import "OxGamesEventUtil.h"
 
-#define OxSDK_VERSION    @"1.2.0.0-RC11-ADN-202401241900"
+#define OxSDK_VERSION    @"1.2.0.0-UA-DMA-20240311"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -48,9 +47,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 展示测试套件，目前仅支持 Max 聚合平台。
 + (void)showMediationDebugger;
 
-/// 设置用户是否在 ConsentDialog 中选择接收。
-+ (void)setHasUserConsent:(BOOL)hasUserConsent;
-
 ///      RewardedVideo 广告展示时，初始静音状态。
 ///      仅对部分广告网络生效。
 + (void)setMute:(BOOL)mute;
@@ -82,15 +78,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 客户端上报商业化相关打点。
 + (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 
-/// 客户端上报商业化相关打点。 用户游戏 过关 死局等
-/// - Parameters:
-///   - eventType: 打点类型
-///   - value: 打点的值，如果是custom value 直接传 eventname
-///   - params: params
-+ (void)trackGamesEvent:(GamesEventType)eventType value:(NSString *)value params:(nullable NSDictionary *)params;
-
 /// 获取google的adaptive Banner的尺寸，方便页面布局
 + (CGSize)getAdaptiveBannerAdSize;
+
+/// 设置用户是否在 ConsentDialog 中选择接收。
++ (void)setHasUserConsent:(BOOL)hasUserConsent DEPRECATED_MSG_ATTRIBUTE("请使用 OxConsentMananger Api");
 
 
 @end

@@ -21,7 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 客户端打点
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
-+ (void)trackGamesEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 
 // 请求广告
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement;

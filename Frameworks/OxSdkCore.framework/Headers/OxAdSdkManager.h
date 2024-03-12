@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "BaseAdManager.h"
 #import "AdEventDelegate.h"
+#import "OxConsentDialogDelegate.h"
 #import "OnMediationInitDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -20,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) OxSdkMediationType currentMediationType; // 当前的聚合平台
 @property (nonatomic, copy) OnSdkInitComplete sdkInitComplete;
 
-+ (nonnull instancetype)sharedInstance;
 
++ (nonnull instancetype)sharedInstance;
 
 /// 初始化 OxSdk
 /// @param delayInMills 延迟 n 毫秒执行初始化。

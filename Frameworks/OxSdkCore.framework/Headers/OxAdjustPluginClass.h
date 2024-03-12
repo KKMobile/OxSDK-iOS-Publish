@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nonnull instancetype)sharedInstance;
 
 - (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
+- (void)trackDMA:(BOOL)isSubjectToGDPR granted:(BOOL)granted;
 
 @end
 

@@ -10,26 +10,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class OxAdUnitIds;
+@class OxAdUnitId;
 
 @interface OxAdUnit : NSObject
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) OxSdkAdFormat adFormat;
-@property (nonatomic,assign) OxSdkMediationType mediationType;
-@property (nonatomic, strong) OxAdUnitIds *adUnitIds;
+@property (nonatomic, assign) OxSdkMediationType mediationType;
 
-- (NSString *)getTargetAdUnitId:(OxSdkMediationType)mediationType;
+@property (nonatomic, strong) NSArray<NSString *> *maxAdUnitIds;
+@property (nonatomic, strong) NSArray<NSString *> *admobAdUnitIds;
+
+- (NSArray *)getTargetAdUnitId:(OxSdkMediationType)mediationType;
 - (OxSdkMediationType)getTargetMediation;
 
 @end
 
-@interface  OxAdUnitIds : NSObject
-
-@property (nonatomic, copy) NSString *max;
-@property (nonatomic, copy) NSString *admob;
-
-@end
 
 
 NS_ASSUME_NONNULL_END

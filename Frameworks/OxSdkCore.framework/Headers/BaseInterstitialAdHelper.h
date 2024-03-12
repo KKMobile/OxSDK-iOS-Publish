@@ -6,7 +6,7 @@
 //
 
 #import "BaseFullscreenAdHelper.h"
-#import "InterstitialAdDelegate.h"
+#import "InterstitialAdGroupDelegate.h"
 #import "InterstitialInternalAdDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BaseInterstitialAdHelper : BaseFullscreenAdHelper <IFullScreenAd,InterstitialInternalAdDelegate>
 
 
-@property (nonatomic, weak) id<InterstitialAdDelegate> mAdDelegate;
+@property (nonatomic, weak) id<InterstitialAdGroupDelegate> mAdDelegate;
 
 + (BaseInterstitialAdHelper *)createAdHelpeWithAdUnitId:(NSString *)adUnitId mediationType:(OxSdkMediationType)mediationType;
 

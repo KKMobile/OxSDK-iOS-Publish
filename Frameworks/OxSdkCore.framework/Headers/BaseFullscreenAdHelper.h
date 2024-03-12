@@ -12,16 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseFullscreenAdHelper : OxAdHelper <IFullScreenAd>
 
-@property (nonatomic, assign) NSInteger retryCount;
-@property (nonatomic, assign) BOOL isReloadAfterFailed;
-@property (nonatomic, assign) BOOL mIsReloadingInLoadFailed;
-@property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
-@property (nonatomic, assign) BOOL mDisplayCalled;
-
-- (void)reloadOnLoadFailed:(NSString *)placement;
-
-- (void)reloadOnDisplayFailed:(NSString *)placement;
-
 
 @end
 

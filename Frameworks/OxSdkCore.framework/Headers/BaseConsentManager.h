@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^ConsentDialogDismissCallback)( NSError * _Nullable error);
+typedef void (^ConsentDialogDismissCallback)(void);
 
 
 @interface BaseConsentManager : NSObject

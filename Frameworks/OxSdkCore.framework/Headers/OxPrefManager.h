@@ -14,12 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nonnull instancetype)sharedInstance;
 
-// 1 Google UMP  0 Max
+// 1 Google UMP  2 SFBX
 @property (nonatomic,assign) int gdprTool;
 @property (nonatomic,assign) NSInteger core_level;
 @property (nonatomic,assign) BOOL isUnityAdsGdprSet;
 @property (nonatomic,assign) BOOL isPrefMigrated;
-//@property (nonatomic,assign) GDPR_STATUS gdprStatus;
 @property (nonatomic,assign) OxSdkMediationType mediationType;
 @property (nonatomic,assign) long last_load_timestamp;
 @property (nonatomic,copy) NSString *keywords_json;

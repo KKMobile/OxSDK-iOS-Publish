@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "AdEvents.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxRemoteConfigHelper : NSObject
@@ -39,12 +40,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// uac campaign 信息。OX_CONFIG_ADSDK_UAC_CAMPAIGN
 + (nullable NSString *)getUacCampaign;
 
-// 获取 后台配置的 GDPR
-+ (int)getGdprStyle;
-
 /// 是否达到内存限制
 /// - Parameter adFormat: 达到内存限制的广告格式
 + (BOOL)isMemoryLimitReached:(NSString *)adFormat;
+
+/// 获取 CMP Google（0，1 ） SDBX（2）
++ (int)getCMPStyle;
+
+/// 获取 max 关闭的ID
++ (NSArray<NSString *> *)getDisableIds;
+
+// 获取 后台配置的 GDPR
++ (int)getGdprStyle;
 
 + (NSArray*)getKeywords;
 

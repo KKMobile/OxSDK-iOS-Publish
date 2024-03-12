@@ -6,7 +6,7 @@
 //
 
 #import "BaseConsentManager.h"
-#import "AdEvents.h"
+#import "ConsentStatusDelegate.h"
 
 typedef enum : NSUInteger {
     ConsentEntryTypeNormal,

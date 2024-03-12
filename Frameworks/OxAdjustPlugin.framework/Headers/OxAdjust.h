@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define OxAdjustPlugin_SDK_VERSION    @"1.0.2-202312041600"
+#define OxAdjustPlugin_SDK_VERSION    @"1.0.2-UA-DMA-20240311"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (nonnull instancetype)sharedInstance;
 
 - (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
+
+- (void)trackDMA:(BOOL)isSubjectToGDPR granted:(BOOL)granted;
 
 @end
 
