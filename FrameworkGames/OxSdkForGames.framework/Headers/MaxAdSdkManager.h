@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MaxAdSdkManager : BaseAdManager
 
 + (nonnull instancetype)sharedInstance;
+- (void)initialize:(OnSdkInitComplete)successBlock;
 
 @end
 

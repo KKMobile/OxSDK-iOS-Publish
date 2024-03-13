@@ -5,21 +5,23 @@
 //  Created by Rober on 2022/4/13.
 //
 
-#import "OxAdHelper.h"
-#import "IFullScreenAd.h"
+#import "OxBaseAd.h"
 #import "InterstitialAdDelegate.h"
-#import "InterstitialInternalAdDelegate.h"
+#import "BaseInterstitialAdHelper.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxInterstitialAdHelper : OxAdHelper <IFullScreenAd>
+@interface OxInterstitialAdHelper : OxBaseAd
 
-@property (nonatomic, weak) id<InterstitialAdDelegate> mAddelegate;
-@property (nonatomic, weak) id<InterstitialInternalAdDelegate> mInternalAddelegate;
-@property (nonatomic, assign) NSInteger retryAttempt;
-@property (nonatomic, assign) BOOL mReload;
-@property (nonatomic, assign) BOOL mIsReloadingInLoadFailed;
-@property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
-- (void)createAd;
+@property (nonatomic, weak) id<InterstitialAdDelegate> mAdDelegate;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *,BaseInterstitialAdHelper *> *mAdHelpersMap;
+
+- (void)showAd:(NSString *)placement;
+- (void)showAd;
+- (BOOL)isReady;
+
+- (void)setReloadAfterFailed:(BOOL)reload;
+
 
 @end
 

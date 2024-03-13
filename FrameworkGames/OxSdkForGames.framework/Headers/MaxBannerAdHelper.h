@@ -5,11 +5,11 @@
 //  Created by Rober on 2022/1/13.
 //
 
-#import "OxBannerAdHelper.h"
+#import "BaseBannerAdHelper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MaxBannerAdHelper : OxBannerAdHelper
+@interface MaxBannerAdHelper : BaseBannerAdHelper
 
 
 @end

@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OxAdHelper : NSObject
 
 @property (nonatomic, weak) UIViewController *mViewController;
-@property (nonatomic, strong) NSString *mAdunitId;
+@property (nonatomic, strong) NSString *adUnitName;  // 广告位Name
+@property (nonatomic, strong) NSString *adUnitId;   // 加载的广告位ID
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;
 @property (nonatomic, assign) double mLastShowFailedTimestamp;
@@ -28,13 +29,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *mNetworkName;
 @property (nonatomic, strong) NSString *mCreativeId;
 
-@property(nonatomic, strong)NSMutableDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
+@property(nonatomic, strong)NSMutableDictionary<NSString*, NSString*>* mExtraParameterMap;
 
-- (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithAdunitId:(NSString *)adunitId;
 
-- (void)loadAd;
+- (void)resetLoadStatus:(NSString *)placement;
 
-- (void)loadAd:(NSString *)placement;
+- (void)loadAd:(Platform)mediation;
+
+- (void)loadAd:(NSString *)placement mediation:(Platform)mediation;
 
 - (double)getDuration:(double)latestTimestamp;
 
@@ -70,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)appendLimitation:(NSString *)limitation;
 
--(void) setExtraParametersForMax:(NSString *)key value:(NSString *)value;
+-(void) setExtraParameters:(NSString *)key value:(NSString *)value;
 
 @end
 

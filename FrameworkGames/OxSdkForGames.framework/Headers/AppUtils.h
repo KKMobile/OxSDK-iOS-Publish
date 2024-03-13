@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSNumber *)getNumberFormPlist:(NSString *)key;
 
+/// 网络是否可用
++ (BOOL)isNetworkAvailable;
 // app 内存显示
 + (double)getAppMemoryLimit;
 // 应用剩余内存
@@ -29,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (double)memoryUsage;
 // 可用内存
 + (double)getAvailableMemory;
+
+// 判断 聚合是否在枚举区域内
++ (BOOL)platformInRange:(NSInteger)platform;
 
 + (UIViewController *)mavlVisibleViewController;
 
