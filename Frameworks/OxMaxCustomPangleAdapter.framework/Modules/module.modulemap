@@ -1,0 +1,6 @@
+framework module OxMaxCustomPangleAdapter {
+  umbrella header "OxMaxCustomPangleAdapter.h"
+
+  export *
+  module * { export * }
+}
