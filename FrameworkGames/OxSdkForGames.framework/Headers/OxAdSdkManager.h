@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.1.3.5"
+#define OXSDK_VERSION "1.1.3.5-MO-LP-202403251830"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,9 +34,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 更改广告聚合平台，主要作用firebase取到更新的值更新本地记录的值
 /// @param platform Platform
 - (void)switchMediationPlatform:(Platform)platform successBlock:(OnSdkInitComplete)block;
-
-/// Remote Config 获取成功之后，将 OxSdk 切换到对应的 Mediation
-- (Platform)switchMediationPlatformByRemoteConfig:(OnSdkInitComplete)block;
 
 - (BOOL)isMediationInitialized:(Platform)mediation;
 

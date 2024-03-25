@@ -19,6 +19,13 @@
 #import "OxRemoteConfigHelper.h"
 #import "ApplovinNativeInterstitialAdapter.h"
 #import "OxUnitAdsGdprUtil.h"
+#import "OxAdUnit.h"
+#import "OxBaseAd.h"
+#import "MrecAdDelegate.h"
+#import "InterstitialAdDelegate.h"
+#import "BannerAdDelegate.h"
+#import "RewardedAdDelegate.h"
+
 
 //! Project version number for OxSdkForGames.
 FOUNDATION_EXPORT double OxSdkForGamesVersionNumber;

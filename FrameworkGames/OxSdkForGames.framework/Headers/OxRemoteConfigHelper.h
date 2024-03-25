@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSArray *)getTopValuesConfig;
 
+// 获取远端的 platform
++ (NSInteger)getRemoteConfigPlatform;
+
 /// 打点等级。 OX_CONFIG_ADSDK_LOG_LEVEL
 + (int)getEventLevel;
 

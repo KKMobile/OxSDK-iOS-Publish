@@ -32,6 +32,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIViewController *)mavlVisibleViewController;
 
+// 判断枚举
++ (BOOL)platformInRange:(NSInteger)platform;
+/// 通过类型获取字符串
++ (NSString *)prefixPlatform:(NSInteger)platform;
+
 @end
 
 NS_ASSUME_NONNULL_END
