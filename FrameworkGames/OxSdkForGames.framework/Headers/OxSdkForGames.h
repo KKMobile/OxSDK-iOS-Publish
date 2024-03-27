@@ -19,7 +19,6 @@
 #import "OxRemoteConfigHelper.h"
 #import "ApplovinNativeInterstitialAdapter.h"
 #import "OxUnitAdsGdprUtil.h"
-#import "OxBaseAd.h"
 #import "MrecAdDelegate.h"
 #import "InterstitialAdDelegate.h"
 #import "BannerAdDelegate.h"
