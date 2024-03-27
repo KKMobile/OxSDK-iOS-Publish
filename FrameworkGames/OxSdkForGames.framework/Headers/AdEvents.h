@@ -69,8 +69,9 @@ typedef NS_ENUM(NSInteger, VPNState) {
 };
 
 typedef NS_ENUM(NSInteger, Platform) {
-    PlatForm_Max = 0,
-    PlatForm_Admob
+    PlatForm_Default = 0,
+    PlatForm_Admob = 1,
+    PlatForm_Max = 2
 };
 
 typedef NS_ENUM(NSInteger, CountedEvents) {
