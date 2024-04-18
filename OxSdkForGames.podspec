@@ -27,11 +27,13 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
+  spec.resource_bundle = {
+    "#{s.module_name}_Privacy" => "ResBundle/PrivacyInfo.xcprivacy"
+  }
 
   spec.dependency 'PureLayout'
-  spec.dependency 'AFNetworking'
-  spec.dependency 'SDWebImage'
   spec.dependency 'Adjust'
+  spec.dependency 'FBSDKCoreKit'
   spec.dependency 'FirebaseAnalytics', '>=8.0.0'
   spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
   # Max Mediation
