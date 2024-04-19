@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
-  spec.resource_bundles = {'OxSdkForGames/Privacy/' => ['ResBundle/PrivacyInfo.xcprivacy']}
+  spec.resource_bundles = {'OxSdkForGames' => ['ResBundle/PrivacyInfo.xcprivacy']}
 
   spec.dependency 'PureLayout'
   spec.dependency 'Adjust'
