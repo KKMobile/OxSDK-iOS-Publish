@@ -13,13 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AppUtils : NSObject
 
 /// 根据info.plist中的id组，进行adapter的初始化操作
-- (NSDictionary *)getAppIdFormInfoPlist;
++ (NSDictionary *)getAppIdFormInfoPlist;
 
-- (NSString *)getAdapterAppId:(NSString *)key;
++ (NSString *)getAdapterAppId:(NSString *)key;
 
-- (NSString *)getStringFromPlist:(NSString *)key;
++ (NSString *)getStringFromPlist:(NSString *)key;
 
-- (NSNumber *)getNumberFormPlist:(NSString *)key;
++ (NSNumber *)getNumberFormPlist:(NSString *)key;
 
 // app 内存显示
 + (double)getAppMemoryLimit;
