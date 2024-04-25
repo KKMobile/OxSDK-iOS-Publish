@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.4.1-RC02-202404251130"#版本号
+    spec.version      = "1.1.4.1-RC02-202404251440"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -60,7 +60,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.6.1.0.0'
     spec.dependency 'OpenWrapSDK', '3.4.1'
     spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
-    spec.dependency 'MolocoCustomAdapterAppLovin','2.1.1.0'
+    spec.dependency 'MolocoCustomAdapterAppLovin','2.1.0.0'
 
     #Admob Mediation
     spec.dependency 'Google-Mobile-Ads-SDK', '11.3.0'
@@ -75,6 +75,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'AdMobPubMaticAdapter','2.2.0'
     spec.dependency 'FiveGADAdapter','1.5.1'
     spec.dependency 'MobileFuseAdMobAdapter','1.7.3.0'
-    spec.dependency 'MolocoCustomAdapterAdMob','2.1.1.0'
+    spec.dependency 'MolocoCustomAdapterAdMob','2.1.0.0'
 
 end
