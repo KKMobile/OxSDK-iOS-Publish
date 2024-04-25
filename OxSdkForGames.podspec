@@ -54,13 +54,13 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationByteDanceAdapter', '5.9.0.6.0'
     spec.dependency 'AppLovinMediationSmaatoAdapter', '22.8.3.0'
     spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.10.0.0'
+    spec.dependency 'UnityAds', '4.10.0.0'
     spec.dependency 'HyBid', '2.21.2'
     spec.dependency 'VungleAds', '7.3.1'
     spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.6.1.0.0'
     spec.dependency 'OpenWrapSDK', '3.4.1'
     spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
-    spec.dependency 'MolocoCustomAdapterAppLovin','2.1.0.0'
 
     #Admob Mediation
     spec.dependency 'Google-Mobile-Ads-SDK', '11.3.0'
@@ -75,6 +75,5 @@ Pod::Spec.new do |spec|
     spec.dependency 'AdMobPubMaticAdapter','2.2.0'
     spec.dependency 'FiveGADAdapter','1.5.1'
     spec.dependency 'MobileFuseAdMobAdapter','1.7.3.0'
-    spec.dependency 'MolocoCustomAdapterAdMob','2.1.0.0'
 
 end
