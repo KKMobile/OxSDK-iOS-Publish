@@ -42,9 +42,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 判断 mediation 是否在区域中
 + (BOOL)isMediationInRange:(NSInteger)mediation;
 
-/// 是否是大于 iOS 13  包含 iOS13
-+ (BOOL)isGreateriOS13;
-
 +(void)showMaxAdMsg:(MAAdWaterfallInfo *)waterfall;
 
 @end

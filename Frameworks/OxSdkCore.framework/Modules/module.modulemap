@@ -1,6 +1,6 @@
 framework module OxSdkCore {
   umbrella header "OxSdkCore.h"
-
   export *
+
   module * { export * }
 }
