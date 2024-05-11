@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <DTBiOSSDK/DTBiOSSDK.h>
+#import "OXLogMoudle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

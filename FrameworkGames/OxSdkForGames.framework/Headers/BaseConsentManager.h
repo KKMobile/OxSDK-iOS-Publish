@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "GDPRConsentants.h"
 #import "AppUtils.h"
+#import "OXLogMoudle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

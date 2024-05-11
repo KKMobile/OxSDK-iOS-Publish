@@ -8,11 +8,6 @@
 #ifndef AdEvents_h
 #define AdEvents_h
 
-#ifdef DEBUG
-#define OXLog(fmt, ...) NSLog((@"OXSDK:%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__);
-#else
-#define OXLog(...)
-#endif
 
 #define OX_IS_IPAD  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 #define OX_FACTOR_WIDTH (OX_IS_IPAD ? 1: (OX_SCREEN_WIDTH / 375.0))

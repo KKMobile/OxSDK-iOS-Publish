@@ -11,6 +11,8 @@
 #import <FBAudienceNetwork/FBAudienceNetwork.h>
 #import "AdEvents.h"
 #import "ApsAdManager.h"
+#import "OXLogMoudle.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^OnSdkInitComplete)(void);
