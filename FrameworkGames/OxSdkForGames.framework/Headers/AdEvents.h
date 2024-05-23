@@ -19,6 +19,7 @@ static NSString * const AdFormat_MREC = @"mrec";
 static NSString * const AdFormat_INTERSTITIAL = @"interstitial";
 static NSString * const AdFormat_NATIVE = @"native";
 static NSString * const AdFormat_REWARDED = @"rewarded";
+static NSString * const AdFormat_OPENADS = @"openads";
 
 static NSString * const AdStatus_IDLE = @"Ad is idle";
 static NSString * const AdStatus_LOADING = @"Ad is loading";

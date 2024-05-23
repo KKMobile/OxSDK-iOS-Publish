@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)enableInterstitialTest:(MAInterstitialAd*)interstitialAd enabled:(bool)enabled;
 
++ (void)enableOpenAdTest:(MAAppOpenAd*)openAd enabled:(bool)enabled;
+
 + (void)enableRewardedTest:(MARewardedAd*)rewardedAd enabled:(bool)enabled;
 
 @end

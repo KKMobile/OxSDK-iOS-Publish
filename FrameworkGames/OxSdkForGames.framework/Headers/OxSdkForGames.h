@@ -11,6 +11,7 @@
 #import "OxInterstitialAdHelper.h"
 #import "OxMrecAdHelper.h"
 #import "OxBannerAdHelper.h"
+#import "OxOpenAdsAdHelper.h"
 #import "OxConsentMananger.h"
 #import "OxAdShowLimitation.h"
 #import "AdEventDelegate.h"
