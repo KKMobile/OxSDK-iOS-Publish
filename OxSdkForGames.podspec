@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "OxSdkForGames"#SDK名称
-  spec.version      = "1.1.3.5"#版本号
+  spec.version      = "1.0-Mo-TradPlus-202406031500"#版本号
   spec.summary      = "OxAdSdk for game applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "12.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
-  spec.ios.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'#SDK相对本文件路径
+  spec.ios.vendored_frameworks = ['FrameworkGames/OxSdkForGames.framework','FrameworkGames/ALMCMediationAdapter.framework']#SDK相对本文件路径
   spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
@@ -75,5 +75,14 @@ Pod::Spec.new do |spec|
   spec.dependency 'OguryMediationGoogleMobileAds','4.1.1.0'
   spec.dependency 'AdMobPubMaticAdapter','2.1.1'
   spec.dependency 'FiveGADAdapter','1.5.0'
+  
+  spec.dependency 'TradPlusAdSDK', '9.2.0'
+  spec.dependency 'TradPlusAdSDK/TPCrossAdapter', '9.2.0'
+  spec.dependency 'TradPlusAdSDK/AdMobAdapter', '9.2.0'
+  spec.dependency 'TradPlusAdSDK/AppLovinAdapter', '9.2.0'
+  spec.dependency 'TradPlusAdSDK/TPGoogleIMAAdapter', '9.2.0'
+  spec.dependency 'GoogleAds-IMA-iOS-SDK','3.18.4'
+  spec.dependency 'TradPlusAdSDK/BigoAdapter', '9.2.0'
+  spec.dependency 'BigoADS','2.1.1'
   
 end
