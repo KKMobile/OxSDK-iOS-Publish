@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.4.1-RC04-202405231730"#版本号
+    spec.version      = "1.1.4.1-RC06-202406121830"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
     spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
     spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
     spec.platform     = :ios#支持平台
-    spec.ios.deployment_target = "12.0"#支持iOS最低版本
+    spec.ios.deployment_target = "13.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinSDK', '12.4.1'
     spec.dependency 'AmazonPublisherServicesSDK','4.9.3.0'
     spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.9.3.0'
-    spec.dependency 'BidMachine', '2.5.3.0'
+    spec.dependency 'AppLovinMediationBidMachineAdapter', '2.5.3.0.0'
     spec.dependency 'AppLovinMediationChartboostAdapter', '9.7.0.0'
     spec.dependency 'AppLovinMediationFyberAdapter', '8.2.7.0'
     spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.3.0.0'
@@ -54,12 +54,15 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationByteDanceAdapter', '5.9.0.7.0'
     spec.dependency 'AppLovinMediationSmaatoAdapter', '22.8.3.0'
     spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.10.0.0'
-    spec.dependency 'HyBid', '3.0.0.0'
-    spec.dependency 'VungleAds', '7.3.1'
+    spec.dependency 'AppLovinMediationVerveAdapter','3.0.1.0'
+    spec.dependency 'AppLovinMediationVungleAdapter', '7.3.1.0'
     spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.6.1.0.0'
     spec.dependency 'OpenWrapSDK', '3.4.1'
     spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
+    spec.dependency 'AppLovinMediationYandexAdapter','7.0.1.0'
+    spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
+    spec.dependency 'AppLovinMediationMolocoAdapter','2.2.1.0'
 
     #Admob Mediation
     spec.dependency 'Google-Mobile-Ads-SDK', '11.3.0'
