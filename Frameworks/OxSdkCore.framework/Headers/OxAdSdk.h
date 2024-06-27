@@ -10,9 +10,11 @@
 #import "OxAdSdkManager.h"
 #import "OxGamesEventUtil.h"
 
-#define OxSDK_VERSION    @"1.2.0.0"
+#define OxSDK_VERSION    @"1.2.1.0-RC01-202406271200"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class OxSdkBuilder;
 
 @interface OxAdSdk : NSObject
 
@@ -20,12 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getSdkVersion;
 
 /// 初始化 OxAdSdk。
-+ (void)initialize:(OnSdkInitComplete)successBlock;
++ (void)initialize:(OxSdkBuilder *)builder successBlock:(OnSdkInitComplete)successBlock;
 
 /// 延迟初始化 OxAdSdk。
 /// - Parameters:
 ///   - delayInMills: 延迟时间
-+ (void)initializeWithDelayInMills:(int)delayInMills successBlock:(OnSdkInitComplete)successBlock;
++ (void)initializeWithDelayInMills:(int)delayInMills builder:(OxSdkBuilder *)builder successBlock:(OnSdkInitComplete)successBlock;
 
 /// 切换到指定的mediation
 + (void)switchMediation:(OxSdkMediationType)mediation;

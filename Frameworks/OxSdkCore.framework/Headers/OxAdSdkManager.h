@@ -9,6 +9,7 @@
 #import "BaseAdManager.h"
 #import "AdEventDelegate.h"
 #import "OnMediationInitDelegate.h"
+#import "OxSdkBuilder.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) BaseAdManager  *mAdManager; // 当前的聚合平台adManager
 @property (nonatomic, assign) OxSdkMediationType currentMediationType; // 当前的聚合平台
 @property (nonatomic, copy) OnSdkInitComplete sdkInitComplete;
+@property (nonatomic, strong) OxSdkBuilder *builder;
 
 + (nonnull instancetype)sharedInstance;
 
@@ -26,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 初始化 OxSdk
 /// @param delayInMills 延迟 n 毫秒执行初始化。
 /// @param successBlock 成功毁掉
-- (void)initializeWithDelayInMills:(int)delayInMills successBlock:(OnSdkInitComplete)successBlock;
+- (void)initializeWithDelayInMills:(int)delayInMills builder:(OxSdkBuilder *)builder successBlock:(OnSdkInitComplete)successBlock;
 
 /**
  * @param delegate  聚合平台初始化完成回调。

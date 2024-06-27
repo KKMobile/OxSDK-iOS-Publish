@@ -10,6 +10,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ApsBannerAdManager : ApsBaseAdManager
 
++ (instancetype)sharedInstance;
+
 @end
 
 NS_ASSUME_NONNULL_END

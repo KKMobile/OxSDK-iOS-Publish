@@ -13,10 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxClientConfig : NSObject
 
-@property (nonatomic,assign) BOOL isDebugEnabled;
-@property (nonatomic,assign) int dayCountSinceInstall;
 @property (nonatomic,weak) id<AdEventDelegate> delegate;
-
 
 + (nonnull instancetype)sharedInstance;
 - (void)onTrackEvent:(nonnull NSString *)name params:(nullable NSDictionary *)params;

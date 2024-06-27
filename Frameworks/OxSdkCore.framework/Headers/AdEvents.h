@@ -8,6 +8,9 @@
 #ifndef AdEvents_h
 #define AdEvents_h
 
+#import "OXLogMoudle.h"
+#import "OxError.h"
+
 #ifdef DEBUG
 #define OXLog(fmt, ...) NSLog((@"OXSDK:%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__);
 #else
@@ -33,11 +36,17 @@ static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
 
 typedef enum : NSUInteger {
+    OxErrorTypeOxSdk = 0,
+    OxErrorTypeMediation
+} OxErrorType;
+
+typedef enum : NSUInteger {
     OxSdkAdFormatBANNER = 1,
     OxSdkAdFormatMREC,
     OxSdkAdFormatINTERSTITIAL,
     OxSdkAdFormatREWARDED,
     OxSdkAdFormatNATIVE,
+    OxSdkAdFormatOPENAD,
 } OxSdkAdFormat;
 
 typedef NS_ENUM(NSInteger, DailyLevel) {
@@ -133,6 +142,7 @@ static NSString * const EVENT_CONFIG_PARSE_FAILED = @"OxConfigParseFailed";
 
 // Param keys
 static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
+static NSString * const PARAM_AD_UNIT_NAME = @"AdUnitName";
 static NSString * const PARAM_AD_FORMAT = @"AdFormat";
 static NSString * const PARAM_PLACEMENT = @"Placement";
 static NSString * const PARAM_VERSION = @"Version";

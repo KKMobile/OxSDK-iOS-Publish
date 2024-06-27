@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)init;
 
-+ (void)enableBannerTest:(MAAdView*)adView enabled:(bool)enabled;
++ (void)enableBannerTest:(MAAdView*)adView;
 
-+ (void)enableMrecTest:(MAAdView*)adView enabled:(bool)enabled;
++ (void)enableMrecTest:(MAAdView*)adView;
 
-+ (void)enableInterstitialTest:(MAInterstitialAd*)interstitialAd enabled:(bool)enabled;
++ (void)enableInterstitialTest:(MAInterstitialAd*)interstitialAd;
 
-+ (void)enableRewardedTest:(MARewardedAd*)rewardedAd enabled:(bool)enabled;
++ (void)enableRewardedTest:(MARewardedAd*)rewardedAd;
 
 @end
 

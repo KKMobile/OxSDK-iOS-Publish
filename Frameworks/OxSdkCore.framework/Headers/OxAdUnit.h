@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) OxSdkAdFormat adFormat;
+@property (nonatomic, copy) NSString *adFormatValue;
 @property (nonatomic,assign) OxSdkMediationType mediationType;
 @property (nonatomic, strong) OxAdUnitIds *adUnitIds;
 

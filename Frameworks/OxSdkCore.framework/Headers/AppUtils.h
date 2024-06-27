@@ -41,8 +41,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (OxSdkMediationType)formatMediationType:(NSInteger)mediation;
 /// 判断 mediation 是否在区域中
 + (BOOL)isMediationInRange:(NSInteger)mediation;
++ (NSString *)getMediationName:(OxSdkMediationType)mediationType;
 
 +(void)showMaxAdMsg:(MAAdWaterfallInfo *)waterfall;
++ (NSString *)adFormatValue:(OxSdkAdFormat)adFormat;
 
 @end
 

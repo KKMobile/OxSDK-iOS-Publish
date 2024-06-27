@@ -8,9 +8,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "OxAdSdkManager.h"
-#import "AdDelegate.h"
 #import "AppUtils.h"
 #import "AdEventUtil.h"
+#import "OxSdkConfig.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)appendLimitation:(NSString *)limitation;
 
--(void) setExtraParameters:(NSString *)key value:(NSString *)value;
+-(void)setExtraParameters:(NSString *)key value:(NSString *)value;
 
 @end
 

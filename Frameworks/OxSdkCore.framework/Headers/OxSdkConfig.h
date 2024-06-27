@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nonnull instancetype)sharedInstance;
 
+@property (nonatomic,strong)  NSDictionary<NSNumber *,NSString *> *mediationSDKName;
+
 /// ad config
 @property (nonatomic,strong) NSMutableDictionary<NSString *,OxAdUnit *> *adUnitMap;
 @property (nonatomic,strong) NSMutableDictionary<NSString *,NSString *> *adjustTokenMap;

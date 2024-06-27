@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OxAdSdkManager.h"
+#import "OxSdkBuilder.h"
+#import "AdEvents.h"
 #import "OxAdSdk.h"
-#import "OxRewardedAd.h"
-#import "OxInterstitialAd.h"
-#import "OxMrecAd.h"
-#import "OxOpenAds.h"
-#import "OxBannerAd.h"
-#import "OxNativeAd.h"
+
+#import "OxInterstitialAdManager.h"
+#import "OxRewardedAdManager.h"
+#import "OxOpenAdsAdManager.h"
+#import "OxBannerAdManager.h"
+#import "OxMrecAdManager.h"
+#import "OxNativeAdManager.h"
+
 #import "OxConsentMananger.h"
 #import "OxAdShowLimitation.h"
 #import "AdEventDelegate.h"

@@ -11,6 +11,8 @@
 #import <FBAudienceNetwork/FBAudienceNetwork.h>
 #import "AdEvents.h"
 #import "ApsAdManager.h"
+#import "OxSdkBuilder.h"
+#import "OXLogMoudle.h"
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : NSUInteger {
@@ -25,7 +27,6 @@ typedef void (^OnSdkInitComplete)(void);
 
 @interface BaseAdManager : NSObject
 
-
 @property (nonatomic, assign) OxSdkInitStatus initStatus;
 
 @property (nonatomic, copy) OnSdkInitComplete initSuccessBlock;
@@ -37,24 +38,15 @@ typedef void (^OnSdkInitComplete)(void);
 
 - (BOOL)isSdkInitialed;
 
-- (void)enableDebug:(BOOL)enable;
+- (void)updateAdConfig;
 
 - (void)showMediationDebugger;
 
 - (void)setHasUserConsent:(BOOL)hasUserConsent;
 
-- (void)setMute:(BOOL)mute;
-
 - (NSString*)getSdkVersion;
 
 - (ALSdkConfiguration*)getSdkConfiguration;
-
-- (void)setCoreLevel:(int)level;
-
-/**
-* Note that the user ID is neither the user’s IDFA nor the device ID; it is your own proprietary user identifier.
-*/
-- (void)setUserId:(NSString *)userIdentifier;
 
 /**
  * 为广告 Sdk 设置属性。

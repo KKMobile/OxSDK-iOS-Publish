@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)logEventWithUserProperties:(NSString*)eventName params:(nullable NSDictionary<NSString*, NSObject*>*)params;
 
++ (void)logConsentEvent;
+
 @end
 
 NS_ASSUME_NONNULL_END
