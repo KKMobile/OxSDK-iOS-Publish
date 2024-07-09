@@ -17,6 +17,7 @@
 #import "OxResBundleUtil.h"
 #import "OxAdData.h"
 #import "OxMAAdRevenueDelegateImpl.h"
+#import "OxNativeViewBinder.h"
 
 @import AppLovinSDK;
 @import GoogleMobileAds;
@@ -57,8 +58,12 @@
 
 - (void)showAd:(NSString *)showPlacement delegate:(id<OxAdDelegate>)delegate;
 
-// 展示 Banner Native Mrec 等
+
+// 展示 Banner Mrec 等
 - (void)showAd:(UIView *)adContainerV showPlacement:(NSString *)showPlacement delegate:(id<OxAdDelegate>)delegate;
+
+// 展示 Native
+- (void)showAd:(UIView *)adContainerV viewBinder:(OxNativeViewBinder *)viewBinder showPlacement:(NSString *)showPlacement delegate:(id<OxAdDelegate>)delegate;
 
 // 广告是否可用
 - (BOOL)isReady;

@@ -23,12 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 用户ID
 @property(nonatomic, copy) NSString *userId;
 
-// Native 配置
-@property(nonatomic, copy) NSString *maxNativeClassName;
-@property(nonatomic, copy) NSString *admobNativeClassName;
-@property(nonatomic, copy) NSString *maxBannerNativeClassName;
-
-
 @property (nonatomic,strong,readonly) NSMutableDictionary<NSString *,NSMutableDictionary *> *maxExtraParameterMap;
 
 /// 为Max  设置扩展参数

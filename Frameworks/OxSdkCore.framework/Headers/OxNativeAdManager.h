@@ -7,12 +7,13 @@
 //
 
 #import "OxAdManager.h"
+#import "OxNativeViewBinder.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxNativeAdManager : OxAdManager
 
--(void)show:(UIView *)adContainerV adUnitName:(NSString *)adUnitName showPlacement:(NSString *)showPlacement delegate:(id<OxAdActionDelegate>)delegate;
+-(void)show:(UIView *)adContainerV viewBinder:(OxNativeViewBinder *)viewBinder adUnitName:(NSString *)adUnitName showPlacement:(NSString *)showPlacement delegate:(id<OxAdActionDelegate>)delegate;
 - (void)hidden:(NSString *)adUnitName showPlacement:(NSString *)showPlacement;
 
 @end

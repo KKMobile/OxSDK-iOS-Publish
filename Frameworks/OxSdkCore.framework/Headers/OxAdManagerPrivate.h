@@ -16,6 +16,8 @@
 
 #define MAXLOADCOUNT 1
 
+@class OxNativeViewBinder;
+
 NS_ASSUME_NONNULL_BEGIN
 @interface OxAdManager() <OxAdStrategyLoadDelegate,OxAdDelegate>
 
@@ -29,9 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (OxAdStrategy *)createAdStrategy:(NSString *)adUnitName;
 - (OxAd *)getAd:(NSString *)adUnitName showPlacement:(NSString *)showPlacement;
 
+- (void)show:(nullable UIView *)adContainerV viewBinder:(nullable OxNativeViewBinder *)viewBinder adUnitName:(NSString *)adUnitName showPlacement:(NSString *)showPlacement delegate:(id<OxAdActionDelegate>)delegate;
 - (void)show:(nullable UIView *)adContainerV adUnitName:(NSString *)adUnitName showPlacement:(NSString *)showPlacement delegate:(id<OxAdActionDelegate>)delegate;
 - (void)show:(NSString *)adUnitName showPlacement:(NSString *)showPlacement delegate:(id<OxAdActionDelegate>)delegate;
-
 // banner APIA
 - (void)hidden:(NSString *)adUnitName showPlacement:(NSString *)showPlacement;
 - (void)startAutoRefresh:(NSString *)adUnitName showPlacement:(NSString *)showPlacement;

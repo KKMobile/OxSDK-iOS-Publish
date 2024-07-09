@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.1.0-RC01-202406271200"#版本号
+  spec.version      = "1.2.1.0-RC01-202407091700"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
 #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC

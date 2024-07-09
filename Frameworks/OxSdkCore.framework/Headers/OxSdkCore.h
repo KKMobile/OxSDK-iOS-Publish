@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
 #import "OxSdkBuilder.h"
+#import "OxNativeViewBinder.h"
 #import "AdEvents.h"
 #import "OxAdSdk.h"
 
