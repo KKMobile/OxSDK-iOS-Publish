@@ -46,6 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// RemoteConfig 获取完成。
 - (void)onRemoteConfigFetchCompleted;
 
+- (void)updateAdConfig;
+
 
 @end
 
