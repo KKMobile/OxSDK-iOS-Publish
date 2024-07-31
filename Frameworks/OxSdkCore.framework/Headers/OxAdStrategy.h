@@ -28,15 +28,21 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy,readonly) NSString *adUnitName;
 @property(nonatomic, assign,readonly) NSInteger loadCount;
 @property (nonatomic, assign) OxSdkAdFormat adFormat;
+@property(nonatomic, assign) AdStrategyLoadType adStrategyLoadType; // 请求策略
 
 
 - (instancetype)initWithAdUnitName:(NSString *)adUnitName;
 - (void)load:(NSInteger)count delegate:(nullable id<OxAdStrategyLoadDelegate>)delegate;
+// show 之后 执行填充策略
+- (void)loadFullAd;
 - (void)setReloadAfterFailed:(BOOL)isReloadAfterFailed;
 
 /// 获取可用Ad  这个位置要加策略等
 - (OxAd *)getAvailableAd;
 - (NSInteger)fetchAd;
+
+
+- (void)reloaded;
 
 @end
 

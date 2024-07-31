@@ -33,8 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAdLoader : NSObject
 
-@property(nonatomic, assign,readonly) NSUInteger requiresCount;
-@property(nonatomic, assign,readonly) NSInteger mRetryCount;
+@property(nonatomic, assign,readonly) NSInteger requiresLoadCount;  // 要请求几次
+@property(nonatomic, assign,readonly) NSInteger mRetryCount;  // 重试次数
+@property(nonatomic, assign,readonly) NSInteger failedCount;  // 请求失败几次 用来执行重试逻辑
 @property(nonatomic, assign,readonly) BOOL loading;
 @property(nonatomic, assign,readonly) OxAdLoadType loadType;
 @property(nonatomic, assign,readonly) OxSdkAdFormat adFormat;
@@ -52,12 +53,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 执行重试逻辑
 - (void)reloaded:(NSInteger)count;
-
-/// Max 聚合 扩展参数
-/// - Parameters:
-///   - key: <#key description#>
-///   - value: <#value description#>
-- (void)setExtraParameters:(NSString *)key value:(NSString *)value;
 
 @end
 

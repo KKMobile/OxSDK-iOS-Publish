@@ -1,0 +1,6 @@
+framework module OxDebugLib {
+  umbrella header "OxDebugLib.h"
+  export *
+
+  module * { export * }
+}

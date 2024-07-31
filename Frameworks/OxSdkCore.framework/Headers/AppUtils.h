@@ -24,9 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSNumber *)getNumberFormPlist:(NSString *)key;
 
++ (NSString  *)phoneModel;
 /// 网络是否可用
 + (BOOL)isNetworkAvailable;
-// app 内存显示
+// app 内存限制
 + (double)getAppMemoryLimit;
 // 应用剩余内存
 + (double)getFreeSize;

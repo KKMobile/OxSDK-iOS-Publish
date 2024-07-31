@@ -49,6 +49,7 @@
 @property(nonatomic, strong,readonly) id ad;
 @property(nonatomic, strong,readonly) id value; // 存储 打点数据上报
 @property(nonatomic, assign) BOOL mAutoRefresh; // 是否允许自动刷新
+@property(nonatomic, assign) BOOL isShowing; // 标记 Banner Mrec 是否正在展示
 @property(nonatomic, strong) UIView *customView; // 是否允许自动刷新
 @property (nonatomic, strong) OxMAAdRevenueDelegateImpl* oxMAAdRevenueDelegateImpl;
 
@@ -75,5 +76,8 @@
 
 // 销毁广告
 - (void)destory;
+
+- (void)hiddenBannerAd;
+- (void)showBannerAd;
 
 @end

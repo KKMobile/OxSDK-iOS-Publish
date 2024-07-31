@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdEvents.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) int dayCountSinceInstall;
 /// 用户ID
 @property(nonatomic, copy) NSString *userId;
+
+/// 请求策略
+@property(nonatomic, assign) AdStrategyLoadType strategyLoadType ;
+
 
 @property (nonatomic,strong,readonly) NSMutableDictionary<NSString *,NSMutableDictionary *> *maxExtraParameterMap;
 

@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取 RemoteConfig 默认值
 /// - Parameter key: key
 - (id)getRemoteConfigDefaultValue:(NSString *)key;
-- (void)parseOxConfig;
+- (void)parseOxConfig:(void (^)(BOOL success))completion;
 
 
 @end

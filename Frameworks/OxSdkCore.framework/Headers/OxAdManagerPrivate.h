@@ -14,7 +14,7 @@
 #import "OxAdPrivate.h"
 #import "OxAdStrategy.h"
 
-#define MAXLOADCOUNT 1
+#define MAXLOADCOUNT 5
 
 @class OxNativeViewBinder;
 
@@ -38,6 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hidden:(NSString *)adUnitName showPlacement:(NSString *)showPlacement;
 - (void)startAutoRefresh:(NSString *)adUnitName showPlacement:(NSString *)showPlacement;
 - (void)stopAutoRefresh:(NSString *)adUnitName showPlacement:(NSString *)showPlacement;
+
 
 @end
 

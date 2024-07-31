@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum : NSUInteger {
+typedef enum : NSInteger {
     OxErrorCodeDefault = 0, //没有错误
     OxErrorCodeNotFoundAdapter = -1000001, //not found adapter
     OxErrorCodeAdLoaderIsLoading = -1000002, // ad loader is loading

@@ -35,6 +35,12 @@ static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
 
+
+typedef enum : NSUInteger {
+    AdStrategyLoadTypeDefault,  // 默认策略
+    AdStrategyLoadTypeFull    // 保证一直填充
+} AdStrategyLoadType;
+
 typedef enum : NSUInteger {
     OxErrorTypeOxSdk = 0,
     OxErrorTypeMediation

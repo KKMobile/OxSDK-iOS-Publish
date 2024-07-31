@@ -10,6 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    OxLoadPriorityDefault,
+    OxLoadPriorityLow,
+    OxLoadPriorityMiddle,
+    OxLoadPriorityHigh
+} OxLoadPriority;
+
 @class OxAdUnitIds;
 
 @interface OxAdUnit : NSObject
@@ -17,7 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) OxSdkAdFormat adFormat;
 @property (nonatomic, copy) NSString *adFormatValue;
-@property (nonatomic,assign) OxSdkMediationType mediationType;
+@property (nonatomic, assign) OxSdkMediationType mediationType;
+@property (nonatomic, assign) OxLoadPriority priority;  // 是否是预加载
 @property (nonatomic, strong) OxAdUnitIds *adUnitIds;
 
 - (NSString *)getTargetAdUnitId:(OxSdkMediationType)mediationType;
