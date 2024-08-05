@@ -54,6 +54,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationVungleAdapter', '7.3.1.0'
   spec.dependency 'AppLovinMediationMolocoAdapter','3.0.0.1'
   
+  
   #Core Admob Mediation
   spec.dependency 'GoogleMobileAdsMediationFacebook','6.15.0.0'
   spec.dependency 'GoogleMobileAdsMediationAppLovin','12.4.1.0'
