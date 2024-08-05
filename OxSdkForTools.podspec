@@ -49,8 +49,8 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationBidMachineAdapter', '2.5.3.0.0'
   spec.dependency 'AppLovinMediationFyberAdapter', '8.2.7.0'
   spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.3.0.0'
-  spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.2.'
-  spec.dependency 'ALInMobiCustomAdapterFramework', '10.7.2.'
+  spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.2.0'
+  spec.dependency 'ALInMobiCustomAdapterFramework', '10.7.2.0'
   spec.dependency 'AppLovinMediationVungleAdapter', '7.3.1.0'
   spec.dependency 'AppLovinMediationMolocoAdapter','2.2.1.0'
   
