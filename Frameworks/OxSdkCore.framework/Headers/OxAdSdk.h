@@ -10,7 +10,7 @@
 #import "OxAdSdkManager.h"
 #import "OxGamesEventUtil.h"
 
-#define OxSDK_VERSION    @"1.0-MO-TMultiBidding"
+#define OxSDK_VERSION    @"1.0-MO-TMultiBidding-202408051500"
 
 NS_ASSUME_NONNULL_BEGIN
 
