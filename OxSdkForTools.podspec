@@ -10,9 +10,9 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.0.0"#版本号
+  spec.version      = "1.0-MO-TMultiBidding"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
-#描述  （描述一定要比概要多一些,不然会有警告!）
+  #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
   OxAdSdk for tools applications.OxAdSdk for tools applications.
                    DESC
@@ -26,34 +26,37 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true#是否时自动内存管理
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   
-  
-    spec.subspec 'Base' do |ss|
-        ss.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
-        ss.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
-        
-        ss.dependency 'PureLayout'
-        ss.dependency 'AFNetworking'
-        ss.dependency 'SDWebImage'
-        ss.dependency 'Adjust'
-        ss.dependency 'FirebaseAnalytics', '>=8.0.0'
-        ss.dependency 'FirebaseRemoteConfig', '>=8.0.0'
+  spec.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
+  spec.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
 
-        ss.dependency 'AppLovinSDK', '11.11.4'
-        ss.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
-        ss.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
-        ss.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
-        ss.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
-        ss.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
-        ss.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'
-    end
+  spec.dependency 'PureLayout'
+  spec.dependency 'AFNetworking'
+  spec.dependency 'SDWebImage'
+  spec.dependency 'Adjust'
+  spec.dependency 'FirebaseAnalytics', '>=8.0.0'
+  spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
+
+  spec.dependency 'AppLovinSDK', '11.11.4'
+  spec.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
+  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
+  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
+  spec.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
+  spec.dependency 'AppLovinMediationFacebookAdapter','6.14.0.0'
+  spec.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
+  spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.9.0.0'
+  spec.dependency 'AppLovinMediationMintegralAdapter', '7.4.7.0.0'
+  spec.dependency 'AppLovinMediationBidMachineAdapter', '2.3.0.2'
+  spec.dependency 'AppLovinMediationFyberAdapter', '8.2.4.0'
+  spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.2.2.0'
+  spec.dependency 'AppLovinMediationInMobiAdapter', '10.6.0.0'
+  spec.dependency 'ALInMobiCustomAdapterFramework', '10.6.0.0'
+  spec.dependency 'AppLovinMediationVungleAdapter', '7.1.0.2'
+  spec.dependency 'MolocoCustomAdapterAppLovin','1.3.0.0'
+
+  spec.dependency 'GoogleMobileAdsMediationFacebook','6.14.0.0'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'
+  spec.dependency 'GoogleMobileAdsMediationPangle','5.5.0.9.0'
     
-    spec.subspec 'Full' do |ss|
-        ss.dependency 'OxSdkForTools/Base'
-        ss.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
-        ss.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
-        ss.dependency 'GoogleMobileAdsMediationPangle','5.5.0.9.0'
-        ss.vendored_frameworks = 'Frameworks/OxMaxCustomPangleAdapter.framework'
-    end
     
   spec.dependency 'OxDiscoveryPlugin','1.0.3-202312041600'
     
