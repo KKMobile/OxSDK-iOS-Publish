@@ -24,6 +24,7 @@ Pod::Spec.new do |spec|
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "t-#{spec.version}" }
   spec.requires_arc = true#是否时自动内存管理
+  spec.static_framework = true
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
   
   
@@ -45,6 +46,7 @@ Pod::Spec.new do |spec|
         ss.dependency 'AppLovinMediationFacebookAdapter','6.15.0.0'
         ss.dependency 'GoogleMobileAdsMediationFacebook','6.15.0.0'
         ss.dependency 'GoogleMobileAdsMediationAppLovin','12.4.1.0'
+        ss.dependency 'UnityAds','4.10.0.0'
     end
     
     spec.subspec 'UnityAds' do |ss|
