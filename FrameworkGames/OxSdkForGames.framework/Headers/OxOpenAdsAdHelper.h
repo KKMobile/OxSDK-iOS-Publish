@@ -5,17 +5,21 @@
 //  Created by Mavl_2023_100272 on 2024/5/22.
 //
 
-#import "OxAdHelper.h"
-#import "IFullScreenAd.h"
+#import "OxBaseAd.h"
 #import "OpenAdsAdDelegate.h"
-#import "OpenAdsInternalAdDelegate.h"
+#import "BaseOpenAdsAdHelper.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxOpenAdsAdHelper : OxAdHelper <IFullScreenAd>
+@interface OxOpenAdsAdHelper : OxBaseAd
 
-@property (nonatomic, weak) id<OpenAdsAdDelegate> mAddelegate;
-@property (nonatomic, weak) id<OpenAdsInternalAdDelegate> mInternalAddelegate;
-- (void)createAd;
+@property (nonatomic, weak) id<OpenAdsAdDelegate> mAdDelegate;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber *,BaseOpenAdsAdHelper *> *mAdHelpersMap;
+
+- (void)showAd:(NSString *)placement;
+- (void)showAd;
+- (BOOL)isReady;
+
 
 @end
 

@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSNumber *)getNumberFormPlist:(NSString *)key;
 
+/// 网络是否可用
++ (BOOL)isNetworkAvailable;
 // app 内存显示
 + (double)getAppMemoryLimit;
 // 应用剩余内存

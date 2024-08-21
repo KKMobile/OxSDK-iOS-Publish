@@ -8,8 +8,7 @@
 #import "BaseAdManager.h"
 #import "DataTools.h"
 #import "AdEventDelegate.h"
-
-#define OXSDK_VERSION "1.1.4.1"
+#define OXSDK_VERSION "1.1.4.1-MO-AdmobBidding-202408211930-V3"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -69,8 +68,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// RemoteConfig 获取完成。
 - (void)onRemoteConfigFetchCompleted;
-
-- (NSURL *)getCacheLog;
 
 @end
 

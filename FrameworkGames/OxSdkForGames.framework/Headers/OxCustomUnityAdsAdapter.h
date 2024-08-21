@@ -8,8 +8,6 @@
 
 #import <AppLovinSDK/AppLovinSDK.h>
 
-// Change: game_id  => app_id
-
 @interface OxCustomUnityAdsAdapter : ALMediationAdapter <MASignalProvider, MAInterstitialAdapter, MARewardedAdapter, MAAdViewAdapter>
 
 @end
