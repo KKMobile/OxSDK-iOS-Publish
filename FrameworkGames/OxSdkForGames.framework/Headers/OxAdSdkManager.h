@@ -8,7 +8,7 @@
 #import "BaseAdManager.h"
 #import "DataTools.h"
 #import "AdEventDelegate.h"
-#define OXSDK_VERSION "1.1.4.1-MO-AdmobBidding-202408211930-V3"
+#define OXSDK_VERSION "3.0-MO-AdmobBidding-202408221030"
 
 NS_ASSUME_NONNULL_BEGIN
 
