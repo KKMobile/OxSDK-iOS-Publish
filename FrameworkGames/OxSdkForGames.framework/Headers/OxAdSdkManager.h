@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.1.4.1"
+#define OXSDK_VERSION "3.0-MO-LP-202408271730"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL       tachiEnable; // 设置tachi是否启用，主要用于部分不需要打点的iOS的工具
 
-@property(nonatomic, strong) NSMutableArray<NSString *> *cacheLogMessage;
 @property(nonatomic, assign) BOOL    mAdmobSdkInitialed;
 @property(nonatomic, assign) BOOL    mMaxSdkInitialed;
 @property(nonatomic, assign) BOOL    enableDebug;
@@ -37,9 +36,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 更改广告聚合平台，主要作用firebase取到更新的值更新本地记录的值
 /// @param platform Platform
 - (void)switchMediationPlatform:(Platform)platform successBlock:(OnSdkInitComplete)block;
-
-/// Remote Config 获取成功之后，将 OxSdk 切换到对应的 Mediation
-- (Platform)switchMediationPlatformByRemoteConfig:(OnSdkInitComplete)block;
 
 - (BOOL)isMediationInitialized:(Platform)mediation;
 
@@ -69,8 +65,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// RemoteConfig 获取完成。
 - (void)onRemoteConfigFetchCompleted;
-
-- (NSURL *)getCacheLog;
 
 @end
 

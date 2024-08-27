@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <DTBiOSSDK/DTBiOSSDK.h>
 #import "OXLogMoudle.h"
+#import "OxAdSdkManager.h"
+#import "AdEvents.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +22,7 @@ typedef void (^OnApsFailedBlock)(DTBAdErrorInfo  * _Nullable errorInfo);
 
 @property (nonatomic, copy) OnApsSuccessBlock apsSuccessBlock;
 @property (nonatomic, copy) OnApsFailedBlock  apsFailedBlock;
+@property (nonatomic, copy) NSString * slotId;
 
 - (BOOL)shouldLoadAps;
 - (void)loadApsAd;

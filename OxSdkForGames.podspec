@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.4.1"#版本号
+    spec.version      = "3.0-MO-LP-202408271730"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -36,11 +36,12 @@ Pod::Spec.new do |spec|
     spec.dependency 'FBSDKCoreKit'
     spec.dependency 'FirebaseAnalytics', '>=8.0.0'
     spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
+    
     # Max Mediation
     spec.dependency 'AppLovinSDK', '12.4.1'
     spec.dependency 'AmazonPublisherServicesSDK','4.9.3.0'
     spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.9.3.0'
-    spec.dependency 'AppLovinMediationBidMachineAdapter', '2.5.3.0.0'
+    spec.dependency 'AppLovinMediationBidMachineAdapter', '2.7.0.0.0'
     spec.dependency 'AppLovinMediationChartboostAdapter', '9.7.0.0'
     spec.dependency 'AppLovinMediationFyberAdapter', '8.2.7.0'
     spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.3.0.0'
@@ -80,5 +81,22 @@ Pod::Spec.new do |spec|
     spec.dependency 'AdMobPubMaticAdapter','2.2.0'
     spec.dependency 'FiveGADAdapter','1.5.1'
     spec.dependency 'MobileFuseAdMobAdapter','1.7.3.0'
+        
+    spec.dependency 'IronSourceSDK','8.0.0'
+    spec.dependency 'IronSourceAdQualitySDK','7.20.6'
+    spec.dependency 'IronSourceAppLovinAdapter','4.3.44.2'
+    spec.dependency 'IronSourceAPSAdapter','4.3.13.2'
+    spec.dependency 'IronSourceBidMachineAdapter','4.3.9.0'
+    spec.dependency 'IronSourceChartboostAdapter','4.3.18.2'
+    spec.dependency 'IronSourceFyberAdapter','4.3.33.1'
+    spec.dependency 'IronSourceFacebookAdapter','4.3.44.2'
+    spec.dependency 'IronSourceAdMobAdapter','4.3.54.0'
+    spec.dependency 'IronSourceInMobiAdapter','4.3.23.2'
+    spec.dependency 'IronSourcePangleAdapter','4.3.28.2'
+    spec.dependency 'IronSourceSmaatoAdapter','4.3.13.2'
+    spec.dependency 'IronSourceUnityAdsAdapter','4.3.37.1'
+    spec.dependency 'IronSourceVungleAdapter','4.3.34.2'
+    spec.dependency 'IronSourceMintegralAdapter', '4.3.23.2'
+    spec.dependency 'IronSourceYandexAdapter', '4.3.1.0'
 
 end

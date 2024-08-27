@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ApsInterstitialAdManager : ApsBaseAdManager
 
+
 @end
 
 NS_ASSUME_NONNULL_END

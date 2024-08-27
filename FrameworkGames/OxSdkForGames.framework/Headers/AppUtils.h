@@ -30,13 +30,16 @@ NS_ASSUME_NONNULL_BEGIN
 // 可用内存
 + (double)getAvailableMemory;
 
++ (UIViewController *)mavlVisibleViewController;
+
 // 判断 聚合是否在枚举区域内
 + (BOOL)platformInRange:(NSInteger)platform;
 
-/// 格式化聚合
+// 格式化 platform 防止枚举越界
 + (NSInteger)formatPlatform:(NSInteger)platform;
 
-+ (UIViewController *)mavlVisibleViewController;
+
++ (NSString *)prefixPlatform:(NSInteger)platform;
 
 @end
 

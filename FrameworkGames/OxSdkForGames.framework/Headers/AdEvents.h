@@ -8,6 +8,11 @@
 #ifndef AdEvents_h
 #define AdEvents_h
 
+#ifdef DEBUG
+#define OXLog(fmt, ...) NSLog((@"OXSDK:%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__);
+#else
+#define OXLog(...)
+#endif
 
 #define OX_IS_IPAD  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 #define OX_FACTOR_WIDTH (OX_IS_IPAD ? 1: (OX_SCREEN_WIDTH / 375.0))
@@ -68,7 +73,8 @@ typedef NS_ENUM(NSInteger, Platform) {
     PlatForm_Default = 0,
     PlatForm_Admob = 1,
     PlatForm_Max = 2,
-    PlatForm_None = 999
+    PlatForm_LevelPlay = 3,
+    Platform_None = 9999
 };
 
 typedef NS_ENUM(NSInteger, CountedEvents) {

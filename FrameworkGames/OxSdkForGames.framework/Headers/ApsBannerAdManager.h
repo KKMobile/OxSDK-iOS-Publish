@@ -6,9 +6,11 @@
 //
 
 #import "ApsBaseAdManager.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ApsBannerAdManager : ApsBaseAdManager
+
 
 @end
 
