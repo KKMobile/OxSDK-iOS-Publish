@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.1.4.1"
+#define OXSDK_VERSION "1.0-UA-S2S-202408291530"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,12 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL       tachiEnable; // 设置tachi是否启用，主要用于部分不需要打点的iOS的工具
 
-@property(nonatomic, strong) NSMutableArray<NSString *> *cacheLogMessage;
 @property(nonatomic, assign) BOOL    mAdmobSdkInitialed;
 @property(nonatomic, assign) BOOL    mMaxSdkInitialed;
 @property(nonatomic, assign) BOOL    enableDebug;
 @property(nonatomic, assign) BOOL    enableFBEvents;
 @property(nonatomic, assign) BOOL    enableTAEvents;
+@property(nonatomic, copy,readonly) NSString  *userID;
 
 + (nonnull instancetype)sharedInstance;
 
@@ -56,7 +56,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)shouldShowConsentDialog;
 
--(void)setGameLevel:(int)level;
+- (void)setGameLevel:(int)level;
+
+- (void)setUserId:(NSString *)userIdentifier;
 
 - (int)getFrequencyOfEvent:(CountedEvents)event;
 
@@ -69,8 +71,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// RemoteConfig 获取完成。
 - (void)onRemoteConfigFetchCompleted;
-
-- (NSURL *)getCacheLog;
 
 @end
 
