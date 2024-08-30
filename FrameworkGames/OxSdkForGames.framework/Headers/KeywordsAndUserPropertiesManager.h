@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 @import Adjust;
 
+@class KeyWordsRegex;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KeywordsAndUserPropertiesManager : NSObject
@@ -34,6 +36,23 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)getFormattedChannel;
 /// 输出格式化之后的 mKeywordCampaign
 - (NSString *)getFormattedCampaign;
+
+// 输出格式改之后的正则
+- (KeyWordsRegex *)getRegexChannel;
+// 输出格式改之后的正则
+- (KeyWordsRegex *)getRegexCampaign;
+
+@end
+
+
+@interface KeyWordsRegex : NSObject
+
+@property(nonatomic, copy) NSString *method;
+@property(nonatomic, copy) NSString *word;
+@property(nonatomic, copy) NSString *rename;
+
+- (BOOL)isConformRegex:(NSString *)keywords;
+
 @end
 
 NS_ASSUME_NONNULL_END

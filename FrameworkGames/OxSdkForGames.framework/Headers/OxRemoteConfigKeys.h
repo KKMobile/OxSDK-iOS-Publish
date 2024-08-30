@@ -32,6 +32,9 @@ extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_MREC;
 extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_INTER;
 extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_REWARDED;
 extern NSString* const OX_CONFIG_GDPR_STYLE;
+extern NSString* const OX_CONFIG_REGEX_CHANNEL;
+extern NSString* const OX_CONFIG_REGEX_CAMPAIGN;
+extern NSString* const OX_CONFIG_AD_CLICK_UPLOAD;
 
 @end
 

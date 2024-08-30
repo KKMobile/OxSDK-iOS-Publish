@@ -131,6 +131,8 @@ static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
 static NSString * const PARAM_CHANNEL = @"Channel";
 static NSString * const PARAM_CAMPAIGN = @"Campaign";
+static NSString * const PARAM_REGEX_CHANNEL = @"regexchannel";
+static NSString * const PARAM_REGEX_CAMPAIGN = @"regexcampaign";
 static NSString * const PARAM_MEMORY_LIMIT_TYPE = @"MemoryLimitType";
 static NSString * const PARAM_ATT_ACCEPTED = @"IsAttAccepted";
 
