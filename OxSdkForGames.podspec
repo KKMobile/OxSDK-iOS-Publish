@@ -30,6 +30,13 @@ Pod::Spec.new do |spec|
   
     spec.ios.vendored_frameworks = 'FrameworkGames/OxSdkForGames.framework'
 
+    spec.frameworks = 'UIKit'
+    spec.dependency 'PureLayout'
+    spec.dependency 'Adjust'
+    spec.dependency 'FBSDKCoreKit'
+    spec.dependency 'FirebaseAnalytics', '>=8.0.0'
+    spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
+    # Max Mediation
     spec.dependency 'AppLovinSDK', '12.4.1'
     spec.dependency 'AmazonPublisherServicesSDK','4.9.3.0'
     spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.9.3.0'
