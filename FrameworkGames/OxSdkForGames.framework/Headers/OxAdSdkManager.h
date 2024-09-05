@@ -8,7 +8,7 @@
 #import "BaseAdManager.h"
 #import "DataTools.h"
 #import "AdEventDelegate.h"
-#define OXSDK_VERSION "3.0-MO-AdmobBidding-202408221030"
+#define OXSDK_VERSION "3.0.0.1-MO-AdmobBidding-202409052300"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL       tachiEnable; // 设置tachi是否启用，主要用于部分不需要打点的iOS的工具
 
-@property(nonatomic, strong) NSMutableArray<NSString *> *cacheLogMessage;
 @property(nonatomic, assign) BOOL    mAdmobSdkInitialed;
 @property(nonatomic, assign) BOOL    mMaxSdkInitialed;
 @property(nonatomic, assign) BOOL    enableDebug;
