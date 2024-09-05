@@ -12,6 +12,7 @@
 #import "OxNativeViewBinder.h"
 #import "AdEvents.h"
 #import "OxAdSdk.h"
+#import "AdReward.h"
 
 #import "OxInterstitialAdManager.h"
 #import "OxRewardedAdManager.h"
