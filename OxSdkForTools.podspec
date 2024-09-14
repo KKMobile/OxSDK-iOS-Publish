@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "2.0-MO-TMultiBidding-202409141130"#版本号
+  spec.version      = "2.0-MO-TMultiBidding-202409141700"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -50,7 +50,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationFyberAdapter', '8.3.2.0'
   spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.4.0.1'
   spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.5.0'
-  spec.dependency 'AppLovinMediationVungleAdapter', '7.4.0.0'
+  spec.dependency 'AppLovinMediationVungleAdapter', '7.4.1.0'
   spec.dependency 'AppLovinMediationMolocoAdapter', '3.1.3.0'
   
   #Core Admob Mediation
