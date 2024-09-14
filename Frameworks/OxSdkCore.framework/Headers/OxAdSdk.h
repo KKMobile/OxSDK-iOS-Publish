@@ -10,7 +10,7 @@
 #import "OxAdSdkManager.h"
 #import "OxGamesEventUtil.h"
 
-#define OxSDK_VERSION    @"1.0.0.0-MO-TMultiBidding-202408131830"
+#define OxSDK_VERSION    @"2.0-MO-TMultiBidding-202409141130"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -91,6 +91,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取google的adaptive Banner的尺寸，方便页面布局
 + (CGSize)getAdaptiveBannerAdSize;
+
+
+/// 设置  segment
+/// - Parameter segment: 需要在  sdk 初始化之前调用
+/// 示例  [OxAdSdk addSegments:[[MASegment alloc] initWithKey:@(112) values:@[@(1)]]];
++ (void)addSegments:(MASegment *)segment;
 
 
 @end

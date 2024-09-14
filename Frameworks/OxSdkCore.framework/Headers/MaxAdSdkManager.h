@@ -11,9 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MaxAdSdkManager : BaseAdManager
 
 + (nonnull instancetype)sharedInstance;
-
-@property (nonatomic, strong) ALSdk *alSdk;
-
+- (void)addSegments:(MASegment *)segment;
 
 @end
 

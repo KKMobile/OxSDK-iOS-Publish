@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.0.0.0-MO-TMultiBidding-202408131830"#版本号
+  spec.version      = "2.0-MO-TMultiBidding-202409141130"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -37,28 +37,26 @@ Pod::Spec.new do |spec|
   spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 
   #Core Max Mediation
-  spec.dependency 'AppLovinSDK', '12.4.1'
-  spec.dependency 'AmazonPublisherServicesSDK','4.9.3.0'
-  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.9.3.0'
-  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.3.0.0'
-  spec.dependency 'AppLovinMediationGoogleAdapter', '11.3.0.0'
-  spec.dependency 'AppLovinMediationFacebookAdapter','6.15.0.0'
-  spec.dependency 'AppLovinMediationByteDanceAdapter', '5.9.0.7.0'
-  spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.10.0.0'
-  spec.dependency 'AppLovinMediationMintegralAdapter', '7.6.1.0.0'
-  spec.dependency 'AppLovinMediationBidMachineAdapter', '2.5.3.0.0'
-  spec.dependency 'AppLovinMediationFyberAdapter', '8.2.7.0'
-  spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.3.0.0'
-  spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.2.0'
-  spec.dependency 'ALInMobiCustomAdapterFramework', '10.7.2.0'
-  spec.dependency 'AppLovinMediationVungleAdapter', '7.3.1.0'
-  spec.dependency 'AppLovinMediationMolocoAdapter','3.0.0.1'
-  
+  spec.dependency 'AppLovinSDK', '12.6.1'
+  spec.dependency 'AmazonPublisherServicesSDK','4.9.7.0'
+  spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.9.7.0'
+  spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.8.0.0'
+  spec.dependency 'AppLovinMediationGoogleAdapter', '11.8.0.0'
+  spec.dependency 'AppLovinMediationFacebookAdapter','6.15.2.0'
+  spec.dependency 'AppLovinMediationByteDanceAdapter', '6.2.0.6.0'
+  spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.12.2.0'
+  spec.dependency 'AppLovinMediationMintegralAdapter', '7.7.1.0.0'
+  spec.dependency 'AppLovinMediationBidMachineAdapter', '2.7.0.0.0'
+  spec.dependency 'AppLovinMediationFyberAdapter', '8.3.2.0'
+  spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.4.0.1'
+  spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.5.0'
+  spec.dependency 'AppLovinMediationVungleAdapter', '7.4.0.0'
+  spec.dependency 'AppLovinMediationMolocoAdapter', '3.1.3.0'
   
   #Core Admob Mediation
-  spec.dependency 'GoogleMobileAdsMediationFacebook','6.15.0.0'
-  spec.dependency 'GoogleMobileAdsMediationAppLovin','12.4.1.0'
-  spec.dependency 'GoogleMobileAdsMediationPangle','5.9.0.7.0'
+  spec.dependency 'GoogleMobileAdsMediationFacebook','6.15.2.0'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin','12.6.1.0'
+  spec.dependency 'GoogleMobileAdsMediationPangle','6.2.0.6.0'
     
     
   spec.dependency 'OxDiscoveryPlugin','1.0.3-202312041600'

@@ -47,6 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)isMemoryLimitReached:(NSString *)adFormat;
 
 + (NSArray*)getKeywords;
++ (NSArray *)getSegments;
 
 + (NSString *)getString:(NSString *)key defaultValue:(NSString *)defaultValue;
 + (double)getDouble:(NSString *)key defaultValue:(double)defaultValue;
