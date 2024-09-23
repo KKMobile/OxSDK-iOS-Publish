@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.4.2-RC02-202409141800"#版本号
+    spec.version      = "1.1.4.2-RC03-202409231030"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -49,7 +49,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'ALInMobiCustomAdapterFramework', '10.7.2.0'
     spec.dependency 'AppLovinMediationIronSourceAdapter', '8.0.0.0.0'
     spec.dependency 'AppLovinMediationFacebookAdapter', '6.15.1.0'
-    spec.dependency 'AppLovinMediationMobileFuseAdapter', '1.7.5.0'
+    spec.dependency 'AppLovinMediationMobileFuseAdapter', '1.7.6.0'
     spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.3.0.0'
     spec.dependency 'AppLovinMediationByteDanceAdapter', '6.1.0.6.0'
     spec.dependency 'AppLovinMediationSmaatoAdapter', '22.8.3.0'
@@ -61,7 +61,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationMyTargetAdapter', '5.21.7.0'
     spec.dependency 'OpenWrapSDK', '3.4.1'
     spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
-    spec.dependency 'AppLovinMediationYandexAdapter','7.0.1.0'
+    spec.dependency 'AppLovinMediationYandexAdapter','7.5.0.0'
     spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
     spec.dependency 'AppLovinMediationMolocoAdapter','2.2.1.0'
 
@@ -80,6 +80,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'OguryMediationGoogleMobileAds','4.3.0.0'
     spec.dependency 'AdMobPubMaticAdapter','2.2.0'
     spec.dependency 'FiveGADAdapter','1.5.1'
-    spec.dependency 'MobileFuseAdMobAdapter','1.7.5.0'
+    spec.dependency 'MobileFuseAdMobAdapter','1.7.6.0'
 
 end
