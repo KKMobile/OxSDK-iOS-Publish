@@ -80,6 +80,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'OguryMediationGoogleMobileAds','4.3.0.0'
     spec.dependency 'AdMobPubMaticAdapter','2.2.0'
     spec.dependency 'FiveGADAdapter','1.5.1'
-    spec.dependency 'MobileFuseAdMobAdapter','1.7.6.0'
+    #spec.dependency 'MobileFuseAdMobAdapter','1.7.6.0'
 
 end
