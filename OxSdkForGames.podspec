@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.4.2-RC07"#版本号
+    spec.version      = "1.1.4.2-RC08"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -66,6 +66,8 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationYandexAdapter','7.5.0.0'
     spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
     spec.dependency 'AppLovinMediationMolocoAdapter','2.2.1.0'
+
+
 
 
 
