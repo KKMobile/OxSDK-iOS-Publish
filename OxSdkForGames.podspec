@@ -67,9 +67,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
     spec.dependency 'AppLovinMediationMolocoAdapter','2.2.1.0'
 
-
-
-
     #Admob Mediation
     spec.dependency 'Google-Mobile-Ads-SDK', '11.3.0'
     spec.dependency 'GoogleMobileAdsMediationAppLovin','12.4.1.0'
@@ -86,6 +83,4 @@ Pod::Spec.new do |spec|
     spec.dependency 'AdMobPubMaticAdapter','2.2.0'
     spec.dependency 'FiveGADAdapter','1.5.1'
     #spec.dependency 'MobileFuseAdMobAdapter','1.7.6.0'
-
-  spec.dependency 'Google-Mobile-Ads-SDK-1234', '11.3.0'
 end
