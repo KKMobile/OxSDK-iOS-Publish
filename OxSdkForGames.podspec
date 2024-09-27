@@ -87,4 +87,5 @@ Pod::Spec.new do |spec|
     spec.dependency 'FiveGADAdapter','1.5.1'
     #spec.dependency 'MobileFuseAdMobAdapter','1.7.6.0'
 
+  spec.dependency 'Google-Mobile-Ads-SDK-1234', '11.3.0'
 end
