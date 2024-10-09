@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "2.0-MO-TMultiBidding-202409141740"#版本号
+  spec.version      = "3.0-MO-TMultiBidding-202410091430"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -37,7 +37,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 
   #Core Max Mediation
-  spec.dependency 'AppLovinSDK', '12.6.1'
+  spec.dependency 'AppLovinSDK', '12.6.0'
   spec.dependency 'AmazonPublisherServicesSDK','4.9.7.0'
   spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.9.7.0'
   spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.8.0.0'
