@@ -55,7 +55,7 @@ Pod::Spec.new do |spec|
   
   #Core Admob Mediation
   spec.dependency 'GoogleMobileAdsMediationFacebook','6.15.2.0'
-  spec.dependency 'GoogleMobileAdsMediationAppLovin','12.6.1.0'
+  spec.dependency 'GoogleMobileAdsMediationAppLovin','12.6.0.0'
   spec.dependency 'GoogleMobileAdsMediationPangle','6.2.0.6.0'
     
     
