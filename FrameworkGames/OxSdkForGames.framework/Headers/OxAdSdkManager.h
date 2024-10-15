@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.0-UA-AdjustIAP&S2S-20241014-1141"
+#define OXSDK_VERSION "1.0-UA-AdjustIAP-S2S-20241015-1141"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL    enableDebug;
 @property(nonatomic, assign) BOOL    enableFBEvents;
 @property(nonatomic, assign) BOOL    enableTAEvents;
+@property(nonatomic, copy)  NSString *s2sURL;
 
 + (nonnull instancetype)sharedInstance;
 
