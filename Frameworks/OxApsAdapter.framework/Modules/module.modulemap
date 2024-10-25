@@ -1,0 +1,6 @@
+framework module OxApsAdapter {
+  umbrella header "OxApsAdapter.h"
+  export *
+
+  module * { export * }
+}
