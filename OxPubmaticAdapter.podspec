@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
 
-    spec.name         = "OxPubmaticAdapter"#SDK名称
+    spec.name         = "OxPubMaticAdapter"#SDK名称
     spec.version      = "4.0.0.0"#版本号
     spec.summary      = "OxAdSdkAdapter for Pubmatic applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
@@ -25,6 +25,8 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+    spec.resource_bundles = {'OxPubMaticAdapter' => ['ResBundle/PrivacyInfo.xcprivacy']}
+    spec.ios.vendored_frameworks = 'Frameworks/OxPubMaticAdapter.framework'
     
     spec.dependency 'OpenWrapSDK', '4.0.0'
     spec.dependency 'AdMobPubMaticAdapter','3.1.0'

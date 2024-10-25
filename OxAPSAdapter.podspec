@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-    spec.resource_bundles = {'OxPangleAdapter' => ['ResBundle/PrivacyInfo.xcprivacy']}
+    spec.resource_bundles = {'OxAPSAdapter' => ['ResBundle/PrivacyInfo.xcprivacy']}
     spec.ios.vendored_frameworks = 'Frameworks/OxAPSAdapter.framework'
 
     spec.dependency 'AmazonPublisherServicesSDK','4.10.0.0'
