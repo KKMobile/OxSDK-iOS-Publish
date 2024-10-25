@@ -30,5 +30,5 @@ Pod::Spec.new do |spec|
     spec.ios.vendored_frameworks = 'Frameworks/OxPangleAdapter.framework'
 
     spec.dependency 'AppLovinMediationByteDanceAdapter', '6.2.0.9.0'
-    spec.dependenc 'GoogleMobileAdsMediationPangle','6.2.0.9.0'
+    spec.dependency 'GoogleMobileAdsMediationPangle','6.2.0.9.0'
 end
