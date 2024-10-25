@@ -31,4 +31,5 @@ Pod::Spec.new do |spec|
     spec.dependency 'OpenWrapSDK', '4.0.0'
     spec.dependency 'AdMobPubMaticAdapter','3.1.0'
     spec.dependency 'AppLovinPubMaticAdapter', '1.2.0'
+    
 end
