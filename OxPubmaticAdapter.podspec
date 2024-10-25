@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint OxPubmaticAdapter.podspec' to ensure this is a
+#  Be sure to run `pod spec lint OxPubMaticAdapter.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -10,10 +10,10 @@ Pod::Spec.new do |spec|
 
     spec.name         = "OxPubMaticAdapter"#SDK名称
     spec.version      = "4.0.0.0"#版本号
-    spec.summary      = "OxAdSdkAdapter for Pubmatic applications."#概要
+    spec.summary      = "OxAdSdkAdapter for PubMatic applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
-    OxAdSdk for Pubmatic applications.OxAdSdk for Pubmatic applications.
+    OxAdSdk for PubMatic applications.OxAdSdk for PubMatic applications.
                    DESC
     spec.homepage     = "https://github.com/KKMobile/OxSDK-iOS-Publish.git"#github 上的仓库地址
     spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
