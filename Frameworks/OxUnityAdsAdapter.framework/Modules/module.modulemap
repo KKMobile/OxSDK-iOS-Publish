@@ -1,0 +1,6 @@
+framework module OxUnityAdsAdapter {
+  umbrella header "OxUnityAdsAdapter.h"
+  export *
+
+  module * { export * }
+}
