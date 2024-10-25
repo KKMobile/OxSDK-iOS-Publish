@@ -1,0 +1,6 @@
+framework module OxPubmaticAdapter {
+  umbrella header "OxPubmaticAdapter.h"
+  export *
+
+  module * { export * }
+}
