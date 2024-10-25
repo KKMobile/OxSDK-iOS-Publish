@@ -1,0 +1,6 @@
+framework module OxFyberAdapter {
+  umbrella header "OxFyberAdapter.h"
+  export *
+
+  module * { export * }
+}
