@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.0-UA-AdjustIAP-202409181630"
+#define OXSDK_VERSION "2.0-UA-AdjustIAP-20241028-1141"
 
 NS_ASSUME_NONNULL_BEGIN
 
