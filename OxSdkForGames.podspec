@@ -37,5 +37,5 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.10.0.0'
     spec.dependency 'AppLovinMediationGoogleAdapter', '11.10.0.0'
     spec.dependency 'GoogleMobileAdsMediationAppLovin','13.0.0.1'
-
+    spec.dependency 'GoogleUserMessagingPlatform','2.6.0'
 end
