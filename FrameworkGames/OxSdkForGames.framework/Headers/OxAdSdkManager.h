@@ -9,7 +9,7 @@
 #import <OxSdkForGames/DataTools.h>
 #import <OxSdkForGames/AdEventDelegate.h>
 
-#define OXSDK_VERSION "1.3.0.0-RC01-202410311000"
+#define OXSDK_VERSION "1.3.0.0-RC01-20241031630"
 
 NS_ASSUME_NONNULL_BEGIN
 
