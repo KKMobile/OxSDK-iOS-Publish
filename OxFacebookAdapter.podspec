@@ -25,6 +25,8 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+    spec.resource_bundles = {'OxFacebookAdapter' => ['ResBundle/PrivacyInfo.xcprivacy']}
+    spec.ios.vendored_frameworks = 'Frameworks/OxFacebookAdapter.framework'
     
     spec.dependency 'AppLovinMediationFacebookAdapter', '6.15.2.1'
     spec.dependency 'GoogleMobileAdsMediationFacebook','6.15.2.1'
