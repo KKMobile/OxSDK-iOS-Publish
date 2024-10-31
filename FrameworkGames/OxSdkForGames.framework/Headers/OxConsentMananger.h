@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OxAdSdkManager.h"
+#import <OxSdkForGames/OxAdSdkManager.h>
 
 typedef enum : NSUInteger {
     GDPRTool_Max = 0,

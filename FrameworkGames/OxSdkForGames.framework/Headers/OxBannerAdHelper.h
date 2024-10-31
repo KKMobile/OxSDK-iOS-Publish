@@ -5,10 +5,10 @@
 //  Created by Rober on 2022/4/12.
 //
 
-#import "OxAdHelper.h"
-#import "IBannerAd.h"
-#import "BannerAdDelegate.h"
-#import "BannerInternalAdDelegate.h"
+#import <OxSdkForGames/OxAdHelper.h>
+#import <OxSdkForGames/IBannerAd.h>
+#import <OxSdkForGames/BannerAdDelegate.h>
+#import <OxSdkForGames/BannerInternalAdDelegate.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxBannerAdHelper : OxAdHelper<IBannerAd>

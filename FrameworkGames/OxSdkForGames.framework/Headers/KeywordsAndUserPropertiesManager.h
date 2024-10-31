@@ -6,9 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-@import Adjust;
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class MASegment;
 
 @interface KeywordsAndUserPropertiesManager : NSObject
 
@@ -26,7 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)checkUserProperties;
 
+//不再建议使用此方法
 - (void)configApplovinKeywords;
+- (NSArray<MASegment *> *)configApplovinSegments;
 
 - (void)setPropLtAdValue:(NSString *)propLtv;
 

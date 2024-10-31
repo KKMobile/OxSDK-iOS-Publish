@@ -8,10 +8,9 @@
 #import <Foundation/Foundation.h>
 #import <AppLovinSDK/AppLovinSDK.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
-#import <FBAudienceNetwork/FBAudienceNetwork.h>
-#import "AdEvents.h"
-#import "ApsAdManager.h"
-#import "OXLogMoudle.h"
+#import <OxSdkForGames/AdEvents.h>
+#import <OxSdkForGames/ApsAdManager.h>
+#import <OxSdkForGames/OXLogMoudle.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

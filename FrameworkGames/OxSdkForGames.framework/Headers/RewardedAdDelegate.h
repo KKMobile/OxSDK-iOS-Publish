@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdDelegate.h"
-#import "AdReward.h"
+#import <OxSdkForGames/AdDelegate.h>
+#import <OxSdkForGames/AdReward.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol RewardedAdDelegate <NSObject, AdDelegate>

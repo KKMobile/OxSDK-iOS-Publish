@@ -5,7 +5,7 @@
 //  Created by BJMM100001 on 2022/8/16.
 //
 
-#import "ApsBaseAdManager.h"
+#import <OxSdkForGames/ApsBaseAdManager.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ApsRewardedAdManager : ApsBaseAdManager

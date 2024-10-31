@@ -5,8 +5,8 @@
 //  Created by BJMM100001 on 2022/5/18.
 //
 
-#import "BaseConsentManager.h"
-#import "AdEvents.h"
+#import <OxSdkForGames/BaseConsentManager.h>
+#import <OxSdkForGames/AdEvents.h>
 
 typedef enum : NSUInteger {
     ConsentEntryTypeNormal,

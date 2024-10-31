@@ -5,7 +5,7 @@
 //  Created by Rober on 2022/4/13.
 //
 
-#import "OxInterstitialAdHelper.h"
+#import <OxSdkForGames/OxInterstitialAdHelper.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

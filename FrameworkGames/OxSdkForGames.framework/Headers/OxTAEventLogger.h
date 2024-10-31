@@ -1,5 +1,5 @@
 //
-//  OxFBEventUtil.h
+//  OxTAEventLogger.h
 //  OxSdkForGames
 //
 //  Created by Mavl_2023_100272 on 2024/3/5.
@@ -9,9 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxFBEventUtil : NSObject
+@interface OxTAEventLogger : NSObject
 
-+ (void)trackEventFB:(NSString *)eventName params:(NSDictionary *)params;
++ (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 
 @end
 

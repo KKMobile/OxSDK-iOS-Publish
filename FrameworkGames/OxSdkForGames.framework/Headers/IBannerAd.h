@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IViewAd.h"
+#import <OxSdkForGames/IViewAd.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol IBannerAd <NSObject, IViewAd>

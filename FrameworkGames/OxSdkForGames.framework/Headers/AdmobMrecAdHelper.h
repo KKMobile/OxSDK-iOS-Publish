@@ -5,7 +5,7 @@
 //  Created by Rober on 2022/4/20.
 //
 
-#import "OxMrecAdHelper.h"
+#import <OxSdkForGames/OxMrecAdHelper.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

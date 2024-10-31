@@ -80,6 +80,15 @@ typedef NS_ENUM(NSInteger, CountedEvents) {
     TOP60 = 6
 };
 
+typedef NS_ENUM(NSInteger, OxAnalyticsProvider) {
+    OxAnalyticsProviderNone = 0,
+    OxAnalyticsProviderFirebase = 1 << 0, //二进制表示为 0001
+    OxAnalyticsProviderAdjust = 1 << 1,   //二进制表示为 0010
+    OxAnalyticsProviderFacebook = 1 << 2, //二进制表示为 0100
+    OxAnalyticsProviderTA = 1 << 3        //二进制表示为 1000
+};
+
+
 //Basic
 static NSString * const EVENT_TOP10 = @"AdLTV_OneDay_Top10Percent";
 static NSString * const EVENT_TOP20 = @"AdLTV_OneDay_Top20Percent";

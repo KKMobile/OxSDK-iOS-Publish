@@ -5,10 +5,10 @@
 //  Created by Mavl_2023_100272 on 2024/5/22.
 //
 
-#import "OxAdHelper.h"
-#import "IFullScreenAd.h"
-#import "OpenAdsAdDelegate.h"
-#import "OpenAdsInternalAdDelegate.h"
+#import <OxSdkForGames/OxAdHelper.h>
+#import <OxSdkForGames/IFullScreenAd.h>
+#import <OxSdkForGames/OpenAdsAdDelegate.h>
+#import <OxSdkForGames/OpenAdsInternalAdDelegate.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxOpenAdsAdHelper : OxAdHelper <IFullScreenAd>

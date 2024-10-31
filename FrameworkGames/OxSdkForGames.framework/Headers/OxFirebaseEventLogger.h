@@ -11,9 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxFirebaseEventLogger : NSObject
 
-+ (void)logEventWithName:(nonnull NSString *)eventName params: (nullable NSDictionary<NSString*, NSObject*>*) params;
++ (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 
-+ (void)logEventWithUserProperties:(NSString*)eventName params:(nullable NSDictionary<NSString*, NSObject*>*)params;
++ (void)trackEventWithUserProperties:(NSString*)eventName params:(nullable NSDictionary<NSString*, NSObject*>*)params;
+
++ (void)setUserPropertyString:(nullable NSString *)value forName:(NSString *)name;
 
 @end
 

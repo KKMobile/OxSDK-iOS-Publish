@@ -7,13 +7,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OxAdSdkManager.h"
-#import "AdDelegate.h"
-#import "AdValueUtils.h"
-#import "AdEventDelegateHelper.h"
-#import "AppUtils.h"
-#import "OXLogMoudle.h"
-#import "OxAdmobExtrasRequtst.h"
+#import <OxSdkForGames/OxAdSdkManager.h>
+#import <OxSdkForGames/AdDelegate.h>
+#import <OxSdkForGames/AdEventDelegateHelper.h>
+#import <OxSdkForGames/AppUtils.h>
+#import <OxSdkForGames/OXLogMoudle.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 

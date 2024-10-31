@@ -7,8 +7,8 @@
 
 
 #import <UIKit/UIKit.h>
-#import "OxConsentMananger.h"
-#import "MaxConsentManager.h"
+#import <OxSdkForGames/OxConsentMananger.h>
+#import <OxSdkForGames/MaxConsentManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

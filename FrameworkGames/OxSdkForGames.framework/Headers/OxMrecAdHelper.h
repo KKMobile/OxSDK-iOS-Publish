@@ -5,10 +5,10 @@
 //  Created by Rober on 2022/4/12.
 //
 
-#import "OxAdHelper.h"
-#import "IBannerAd.h"
-#import "MrecAdDelegate.h"
-#import "MrecInternalAdDelegate.h"
+#import <OxSdkForGames/OxAdHelper.h>
+#import <OxSdkForGames/IBannerAd.h>
+#import <OxSdkForGames/MrecAdDelegate.h>
+#import <OxSdkForGames/MrecInternalAdDelegate.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxMrecAdHelper : OxAdHelper<IBannerAd>

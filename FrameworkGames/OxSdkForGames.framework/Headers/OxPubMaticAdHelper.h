@@ -1,16 +1,16 @@
 //
-//  PubMaticManager.h
+//  OxPubMaticAdHelper.h
 //  SwithMediationDemo
 //
 //  Created by BJMM100001 on 2022/6/24.
 //
 
 #import <Foundation/Foundation.h>
-@import AppLovinSDK;
+#import <AppLovinSDK/AppLovinSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PubMaticManager : NSObject
+@interface OxPubMaticAdHelper : NSObject
 
 + (void)init;
 

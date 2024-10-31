@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdInternalAdDelegate.h"
+#import <OxSdkForGames/AdInternalAdDelegate.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol OpenAdsInternalAdDelegate <NSObject, AdInternalAdDelegate>

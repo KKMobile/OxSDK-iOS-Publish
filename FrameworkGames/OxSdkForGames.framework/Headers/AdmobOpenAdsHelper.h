@@ -5,7 +5,7 @@
 //  Created by BJMM100001 on 2022/11/25.
 //
 
-#import "OxOpenAdsAdHelper.h"
+#import <OxSdkForGames/OxOpenAdsAdHelper.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

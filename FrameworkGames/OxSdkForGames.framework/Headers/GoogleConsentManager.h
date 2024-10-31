@@ -6,7 +6,7 @@
 //  Copyright © 2023 耿志向. All rights reserved.
 //
 
-#import "BaseConsentManager.h"
+#import <OxSdkForGames/BaseConsentManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

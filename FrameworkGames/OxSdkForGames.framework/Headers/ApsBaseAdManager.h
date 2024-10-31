@@ -6,23 +6,24 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <DTBiOSSDK/DTBiOSSDK.h>
-#import "OXLogMoudle.h"
+#import <OxSdkForGames/OXLogMoudle.h>
+#import <OxSdkForGames/OxAPSHelper.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-typedef void (^OnApsSuccessBlock)(DTBAdResponse  * _Nullable response);
+typedef void (^OnApsSuccessBlock)(id response);
 
-typedef void (^OnApsFailedBlock)(DTBAdErrorInfo  * _Nullable errorInfo);
+typedef void (^OnApsFailedBlock)(__nullable id errorInfo);
 
-@interface ApsBaseAdManager : NSObject<DTBAdCallback>
+@interface ApsBaseAdManager : NSObject
 
 @property (nonatomic, copy) OnApsSuccessBlock apsSuccessBlock;
 @property (nonatomic, copy) OnApsFailedBlock  apsFailedBlock;
 
 - (BOOL)shouldLoadAps;
 - (void)loadApsAd;
+- (void)loadApsAd:(NSString *)amazonAdSlotId adFormat:(OxAPSAdFormat)adFormat;
 - (void)checkApsInit:(void (^)(BOOL isInitialized))callback;
 
 

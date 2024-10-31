@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.4.1"#版本号
+    spec.version      = "1.3.0.0-RC01-202410311000"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -32,53 +32,10 @@ Pod::Spec.new do |spec|
 
     spec.frameworks = 'UIKit'
     spec.dependency 'PureLayout'
-    spec.dependency 'Adjust'
-    spec.dependency 'FBSDKCoreKit'
-    spec.dependency 'FirebaseAnalytics', '>=8.0.0'
-    spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
-    # Max Mediation
-    spec.dependency 'AppLovinSDK', '12.4.1'
-    spec.dependency 'AmazonPublisherServicesSDK','4.9.3.0'
-    spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.9.3.0'
-    spec.dependency 'AppLovinMediationBidMachineAdapter', '2.5.3.0.0'
-    spec.dependency 'AppLovinMediationChartboostAdapter', '9.7.0.0'
-    spec.dependency 'AppLovinMediationFyberAdapter', '8.2.7.0'
-    spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.3.0.0'
-    spec.dependency 'AppLovinMediationGoogleAdapter', '11.3.0.0'
-    spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.2.0'
-    spec.dependency 'ALInMobiCustomAdapterFramework', '10.7.2.0'
-    spec.dependency 'AppLovinMediationIronSourceAdapter', '8.0.0.0.0'
-    spec.dependency 'AppLovinMediationFacebookAdapter', '6.15.0.0'
-    spec.dependency 'AppLovinMediationMobileFuseAdapter', '1.7.3.0'
-    spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.3.0.0'
-    spec.dependency 'AppLovinMediationByteDanceAdapter', '5.9.0.7.0'
-    spec.dependency 'AppLovinMediationSmaatoAdapter', '22.8.3.0'
-    spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.10.0.0'
-    spec.dependency 'AppLovinMediationVerveAdapter','3.0.1.0'
-    spec.dependency 'AppLovinMediationVungleAdapter', '7.3.1.0'
-    spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
-    spec.dependency 'AppLovinMediationMintegralAdapter', '7.6.1.0.0'
-    spec.dependency 'OpenWrapSDK', '3.4.1'
-    spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
-    spec.dependency 'AppLovinMediationYandexAdapter','7.0.1.0'
-    spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
-    spec.dependency 'AppLovinMediationMolocoAdapter','2.2.1.0'
-
-    #Admob Mediation
-    spec.dependency 'Google-Mobile-Ads-SDK', '11.3.0'
-    spec.dependency 'GoogleMobileAdsMediationAppLovin','12.4.1.0'
-    spec.dependency 'GoogleMobileAdsMediationUnity','4.10.0.0'
-    spec.dependency 'GoogleMobileAdsMediationVungle','7.3.1.0'
-    spec.dependency 'GoogleMobileAdsMediationChartboost','9.7.0.0'
-    spec.dependency 'GoogleMobileAdsMediationMintegral','7.6.1.0'
-    spec.dependency 'GoogleMobileAdsMediationInMobi','10.7.2.0'
-    spec.dependency 'GoogleMobileAdsMediationPangle','5.9.0.7.0'
-    spec.dependency 'GoogleMobileAdsMediationFacebook','6.15.0.0'
-    spec.dependency 'GoogleMobileAdsMediationIronSource','8.0.0.0.0'
-    spec.dependency 'GoogleMobileAdsMediationFyber','8.2.7.0'
-    spec.dependency 'OguryMediationGoogleMobileAds','4.3.0.0'
-    spec.dependency 'AdMobPubMaticAdapter','2.2.0'
-    spec.dependency 'FiveGADAdapter','1.5.1'
-    spec.dependency 'MobileFuseAdMobAdapter','1.7.3.0'
+    spec.dependency 'AppLovinSDK', '13.0.0'
+    spec.dependency 'Google-Mobile-Ads-SDK', '11.10.0.0'
+    spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.10.0.0'
+    spec.dependency 'AppLovinMediationGoogleAdapter', '11.10.0.0'
+    spec.dependency 'GoogleMobileAdsMediationAppLovin','13.0.0.1'
 
 end

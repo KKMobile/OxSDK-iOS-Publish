@@ -6,10 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OxAdSdkManager.h"
-#import "OxAdShowLimitation.h"
+#import <OxSdkForGames/OxAdSdkManager.h>
+#import <OxSdkForGames/OxAdShowLimitation.h>
+
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
+
++ (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement;
++ (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement;
 
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
 
@@ -56,6 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
     waterfallName:(nullable NSString*)waterfullName networkResponses:(NSInteger)networkResponses creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
++ (void)countEventIfShould:(NSString *)name;
 
 @end
 

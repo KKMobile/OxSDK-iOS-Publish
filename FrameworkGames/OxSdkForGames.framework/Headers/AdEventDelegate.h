@@ -7,7 +7,9 @@
 
 #ifndef AdEventDelegate_h
 #define AdEventDelegate_h
-#import "OxAdjustTokens.h"
+#import <OxSdkForGames/OxAdjustTokens.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol AdEventDelegate<NSObject>
 
@@ -27,5 +29,7 @@
 - (void) onTrackEvent:(nonnull NSString *)name params:(nullable nullable NSDictionary *)params;
          
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif /* AdEventDelegate_h */

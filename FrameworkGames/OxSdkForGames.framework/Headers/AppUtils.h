@@ -38,6 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIViewController *)mavlVisibleViewController;
 
+// 判断 platform 是否在枚举内
++ (BOOL)platformInRange:(NSInteger)platform;
+
+// 格式化 platform 防止枚举越界
++ (NSInteger)formatplatform:(NSInteger)platform;
+
 @end
 
 NS_ASSUME_NONNULL_END

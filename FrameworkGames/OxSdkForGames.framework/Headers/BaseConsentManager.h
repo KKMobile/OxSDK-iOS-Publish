@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "GDPRConsentants.h"
-#import "AppUtils.h"
-#import "OXLogMoudle.h"
+#import <OxSdkForGames/GDPRConsentants.h>
+#import <OxSdkForGames/AppUtils.h>
+#import <OxSdkForGames/OXLogMoudle.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@import AppLovinSDK;
+#import <AppLovinSDK/AppLovinSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -5,10 +5,10 @@
 //  Created by Rober on 2022/4/13.
 //
 
-#import "OxAdHelper.h"
-#import "IFullScreenAd.h"
-#import "RewardedAdDelegate.h"
-#import "RewardedInternalAdDelegate.h"
+#import <OxSdkForGames/OxAdHelper.h>
+#import <OxSdkForGames/IFullScreenAd.h>
+#import <OxSdkForGames/RewardedAdDelegate.h>
+#import <OxSdkForGames/RewardedInternalAdDelegate.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxRewardedAdHelper : OxAdHelper<IFullScreenAd>
