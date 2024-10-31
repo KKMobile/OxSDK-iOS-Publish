@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <OxUnityAdsAdapter/OxUnityAdsAd.h>
 
 //! Project version number for OxUnityAdsAdapter.
 FOUNDATION_EXPORT double OxUnityAdsAdapterVersionNumber;
