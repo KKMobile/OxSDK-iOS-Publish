@@ -24,8 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OxAPSAd : NSObject
 + (instancetype)sharedInstance;
 + (void)initApsSdk:(NSString *)appId testMode:(BOOL)testMode;
-+ (BOOL)isReady;
-- (void)loadApsAd:(NSString *)amazonAdSlotId adFormat:(OxAPSAdFormat)adFormat ompletion:(nullable void (^)(BOOL success,id info)) completion;
++ (NSNumber *)isReady;
+- (void)loadApsAd:(NSDictionary *)amazonParams completion:(nullable void (^)(BOOL success,id info)) completion;
 
 @end
 
