@@ -1,0 +1,6 @@
+framework module OxFirebasePlugin {
+  umbrella header "OxFirebasePlugin.h"
+  export *
+
+  module * { export * }
+}

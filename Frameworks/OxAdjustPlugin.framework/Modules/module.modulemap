@@ -1,0 +1,6 @@
+framework module OxAdjustPlugin {
+  umbrella header "OxAdjustPlugin.h"
+  export *
+
+  module * { export * }
+}

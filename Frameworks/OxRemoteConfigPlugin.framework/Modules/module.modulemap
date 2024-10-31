@@ -1,0 +1,6 @@
+framework module OxRemoteConfigPlugin {
+  umbrella header "OxRemoteConfigPlugin.h"
+  export *
+
+  module * { export * }
+}

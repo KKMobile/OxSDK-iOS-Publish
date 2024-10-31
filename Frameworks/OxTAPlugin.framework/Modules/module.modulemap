@@ -1,0 +1,6 @@
+framework module OxTAPlugin {
+  umbrella header "OxTAPlugin.h"
+  export *
+
+  module * { export * }
+}

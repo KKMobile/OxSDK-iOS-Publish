@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint OxFBPlugin.podspec' to ensure this is a
+#  Be sure to run `pod spec lint OxFirebasePlugin.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |spec|
 
-    spec.name         = "OxFBPlugin"#SDK名称
+    spec.name         = "OxFirebasePlugin"#SDK名称
     spec.version      = "2.0.0-202410311600"#版本号
-    spec.summary      = "OxAdSdk for FB applications."#概要
+    spec.summary      = "OxAdSdk for Firebase applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
-    OxAdSdk for FB applications.OxAdSdk for FB applications.
+    OxAdSdk for Firebase applications.OxAdSdk for Firebase applications.
                    DESC
     spec.homepage     = "https://github.com/KKMobile/OxSDK-iOS-Publish.git"#github 上的仓库地址
     spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
@@ -21,13 +21,15 @@ Pod::Spec.new do |spec|
     spec.platform     = :ios#支持平台
     spec.ios.deployment_target = "12.0"#支持iOS最低版本
     spec.swift_version = '4.0'
-    spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "a-event-fb-#{spec.version}" }
+    spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "a-event-firebase-#{spec.version}" }
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-    spec.resource_bundles = {'OxFBPlugin' => ['ResBundle/PrivacyInfo.xcprivacy']}
-    spec.ios.vendored_frameworks = 'Frameworks/OxFBPlugin.framework'
+    spec.resource_bundles = {'OxFirebasePlugin' => ['ResBundle/PrivacyInfo.xcprivacy']}
+    spec.ios.vendored_frameworks = 'Frameworks/OxFirebasePlugin.framework'
 
 
-    spec.dependency 'FBSDKCoreKit'
+    spec.dependency 'Firebase/Core'
+    spec.dependency 'Firebase/Analytics'
+
 end
