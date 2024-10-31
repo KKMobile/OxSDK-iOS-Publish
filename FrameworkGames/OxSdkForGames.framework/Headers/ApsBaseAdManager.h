@@ -7,7 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import <OxSdkForGames/OXLogMoudle.h>
-#import <OxSdkForGames/OxAPSHelper.h>
+
+#if __has_include(<OxApsAdapter/OxAPSAd.h>)
+    #import <OxApsAdapter/OxAPSAd.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,7 +26,7 @@ typedef void (^OnApsFailedBlock)(__nullable id errorInfo);
 
 - (BOOL)shouldLoadAps;
 - (void)loadApsAd;
-- (void)loadApsAd:(NSString *)amazonAdSlotId adFormat:(OxAPSAdFormat)adFormat;
+- (void)loadApsAd:(NSString *)amazonAdSlotId adFormat:(NSInteger)adFormat;
 - (void)checkApsInit:(void (^)(BOOL isInitialized))callback;
 
 

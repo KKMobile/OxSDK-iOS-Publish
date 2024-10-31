@@ -29,7 +29,6 @@
 #import <OxSdkForGames/ApplovinNativeInterstitialView3.h>
 #import <OxSdkForGames/ApplovinNativeInterstitialView4.h>
 #import <OxSdkForGames/ApplovinNativeInterstitialViewController.h>
-#import <OxSdkForGames/OxAPSHelper.h>
 #import <OxSdkForGames/ApsAdManager.h>
 #import <OxSdkForGames/ApsBannerAdManager.h>
 #import <OxSdkForGames/ApsBaseAdManager.h>
