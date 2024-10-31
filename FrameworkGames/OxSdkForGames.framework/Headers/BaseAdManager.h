@@ -9,6 +9,7 @@
 #import <AppLovinSDK/AppLovinSDK.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import <OxSdkForGames/AdEvents.h>
+#import <OxSdkForGames/ApsAdManager.h>
 #import <OxSdkForGames/OXLogMoudle.h>
 
 NS_ASSUME_NONNULL_BEGIN
