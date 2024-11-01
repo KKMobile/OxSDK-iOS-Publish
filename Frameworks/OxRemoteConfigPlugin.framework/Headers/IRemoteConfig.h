@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol IRemoteConfig <NSObject>
 
 - (NSString *)getString:(NSString *)key defaultValue:(NSString *)defaultValue;
-- (NSNumber *)getDouble:(NSString *)key defaultValue:(double)defaultValue;
-- (NSNumber *)getInt:(NSString *)key defaultValue:(int)defaultValue;
-- (NSNumber *)getBool:(nonnull NSString *)key defaultValue:(BOOL)defaultValue;
+- (NSNumber *)getDouble:(NSString *)key defaultValue:(NSNumber *)defaultValue;
+- (NSNumber *)getInt:(NSString *)key defaultValue:(NSNumber *)defaultValue;
+- (NSNumber *)getBool:(nonnull NSString *)key defaultValue:(NSNumber *)defaultValue;
 
 @end
 
