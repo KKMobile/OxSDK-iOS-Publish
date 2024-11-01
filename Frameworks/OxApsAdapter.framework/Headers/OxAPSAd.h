@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <DTBiOSSDK/DTBiOSSDK.h>
-
 
 typedef NS_ENUM(NSInteger, OxAPSAdFormat) {
     OxAPSAdFormatBanner = 0,       /* 320x50 */
@@ -22,7 +20,6 @@ typedef NS_ENUM(NSInteger, OxAPSAdFormat) {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAPSAd : NSObject
-+ (instancetype)sharedInstance;
 + (void)initApsSdk:(NSString *)appId testMode:(BOOL)testMode;
 + (NSNumber *)isReady;
 - (void)loadApsAd:(NSDictionary *)amazonParams completion:(nullable void (^)(BOOL success,id info)) completion;
