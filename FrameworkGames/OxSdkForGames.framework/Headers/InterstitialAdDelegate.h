@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OxSdkForGames/AdDelegate.h>
+#import "AdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol InterstitialAdDelegate <NSObject, AdDelegate>

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OxSdkForGames/OxAdjustTokens.h>
+#import "OxAdjustTokens.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

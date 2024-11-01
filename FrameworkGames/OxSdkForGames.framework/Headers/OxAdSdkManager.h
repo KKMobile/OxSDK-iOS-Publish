@@ -5,11 +5,11 @@
 //  Created by Rober on 2021/12/14.
 //
 
-#import <OxSdkForGames/BaseAdManager.h>
-#import <OxSdkForGames/DataTools.h>
-#import <OxSdkForGames/AdEventDelegate.h>
+#import "BaseAdManager.h"
+#import "AdEventDelegate.h"
+#import "DataTools.h"
 
-#define OXSDK_VERSION "1.3.0.0-RC01-202411011700"
+#define OXSDK_VERSION "1.3.0.0-RC01-202411011900"
 
 NS_ASSUME_NONNULL_BEGIN
 

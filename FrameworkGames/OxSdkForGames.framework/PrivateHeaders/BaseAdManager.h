@@ -6,13 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AppLovinSDK/AppLovinSDK.h>
-#import <GoogleMobileAds/GoogleMobileAds.h>
-#import <OxSdkForGames/AdEvents.h>
-#import <OxSdkForGames/ApsAdManager.h>
-#import <OxSdkForGames/OXLogMoudle.h>
+#import "AdEvents.h"
+#import "OXLogMoudle.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@import AppLovinSDK;
+@import GoogleMobileAds;
 
 typedef void (^OnSdkInitComplete)(void);
 

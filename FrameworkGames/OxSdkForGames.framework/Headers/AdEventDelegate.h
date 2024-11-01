@@ -7,7 +7,7 @@
 
 #ifndef AdEventDelegate_h
 #define AdEventDelegate_h
-#import <OxSdkForGames/OxAdjustTokens.h>
+#import "OxAdjustTokens.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
