@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OxAdHelper.h"
+#import "BaseAdManager.h"
+#import "AdDelegate.h"
+#import "OxKeywordType.h"
 #import "OxAdSdkManager.h"
 #import "OxRewardedAdHelper.h"
 #import "OxInterstitialAdHelper.h"
