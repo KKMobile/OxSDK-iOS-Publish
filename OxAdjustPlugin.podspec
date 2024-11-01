@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxAdjustPlugin"#SDK名称
-    spec.version      = "2.0.0-202410311750"#版本号
+    spec.version      = "2.0.0-202410311760"#版本号
     spec.summary      = "OxAdSdk for Adjust applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
