@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.1.4.2"#版本号
+    spec.version      = "1.1.4.3-RC01-202411051800"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -53,7 +53,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationOguryPresageAdapter', '4.3.0.0'
     spec.dependency 'AppLovinMediationByteDanceAdapter', '6.1.0.6.0'
     spec.dependency 'AppLovinMediationSmaatoAdapter', '22.8.3.0'
-    spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.10.0.0'
+    spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.12.2.0'
     spec.dependency 'AppLovinMediationVerveAdapter','3.0.1.0'
     spec.dependency 'AppLovinMediationVungleAdapter', '7.3.1.0'
     spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
@@ -63,12 +63,12 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinPubMaticAdapter', '1.1.0'
     spec.dependency 'AppLovinMediationYandexAdapter','7.5.0.0'
     spec.dependency 'AppLovinMediationLineAdapter', '2.7.20240318'
-    spec.dependency 'AppLovinMediationMolocoAdapter','2.2.1.0'
+    spec.dependency 'AppLovinMediationMolocoAdapter','3.1.3.0'
 
     #Admob Mediation
     spec.dependency 'Google-Mobile-Ads-SDK', '11.3.0'
     spec.dependency 'GoogleMobileAdsMediationAppLovin','12.4.1.0'
-    spec.dependency 'GoogleMobileAdsMediationUnity','4.10.0.0'
+    spec.dependency 'GoogleMobileAdsMediationUnity','4.12.2.0'
     spec.dependency 'GoogleMobileAdsMediationVungle','7.3.1.0'
     spec.dependency 'GoogleMobileAdsMediationChartboost','9.7.0.0'
     spec.dependency 'GoogleMobileAdsMediationMintegral','7.6.1.0'
