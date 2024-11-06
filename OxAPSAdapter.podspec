@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxAPSAdapter"#SDK名称
-    spec.version      = "4.10.0.4"#版本号
+    spec.version      = "4.10.0.5"#版本号
     spec.summary      = "OxAdSdkAdapter for APS applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
