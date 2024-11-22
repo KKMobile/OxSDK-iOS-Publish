@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)setUserPropertyString:(nullable NSString *)value forName:(NSString *)name;
 
++ (NSString *)appInstanceID;
+
 @end
 
 NS_ASSUME_NONNULL_END

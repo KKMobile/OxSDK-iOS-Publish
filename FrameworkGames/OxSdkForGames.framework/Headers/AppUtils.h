@@ -38,10 +38,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIViewController *)mavlVisibleViewController;
 
-// 判断 platform 是否在枚举内
-+ (BOOL)platformInRange:(NSInteger)platform;
-
-
 @end
 
 NS_ASSUME_NONNULL_END
