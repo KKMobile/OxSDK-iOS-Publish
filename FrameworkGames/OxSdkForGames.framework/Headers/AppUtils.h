@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AppUtils : NSObject
 
++ (NSInteger)appVersionToSegment;
+
 /// 根据info.plist中的id组，进行adapter的初始化操作
 + (NSDictionary *)getAppIdFormInfoPlist;
 
