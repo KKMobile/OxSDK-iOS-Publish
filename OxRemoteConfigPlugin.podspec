@@ -27,7 +27,4 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.resource_bundles = {'OxRemoteConfigPlugin' => ['ResBundle/PrivacyInfo.xcprivacy']}
     spec.ios.vendored_frameworks = 'Frameworks/OxRemoteConfigPlugin.framework'
-
-    spec.dependency 'Firebase/Core'
-    spec.dependency 'Firebase/RemoteConfig'
 end
