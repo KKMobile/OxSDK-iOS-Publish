@@ -67,7 +67,6 @@ Pod::Spec.new do |spec|
 
     #Admob Mediation
     spec.dependency 'Google-Mobile-Ads-SDK', '11.11.0'
-    spec.dependency 'GoogleMobileAdsMediationAppLovin','13.0.1.0'
     spec.dependency 'GoogleMobileAdsMediationUnity','4.12.3.1'
     spec.dependency 'GoogleMobileAdsMediationVungle','7.4.2.0'
     spec.dependency 'GoogleMobileAdsMediationChartboost','9.7.0.1'
