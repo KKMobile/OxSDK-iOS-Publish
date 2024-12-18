@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *mAdStatus;
 @property (nonatomic, strong) NSString *mNetworkName;
 @property (nonatomic, strong) NSString *mCreativeId;
+@property (nonatomic, assign) double ecpm;
 
 @property(nonatomic, strong)NSMutableDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
 

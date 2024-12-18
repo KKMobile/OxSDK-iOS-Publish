@@ -136,6 +136,7 @@ static NSString * const PARAM_ATT_ACCEPTED = @"IsAttAccepted";
 
 
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
+static NSString * const MAX_DISABLE_CACHE_PARAM_KEY = @"disable_b2b_ad_unit_ids";
 
 static NSString * const FAIL_KEY_ADSDK = @"AdSdkDiscovery";
 

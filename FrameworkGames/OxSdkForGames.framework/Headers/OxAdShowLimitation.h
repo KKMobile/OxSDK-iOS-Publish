@@ -11,6 +11,8 @@
 @interface OxAdShowLimitation : NSObject
 
 extern NSString* const LIMITATION_AD_NOT_READY;
+extern NSString* const LIMITATION_NO_NETWORK;
+extern NSString* const LIMITATION_MEMORY;
 extern NSString* const LIMITATION_AD_CONTAINER_NOT_FOUND;
 extern NSString* const LIMITATION_REMOVE_ADS_BY_PURCHASE;
 

@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol IFullScreenAd <NSObject>
 
-- (void)showAd;
+- (BOOL)showAd;
 
-- (void)showAd:(NSString *)placement;
+- (BOOL)showAd:(NSString *)placement;
 
 - (void)setReloadAfterFailed:(BOOL)reload;
 
