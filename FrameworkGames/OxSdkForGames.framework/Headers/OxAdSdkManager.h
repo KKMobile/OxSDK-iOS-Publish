@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.0.0-PR-FullShowRate-202412191530-1142"
+#define OXSDK_VERSION "1.0.0-PR-FullShowRate-202412191630-1142"
 
 NS_ASSUME_NONNULL_BEGIN
 
