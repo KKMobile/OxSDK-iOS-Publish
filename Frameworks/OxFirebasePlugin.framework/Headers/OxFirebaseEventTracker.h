@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 + (void)setUserPropertyString:(nullable NSString *)value forName:(NSString *)name;
 + (NSString *)appInstanceID;
++ (void)setUserID:(NSString *)userID;
++ (void)installationID;
 
 @end
 
