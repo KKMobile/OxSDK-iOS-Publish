@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nonnull instancetype)sharedInstance;
 
+// 当前广告ID 是否开启 APS
+- (BOOL)enabledAmazonAdUnitIdentifier:(NSString *)adUnitID;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -59,6 +59,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdGottenCreditAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement networkName:(nullable NSString*)networkName
     waterfallName:(nullable NSString*)waterfullName networkResponses:(NSInteger)networkResponses creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
 
++ (void)trackInstallDay:(NSInteger)day;
++ (void)trackUseDay:(NSInteger)day;
++ (void)trackUseCore:(int)level;
+
+
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;
 
