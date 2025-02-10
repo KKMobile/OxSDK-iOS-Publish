@@ -101,6 +101,9 @@ static NSString * const EVENT_AD_SHOW_FAILED = @"Ad_Show_Failed";
 static NSString * const EVENT_AD_CLICK = @"Ad_Click";
 static NSString * const EVENT_AD_GOTTEN_CREDIT = @"Ad_GottenCredit";
 static NSString * const EVENT_AD_CLOSE = @"Ad_Close";
+static NSString * const EVENT_AD_USER_VALUE_DURATION = @"Ad_User_Value_Duration";
+static NSString * const EVENT_AD_USER_VALUE_ERROR = @"Ad_User_Value_Error";
+
 // Sdk
 static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
 static NSString * const EVENT_CLICK_SDK_CONSENT_BACK_KEY = @"click_sdk_consent_back_key";

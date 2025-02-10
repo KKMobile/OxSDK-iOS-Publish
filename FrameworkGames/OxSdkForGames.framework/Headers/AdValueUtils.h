@@ -29,6 +29,12 @@ static NSString* PARAM_KEY_CORE_LEVEL= @"core_level";
 static NSString* AD_PLATFORM_ADMOB = @"AdMob";
 static NSString* AD_PLATFORM_MAX = @"MAX";
 
+static NSString* PARAM_KEY_COUNT = @"count";
+static NSString* PARAM_KEY_ORDER = @"order";
+static NSString* PARAM_KEY_FUNCTION = @"function";
+static NSString* PARAM_KEY_ERROR = @"error";
+static NSString* PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
+
 @interface AdValueUtils : NSObject
 
 @property (nonatomic, strong) NSArray     *firebaseConfigValues;
@@ -38,6 +44,10 @@ static NSString* AD_PLATFORM_MAX = @"MAX";
 - (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement;
 
 - (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement;
+
+- (void)logAdUserValueDurationEvent:(NSString *)adUnitId count:(NSInteger)count ecpm:(float)value function:(NSString *)function;
+- (void)logAdUserValueError:(NSString *)order function:(NSString *)function error:(NSString *)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

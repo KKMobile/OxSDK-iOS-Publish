@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)checkUserProperties;
 
-- (void)configApplovinKeywords;
+- (void)configApplovinKeywords:(NSString *)adUnitId;
 
 - (void)setPropLtAdValue:(NSString *)propLtv;
 
