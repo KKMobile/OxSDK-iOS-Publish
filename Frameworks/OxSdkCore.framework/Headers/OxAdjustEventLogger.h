@@ -1,6 +1,6 @@
 //
 //  OxAdjustEventLogger.h
-//  OxSdkForGames
+//  OxSdkCore
 //
 //  Created by Mavl_2023_100272 on 2024/10/23.
 //  Copyright © 2024 耿志向. All rights reserved.
