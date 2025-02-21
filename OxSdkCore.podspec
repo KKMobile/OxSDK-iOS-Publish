@@ -32,7 +32,7 @@ Pod::Spec.new do |spec|
 
     spec.frameworks = 'UIKit'
     spec.dependency 'PureLayout'
-    spec.dependency 'AppLovinSDK', '13.0.1'
+    spec.dependency 'AppLovinSDK', '13.0.0'
     spec.dependency 'Google-Mobile-Ads-SDK', '11.10.0.0'
     spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.10.0.0'
     spec.dependency 'AppLovinMediationGoogleAdapter', '11.10.0.0'
