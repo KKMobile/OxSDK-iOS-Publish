@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
     spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
     spec.resource_bundles = {'OxSdkCore' => ['ResBundle/PrivacyInfo.xcprivacy']}
   
-    spec.ios.vendored_frameworks = 'Framework/OxSdkCore.framework'
+    spec.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
 
     spec.frameworks = 'UIKit'
     spec.dependency 'PureLayout'
