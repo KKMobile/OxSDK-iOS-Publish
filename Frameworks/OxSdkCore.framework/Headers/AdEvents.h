@@ -120,6 +120,7 @@ static NSString * const EVENT_TOTAL_ADS_REVENUE_01 = @"Total_Ads_Revenue_01";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
 static NSString * const EVENT_AD_MEMORY_LIMITED = @"Ad_Memory_Limited";
 static NSString * const EVENT_AD_REQUEST = @"Ad_Request";
+static NSString * const EVENT_AD_ADAPTER_REQUEST = @"Ad_Adapt_Request";
 static NSString * const EVENT_AD_LOADED = @"Ad_Loaded";
 static NSString * const EVENT_AD_FAILED = @"Ad_Failed";
 static NSString * const EVENT_AD_SHOW = @"Ad_Show";
@@ -130,6 +131,7 @@ static NSString * const EVENT_AD_CLICK = @"Ad_Click";
 static NSString * const EVENT_AD_GOTTEN_CREDIT = @"Ad_GottenCredit";
 static NSString * const EVENT_AD_CLOSE = @"Ad_Close";
 // Sdk
+static NSString * const EVENT_SDK_Init = @"SDK_Init";
 static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
 static NSString * const EVENT_CLICK_SDK_CONSENT_BACK_KEY = @"click_sdk_consent_back_key";
 static NSString * const EVENT_CLICK_SDK_CONSENT_SAVE_ACCEPT = @"click_sdk_consent_save_accept";
@@ -141,10 +143,12 @@ static NSString * const EVENT_SHOW_SDK_CONSENT_OPTION = @"show_sdk_consent_optio
 static NSString * const EVENT_CONFIG_PARSE_FAILED = @"OxConfigParseFailed";
 
 // Param keys
+static NSString * const PARAM_INIT_DURATION = @"InitDuration";
 static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
 static NSString * const PARAM_AD_UNIT_NAME = @"AdUnitName";
 static NSString * const PARAM_AD_FORMAT = @"AdFormat";
 static NSString * const PARAM_PLACEMENT = @"Placement";
+static NSString * const PARAM_MEDIATION = @"Mediation";
 static NSString * const PARAM_VERSION = @"Version";
 static NSString * const PARAM_NETWORK_TYPE = @"NetworkType";
 static NSString * const PARAM_NETWORK_STATE = @"NetworkState";

@@ -38,6 +38,7 @@
 
 @interface OxAd() <MAAdDelegate,MARewardedAdDelegate,MAAdViewAdDelegate,GADFullScreenContentDelegate,GADBannerViewDelegate,MANativeAdDelegate,GADNativeAdDelegate,GADVideoControllerDelegate>
 
+@property(nonatomic, assign,readonly) OxSdkMediationType mediation;
 @property(nonatomic, assign,readonly) OxSdkAdFormat adFormat;
 @property(nonatomic, copy,readonly) NSString *adFormatValue;
 @property(nonatomic, copy,readonly) NSString *adUnitName;

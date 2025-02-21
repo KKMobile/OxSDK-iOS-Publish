@@ -38,6 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign,readonly) BOOL loading;
 @property(nonatomic, assign,readonly) OxAdLoadType loadType;
 @property(nonatomic, assign,readonly) OxSdkAdFormat adFormat;
+@property(nonatomic, assign,readonly) OxSdkMediationType meidation;
 
 - (instancetype)initWithAdUnitName:(NSString *)adUnitName;
 /// load ad

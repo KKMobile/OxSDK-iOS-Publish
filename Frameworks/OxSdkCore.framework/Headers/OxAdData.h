@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAdData : NSObject
 
+@property(nonatomic, assign) OxSdkMediationType mediation;
 @property(nonatomic, assign) OxSdkAdFormat adFormat;
 @property(nonatomic, copy) NSString *adFormatValue;
 @property(nonatomic, copy) NSString *adUnitId;
