@@ -38,19 +38,19 @@ Pod::Spec.new do |spec|
         ss.dependency 'FirebaseAnalytics', '>=8.0.0'
         ss.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 
-        ss.dependency 'AppLovinSDK', '11.11.4'
-        ss.dependency 'AmazonPublisherServicesSDK','4.7.6.0'
-        ss.dependency 'AppLovinMediationGoogleAdManagerAdapter', '10.13.0.0'
-        ss.dependency 'AppLovinMediationGoogleAdapter', '10.13.0.0'
-        ss.dependency 'AppLovinMediationFacebookAdapter','6.15.1.0'
-        ss.dependency 'GoogleMobileAdsMediationAppLovin','11.11.4.0'
+        ss.dependency 'AppLovinSDK', '12.6.0'
+        ss.dependency 'AmazonPublisherServicesSDK','4.9.7.0'
+        ss.dependency 'AppLovinMediationGoogleAdManagerAdapter', '11.8.0.0'
+        ss.dependency 'AppLovinMediationGoogleAdapter', '11.8.0.0'
+        ss.dependency 'AppLovinMediationFacebookAdapter','6.15.2.0'
+        ss.dependency 'GoogleMobileAdsMediationAppLovin','12.6.0.0'
     end
     
     spec.subspec 'Full' do |ss|
         ss.dependency 'OxSdkForTools/Base'
-        ss.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.7.6.0'
-        ss.dependency 'AppLovinMediationByteDanceAdapter', '5.5.0.9.0'
-        ss.dependency 'GoogleMobileAdsMediationPangle','5.5.0.9.0'
+        ss.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','4.9.7.0'
+        ss.dependency 'AppLovinMediationByteDanceAdapter', '6.2.0.6.0'
+        ss.dependency 'GoogleMobileAdsMediationPangle','6.2.0.6.0'
         ss.vendored_frameworks = 'Frameworks/OxMaxCustomPangleAdapter.framework'
     end
     
