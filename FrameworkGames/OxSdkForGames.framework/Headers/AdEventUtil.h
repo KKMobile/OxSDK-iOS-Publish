@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 请求广告
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement;
++ (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement requestIndex:(NSInteger)requestIndex;
 
 // 加载成功
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement      loadedDuration:(double)loadedDuration bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName

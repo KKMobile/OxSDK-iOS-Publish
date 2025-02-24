@@ -9,7 +9,7 @@
 #import "DataTools.h"
 #import "AdEventDelegate.h"
 
-#define OXSDK_VERSION "1.1.4.2"
+#define OXSDK_VERSION "1.0-MO-MaxMultiCall-202402241030"
 
 NS_ASSUME_NONNULL_BEGIN
 
