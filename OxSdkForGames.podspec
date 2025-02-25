@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.3.0.0-RC03-202502211830"#版本号
+    spec.version      = "1.3.0.0-rc03-202502251634"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -25,35 +25,8 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-
-    spec.dependency 'OxSdkCore', '1.3.0.0-RC03-202501161100'
-    
-    spec.dependency 'OxAPSAdapter', '4.10.0.1'
-    spec.dependency 'OxBidMachineAdapter', '3.0.1.0'
-    spec.dependency 'OxChartboostAdapter', '9.7.0.0'
-    spec.dependency 'OxFacebookAdapter', '6.15.2.0'
-    spec.dependency 'OxFyberAdapter', '8.3.2.0'
-    spec.dependency 'OxInmobiAdapter', '10.7.5.0'
-    spec.dependency 'OxIronSourceAdapter', '8.3.0.0.0'
-    spec.dependency 'OxLineAdapter', '2.8.20240827.0'
-    spec.dependency 'OxMintegralAdapter', '7.7.2.0'
-    spec.dependency 'OxMobileFuseAdapter', '1.7.6.0'
-    spec.dependency 'OxMolocoAdapter', '3.2.0.0'
-    spec.dependency 'OxMyTargetAdapter', '5.21.9.0'
-    spec.dependency 'OxOguryAdapter', '5.0.1.0'
-    spec.dependency 'OxPangleAdapter', '6.2.0.9.0'
-    spec.dependency 'OxPubmaticAdapter', '4.0.0.0'
-    spec.dependency 'OxSmaatoAdapter', '22.9.0.0'
-    spec.dependency 'OxUnityAdsAdapter', '4.12.3.0'
-    spec.dependency 'OxVerveAdapter', '3.1.1.0'
-    spec.dependency 'OxVungleAdapter', '7.4.2.0'
-    spec.dependency 'OxYandexAdapter', '7.5.0.0'
-    
-    spec.dependency 'OxAdjustPlugin', '2.0.0-202411252000'
-    spec.dependency 'OxFBPlugin', '2.0.0-202411251600'
-    spec.dependency 'OxFirebasePlugin', '2.0.0-202501021730'
-    spec.dependency 'OxTAPlugin', '2.0.0-202411251600'
-    spec.dependency 'OxRemoteConfigPlugin', '2.0.0-202411251600'
-    spec.dependency 'OxDiscoveryPlugin', '2.0.0-202410311700'
-    
+    spec.dependency 'OxSdkCore.podspec', '1.3.0.0-rc02'
+    spec.dependency 'project_name', '1.3.0.0-rc02'
+    spec.dependency 'OxAPSAdapter', '1.3.0'
+    spec.dependency '', '1.3.0'
 end
