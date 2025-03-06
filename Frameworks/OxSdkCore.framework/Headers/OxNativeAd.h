@@ -9,6 +9,8 @@
 #import "NativeAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class OxNativeViewBinder;
+
 @interface OxNativeAd : OxBaseAd
 
 @property (nonatomic, weak)id<NativeAdDelegate> mAdDelegate;
@@ -19,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setAdmobViewBinder:(UIView *)view;
 - (void)showAd:(nonnull UIView *)adContainerV;
 - (void)showAd:(nonnull UIView *)adContainerV placement:(nonnull NSString *)placement;
+- (void)showAd:(nonnull UIView *)adContainerV viewBinder:(nonnull OxNativeViewBinder *)viewBinder placement:(nonnull NSString *)placement;
 - (void)hideAd;
 - (BOOL)isReady;
 

@@ -22,6 +22,8 @@
 #import "OxKeywordType.h"
 #import "ApplovinNativeInterstitialAdapter.h"
 #import "OxUnitAdsGdprUtil.h"
+#import "OxNativeViewBinder.h"
+#import "OxNativeAdInfo.h"
 
 //! Project version number for OxSdkCore.
 FOUNDATION_EXPORT double OxSdkCoreVersionNumber;

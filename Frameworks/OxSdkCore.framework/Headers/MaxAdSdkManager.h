@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MaxAdSdkManager : BaseAdManager
 
 + (nonnull instancetype)sharedInstance;
-- (void)addSegments:(MASegment *)segment;
+- (void)setSegments:(NSDictionary<NSNumber *,NSArray<NSNumber *> *> *)segment;
 
 @end
 

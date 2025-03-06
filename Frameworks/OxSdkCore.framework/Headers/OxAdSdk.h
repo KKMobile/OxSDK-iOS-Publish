@@ -95,8 +95,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 设置  segment
 /// - Parameter segment: 需要在  sdk 初始化之前调用
-/// 示例  [OxAdSdk addSegments:[[MASegment alloc] initWithKey:@(112) values:@[@(1)]]];
-+ (void)addSegments:(MASegment *)segment;
++ (void)setSegments:(NSDictionary<NSNumber *,NSArray<NSNumber *> *> *)segment;
 
 
 @end

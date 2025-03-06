@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class OxNativeAdInfo;
+
 @protocol AdDelegate <NSObject>
 
 - (void)onAdLoadedWithAdUnitName:(NSString *)adUnitName;
@@ -24,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onAdOpenedWithAdUnitName:(NSString *)adUnitName;
 
 - (void)onAdClosedWithAdUnitName:(NSString *)adUnitName;
+
+@optional
+- (void)onAdLoadedWithAdUnitName:(NSString *)adUnitName info:(OxNativeAdInfo *)info;
 
 @end
 
