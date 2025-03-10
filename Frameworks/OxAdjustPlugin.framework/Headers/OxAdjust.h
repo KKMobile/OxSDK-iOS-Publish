@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define OxAdjustPlugin_SDK_VERSION    @"1.0.2-202312041600"
+#define OxAdjustPlugin_SDK_VERSION    @"1.0.3-202503101900"
 
 
 NS_ASSUME_NONNULL_BEGIN
