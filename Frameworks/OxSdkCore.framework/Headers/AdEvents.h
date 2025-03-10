@@ -110,10 +110,6 @@ static NSString * const EVENT_AD_SHOW_FAILED = @"Ad_Show_Failed";
 static NSString * const EVENT_AD_CLICK = @"Ad_Click";
 static NSString * const EVENT_AD_GOTTEN_CREDIT = @"Ad_GottenCredit";
 static NSString * const EVENT_AD_CLOSE = @"Ad_Close";
-static NSString * const EVENT_AD_USER_CORE_METRIC = @"ad_user_core_metric";
-static NSString * const EVENT_AD_INSTALL_DAYS = @"ad_install_days";
-static NSString * const EVENT_AD_ACTIVE_DAYS = @"ad_active_days";
-
 // Sdk
 static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
 static NSString * const EVENT_CLICK_SDK_CONSENT_BACK_KEY = @"click_sdk_consent_back_key";
@@ -146,8 +142,6 @@ static NSString * const PARAM_CHANNEL = @"Channel";
 static NSString * const PARAM_CAMPAIGN = @"Campaign";
 static NSString * const PARAM_MEMORY_LIMIT_TYPE = @"MemoryLimitType";
 static NSString * const PARAM_ATT_ACCEPTED = @"IsAttAccepted";
-static NSString * const PARAM_DAYS = @"days";
-static NSString * const PARAM_CORE = @"core";
 
 
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
