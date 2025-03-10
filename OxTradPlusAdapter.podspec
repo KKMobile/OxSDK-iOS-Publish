@@ -9,7 +9,6 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxTradPlusAdapter"#SDK名称
-    spec.version      = "12.5.0.0"#版本号
     spec.summary      = "OxAdSdkAdapter for TradPlus applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -35,8 +34,8 @@ Pod::Spec.new do |spec|
     spec.dependency 'TradPlusAdSDK/AdMobAdapter', '12.5.0'
     spec.dependency 'TradPlusAdSDK/AppLovinAdapter', '12.5.0'
     spec.dependency 'TradPlusAdSDK/FacebookAdapter', '12.5.0'
-    spec.dependency 'AppLovinSDK'
-    spec.dependency 'Google-Mobile-Ads-SDK'
-    spec.dependency 'FBAudienceNetwork'
+    spec.dependency 'AppLovinSDK','13.0.0'
+    spec.dependency 'Google-Mobile-Ads-SDK','11.10.0'
+    spec.dependency 'FBAudienceNetwork','6.15.2'
     
 end
