@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxFacebookAdapter"#SDK名称
-    spec.version      = "6.15.2.0"#版本号
+    spec.version      = "6.15.2.1"#版本号
     spec.summary      = "OxAdSdkAdapter for Facebook applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
