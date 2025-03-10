@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.0.3-RC01-202503061500"#版本号
+  spec.version      = "1.2.0.3-RC01-202503102000"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -32,7 +32,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'PureLayout'
   spec.dependency 'AFNetworking'
   spec.dependency 'SDWebImage'
-  spec.dependency 'Adjust'
+  spec.dependency 'Adjust','>=5.0.0'
   spec.dependency 'FirebaseAnalytics', '>=8.0.0'
   spec.dependency 'FirebaseRemoteConfig', '>=8.0.0'
 

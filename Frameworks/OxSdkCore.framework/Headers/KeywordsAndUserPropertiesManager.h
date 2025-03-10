@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-@import Adjust;
 
 NS_ASSUME_NONNULL_BEGIN
 
