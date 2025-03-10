@@ -1,0 +1,6 @@
+framework module OxTradPlusAdapter {
+  umbrella header "OxTradPlusAdapter.h"
+  export *
+
+  module * { export * }
+}
