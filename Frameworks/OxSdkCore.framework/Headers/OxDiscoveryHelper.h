@@ -1,6 +1,6 @@
 //
 //  OxDiscoveryHelper.h
-//  OxSdkCore
+//  OxSdkForGames
 //
 //  Created by Mavl_2023_100272 on 2024/10/24.
 //  Copyright © 2024 耿志向. All rights reserved.

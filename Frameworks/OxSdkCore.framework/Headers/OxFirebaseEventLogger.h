@@ -19,10 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)appInstanceID;
 
-+ (void)installationID;
-
-+ (void)setUserID:(NSString *)userID;
-
 @end
 
 NS_ASSUME_NONNULL_END

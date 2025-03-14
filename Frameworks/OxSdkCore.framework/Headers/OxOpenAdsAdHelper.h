@@ -1,6 +1,6 @@
 //
 //  OxOpenAdsAdHelper.h
-//  OxSdkCore
+//  OxSdkForGames
 //
 //  Created by Mavl_2023_100272 on 2024/5/22.
 //
