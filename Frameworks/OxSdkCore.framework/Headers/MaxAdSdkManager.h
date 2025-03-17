@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nonnull instancetype)sharedInstance;
 - (void)setSegments:(NSDictionary<NSNumber *,NSArray<NSNumber *> *> *)segment;
-
+- (void)setMaxTestDeviceAdvertisingIdentifiers:(NSArray<NSString *> *)testDeviceAdvertisingIdentifiers;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -121,6 +121,7 @@ static NSString * const EVENT_AD_CLICK = @"Ad_Click";
 static NSString * const EVENT_AD_GOTTEN_CREDIT = @"Ad_GottenCredit";
 static NSString * const EVENT_AD_CLOSE = @"Ad_Close";
 // Sdk
+static NSString * const EVENT_SDK_Init = @"SDK_Init";
 static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
 static NSString * const EVENT_CLICK_SDK_CONSENT_BACK_KEY = @"click_sdk_consent_back_key";
 static NSString * const EVENT_CLICK_SDK_CONSENT_SAVE_ACCEPT = @"click_sdk_consent_save_accept";
@@ -132,6 +133,7 @@ static NSString * const EVENT_SHOW_SDK_CONSENT_OPTION = @"show_sdk_consent_optio
 static NSString * const EVENT_CONFIG_PARSE_FAILED = @"OxConfigParseFailed";
 
 // Param keys
+static NSString * const PARAM_INIT_DURATION = @"InitDuration";
 static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
 static NSString * const PARAM_AD_FORMAT = @"AdFormat";
 static NSString * const PARAM_PLACEMENT = @"Placement";

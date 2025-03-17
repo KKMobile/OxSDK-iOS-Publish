@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nonnull instancetype)sharedInstance;
 
 /// ad config
+@property (nonatomic,copy) NSString *maxSdkKey;
 @property (nonatomic,strong) NSMutableDictionary<NSString *,OxAdUnit *> *adUnitMap;
 @property (nonatomic,strong) NSMutableDictionary<NSString *,NSString *> *adjustTokenMap;
 @property (nonatomic,strong) NSMutableDictionary<NSString *,id> *remoteConfigDefaultsMap;

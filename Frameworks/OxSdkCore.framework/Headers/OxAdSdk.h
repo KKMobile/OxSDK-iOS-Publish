@@ -10,7 +10,7 @@
 #import "OxAdSdkManager.h"
 #import "OxGamesEventUtil.h"
 
-#define OxSDK_VERSION    @"1.2.0.3-RC01-202503111200"
+#define OxSDK_VERSION    @"1.2.2.0-RC01-202503171830"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -96,7 +96,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 设置  segment
 /// - Parameter segment: 需要在  sdk 初始化之前调用
 + (void)setSegments:(NSDictionary<NSNumber *,NSArray<NSNumber *> *> *)segment;
-
++ (void)setMaxTestDeviceAdvertisingIdentifiers:(NSArray<NSString *> *)testDeviceAdvertisingIdentifiers;
 
 @end
 
