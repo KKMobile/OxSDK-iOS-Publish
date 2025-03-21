@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.2.0-RC01-202503211630"#版本号
+  spec.version      = "1.2.2.0-RC01-202503211730"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -46,7 +46,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.13.1.0'
   spec.dependency 'AppLovinMediationMintegralAdapter', '7.7.5.0.0'
   spec.dependency 'AppLovinMediationBidMachineAdapter', '3.2.0.0.0'
-  spec.dependency 'AppLovinMediationFyberAdapter', '8.3.5.0'
+  #spec.dependency 'AppLovinMediationFyberAdapter', '8.3.5.0'
   spec.dependency 'AppLovinMediationOguryPresageAdapter', '5.0.2.0'
   spec.dependency 'AppLovinMediationInMobiAdapter', '10.8.0.0'
   spec.dependency 'AppLovinMediationVungleAdapter', '7.4.4.0'
@@ -57,7 +57,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'GoogleMobileAdsMediationAppLovin','13.0.0.2'
   spec.dependency 'GoogleMobileAdsMediationPangle','6.4.1.2.0'
   spec.dependency 'GoogleMobileAdsMediationUnity', '4.13.1.0'
-  spec.dependency 'GoogleMobileAdsMediationFyber', '8.3.5.0'
+  #spec.dependency 'GoogleMobileAdsMediationFyber', '8.3.5.0'
   spec.dependency 'GoogleMobileAdsMediationInMobi', '10.8.0.0'
   spec.dependency 'GoogleMobileAdsMediationMoloco', '3.6.0.0'
   spec.dependency 'GoogleMobileAdsMediationMintegral','7.7.5.0'
