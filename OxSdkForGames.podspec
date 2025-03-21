@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.3.0.0-RC06-202503201800"#版本号
+    spec.version      = "1.3.0.0-RC07-202503211430"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -49,7 +49,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxVungleAdapter', '7.4.2.0'
     spec.dependency 'OxYandexAdapter', '7.5.0.0'
     
-    spec.dependency 'OxAdjustPlugin', '2.0.0-202411252000'
+    spec.dependency 'OxAdjustPlugin', '3.0.0-202502182000'
     spec.dependency 'OxFBPlugin', '2.0.0-202411251600'
     spec.dependency 'OxFirebasePlugin', '2.0.0-202501021730'
     spec.dependency 'OxTAPlugin', '2.0.0-202411251600'
