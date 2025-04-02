@@ -10,8 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define OxAdjustPluginVersion @"3.0.0-202502182000"
-
 @interface OxAdjustEventTracker : NSObject
 
 + (void)trackEvent:(NSString *)eventName adjustParams:(nullable NSDictionary *)adjustParams;

@@ -27,6 +27,8 @@ static NSString * const OXD_PARAM_KEY_CORE_LEVEL= @"core_level";
 static NSString * const OXD_AD_PLATFORM_ADMOB = @"AdMob";
 static NSString * const OXD_AD_PLATFORM_MAX = @"MAX";
 static NSString * const OXD_PARAM_USER_REVENUE = @"Ad_User_Revenue";
+static NSString * const OXD_PARAM_KEY_EVENT_TYPE = @"event_type";
+
 
 // EVENT
 static NSString * const OXD_EVENT_TOP10 = @"AdLTV_OneDay_Top10Percent";
