@@ -65,6 +65,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'OguryMediationGoogleMobileAds','5.0.2.0'
     
     
-  spec.dependency 'OxDiscoveryPlugin','1.0.6-202503281600'
+  spec.dependency 'OxDiscoveryPlugin','1.0.3-202312041600'
     
 end
