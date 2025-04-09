@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.2.0-RC01-202503211730"#版本号
+  spec.version      = "1.2.2.0"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -43,7 +43,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'AppLovinMediationGoogleAdapter', '11.13.0.0'
   spec.dependency 'AppLovinMediationFacebookAdapter','6.16.0.0'
   spec.dependency 'AppLovinMediationByteDanceAdapter', '6.4.1.2.0'
-  spec.dependency 'UnityAds', '4.13.1'
   spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.13.1.0'
   spec.dependency 'AppLovinMediationMintegralAdapter', '7.7.5.0.0'
   spec.dependency 'AppLovinMediationBidMachineAdapter', '3.2.0.0.0'
@@ -66,6 +65,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'OguryMediationGoogleMobileAds','5.0.2.0'
     
     
-  spec.dependency 'OxDiscoveryPlugin','1.0.3-202312041600'
+  spec.dependency 'OxDiscoveryPlugin','1.0.6-202503281600'
     
 end
