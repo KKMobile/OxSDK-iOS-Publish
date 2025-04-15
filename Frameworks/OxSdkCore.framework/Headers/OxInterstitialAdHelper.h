@@ -11,7 +11,15 @@
 #import "InterstitialInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class OxInterstitialAd;
+
 @interface OxInterstitialAdHelper : OxAdHelper <IFullScreenAd>
+
+// 缓存
+@property (nonatomic, strong) NSMutableArray<OxInterstitialAd *> *cacheAds;
+// 判断是否请求中又来请求
+@property (nonatomic, assign) BOOL isLoading;
+@property(nonatomic, assign) LoadStatus loadStatus;
 
 @property (nonatomic, weak) id<InterstitialAdDelegate> mAddelegate;
 @property (nonatomic, weak) id<InterstitialInternalAdDelegate> mInternalAddelegate;

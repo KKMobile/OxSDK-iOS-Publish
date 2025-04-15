@@ -11,10 +11,18 @@
 #import "RewardedInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class OxRewardedAd;
+
 @interface OxRewardedAdHelper : OxAdHelper<IFullScreenAd>
 
 @property (nonatomic, weak) id<RewardedAdDelegate> mAddelegate;
 @property (nonatomic, weak) id<RewardedInternalAdDelegate> mInternalAddelegate;
+
+// 缓存
+@property (nonatomic, strong) NSMutableArray<OxRewardedAd *> *cacheAds;
+// 判断是否请求中又来请求
+@property (nonatomic, assign) BOOL isLoading;
+@property(nonatomic, assign) LoadStatus loadStatus;
 
 @property (nonatomic, assign) bool mUserRewarded;
 

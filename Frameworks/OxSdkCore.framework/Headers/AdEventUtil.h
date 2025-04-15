@@ -15,6 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement;
 + (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement;
 
+// uservalue
++ (void)logAdUserValueDurationEvent:(NSString *)adUnitId count:(NSInteger)count ecpm:(float)ecpm function:(NSString *)function;
++ (void)logAdUserValueError:(NSString *)order function:(NSString *)function error:(NSString *)error;
+
+
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
 
 /// 客户端打点
@@ -22,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 请求广告
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement;
++ (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestNumber:(NSInteger)requestNumber;
 
 // 加载成功
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement      loadedDuration:(double)loadedDuration bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName

@@ -9,6 +9,8 @@
 #import "AdInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class AdReward;
+
 @protocol RewardedInternalAdDelegate <NSObject, AdInternalAdDelegate>
 
 - (void)onRewardedVideoStarted;

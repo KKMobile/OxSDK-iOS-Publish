@@ -15,7 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (nonnull instancetype)sharedInstance;
 
 // 1 Google UMP  0 Max
-@property (nonatomic,assign) int gdprTool;
+@property (nonatomic, assign) int gdprTool;
+
+- (void)setIsUseDefaultUserValue:(BOOL)isUseDefaultUserValue adunitID:(NSString *)adunitID;
+
+- (BOOL)isUseDefaultUserValue:(NSString *)adunitID;
 
 @end
 
