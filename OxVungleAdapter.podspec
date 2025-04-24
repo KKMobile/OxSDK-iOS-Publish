@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+    spec.ios.vendored_frameworks = 'Frameworks/OxVungleAdapter.framework'
     
-    spec.dependency 'GoogleMobileAdsMediationVungle','7.4.2.0'
-    spec.dependency 'AppLovinMediationVungleAdapter', '7.4.2.1'
+    spec.dependency 'AppLovinMediationVungleAdapter', '7.4.5.0'
 end
