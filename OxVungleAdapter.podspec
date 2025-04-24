@@ -27,5 +27,7 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.ios.vendored_frameworks = 'Frameworks/OxVungleAdapter.framework'
     
+    spec.dependency 'AppLovinSDK'
+    spec.dependency 'Google-Mobile-Ads-SDK'
     spec.dependency 'AppLovinMediationVungleAdapter', '7.4.5.0'
 end
