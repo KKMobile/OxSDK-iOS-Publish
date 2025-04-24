@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.0-PR-UVMTC-202504232350-1300"#版本号
+    spec.version      = "2.0-PR-UVMTC-202504241930-1300"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-    spec.dependency 'OxSdkCore', '1.0-PR-UVMTC-202504232350-1300'
+    spec.dependency 'OxSdkCore', '2.0-PR-UVMTC-202504241930-1300'
     
     spec.dependency 'OxAPSAdapter', '4.10.0.1'
     spec.dependency 'OxBidMachineAdapter', '3.0.1.0'
@@ -46,7 +46,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxSmaatoAdapter', '22.9.0.0'
     spec.dependency 'OxUnityAdsAdapter', '4.12.3.0'
     spec.dependency 'OxVerveAdapter', '3.1.1.0'
-    spec.dependency 'OxVungleAdapter', '7.4.2.0'
+    spec.dependency 'OxVungleAdapter', '7.4.5.0'
     spec.dependency 'OxYandexAdapter', '7.5.0.0'
     
     spec.dependency 'OxAdjustPlugin', '4.0.0-202504021600'
