@@ -68,6 +68,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;
 
++ (NSInteger)getNetworkState;
+
 @end
 
 NS_ASSUME_NONNULL_END

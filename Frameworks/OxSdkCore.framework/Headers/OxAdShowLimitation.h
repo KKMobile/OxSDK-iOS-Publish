@@ -13,6 +13,7 @@
 extern NSString* const LIMITATION_AD_NOT_READY;
 extern NSString* const LIMITATION_AD_CONTAINER_NOT_FOUND;
 extern NSString* const LIMITATION_REMOVE_ADS_BY_PURCHASE;
+extern NSString* const NETWORK_UNAVAILABLE;
 
 @end
 
