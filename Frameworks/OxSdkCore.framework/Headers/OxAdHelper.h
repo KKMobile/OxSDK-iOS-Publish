@@ -26,6 +26,7 @@ typedef enum : NSUInteger {
 @interface OxAdHelper : NSObject
 
 @property (nonatomic, weak) UIViewController *mViewController;
+@property (nonatomic, assign) NSString *mOriginalAdunitId;
 @property (nonatomic, strong) NSString *mAdunitId;
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;

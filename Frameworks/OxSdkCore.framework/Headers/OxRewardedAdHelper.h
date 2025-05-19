@@ -16,24 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OxRewardedAdHelper : OxAdHelper<IFullScreenAd>
 
 @property (nonatomic, weak) id<RewardedAdDelegate> mAddelegate;
-@property (nonatomic, weak) id<RewardedInternalAdDelegate> mInternalAddelegate;
 
-// 缓存
-@property (nonatomic, strong) NSMutableArray<OxRewardedAd *> *cacheAds;
-// 判断是否请求中又来请求
-@property (nonatomic, assign) BOOL isLoading;
-@property(nonatomic, assign) LoadStatus loadStatus;
-
-@property (nonatomic, assign) bool mUserRewarded;
-
-@property (nonatomic, assign) double mOnRewardedVideoStartedTime;
-
-@property (nonatomic, assign) NSInteger retryAttempt;
-@property (nonatomic, assign) BOOL mReload;
-@property (nonatomic, assign) BOOL mIsReloadingInLoadFailed;
-@property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
-
-- (void)createAd;
++ (OxRewardedAdHelper *)createAdWithCurrentVC:(UIViewController *)currentVC adUnitID:(NSString *)adUnitID;
 
 
 @end

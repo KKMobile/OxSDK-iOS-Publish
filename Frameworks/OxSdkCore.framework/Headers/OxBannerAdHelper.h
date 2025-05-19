@@ -12,14 +12,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxBannerAdHelper : OxAdHelper<IBannerAd>
-@property (nonatomic, weak) id<BannerInternalAdDelegate>  mInternalAddelegate;
-@property (nonatomic, weak) id<BannerAdDelegate> mAdDelegate;
-@property (nonatomic, assign) bool  mIsReady;
-@property (nonatomic, assign) bool  mAutoRefresh;
-@property (nonatomic, strong) NSString *loadPlacement;
-@property (nonatomic, assign) bool mAdaptive;
 
-- (void)createAd;
+@property (nonatomic, weak) id<BannerAdDelegate> mAdDelegate;
+
++ (OxBannerAdHelper *)createAdWithCurrentVC:(UIViewController *)currentVC adUnitID:(NSString *)adUnitID;
 
 
 @end
