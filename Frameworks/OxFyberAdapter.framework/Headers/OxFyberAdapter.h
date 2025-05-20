@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OxFyberAdapter/OxCustomFyberAdapter.h>
+#import "OxCustomFyberAdapter.h"
 
 
 //! Project version number for OxFyberAdapter.
