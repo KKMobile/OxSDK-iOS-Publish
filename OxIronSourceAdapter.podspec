@@ -27,6 +27,6 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.ios.vendored_frameworks = 'Frameworks/OxIronSourceAdapter.framework'
     
-    spec.dependency 'Google-Mobile-Ads-SDK', '12.3.0'
+    spec.dependency 'Google-Mobile-Ads-SDK'
     spec.dependency 'AppLovinMediationIronSourceAdapter', '8.3.0.0.2'
 end
