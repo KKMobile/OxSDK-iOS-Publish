@@ -29,6 +29,6 @@ Pod::Spec.new do |spec|
   
     spec.ios.vendored_frameworks = 'Frameworks/OxMintegralAdapter.framework'
 
-    spec.dependency 'Google-Mobile-Ads-SDK
+    spec.dependency 'Google-Mobile-Ads-SDK'
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.7.2.0.1'
 end
