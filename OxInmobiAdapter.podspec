@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
-    spec.ios.vendored_frameworks = 'Frameworks/OxAdSdkAdapter.framework'
+    spec.ios.vendored_frameworks = 'Frameworks/OxInmobiAdapter.framework'
     
     spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.5.1'
     spec.dependency 'ALInMobiCustomAdapterFramework', '10.7.5.1'
