@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, OxAPSAdFormat) {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxAPSAd : NSObject
-+ (void)initApsSdk:(NSString *)appId testMode:(BOOL)testMode;
++ (void)initApsSdk:(NSString *)appId testMode:(NSNumber *)testMode;
 + (NSNumber *)isReady;
 - (void)loadApsAd:(NSDictionary *)amazonParams completion:(nullable void (^)(BOOL success,id info)) completion;
 
