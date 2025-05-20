@@ -1,5 +1,5 @@
-framework module OxIronsourceAdapter {
-  umbrella header "OxIronsourceAdapter.h"
+framework module OxIronSourceAdapter {
+  umbrella header "OxIronSourceAdapter.h"
   export *
 
   module * { export * }
