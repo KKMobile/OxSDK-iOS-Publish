@@ -1,0 +1,6 @@
+framework module OxIronsourceAdapter {
+  umbrella header "OxIronsourceAdapter.h"
+  export *
+
+  module * { export * }
+}
