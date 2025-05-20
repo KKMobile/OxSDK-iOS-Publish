@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxMintegralAdapter"#SDK名称
-    spec.version      = "7.7.2.0"#版本号
+    spec.version      = "7.7.2.1"#版本号
     spec.summary      = "OxAdSdk for Mintegral applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -29,6 +29,6 @@ Pod::Spec.new do |spec|
   
     spec.ios.vendored_frameworks = 'Frameworks/OxMintegralAdapter.framework'
 
+    spec.dependency 'Google-Mobile-Ads-SDK
     spec.dependency 'AppLovinMediationMintegralAdapter', '7.7.2.0.1'
-    spec.dependency 'GoogleMobileAdsMediationMintegral','7.7.2.1'
 end
