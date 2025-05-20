@@ -26,12 +26,12 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-    spec.dependency 'OxSdkCore', '1.3.0.0-RC02-202503141030'
+    spec.dependency 'OxSdkCore', '1.0-PR-MayCrash-202405202020-1130'
     
-    spec.dependency 'OxAPSAdapter', '4.10.0.1'
+    spec.dependency 'OxAPSAdapter', '5.2.0.0'
     spec.dependency 'OxBidMachineAdapter', '3.0.1.0'
-    spec.dependency 'OxChartboostAdapter', '9.7.0.0'
-    spec.dependency 'OxFacebookAdapter', '6.15.2.0'
+    spec.dependency 'OxChartboostAdapter', '9.8.1.0'
+    spec.dependency 'OxFacebookAdapter', '6.15.2.1'
     spec.dependency 'OxFyberAdapter', '8.3.2.0'
     spec.dependency 'OxInmobiAdapter', '10.7.5.0'
     spec.dependency 'OxIronSourceAdapter', '8.3.0.0.0'
