@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxPangleAdapter"#SDK名称
-    spec.version      = "6.2.0.9.0"#版本号
+    spec.version      = "6.2.0.9.1"#版本号
     spec.summary      = "OxAdSdk for Pangle applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -29,6 +29,6 @@ Pod::Spec.new do |spec|
   
     spec.ios.vendored_frameworks = 'Frameworks/OxPangleAdapter.framework'
 
+    spec.dependency 'Google-Mobile-Ads-SDK'
     spec.dependency 'AppLovinMediationByteDanceAdapter', '6.2.0.9.0'
-    spec.dependency 'GoogleMobileAdsMediationPangle','6.2.0.9.0'
 end
