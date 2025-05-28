@@ -12,6 +12,7 @@
 #define OX_IS_IPAD  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 #define OX_FACTOR_WIDTH (OX_IS_IPAD ? 1: (OX_SCREEN_WIDTH / 375.0))
 #define OX_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define USERVALUESEGMENTKEY @"120"
 
 // Adformat
 static NSString * const AdFormat_BANNER = @"banner";
@@ -26,6 +27,14 @@ static NSString * const AdStatus_LOADING = @"Ad is loading";
 static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
+
+typedef enum : NSUInteger {
+    AdUserValueErrorType_Default,
+    AdUserValueErrorType_SetValue,
+    AdUserValueErrorType_SetSegment,
+    AdUserValueErrorType_GetSegment,
+    AdUserValueErrorType_UpdateSegment
+} AdUserValueErrorType;
 
 typedef NS_ENUM(NSInteger, DailyLevel) {
     LOW = 0,
@@ -146,19 +155,33 @@ static NSString * const PARAM_ATT_ACCEPTED = @"IsAttAccepted";
 
 static NSString * const EVENT_AD_USER_VALUE_DURATION = @"Ad_User_Value_Duration";
 static NSString * const EVENT_AD_USER_VALUE_ERROR = @"Ad_User_Value_Error";
+static NSString * const EVENT_AD_USER_VALUE = @"Ad_User_Value";
+static NSString * const EVENT_AD_USER_VALUE_SEGMENT = @"Ad_User_Value_Segment";
+static NSString * const EVENT_AD_USER_VALUE_NO_SEGMENT = @"Ad_User_Value_No_Segment";
+static NSString * const EVENT_AD_SET_SEGMENT = @"Ad_Set_Segment";
+
 static NSString * const PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";
 static NSString * const PARAM_KEY_COUNT = @"count";
 static NSString * const PARAM_KEY_ORDER = @"order";
+static NSString * const PARAM_KEY_FACTOR = @"factor";
 static NSString * const PARAM_KEY_FUNCTION = @"function";
 static NSString * const PARAM_KEY_ERROR = @"error";
+static NSString * const PARAM_KEY_ORDER_TYPE = @"errorType";
 static NSString * const PARAM_KEY_VALUE = @"value";
-static NSString * const PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
+static NSString * const PARAM_KEY_SEGMENT_KEY = @"segment_key";
+static NSString * const PARAM_KEY_SEGMENT_VALUE = @"segment_value";
+static NSString * const PARAM_KEY_SEGMENT = @"segment";
+static NSString * const PARAM_KEY_PERIOD = @"isNewPeriod";
+static NSString * const PARAM_KEY_LIST = @"list";
+
+static NSString * const EVENT_AD_MAX_INITIALIZE = @"Ad_Max_Initialize";
+static NSString * const EVENT_KEY_BEGIN_SEGMENT = @"begin_segment";
+static NSString * const EVENT_KEY_SEGMENT_INITIALIZE_SUCCESS = @"segment_initialize_Success";
+static NSString * const EVENT_KEY_SEGMENTED = @"isSegment";
 
 
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
 static NSString * const MAX_DISABLE_CACHE_PARAM_KEY = @"disable_b2b_ad_unit_ids";
-static NSString * const META_KEY_USERVALUE_IDS = @"OxUserValueIDs";
-static NSString * const META_KEY_DEFAULT_VALUES = @"OxDefaultValues";
 
 static NSString * const FAIL_KEY_ADSDK = @"AdSdkDiscovery";
 

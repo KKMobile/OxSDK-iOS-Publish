@@ -10,7 +10,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MaxAdSdkManager : BaseAdManager
 
+@property(nonatomic, assign) BOOL isSetSegmented;
+
 + (nonnull instancetype)sharedInstance;
+
+- (void)updateSegment;
 
 @end
 

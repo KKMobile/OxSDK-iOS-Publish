@@ -29,7 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 //不再建议使用此方法
 - (void)configApplovinKeywords;
+
 - (NSArray<MASegment *> *)configApplovinSegments;
+- (NSDictionary *)defaultSegmentFromRemoteConfig;
 
 - (void)setPropLtAdValue:(NSString *)propLtv;
 
