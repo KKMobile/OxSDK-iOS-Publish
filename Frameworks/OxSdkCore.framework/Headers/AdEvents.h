@@ -173,6 +173,9 @@ static NSString * const PARAM_KEY_SEGMENT_VALUE = @"segment_value";
 static NSString * const PARAM_KEY_SEGMENT = @"segment";
 static NSString * const PARAM_KEY_PERIOD = @"isNewPeriod";
 static NSString * const PARAM_KEY_LIST = @"list";
+static NSString * const PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
+
+
 
 static NSString * const EVENT_AD_MAX_INITIALIZE = @"Ad_Max_Initialize";
 static NSString * const EVENT_KEY_BEGIN_SEGMENT = @"begin_segment";
