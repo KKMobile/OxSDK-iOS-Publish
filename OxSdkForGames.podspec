@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "2.0-PR-MayCrash-202406161500-1130"#版本号
+    spec.version      = "1.3.2.0-RC01-202506191730"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,12 +26,12 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-    spec.dependency 'OxSdkCore', '1.0-PR-MayCrash-202405202020-1130'
+    spec.dependency 'OxSdkCore', '1.3.2.0-RC01-202506191730'
     
     spec.dependency 'OxAPSAdapter', '5.2.0.0'
     spec.dependency 'OxBidMachineAdapter', '3.0.1.0'
     spec.dependency 'OxChartboostAdapter', '9.8.1.0'
-    spec.dependency 'OxFacebookAdapter', '6.17.1.0'
+    spec.dependency 'OxFacebookAdapter', '6.20.0.0'
     spec.dependency 'OxFyberAdapter', '8.3.6.0'
     spec.dependency 'OxInmobiAdapter', '10.7.5.1'
     spec.dependency 'OxIronSourceAdapter', '8.3.0.0.1'
