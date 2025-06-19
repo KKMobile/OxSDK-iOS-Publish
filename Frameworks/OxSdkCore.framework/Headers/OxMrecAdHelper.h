@@ -13,12 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxMrecAdHelper : OxAdHelper<IBannerAd>
 
-@property (nonatomic, weak) id<MrecInternalAdDelegate>  mInternalAddelegate;
 @property (nonatomic, weak)id<MrecAdDelegate> mAddelegate;
-@property (nonatomic, assign) bool  mIsReady;
-@property (nonatomic, assign) bool  mAutoRefresh;
-@property (nonatomic, strong) NSString *loadPlacement;
-- (void)createAd;
+
++ (OxMrecAdHelper *)createAdWithCurrentVC:(UIViewController *)currentVC adUnitID:(NSString *)adUnitID;
 
 @end
 

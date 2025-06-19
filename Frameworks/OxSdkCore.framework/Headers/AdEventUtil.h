@@ -15,6 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement;
 + (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement;
 
+// uservalue
++ (void)logAdUserValueDurationEvent:(NSString *)adUnitId count:(NSInteger)count ecpm:(float)ecpm function:(NSString *)function;
++ (void)logAdUserValueError:(NSString *)order function:(NSString *)function error:(NSString *)error;
+
+
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
 
 /// 客户端打点
@@ -22,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 请求广告
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement;
++ (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestNumber:(NSInteger)requestNumber;
 
 // 加载成功
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement      loadedDuration:(double)loadedDuration bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName
@@ -31,7 +37,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdLoadFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement error:(nullable NSString*)error failedDuration:(double)failedDuration;
 
 // 客户端调用 showAd 系列方法
-+ (void)trackAdShowEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement      limitation:(nullable NSString*)limitation;
++ (void)trackAdShowEventAdformat:(NSString *)adFormat
+                        adUnitId:(NSString *)adUnitId
+                       placement:(NSString *)placement
+                      limitation:(NSString *)limitation
+              showFailedDuration:(double)showFailedDuration
+                         isReady:(BOOL)isReady;
 
 // 客户端调用 showAd 后，Sdk 进行必要检查（比如 isReady（）），检查通过后调用 Mediation 的广告展示 API。
 + (void)trackAdShowingEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement networkNamee:(nullable NSString *) networkName creativeId:(nullable NSString *)creativeId;
@@ -61,6 +72,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;
+
++ (NSInteger)getNetworkState;
 
 @end
 

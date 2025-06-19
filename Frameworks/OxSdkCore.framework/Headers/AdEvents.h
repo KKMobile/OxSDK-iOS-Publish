@@ -140,14 +140,38 @@ static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
 static NSString * const PARAM_CHANNEL = @"Channel";
 static NSString * const PARAM_CAMPAIGN = @"Campaign";
+static NSString * const PARAM_REQUEST_NUMBER = @"RequestNumber";
 static NSString * const PARAM_MEMORY_LIMIT_TYPE = @"MemoryLimitType";
 static NSString * const PARAM_ATT_ACCEPTED = @"IsAttAccepted";
+static NSString * const PARAM_AD_STATUS = @"ad_status";
+static NSString * const PARAM_PRE_AD_ERROR_CODE = @"pre_ad_error_code";
+static NSString * const PARAM_IS_LOAD_FAIL_RETRY = @"is_load_fail_retry";
+static NSString * const PARAM_IS_Ready = @"is_ready";
+
+static NSString * const EVENT_AD_USER_VALUE_DURATION = @"Ad_User_Value_Duration";
+static NSString * const EVENT_AD_USER_VALUE_ERROR = @"Ad_User_Value_Error";
+static NSString * const PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";
+static NSString * const PARAM_KEY_COUNT = @"count";
+static NSString * const PARAM_KEY_ORDER = @"order";
+static NSString * const PARAM_KEY_FUNCTION = @"function";
+static NSString * const PARAM_KEY_ERROR = @"error";
+static NSString * const PARAM_KEY_VALUE = @"value";
+static NSString * const PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
 
 
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
 static NSString * const MAX_DISABLE_CACHE_PARAM_KEY = @"disable_b2b_ad_unit_ids";
+static NSString * const META_KEY_USERVALUE_IDS = @"OxUserValueIDs";
+static NSString * const META_KEY_DEFAULT_VALUES = @"OxDefaultValues";
 
 static NSString * const FAIL_KEY_ADSDK = @"AdSdkDiscovery";
+
+
+static NSString * const AD_LOAD_ERROR_ADAPTER_REQUEST_TIMEOUT = @"Adapter request timeout";
+static NSString * const AD_LOAD_ERROR_ADAPTER_REQUEST_FLOOR_TIMEOUT = @"_Floor_Timeout";
+static NSString * const AD_LOAD_ERROR_AD_SHOW_RESTRICT = @"Ad Show Restrict";
+static NSString * const AD_LOAD_ERROR_AD_LOAD_RESTRICT = @"Ad Load Restrict";
+static NSString * const AD_LOAD_ERROR_AD_DISABLE_ID = @"Ad Disable ID";
 
 
 #endif /* AdEvents_h */

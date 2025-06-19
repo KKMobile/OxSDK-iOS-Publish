@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OxOpenAdsAdHelper : OxAdHelper <IFullScreenAd>
 
 @property (nonatomic, weak) id<OpenAdsAdDelegate> mAddelegate;
-@property (nonatomic, weak) id<OpenAdsInternalAdDelegate> mInternalAddelegate;
-- (void)createAd;
+
++ (OxOpenAdsAdHelper *)createAdWithCurrentVC:(UIViewController *)currentVC adUnitID:(NSString *)adUnitID;
 
 @end
 

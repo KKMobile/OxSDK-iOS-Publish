@@ -11,21 +11,13 @@
 #import "RewardedInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class OxRewardedAd;
+
 @interface OxRewardedAdHelper : OxAdHelper<IFullScreenAd>
 
 @property (nonatomic, weak) id<RewardedAdDelegate> mAddelegate;
-@property (nonatomic, weak) id<RewardedInternalAdDelegate> mInternalAddelegate;
 
-@property (nonatomic, assign) bool mUserRewarded;
-
-@property (nonatomic, assign) double mOnRewardedVideoStartedTime;
-
-@property (nonatomic, assign) NSInteger retryAttempt;
-@property (nonatomic, assign) BOOL mReload;
-@property (nonatomic, assign) BOOL mIsReloadingInLoadFailed;
-@property (nonatomic, assign) BOOL mIsReloadingInDisplayFailed;
-
-- (void)createAd;
++ (OxRewardedAdHelper *)createAdWithCurrentVC:(UIViewController *)currentVC adUnitID:(NSString *)adUnitID;
 
 
 @end

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nonnull instancetype)sharedInstance;
 
 // 1 Google UMP  0 Max
-@property (nonatomic,assign) int gdprTool;
+@property (nonatomic, assign) int gdprTool;
 
 @end
 

@@ -40,6 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIViewController *)mavlVisibleViewController;
 
++ (double)getDuration:(double)latestTimestamp;
+
 @end
 
 NS_ASSUME_NONNULL_END

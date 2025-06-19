@@ -15,10 +15,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class OxAd;
+
+typedef enum : NSUInteger {
+    LoadStatus_Normal,
+    LoadStatus_Running
+} LoadStatus;
+
 
 @interface OxAdHelper : NSObject
 
 @property (nonatomic, weak) UIViewController *mViewController;
+@property (nonatomic, assign) NSString *mOriginalAdunitId;
 @property (nonatomic, strong) NSString *mAdunitId;
 @property (nonatomic, assign) double mRequestTimestamp;
 @property (nonatomic, assign) double mShowingTimestamp;
@@ -29,9 +37,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *mNetworkName;
 @property (nonatomic, strong) NSString *mCreativeId;
 
+@property (nonatomic, strong) NSArray<NSString *> *mAdUnitIds;
+@property (nonatomic, assign) NSInteger layers;  // 请求当前的层数
+@property (nonatomic, assign) BOOL isLastLayers;  // 是否是最后一个请求回来的id
+
+
 @property(nonatomic, strong)NSMutableDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
 
-- (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId;
 
 - (void)loadAd;
 
@@ -59,6 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
      * @param limitation 限制本次广告展示的原因。
      */
 - (void)onClientShowingLimitation:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
+- (void)clientInvokingShowAd:(nullable NSString *)placement limitation:(nullable NSString *)limitation networkName:(NSString *)networkName creativeId:(NSString *)creativeId;
 
 /**
      * 客户端调用 showAd 系列方法。
@@ -72,6 +86,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)appendLimitation:(NSString *)limitation;
 
 -(void) setExtraParametersForMax:(NSString *)key value:(NSString *)value;
+
+- (NSInteger)findInsertPosition:(OxAd *)ad inCacheAds:(NSArray<OxAd *> *)cacheAds;
 
 @end
 
