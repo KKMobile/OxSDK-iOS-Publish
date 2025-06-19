@@ -54,6 +54,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxFirebasePlugin', '2.0.0-202501021730'
     spec.dependency 'OxTAPlugin', '2.0.0-202411251600'
     spec.dependency 'OxRemoteConfigPlugin', '2.0.0-202411251600'
-    spec.dependency 'OxDiscoveryPlugin', '3.0.0-202504021600'
+    spec.dependency 'OxDiscoveryPlugin', '3.0.0-202504152000'
     
 end
