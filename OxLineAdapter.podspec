@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxLineAdapter"#SDK名称
-    spec.version      = "2.9.20241106.0"#版本号
+    spec.version      = "2.9.20250512.0"#版本号
     spec.summary      = "OxAdSdkAdapter for Line applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,6 +26,6 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     
-    spec.dependency 'AppLovinMediationLineAdapter', '2.9.20241106.1'
-    spec.dependency 'GoogleMobileAdsMediationLine','2.9.20241106.3'
+    spec.dependency 'AppLovinMediationLineAdapter', '2.9.20250512.0'
+    spec.dependency 'GoogleMobileAdsMediationLine','2.9.20250512.0'
 end
