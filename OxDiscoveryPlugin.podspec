@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxDiscoveryPlugin"#SDK名称
-    spec.version      = "3.0.1-202508141630"#版本号
+    spec.version      = "3.0.1-202508141900"#版本号
     spec.summary      = "OxAdSdk for Discovery applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
