@@ -18,41 +18,16 @@ NS_ASSUME_NONNULL_BEGIN
 @class OxAd;
 
 typedef enum : NSUInteger {
-    LoadStatus_Normal,
+    LoadStatus_Normal = 0,
     LoadStatus_Running
 } LoadStatus;
 
 
+
 @interface OxAdHelper : NSObject
 
-@property (nonatomic, weak) UIViewController *mViewController;
-@property (nonatomic, assign) NSString *mOriginalAdunitId;
-@property (nonatomic, strong) NSString *mAdunitId;
-@property (nonatomic, assign) double mRequestTimestamp;
-@property (nonatomic, assign) double mShowingTimestamp;
-@property (nonatomic, assign) double mLastShowFailedTimestamp;
-@property (nonatomic, strong) NSString *mLoadPlacement;
-@property (nonatomic, strong) NSString *mShowPlacement;
-@property (nonatomic, strong) NSString *mAdStatus;
-@property (nonatomic, strong) NSString *mNetworkName;
-@property (nonatomic, strong) NSString *mCreativeId;
-
-@property (nonatomic, strong) NSArray<NSString *> *mAdUnitIds;
-@property (nonatomic, assign) NSInteger layers;  // 请求当前的层数
-@property (nonatomic, assign) BOOL isLastLayers;  // 是否是最后一个请求回来的id
-
-
-@property(nonatomic, strong)NSMutableDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
-
-- (instancetype)initWithCurrentVC:(UIViewController *)VC AdUnitId:(NSString*)adunitId;
-
 - (void)loadAd;
-
 - (void)loadAd:(NSString *)placement;
-
-- (double)getDuration:(double)latestTimestamp;
-
-- (void)loadAdInternal:(NSString *)placement;
 
 - (void)destoryAd;
 
@@ -72,6 +47,7 @@ typedef enum : NSUInteger {
      * @param limitation 限制本次广告展示的原因。
      */
 - (void)onClientShowingLimitation:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
+
 - (void)clientInvokingShowAd:(nullable NSString *)placement limitation:(nullable NSString *)limitation networkName:(NSString *)networkName creativeId:(NSString *)creativeId;
 
 /**
@@ -83,11 +59,12 @@ typedef enum : NSUInteger {
      */
 - (void)clientInvokingShowAd:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
 
-- (NSString *)appendLimitation:(NSString *)limitation;
+/// 设置 Max 扩展属性
+/// @param key key
+/// @param value value
+- (void)setExtraParametersForMax:(NSString *)key value:(NSString *)value;
 
--(void) setExtraParametersForMax:(NSString *)key value:(NSString *)value;
 
-- (NSInteger)findInsertPosition:(OxAd *)ad inCacheAds:(NSArray<OxAd *> *)cacheAds;
 
 @end
 

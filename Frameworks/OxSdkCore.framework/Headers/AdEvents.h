@@ -27,6 +27,13 @@ static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
 
+typedef enum : NSUInteger {
+    OxAdLoadType_Normal,
+    OxAdLoadType_Closed,
+    OxAdLoadType_LoadFailed,
+    OxAdLoadType_DesplayFailed,
+} OxAdLoadType;
+
 typedef NS_ENUM(NSInteger, DailyLevel) {
     LOW = 0,
     MEDIUM = 1,
@@ -110,6 +117,18 @@ static NSString * const EVENT_AD_SHOW_FAILED = @"Ad_Show_Failed";
 static NSString * const EVENT_AD_CLICK = @"Ad_Click";
 static NSString * const EVENT_AD_GOTTEN_CREDIT = @"Ad_GottenCredit";
 static NSString * const EVENT_AD_CLOSE = @"Ad_Close";
+static NSString * const EVENT_DELETE_EXPIRE_AD = @"Delete_Expire_Ad";
+
+static NSString * const EVENT_AD_ADAPTER_REQUEST = @"Ad_Adapter_Request";
+static NSString * const EVENT_AD_ADAPTER_LOADED = @"Ad_Adapter_Loaded";
+static NSString * const EVENT_AD_ADAPTER_FAILED = @"Ad_Adapter_Failed";
+static NSString * const EVENT_AD_ADAPTER_IMPRESSION = @"Ad_Adapter_Impression";
+static NSString * const EVENT_AD_ADAPTER_SHOW_FAILED = @"Ad_Adapter_Show_Failed";
+static NSString * const EVENT_AD_ADAPTER_GOTTEN_CREDIT = @"Ad_Adapter_GottenCredit";
+static NSString * const EVENT_AD_ADAPTER_CLICK = @"Ad_Adapter_Click";
+static NSString * const EVENT_AD_ADAPTER_CLOSE = @"Ad_Adapter_Close";
+static NSString * const EVENT_LISTENER_INTERRUPT = @"Listener_Interrupt";
+
 // Sdk
 static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
 static NSString * const EVENT_CLICK_SDK_CONSENT_BACK_KEY = @"click_sdk_consent_back_key";
@@ -122,6 +141,7 @@ static NSString * const EVENT_SHOW_SDK_CONSENT_OPTION = @"show_sdk_consent_optio
 // Param keys
 static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
 static NSString * const PARAM_AD_FORMAT = @"AdFormat";
+static NSString * const PARAM_PLACEMENT_ID = @"Placement_ID";
 static NSString * const PARAM_PLACEMENT = @"Placement";
 static NSString * const PARAM_VERSION = @"Version";
 static NSString * const PARAM_NETWORK_TYPE = @"NetworkType";
@@ -140,13 +160,19 @@ static NSString * const PARAM_SHOWING_DURATION = @"ShowingDuration";
 static NSString * const PARAM_LIMITATION = @"Limitation";
 static NSString * const PARAM_CHANNEL = @"Channel";
 static NSString * const PARAM_CAMPAIGN = @"Campaign";
-static NSString * const PARAM_REQUEST_NUMBER = @"RequestNumber";
 static NSString * const PARAM_MEMORY_LIMIT_TYPE = @"MemoryLimitType";
 static NSString * const PARAM_ATT_ACCEPTED = @"IsAttAccepted";
 static NSString * const PARAM_AD_STATUS = @"ad_status";
 static NSString * const PARAM_PRE_AD_ERROR_CODE = @"pre_ad_error_code";
 static NSString * const PARAM_IS_LOAD_FAIL_RETRY = @"is_load_fail_retry";
 static NSString * const PARAM_IS_Ready = @"is_ready";
+static NSString * const PARAM_REQUEST_TAG = @"Request_Tag";
+static NSString * const PARAM_AD_TAG = @"Ad_Tag";
+static NSString * const PARAM_KEY_CORE_LEVEL= @"core_level";
+static NSString * const PARAM_LISTENER_INTERRUPT= @"ListenerInterrupt";
+static NSString * const PARAM_LISTENER_INTERRUPT_EVENT_NAME = @"event_name";
+static NSString * const PARAM_CACHE_SIZE = @"Cache_Size";
+static NSString * const PARAM_DELETE_SIZE = @"Delete_Size";
 
 static NSString * const EVENT_AD_USER_VALUE_DURATION = @"Ad_User_Value_Duration";
 static NSString * const EVENT_AD_USER_VALUE_ERROR = @"Ad_User_Value_Error";
@@ -157,6 +183,23 @@ static NSString * const PARAM_KEY_FUNCTION = @"function";
 static NSString * const PARAM_KEY_ERROR = @"error";
 static NSString * const PARAM_KEY_VALUE = @"value";
 static NSString * const PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
+static NSString * const PARAM_KEY_CURRENCY = @"currency";
+static NSString * const PARAM_KEY_REVENUE = @"revenue";
+static NSString * const PARAM_KEY_NETWORK_NAME = @"networkName";
+static NSString * const PARAM_KEY_PLACEMENT = @"placement";
+static NSString * const PARAM_KEY_NETWORK_PLACEMENT = @"networkPlacement";
+static NSString * const PARAM_KEY_CREATIVE_IDENTIFIER = @"creativeIdentifier";
+static NSString * const PARAM_KEY_ADFORMAT = @"adformat";
+static NSString * const PARAM_KEY_COUNTRY = @"country";
+static NSString * const PARAM_KEY_AD_PLATFORM = @"ad_platform";
+static NSString * const PARAM_KEY_PRECISION_TYPE = @"precisionType";
+static NSString * const PARAM_KEY_ADNETWORK = @"adNetwork";
+static NSString * const PARAM_KEY_AD_PLATFORM_ADMOB = @"AdMob";
+static NSString * const PARAM_KEY_AD_PLATFORM_MAX = @"MAX";
+static NSString * const PARAM_USER_REVENUE = @"Ad_User_Revenue";
+static NSString * const PARAM_KEY_EVENT_TYPE = @"event_type";
+
+
 
 
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
@@ -173,5 +216,7 @@ static NSString * const AD_LOAD_ERROR_AD_SHOW_RESTRICT = @"Ad Show Restrict";
 static NSString * const AD_LOAD_ERROR_AD_LOAD_RESTRICT = @"Ad Load Restrict";
 static NSString * const AD_LOAD_ERROR_AD_DISABLE_ID = @"Ad Disable ID";
 
+#pragma mark - 消息通知
+static NSString * const OX_MAG_NETWIRKCHANGE = @"OxNetworkChangeToReachable";
 
 #endif /* AdEvents_h */

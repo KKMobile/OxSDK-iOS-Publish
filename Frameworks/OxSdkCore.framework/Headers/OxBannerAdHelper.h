@@ -8,7 +8,6 @@
 #import "OxAdHelper.h"
 #import "IBannerAd.h"
 #import "BannerAdDelegate.h"
-#import "BannerInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxBannerAdHelper : OxAdHelper<IBannerAd>

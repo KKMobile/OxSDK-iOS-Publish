@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (void)logMaxImpressionRevenue:(nonnull MAAd *)ad placement:(nullable NSString *)placement coreLevel:(NSInteger)coreLevel;
-- (void)logAdmobImpressionRevenue:(nullable NSString *)adUnitId adFormat:(nullable NSString *)adFormat adNetwork:(nullable NSString *)adNetwork advalue:(nonnull GADAdValue *)advalue placement:(nullable NSString *)placement coreLevel:(NSInteger)coreLevel;
+- (void)logMaxImpressionRevenue:(nonnull MAAd *)ad placement:(nullable NSString *)placement coreLevel:(NSInteger)coreLevel tag:(long long)tag requestTag:(long long)requestTag;
+- (void)logAdmobImpressionRevenue:(nullable NSString *)adUnitId adFormat:(nullable NSString *)adFormat adNetwork:(nullable NSString *)adNetwork advalue:(nonnull GADAdValue *)advalue placement:(nullable NSString *)placement coreLevel:(NSInteger)coreLevel tag:(long long)tag requestTag:(long long)requestTag;
 
 @end
 

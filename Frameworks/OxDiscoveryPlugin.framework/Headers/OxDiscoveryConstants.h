@@ -10,23 +10,31 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * const OXD_PARAM_KEY_VALUE = @"value";
-static NSString * const OXD_PARAM_KEY_CURRENCY = @"currency";
-static NSString * const OXD_PARAM_KEY_REVENUE = @"revenue";
-static NSString * const OXD_PARAM_KEY_NETWORK_NAME = @"networkName";
-static NSString * const OXD_PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";
-static NSString * const OXD_PARAM_KEY_PLACEMENT = @"placement";
-static NSString * const OXD_PARAM_KEY_NETWORK_PLACEMENT = @"networkPlacement";
-static NSString * const OXD_PARAM_KEY_CREATIVE_IDENTIFIER = @"creativeIdentifier";
-static NSString * const OXD_PARAM_KEY_ADFORMAT = @"adformat";
-static NSString * const OXD_PARAM_KEY_COUNTRY = @"country";
-static NSString * const OXD_PARAM_KEY_AD_PLATFORM = @"ad_platform";
-static NSString * const OXD_PARAM_KEY_PRECISION_TYPE = @"precisionType";
-static NSString * const OXD_PARAM_KEY_ADNETWORK = @"adNetwork";
-static NSString * const OXD_PARAM_KEY_CORE_LEVEL= @"core_level";
-static NSString * const OXD_AD_PLATFORM_ADMOB = @"AdMob";
-static NSString * const OXD_AD_PLATFORM_MAX = @"MAX";
+#ifdef DEBUG
+#   define ALog(...) NSLog(@"%s: %@", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
+#else
+#   define ALog(...)
+#endif
+//
+//static NSString * const OXD_PARAM_KEY_VALUE = @"value";
+//static NSString * const OXD_PARAM_KEY_CURRENCY = @"currency";
+//static NSString * const OXD_PARAM_KEY_NETWORK_NAME = @"networkName";
+//static NSString * const OXD_PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";
+//static NSString * const OXD_PARAM_KEY_PLACEMENT = @"placement";
+//static NSString * const OXD_PARAM_KEY_NETWORK_PLACEMENT = @"networkPlacement";
+//static NSString * const OXD_PARAM_KEY_CREATIVE_IDENTIFIER = @"creativeIdentifier";
+//static NSString * const OXD_PARAM_KEY_ADFORMAT = @"adformat";
+//static NSString * const OXD_PARAM_KEY_COUNTRY = @"country";
+//static NSString * const OXD_PARAM_KEY_AD_PLATFORM = @"ad_platform";
+//static NSString * const OXD_PARAM_KEY_PRECISION_TYPE = @"precisionType";
+//static NSString * const OXD_PARAM_KEY_ADNETWORK = @"adNetwork";
+//static NSString * const OXD_PARAM_KEY_CORE_LEVEL= @"core_level";
+//static NSString * const OXD_AD_PLATFORM_ADMOB = @"AdMob";
+//static NSString * const OXD_AD_PLATFORM_MAX = @"MAX";
+//static NSString * const OXD_PARAM_REQUEST_TAG = @"Request_Tag";
+//static NSString * const OXD_PARAM_AD_TAG = @"Ad_Tag";
 static NSString * const OXD_PARAM_USER_REVENUE = @"Ad_User_Revenue";
+static NSString * const OXD_PARAM_KEY_REVENUE = @"revenue";
 static NSString * const OXD_PARAM_KEY_EVENT_TYPE = @"event_type";
 
 

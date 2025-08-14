@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxMAAdRevenueDelegateImpl : NSObject<MAAdRevenueDelegate>
 
+@property (nonatomic, assign) long long mTag;
+@property (nonatomic, assign) long long mRequestTag;
 @property(nonatomic, copy) NSString* showPlacement;
 
 @end

@@ -44,6 +44,31 @@ NS_ASSUME_NONNULL_BEGIN
 // 并行数
 + (NSInteger)getParallelTasks;
 
+// Max native id 当 Banner id
++ (NSString *)getNative2BannerId;
+
+// Max native id 当插屏 ids
++ (NSString *)getNative2InterIds;
+
+// 添加额外的插屏ID
++ (NSString *)getAddInterIds;
+
+// 添加额外的RV ID
++ (NSString *)getAddRVIds;
+
+// 是否关闭 【加载失败｜展示失败 重试】 功能，格式：reward,interstitial,open,native， -1 为关闭，其他数据不关闭，比如: -1,0,0,0  这里只关闭 reward ，其他的不关闭
++ (NSString *)getDisableReload;
+
+// 广告关闭之后，是否立刻请求，格式：reward,interstitial， -1 为关闭，其他数据不关闭，比如: -1,0  这里只关闭 reward ，其他的不关闭
++ (NSString *)getDisableCloseReload;
+
+// 重试时间最大方次数，重试时间一般都是2的n次方，这里是动态获取n
++ (int)getReloadTime;
+
+// 广告缓存最大数量设置，等于 0 不生效
++ (int)getCacheAdSize;
+
+
 + (int)getGdprStyle;
 /// 是否达到内存限制
 /// - Parameter adFormat: 达到内存限制的广告格式

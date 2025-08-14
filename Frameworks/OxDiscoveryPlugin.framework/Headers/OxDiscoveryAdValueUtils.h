@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OxDiscoveryAdValueUtils : NSObject
 
 
-+ (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement coreLevel:(NSInteger)coreLevel;
-+ (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement coreLevel:(NSInteger)coreLevel;
++ (void)logMaxImpressionRevenue:(NSDictionary *)parmas;
++ (void)logAdmobImpressionRevenue:(NSDictionary *)parmas;
 
 @end
 

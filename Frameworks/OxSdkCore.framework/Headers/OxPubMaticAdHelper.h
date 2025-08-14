@@ -11,6 +11,7 @@
 @class MAInterstitialAd;
 @class MAAppOpenAd;
 @class MARewardedAd;
+@class MANativeAdLoader;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)init;
 
 + (void)enableBannerTest:(MAAdView*)adView enabled:(bool)enabled;
+
++ (void)enableNativeTest:(MANativeAdLoader *)loader enabled:(bool)enabled;
 
 + (void)enableMrecTest:(MAAdView*)adView enabled:(bool)enabled;
 

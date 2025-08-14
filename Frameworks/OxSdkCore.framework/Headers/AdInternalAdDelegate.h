@@ -11,19 +11,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol AdInternalAdDelegate <NSObject>
 
-- (void)onAdLoaded:(nonnull NSString*)adunitId placement:(nullable NSString*)placement loadedDuration:(double)loadedDuration bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName waterfallName:(nullable NSString*)waterfallName networkResponses:(NSInteger)networkResponses latencyMillis:(double)latencyMillis creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
+- (void)oxAdLoaded:(nullable id)ad;
 
-- (void)onAdLoadFailed:(nonnull NSString*)adunitId errorInfo:(NSString *)error placement:(nullable NSString*)placement failedDuration:(double)failedDuration;
+- (void)oxAdLoadFailed:(NSString *)error;
 
-- (void)onAdDisplayed:(nonnull NSString*)adunitId placement:(nullable NSString*)placement bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName waterfallName:(nullable NSString*)waterfallName networkResponses:(NSInteger)networkResponses latencyMillis:(double)latencyMillis creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
+- (void)oxAdDisplayed:(nullable id)ad;
 
-- (void)onAdDisplayFailed:(nonnull NSString*)adunitId errorInfo:(nonnull NSString *)error placement:(nullable NSString*)placement bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName waterfallName:(nullable NSString*)waterfallName networkResponses:(NSInteger)networkResponses creativeId:(nullable NSString*)creativeId failedDuration:(double)failedDuration;
+- (void)oxAdDisplayFailed:(nullable id)ad errorInfo:(nonnull NSString *)error;
 
-- (void)onAdClicked:(nonnull NSString*)adunitId placement:(nullable NSString*)placement bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName waterfallName:(nullable NSString*)waterfallName networkResponses:(NSInteger)networkResponses  creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
+- (void)oxAdClicked:(nullable id)ad;
 
-- (void)onAdOpened;
+- (void)oxAdOpened;
 
-- (void)onAdClosed:(nonnull NSString*)adunitId placement:(nullable NSString*)placement bannerSize:(nullable NSString*)bannerSize networkName:(nullable NSString*)networkName waterfallName:(nullable NSString*)waterfallName networkResponses:(NSInteger)networkResponses latencyMillis:(double)latencyMillis creativeId:(nullable NSString*)creativeId revenue:(double)revenue showingDuration:(double)showingDuration;
+- (void)oxAdClosed:(nullable id)ad;
 
 @end
 

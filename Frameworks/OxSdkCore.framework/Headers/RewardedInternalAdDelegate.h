@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol RewardedInternalAdDelegate <NSObject, AdInternalAdDelegate>
 
-- (void)onRewardedVideoStarted;
+- (void)oxRewardedVideoStarted;
 
-- (void)onRewardedVideoCompleted;
+- (void)oxRewardedVideoCompleted;
 
-- (void)onUserRewarded:(AdReward *)reward adunitId:(nonnull NSString*)adunitId placement:(nullable NSString*)placement  networkName:(nullable NSString*)networkName waterfallName:(nullable NSString*)waterfallName networkResponses:(NSInteger)networkResponses creativeId:(nullable NSString*)creativeId revenue:(double)revenue;
+- (void)oxUserRewarded:(AdReward *)reward ad:(nullable id)ad;
 
 @end
 

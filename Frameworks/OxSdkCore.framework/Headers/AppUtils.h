@@ -42,6 +42,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (double)getDuration:(double)latestTimestamp;
 
++ (BOOL)isNetworkAvailable;
+
+// 获取 网络类型 + Vpn 状态。
++ (NSInteger)getNetworkTypeWithVpnState;
+
+// 获取网络连接状态。
++ (NSInteger)getNetworkState;
+
 @end
 
 NS_ASSUME_NONNULL_END

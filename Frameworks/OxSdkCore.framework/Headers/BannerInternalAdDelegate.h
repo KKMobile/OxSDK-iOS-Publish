@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol BannerInternalAdDelegate <NSObject, AdInternalAdDelegate>
 
-- (void)onAdExpanded;
+- (void)oxAdExpanded;
 
-- (void)onAdCollapsed;
+- (void)oxAdCollapsed;
 
 @end
 
