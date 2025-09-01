@@ -68,6 +68,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 广告缓存最大数量设置，等于 0 不生效
 + (int)getCacheAdSize;
 
+// 是否打开超时任务
++ (BOOL)getIsOpenTimeout;
+
+/// 获取远端配置的超时时间
++ (int)getTimeOutSeconds;
+
 
 + (int)getGdprStyle;
 /// 是否达到内存限制
