@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxIronSourceAdapter"#SDK名称
-    spec.version      = "8.3.0.0.1"#版本号
+    spec.version      = "8.11.0.0.1"#版本号
     spec.summary      = "OxAdSdkAdapter for IronSource applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -28,5 +28,5 @@ Pod::Spec.new do |spec|
     spec.ios.vendored_frameworks = 'Frameworks/OxIronSourceAdapter.framework'
     
     spec.dependency 'Google-Mobile-Ads-SDK'
-    spec.dependency 'AppLovinMediationIronSourceAdapter', '8.3.0.0.2'
+    spec.dependency 'AppLovinMediationIronSourceAdapter', '8.11.0.0.0'
 end
