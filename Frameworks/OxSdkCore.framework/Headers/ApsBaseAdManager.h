@@ -6,22 +6,30 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <DTBiOSSDK/DTBiOSSDK.h>
+
+typedef NS_ENUM(NSInteger, OxAPSAdFormat) {
+    OxAPSAdFormatBanner = 0,       /* 320x50 */
+    OxAPSAdFormatMREC,         /* 300x250 */
+    OxAPSAdFormatLeaderBoard,  /* 728x90 */
+    OxAPSAdFormatInterstitial, /* full screen */
+    OxAPSAdFormatRewardedVideo, /* full screen */
+    OxAPSAdFormatInterstitialVideo /* video player width and height set by publisher, default is 320x480*/
+};
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^OnApsSuccessBlock)(id response);
 
-typedef void (^OnApsSuccessBlock)(DTBAdResponse  * _Nullable response);
+typedef void (^OnApsFailedBlock)(__nullable id errorInfo);
 
-typedef void (^OnApsFailedBlock)(DTBAdErrorInfo  * _Nullable errorInfo);
-
-@interface ApsBaseAdManager : NSObject<DTBAdCallback>
+@interface ApsBaseAdManager : NSObject
 
 @property (nonatomic, copy) OnApsSuccessBlock apsSuccessBlock;
 @property (nonatomic, copy) OnApsFailedBlock  apsFailedBlock;
 
 - (BOOL)shouldLoadAps;
 - (void)loadApsAd;
+- (void)loadApsAd:(NSString *)amazonAdSlotId adFormat:(OxAPSAdFormat)adFormat;
 - (void)checkApsInit:(void (^)(BOOL isInitialized))callback;
 
 

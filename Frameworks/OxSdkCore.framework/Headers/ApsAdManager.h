@@ -6,18 +6,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <DTBiOSSDK/DTBiOSSDK.h>
-#import <AppLovinSDK/AppLovinSDK.h>
 #import "AdEvents.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ApsAdManager : NSObject
 
+@property(nonatomic, assign, readonly) BOOL isReady;
+
 + (nonnull instancetype)sharedInstance;
 
 - (void)initApsSdk;
 
-- (void)setApsTestMode:(BOOL)mode;
+- (NSString *)getApsAppId;
 
 @end
 

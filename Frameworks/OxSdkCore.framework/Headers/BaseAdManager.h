@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <AppLovinSDK/AppLovinSDK.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
-#import <FBAudienceNetwork/FBAudienceNetwork.h>
 #import "AdEvents.h"
 #import "ApsAdManager.h"
 NS_ASSUME_NONNULL_BEGIN

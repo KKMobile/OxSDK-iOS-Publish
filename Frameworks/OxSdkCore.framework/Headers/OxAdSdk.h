@@ -10,7 +10,7 @@
 #import "OxAdSdkManager.h"
 #import "OxGamesEventUtil.h"
 
-#define OxSDK_VERSION    @"1.2.2.0"
+#define OxSDK_VERSION    @"1.2.3.0-RC01-202509041630"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -92,6 +92,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 获取google的adaptive Banner的尺寸，方便页面布局
 + (CGSize)getAdaptiveBannerAdSize;
 
+// 设置是否开启 Facebook 打点 默认 YES
++ (void)enableFBEvents:(BOOL)enable;
+
+// 设置是否开启 TA 打点 默认YES
++ (void)enableTAEvents:(BOOL)enable;
 
 /// 设置  segment
 /// - Parameter segment: 需要在  sdk 初始化之前调用

@@ -9,7 +9,7 @@
 #define AdEvents_h
 
 #ifdef DEBUG
-#define OXLog(fmt, ...) NSLog((@"OXSDK:%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__);
+#define OXLog(fmt, ...) NSLog((@"OxAdSdk:%s " fmt), __PRETTY_FUNCTION__, ##__VA_ARGS__);
 #else
 #define OXLog(...)
 #endif
@@ -98,6 +98,13 @@ typedef enum : NSUInteger {
     GDPR_STATE_CONSENT_ACCEPTED,
 } GDPR_STATUS;
 
+typedef NS_ENUM(NSInteger, OxAnalyticsProvider) {
+    OxAnalyticsProviderNone = 0,
+    OxAnalyticsProviderFirebase = 1 << 0, //二进制表示为 0001
+    OxAnalyticsProviderAdjust = 1 << 1,   //二进制表示为 0010
+    OxAnalyticsProviderFacebook = 1 << 2, //二进制表示为 0100
+    OxAnalyticsProviderTA = 1 << 3        //二进制表示为 1000
+};
 
 //Basic
 static NSString * const EVENT_TOP10 = @"AdLTV_OneDay_Top10Percent";
@@ -158,6 +165,26 @@ static NSString * const PARAM_MEMORY_LIMIT_TYPE = @"MemoryLimitType";
 static NSString * const PARAM_ATT_ACCEPTED = @"IsAttAccepted";
 static NSString * const PARAM_ADMOB = @"AdMob";
 static NSString * const PARAM_MAX = @"MAX";
+
+static NSString * const PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";
+static NSString * const PARAM_KEY_ERROR = @"error";
+static NSString * const PARAM_KEY_VALUE = @"value";
+static NSString * const PARAM_KEY_CURRENCY = @"currency";
+static NSString * const PARAM_KEY_REVENUE = @"revenue";
+static NSString * const PARAM_KEY_NETWORK_NAME = @"networkName";
+static NSString * const PARAM_KEY_PLACEMENT = @"placement";
+static NSString * const PARAM_KEY_NETWORK_PLACEMENT = @"networkPlacement";
+static NSString * const PARAM_KEY_CREATIVE_IDENTIFIER = @"creativeIdentifier";
+static NSString * const PARAM_KEY_ADFORMAT = @"adformat";
+static NSString * const PARAM_KEY_COUNTRY = @"country";
+static NSString * const PARAM_KEY_AD_PLATFORM = @"ad_platform";
+static NSString * const PARAM_KEY_PRECISION_TYPE = @"precisionType";
+static NSString * const PARAM_KEY_ADNETWORK = @"adNetwork";
+static NSString * const PARAM_KEY_AD_PLATFORM_ADMOB = @"AdMob";
+static NSString * const PARAM_KEY_AD_PLATFORM_MAX = @"MAX";
+static NSString * const PARAM_USER_REVENUE = @"Ad_User_Revenue";
+static NSString * const PARAM_KEY_EVENT_TYPE = @"event_type";
+static NSString * const PARAM_KEY_CORE_LEVEL= @"core_level";
 
 
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";

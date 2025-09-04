@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) BaseAdManager  *mAdManager; // 当前的聚合平台adManager
 @property (nonatomic, assign) OxSdkMediationType currentMediationType; // 当前的聚合平台
 @property (nonatomic, copy) OnSdkInitComplete sdkInitComplete;
+@property (nonatomic, assign) BOOL    enableFBEvents;  // 开启 FB 打点 默认 YES
+@property (nonatomic, assign) BOOL    enableTAEvents;  // 开启 TA 打点 默认YES
 
 + (nonnull instancetype)sharedInstance;
 
