@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.3.0-RC01-202509041910"#版本号
+  spec.version      = "1.2.3.0-RC01-202509041920"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -28,6 +28,8 @@ Pod::Spec.new do |spec|
   
   spec.vendored_frameworks = 'Frameworks/OxSdkCore.framework'#SDK相对本文件路径
   spec.resources = ["ResBundle/Core/OxSdkRes.bundle","ResBundle/Core/Language.bundle"]
+
+  spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
 
   spec.dependency 'PureLayout'
 
