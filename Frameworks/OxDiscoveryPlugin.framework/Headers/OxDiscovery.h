@@ -11,9 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class MAAd;
-@class GADAdValue;
-
 @interface OxDiscovery : NSObject
 
 + (instancetype)sharedInstance;

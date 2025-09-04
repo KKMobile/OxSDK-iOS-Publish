@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #ifdef DEBUG
-#   define ALog(...) NSLog(@"%s: %@", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
+#   define ALog(...) NSLog(@"OxAdSdk %s: %@", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
 #else
 #   define ALog(...)
 #endif
