@@ -1,0 +1,36 @@
+//
+//  OxPubMaticAdHelper.h
+//  SwithMediationDemo
+//
+//  Created by BJMM100001 on 2022/6/24.
+//
+
+#import <Foundation/Foundation.h>
+
+@class MAAdView;
+@class MAInterstitialAd;
+@class MAAppOpenAd;
+@class MARewardedAd;
+@class MANativeAdLoader;
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface OxPubMaticAdHelper : NSObject
+
++ (void)init;
+
++ (void)enableBannerTest:(MAAdView*)adView enabled:(bool)enabled;
+
++ (void)enableNativeTest:(MANativeAdLoader *)loader enabled:(bool)enabled;
+
++ (void)enableMrecTest:(MAAdView*)adView enabled:(bool)enabled;
+
++ (void)enableInterstitialTest:(MAInterstitialAd*)interstitialAd enabled:(bool)enabled;
+
++ (void)enableOpenAdTest:(MAAppOpenAd*)openAd enabled:(bool)enabled;
+
++ (void)enableRewardedTest:(MARewardedAd*)rewardedAd enabled:(bool)enabled;
+
+@end
+
+NS_ASSUME_NONNULL_END
