@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxFirebasePlugin"#SDK名称
-    spec.version      = "2.0.0-202501021730"#版本号
+    spec.version      = "2.0.1-202509041700"#版本号
     spec.summary      = "OxAdSdk for Firebase applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
