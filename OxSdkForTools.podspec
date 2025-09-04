@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.2.3.0-RC01-202509041920"#版本号
+  spec.version      = "1.2.3.0-RC01-202509042130"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -46,7 +46,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'OxPangleAdapter', '6.2.0.9.1'
  
   spec.dependency 'OxRemoteConfigPlugin', '2.0.0-202411251600'
-  spec.dependency 'OxDiscoveryPlugin', '3.0.1-202508141900'
-  spec.dependency 'OxFirebasePlugin', '2.0.1-202509041700'
+  spec.dependency 'OxDiscoveryPlugin', '3.0.2-202509042130'
+  spec.dependency 'OxFirebasePlugin', '2.0.0-202411251600'
     
 end
