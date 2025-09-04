@@ -24,7 +24,6 @@
 #import "OxUnitAdsGdprUtil.h"
 #import "OxNativeViewBinder.h"
 #import "OxNativeAdInfo.h"
-#import "AdLTVTracker.h"
 
 //! Project version number for OxSdkCore.
 FOUNDATION_EXPORT double OxSdkCoreVersionNumber;

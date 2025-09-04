@@ -1,5 +1,5 @@
 //
-//  AdLTVTracker.h
+//  OxAdLTVTracker.h
 //  SwithMediationDemo
 //
 //  Created by BJMM100001 on 2022/7/11.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdLTVTracker : NSObject
+@interface OxAdLTVTracker : NSObject
 
 + (void)addAdValue:(double)value;
 
