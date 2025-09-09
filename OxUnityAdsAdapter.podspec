@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxUnityAdsAdapter"#SDK名称
-    spec.version      = "4.12.3.1"#版本号
+    spec.version      = "4.16.1.0"#版本号
     spec.summary      = "OxAdSdk for UnityAds applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -28,7 +28,8 @@ Pod::Spec.new do |spec|
     spec.resource_bundles = {'OxUnityAdsAdapter' => ['ResBundle/PrivacyInfo.xcprivacy']}
   
     spec.ios.vendored_frameworks = 'Frameworks/OxUnityAdsAdapter.framework'
+    spec.static_framework = true
 
-    spec.dependency 'Google-Mobile-Ads-SDK'
-    spec.dependency 'AppLovinMediationUnityAdsAdapter', '4.12.3.0'
+    spec.dependency 'AppLovinMediationUnityAdsAdapter', "4.16.1.0"
+    spec.dependency 'GoogleMobileAdsMediationUnity', "4.16.1.0"  
 end
