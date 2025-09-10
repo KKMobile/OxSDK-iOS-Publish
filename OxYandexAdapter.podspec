@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxYandexAdapter"#SDK名称
-    spec.version      = "7.5.0.0"#版本号
+    spec.version      = "7.15.1.0"#版本号
     spec.summary      = "OxAdSdkAdapter for Yandex applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+    spec.static_framework = true
     
-    spec.dependency 'AppLovinMediationYandexAdapter','7.5.0.1'
+    spec.dependency 'AppLovinMediationYandexAdapter','7.15.1.0'
 end
