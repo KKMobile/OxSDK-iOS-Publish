@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkCore"#SDK名称
-    spec.version      = "12.0-MO-MaxMultiCall-202509011700-1330"#版本号
+    spec.version      = "12.0-MO-MaxMultiCall-202509151500-1330"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
