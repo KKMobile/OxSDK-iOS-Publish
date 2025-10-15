@@ -16,8 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
 
 // uservalue
-+ (void)logAdUserValueDurationEvent:(NSString *)adUnitId count:(NSInteger)count ecpm:(float)ecpm function:(NSString *)function;
-+ (void)logAdUserValueError:(NSString *)order function:(NSString *)function error:(NSString *)error;
++ (void)logAdUserValueError:(NSString *)error;
++ (void)logAdUserValueError:(NSString *)error type:(AdUserValueErrorType)type;
++ (void)logAdUserValue:(NSString *)adUnitId count:(NSInteger)count value:(float)value isNewPeriod:(BOOL)isNewPeriod;
++ (void)logAdUserValueSegment:(NSString *)adUnitId value:(float)value factor:(float)factor segmentValue:(NSString *)segmentValue;
++ (void)logAdUserValueNoSegment:(NSString *)adUnitId value:(float)value factor:(float)factor;
++ (void)logAdSegment:(NSDictionary *)segmentMap;
 
 
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
@@ -27,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
 + (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
++ (void)trackAdAdapterLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad floorPrice:(nullable NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
 
 
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;
@@ -59,6 +64,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackListenerInterruptEvent:(NSString *)eventName adFormat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag error:(NSString *)error;
 
 + (void)trackDeleteExpireAdEvent:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag deleteSize:(NSInteger)deleteSize cacheSize:(NSInteger)cacheSize;
++ (void)trackReplaceAdEventAdformat:(NSString *)adFormat oldAdUnitId:(NSString *)oldAdUnitId newAdUnitId:(NSString *)newAdUnitId oldValue:(double)oldValue newValue:(long long)newValue tag:(long long)tag cacheModel:(NSString *)cacheModel cacheAdSize:(NSInteger)cacheAdSize;
+
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;

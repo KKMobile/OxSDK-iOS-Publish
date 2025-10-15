@@ -12,6 +12,8 @@
 #define OX_IS_IPAD  ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 #define OX_FACTOR_WIDTH (OX_IS_IPAD ? 1: (OX_SCREEN_WIDTH / 375.0))
 #define OX_SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define USERVALUESEGMENTKEY @"120"
+#define MILLISECOND_OF_ONE_MINUTE 60
 
 // Adformat
 static NSString * const AdFormat_BANNER = @"banner";
@@ -33,6 +35,14 @@ typedef enum : NSUInteger {
     OxAdLoadType_LoadFailed,
     OxAdLoadType_DesplayFailed,
 } OxAdLoadType;
+
+typedef enum : NSUInteger {
+    AdUserValueErrorType_Default,
+    AdUserValueErrorType_SetValue,
+    AdUserValueErrorType_SetSegment,
+    AdUserValueErrorType_GetSegment,
+    AdUserValueErrorType_UpdateSegment
+} AdUserValueErrorType;
 
 typedef NS_ENUM(NSInteger, DailyLevel) {
     LOW = 0,
@@ -118,6 +128,7 @@ static NSString * const EVENT_AD_CLICK = @"Ad_Click";
 static NSString * const EVENT_AD_GOTTEN_CREDIT = @"Ad_GottenCredit";
 static NSString * const EVENT_AD_CLOSE = @"Ad_Close";
 static NSString * const EVENT_DELETE_EXPIRE_AD = @"Delete_Expire_Ad";
+static NSString * const EVENT_DELETE_REPLACE_AD = @"Delete_Replace_Ad";
 
 static NSString * const EVENT_AD_ADAPTER_REQUEST = @"Ad_Adapter_Request";
 static NSString * const EVENT_AD_ADAPTER_LOADED = @"Ad_Adapter_Loaded";
@@ -128,6 +139,14 @@ static NSString * const EVENT_AD_ADAPTER_GOTTEN_CREDIT = @"Ad_Adapter_GottenCred
 static NSString * const EVENT_AD_ADAPTER_CLICK = @"Ad_Adapter_Click";
 static NSString * const EVENT_AD_ADAPTER_CLOSE = @"Ad_Adapter_Close";
 static NSString * const EVENT_LISTENER_INTERRUPT = @"Listener_Interrupt";
+
+
+// uservalue event
+static NSString * const EVENT_AD_USER_VALUE_ERROR = @"Ad_User_Value_Error";
+static NSString * const EVENT_AD_USER_VALUE = @"Ad_User_Value";
+static NSString * const EVENT_AD_USER_VALUE_SEGMENT = @"Ad_User_Value_Segment";
+static NSString * const EVENT_AD_USER_VALUE_NO_SEGMENT = @"Ad_User_Value_No_Segment";
+static NSString * const EVENT_AD_SET_SEGMENT = @"Ad_Set_Segment";
 
 // Sdk
 static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
@@ -173,16 +192,19 @@ static NSString * const PARAM_LISTENER_INTERRUPT= @"ListenerInterrupt";
 static NSString * const PARAM_LISTENER_INTERRUPT_EVENT_NAME = @"event_name";
 static NSString * const PARAM_CACHE_SIZE = @"Cache_Size";
 static NSString * const PARAM_DELETE_SIZE = @"Delete_Size";
+static NSString * const PARAM_OLD_ID = @"old_id";
+static NSString * const PARAM_OLD_VALUE = @"old_value";
+static NSString * const PARAM_NEW_ID = @"new_id";
+static NSString * const PARAM_NEW_VALUE = @"new_value";
+static NSString * const PARAM_CACHE_MODEL = @"cache_model";
+static NSString * const PARAM_CACHE_AD_SIZE = @"cache_ad_size";
+static NSString * const PARAM_FLOOR_PRICE = @"floorPrice";
+static NSString * const PARAM_JUMP_HEIGHT_PER = @"jumpHeightPer";
 
-static NSString * const EVENT_AD_USER_VALUE_DURATION = @"Ad_User_Value_Duration";
-static NSString * const EVENT_AD_USER_VALUE_ERROR = @"Ad_User_Value_Error";
+
 static NSString * const PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";
-static NSString * const PARAM_KEY_COUNT = @"count";
-static NSString * const PARAM_KEY_ORDER = @"order";
-static NSString * const PARAM_KEY_FUNCTION = @"function";
 static NSString * const PARAM_KEY_ERROR = @"error";
 static NSString * const PARAM_KEY_VALUE = @"value";
-static NSString * const PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
 static NSString * const PARAM_KEY_CURRENCY = @"currency";
 static NSString * const PARAM_KEY_REVENUE = @"revenue";
 static NSString * const PARAM_KEY_NETWORK_NAME = @"networkName";
@@ -199,10 +221,27 @@ static NSString * const PARAM_KEY_AD_PLATFORM_MAX = @"MAX";
 static NSString * const PARAM_USER_REVENUE = @"Ad_User_Revenue";
 static NSString * const PARAM_KEY_EVENT_TYPE = @"event_type";
 
+// uservalue key
+static NSString * const PARAM_KEY_COUNT = @"count";
+static NSString * const PARAM_KEY_ORDER = @"order";
+static NSString * const PARAM_KEY_FACTOR = @"factor";
+static NSString * const PARAM_KEY_FUNCTION = @"function";
+static NSString * const EVENT_AD_MAX_INITIALIZE = @"Ad_Max_Initialize";
+static NSString * const EVENT_KEY_BEGIN_SEGMENT = @"begin_segment";
+static NSString * const EVENT_KEY_SEGMENT_INITIALIZE_SUCCESS = @"segment_initialize_Success";
+static NSString * const EVENT_KEY_SEGMENTED = @"isSegment";
+static NSString * const PARAM_KEY_ORDER_TYPE = @"errorType";
+static NSString * const PARAM_KEY_SEGMENT_KEY = @"segment_key";
+static NSString * const PARAM_KEY_SEGMENT_VALUE = @"segment_value";
+static NSString * const PARAM_KEY_SEGMENT = @"segment";
+static NSString * const PARAM_KEY_PERIOD = @"isNewPeriod";
+static NSString * const PARAM_KEY_LIST = @"list";
+static NSString * const PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
 
 
 
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
+static NSString * const META_KEY_IRONSOURCE_KEY = @"OxIronsourceKey";
 static NSString * const MAX_DISABLE_CACHE_PARAM_KEY = @"disable_b2b_ad_unit_ids";
 static NSString * const META_KEY_USERVALUE_IDS = @"OxUserValueIDs";
 static NSString * const META_KEY_DEFAULT_VALUES = @"OxDefaultValues";
@@ -218,5 +257,10 @@ static NSString * const AD_LOAD_ERROR_AD_DISABLE_ID = @"Ad Disable ID";
 
 #pragma mark - 消息通知
 static NSString * const OX_MAG_NETWIRKCHANGE = @"OxNetworkChangeToReachable";
+// remoteconfig 回来之后的监听，需要再更新一遍远端值，减少计算
+static NSString * const OX_MAG_REMOTECONFIGCHANGE = @"OxRemoteConfigChange";
+
+static NSString * const OX_MAX_EXTRA_PARAMETER_KEY = @"jC7Fp";
+
 
 #endif /* AdEvents_h */
