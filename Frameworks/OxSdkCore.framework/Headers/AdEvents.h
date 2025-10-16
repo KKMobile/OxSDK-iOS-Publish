@@ -261,6 +261,8 @@ static NSString * const OX_MAG_NETWIRKCHANGE = @"OxNetworkChangeToReachable";
 static NSString * const OX_MAG_REMOTECONFIGCHANGE = @"OxRemoteConfigChange";
 
 static NSString * const OX_MAX_EXTRA_PARAMETER_KEY = @"jC7Fp";
+static NSString * const OX_MAX_DISABLE_AUTO_RETRIES = @"disable_auto_retries";
+
 
 
 #endif /* AdEvents_h */
