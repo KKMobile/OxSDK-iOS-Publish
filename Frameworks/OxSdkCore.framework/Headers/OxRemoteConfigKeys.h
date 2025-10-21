@@ -44,6 +44,7 @@ extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_MREC;
 extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_INTER;
 extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_REWARDED;
 extern NSString* const OX_CONFIG_GDPR_STYLE;
+extern NSString* const OX_CONFIG_ADSDK_GEO_CONSENT;
 
 @end
 

@@ -103,6 +103,7 @@ static NSString * const EVENT_TOP30 = @"AdLTV_OneDay_Top30Percent";
 static NSString * const EVENT_TOP40 = @"AdLTV_OneDay_Top40Percent";
 static NSString * const EVENT_TOP50 = @"AdLTV_OneDay_Top50Percent";
 static NSString * const EVENT_TOP60 = @"AdLTV_OneDay_Top60Percent";
+static NSString * const EVENT_SHOW_SDK_CONSENT_INIT = @"show_sdk_consent_init";
 static NSString * const EVENT_TOTAL_ADS_REVENUE_001 = @"Total_Ads_Revenue_001";
 static NSString * const EVENT_TOTAL_ADS_REVENUE_01 = @"Total_Ads_Revenue_01";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
@@ -138,6 +139,7 @@ static NSString * const EVENT_CLICK_SDK_CONSENT_MORE = @"click_sdk_consent_more"
 static NSString * const EVENT_CONSENT_GDPR_YES = @"consent_gdpr_yes";
 static NSString * const EVENT_CONSENT_GDPR_NO = @"consent_gdpr_no";
 static NSString * const EVENT_SHOW_SDK_CONSENT_OPTION = @"show_sdk_consent_option";
+
 // Param keys
 static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
 static NSString * const PARAM_AD_FORMAT = @"AdFormat";
@@ -204,6 +206,7 @@ static NSString * const PARAM_KEY_EVENT_TYPE = @"event_type";
 
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
 static NSString * const MAX_DISABLE_CACHE_PARAM_KEY = @"disable_b2b_ad_unit_ids";
+static NSString * const OX_MAX_DISABLE_AUTO_RETRIES = @"disable_auto_retries";
 static NSString * const META_KEY_USERVALUE_IDS = @"OxUserValueIDs";
 static NSString * const META_KEY_DEFAULT_VALUES = @"OxDefaultValues";
 
