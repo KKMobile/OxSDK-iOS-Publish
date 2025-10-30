@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-    spec.dependency 'OxSdkCore', '1.3.3.2-RC01-202510221730'
+    spec.dependency 'OxSdkCore', '1.3.3.2-RC03-202510301730'
     
     spec.dependency 'OxAPSAdapter', '5.2.0.0'
     spec.dependency 'OxBidMachineAdapter', '3.0.1.0'
