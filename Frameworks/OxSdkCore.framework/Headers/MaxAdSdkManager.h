@@ -8,6 +8,8 @@
 #import "BaseAdManager.h"
 NS_ASSUME_NONNULL_BEGIN
 
+@class ALSdkConfiguration;
+
 @interface MaxAdSdkManager : BaseAdManager
 
 + (nonnull instancetype)sharedInstance;
@@ -15,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addDisableCache:(NSString *)adUnitId;
 
 - (void)updateSegment;
+
+- (ALSdkConfiguration *)getSdkConfiguration;
+
 
 @end
 

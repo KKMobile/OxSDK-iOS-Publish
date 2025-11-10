@@ -175,5 +175,6 @@ extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_REWARDED;
  * 0 for Max, 1 for Google Ump
  */
 extern NSString* const OX_CONFIG_GDPR_STYLE;
+extern NSString* const OX_CONFIG_ADSDK_GEO_CONSENT;
 
 NS_ASSUME_NONNULL_END

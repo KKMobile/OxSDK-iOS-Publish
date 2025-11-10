@@ -19,7 +19,7 @@ typedef void (^ConsentDialogDismissCallback)(void);
 
 @interface BaseConsentManager : NSObject
 
-- (instancetype)init:(void (^)(BOOL isSubjectToGDRP))consentCheckResultCallback;
+- (instancetype)init:(BOOL)reset consentCheckResultCallback:(void (^)(BOOL isSubjectToGDPR))consentCheckResultCallback;
 
 - (BOOL)isSubjectToGDPR;
 

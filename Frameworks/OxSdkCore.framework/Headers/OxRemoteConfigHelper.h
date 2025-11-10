@@ -91,6 +91,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (int)getGdprStyle;
+
+
+/*
+ * 配置是否在目标区域开启 MAX GDPR  目前只对 Admob 聚合生效
+ * -1: 没有配置，0.默认配置，1. 目标区域配置。
+ */
++ (int)getGeoConsent;
+
 /// 是否达到内存限制
 /// - Parameter adFormat: 达到内存限制的广告格式
 + (BOOL)isMemoryLimitReached:(NSString *)adFormat;
