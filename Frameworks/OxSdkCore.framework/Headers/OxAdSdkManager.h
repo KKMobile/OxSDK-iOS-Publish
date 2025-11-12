@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "DataTools.h"
 
-#define OXSDK_VERSION @"1.3.3.2-RC03-202510301730"
+#define OXSDK_VERSION @"1.0-PR-GDPREvent-202511121030-1132"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -52,8 +52,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获得google 自适配的banner 尺寸
 - (CGSize)getAdaptiveBannerAdSize;
-
-- (BOOL)shouldShowConsentDialog;
 
 -(void)setGameLevel:(int)level;
 

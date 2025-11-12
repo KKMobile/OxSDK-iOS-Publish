@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class PrivacyPopupView;
+
 typedef void (^TapClick)(void);
 typedef void (^AcceptClick)(void);
 typedef void (^MoreClick)(void);

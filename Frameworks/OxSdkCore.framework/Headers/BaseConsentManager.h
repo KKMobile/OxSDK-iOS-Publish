@@ -11,15 +11,22 @@
 #import "GDPRConsentants.h"
 #import "AppUtils.h"
 #import "OXLogMoudle.h"
+#import "OxConsentEventUtils.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef enum : NSUInteger {
+    OxGDPRFormSteteUnknown = 0,  // 未拿到数据，可能原因 未初始化 或者初始化失败
+    OxGDPRFormSteteAvailable = 1, //  GDPR 可用
+    OxGDPRFormSteteUnavailable = 2, // GDPR 不可用
+} OxGDPRFormStete;
 
 typedef void (^ConsentDialogDismissCallback)(void);
 
 
 @interface BaseConsentManager : NSObject
 
-- (instancetype)init:(BOOL)reset consentCheckResultCallback:(void (^)(BOOL isSubjectToGDPR))consentCheckResultCallback;
+- (instancetype)init:(BOOL)reset consentCheckResultCallback:(nullable void (^)(BOOL isSubjectToGDPR,NSString * _Nullable error))consentCheckResultCallback;
 
 - (BOOL)isSubjectToGDPR;
 
@@ -29,6 +36,8 @@ typedef void (^ConsentDialogDismissCallback)(void);
 ///   - force: 是否为设置界面 (YES=设置界面)
 ///   - dismiss: 关闭回调
 - (BOOL)showConsentDialog:(UIViewController *)viewController force:(BOOL)force consentDialogDismissCallback:(nullable ConsentDialogDismissCallback)consentDialogDismissCallback;
+
+- (OxGDPRFormStete)getState;
 
 - (void)reset;
 

@@ -21,8 +21,6 @@ typedef void(^ConsentCheckResultCallback)(BOOL isSubjectToGDPR);
 
 @interface OxConsentMananger : NSObject
 
-@property(nonatomic, copy)NSString *privacyPolicyLink;
-
 + (nonnull instancetype)sharedInstance;
 
 /// 初始化GDPR
@@ -41,9 +39,6 @@ typedef void(^ConsentCheckResultCallback)(BOOL isSubjectToGDPR);
 
 /// 是否是可以展示GDPR的地区/国家
 - (BOOL)isSubjectToGDPR;
-
-/// Max 下 SDK 初始化成功
-- (void)onMediationInitialized:(Platform)mediation;
 
 
 @end
