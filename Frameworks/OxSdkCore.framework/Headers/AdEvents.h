@@ -202,6 +202,8 @@ static NSString * const PARAM_CACHE_MODEL = @"cache_model";
 static NSString * const PARAM_CACHE_AD_SIZE = @"cache_ad_size";
 static NSString * const PARAM_FLOOR_PRICE = @"floorPrice";
 static NSString * const PARAM_JUMP_HEIGHT_PER = @"jumpHeightPer";
+static NSString * const PARAM_IS_RELOAD = @"isReload";
+static NSString * const PARAM_LOAD_STATUS = @"loadStatus";
 
 
 static NSString * const PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";

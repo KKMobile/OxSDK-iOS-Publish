@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
 #import "OxAdShowLimitation.h"
+#import "OxAdHelperPrivate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
@@ -30,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
++ (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag loadState:(OxAdLoadStatus)loadState isReload:(BOOL)isReload;
 + (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
 + (void)trackAdAdapterLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad floorPrice:(nullable NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
 
