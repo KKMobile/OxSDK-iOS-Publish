@@ -1,8 +1,9 @@
 //
-//  OxSdkCore.h
-//  OxSdkCore
+//  OxSdkForGames.h
+//  OxSdkForGames
 //
-//  Created by Mavl_2023_100272 on 2025/11/21.
+//  Created by Mavl_2023_100272 on 2024/10/21.
+//  Copyright © 2024 耿志向. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -33,13 +34,13 @@
 #import "OpenAdsAdDelegate.h"
 #import "OxRemoteConfigKeys.h"
 #import "OxKeywordType.h"
-#import "OxUserValueManager.h"
-#import "DataTools.h"
 
-//! Project version number for OxSdkCore.
-FOUNDATION_EXPORT double OxSdkCoreVersionNumber;
+//! Project version number for OxSdkForGames.
+FOUNDATION_EXPORT double OxSdkForGamesVersionNumber;
 
-//! Project version string for OxSdkCore.
-FOUNDATION_EXPORT const unsigned char OxSdkCoreVersionString[];
+//! Project version string for OxSdkForGames.
+FOUNDATION_EXPORT const unsigned char OxSdkForGamesVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <OxSdkCore/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import "PublicHeader.h"
+
+
