@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "DataTools.h"
 
-#define OXSDK_VERSION @"1.3.4.0-RC05-202511182230"
+#define OXSDK_VERSION @"1.3.4.0-RC06-202511241800"
 
 NS_ASSUME_NONNULL_BEGIN
 
