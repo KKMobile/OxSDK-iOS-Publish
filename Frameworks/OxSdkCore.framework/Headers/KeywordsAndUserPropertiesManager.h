@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)configApplovinKeywords;
 - (NSArray<MASegment *> *)configApplovinSegments;
 
+///  设置 channel 和 campaign
+- (void)setChannelAndCampaign;
+
 - (void)setPropLtAdValue:(NSString *)propLtv;
 
 /// 输出格式化之后的 mKeywordChannel
