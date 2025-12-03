@@ -7,13 +7,24 @@
 
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
-#import "OxAdShowLimitation.h"
+
+@class OxAdParams,OxPlacementParams;
 
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
 
-+ (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
-+ (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
+/// MAX 价值打点
+/// - Parameters:
+///   - ad: max ad
+///   - mAdEventParams: 参数
++ (void)logMaxImpressionRevenueWithAd:(MAAd *)ad mAdEventParams:(OxAdParams *)mAdEventParams;
+
+/// Admob 价值打点
+/// - Parameters:
+///   - advalue: admob ad
+///   - adNetwork: network
+///   - mAdEventParams: 参数
++ (void)logAdmobImpressionRevenueWithAd:(GADAdValue *)advalue adNetwork:(NSString *)adNetwork AdEventParams:(OxAdParams *)mAdEventParams;
 
 // uservalue
 + (void)logAdUserValueError:(NSString *)error;
@@ -23,46 +34,80 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)logAdUserValueNoSegment:(NSString *)adUnitId value:(float)value factor:(float)factor;
 + (void)logAdSegment:(NSDictionary *)segmentMap;
 
++ (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
+
 
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
 
-/// 客户端打点
-+ (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
+/// 客户端请求广告。
++ (void)trackAdRequestEvent:(OxPlacementParams *)params;
 
-+ (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
-+ (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
+/// OxSdk 内部 Adapter 请求广告。
++ (void)trackAdapterRequestEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 
+/// 因为某些原因，没有给 App 回调事件上报
++ (void)trackListenerInterruptEvent:(OxPlacementParams *)params eventName:(NSString *)eventName errorMsg:(NSString *)errorMsg;
 
-+ (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;
-+ (void)trackAdAdapterLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;
+/// Max 中 Aps Load
++ (void)trackApsLoadRequestEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 
-+ (void)trackAdLoadFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement error:(NSString *)error failedDuration:(double)failedDuration requestTag:(long long)requestTag;
-+ (void)trackAdAdapterLoadFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement error:(NSString *)error failedDuration:(double)failedDuration requestTag:(long long)requestTag;
+/// Max 中 Aps 加载完成（包括成功失败）
++ (void)trackApsLoadFinishEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 
-+ (void)trackAdShowEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement limitation:(NSString *)limitation adStatus:(NSString *)adStatus showFailedDuration:(double)showFailedDuration isReady:(BOOL)isReady requestTag:(long long)requestTag;
+/// 删除过期缓存的时候上报
++ (void)trackDeleteExpireAdEvent:(OxPlacementParams *)params deleteSize:(NSInteger)deleteSize cacheSize:(NSInteger)cacheSize;
 
-+ (void)trackAdShowingEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement networkNamee:(nullable NSString *) networkName creativeId:(nullable NSString *)creativeId requestTag:(long long)requestTag;
+/// 客户端广告加载完成。
++ (void)trackAdLoadedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 
-+ (void)trackAdMemoryLimitedEvent:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
+/// OxSdk 内部 Adapter 加载完成。
++ (void)trackAdAdapterLoadedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 
-+ (void)trackAdImpressionEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag ad:(nullable id)ad;
-+ (void)trackAdAdapterImpressionEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag adTag:(long long)adTag ad:(nullable id)ad;
+/// OxSdk 广告加载失败。
++ (void)trackAdAdapterLoadFailedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 
-+ (void)trackAdShowFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag ad:(nullable id)ad  error:(NSString *)error failedDuration:(double)failedDuration;
-+ (void)trackAdAdapterShowFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag adTag:(long long)adTag ad:(nullable id)ad  error:(NSString *)error failedDuration:(double)failedDuration;
+/// 客户端广告加载失败。
++ (void)trackAdLoadFailedEvent:(OxPlacementParams *)params adParams:(nullable OxAdParams *)adParams;
 
-+ (void)trackAdClickEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag ad:(nullable id)ad;
-+ (void)trackAdAdapterClickEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag adTag:(long long)adTag ad:(nullable id)ad;
-+ (void)trackAdCloseEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag ad:(nullable id)ad showingDuration:(double)showingDuration;
-+ (void)trackAdapterCloseEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag adTag:(long long)adTag ad:(nullable id)ad showingDuration:(double)showingDuration;
+/// 客户端广告展示。
++ (void)trackAdShowEvent:(OxPlacementParams *)params limitation:(NSString *)limitation;
 
-+ (void)trackAdGottenCreditAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag ad:(nullable id)ad;
-+ (void)trackAdAdapterGottenCreditAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag adTag:(long long)adTag ad:(nullable id)ad;
+/// 客户端调用 showAd 后，Sdk 进行必要检查（比如 isReady），检查通过后调用 Mediation 的广告展示 API。
++ (void)trackAdShowingEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 
+/// 应用剩余过低，达到设定阈值时，不再展示广告，并上报该事件。
++ (void)trackAdMemoryLimitedEvent:(OxPlacementParams *)params;
 
-+ (void)trackListenerInterruptEvent:(NSString *)eventName adFormat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag error:(NSString *)error;
+/// 客户端广告展示成功（Displayed 回调）。
++ (void)trackAdImpressionEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 
-+ (void)trackDeleteExpireAdEvent:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag deleteSize:(NSInteger)deleteSize cacheSize:(NSInteger)cacheSize;
+/// OxSdk 广告展示成功（Displayed 回调）。
++ (void)trackAdAdapterImpressionEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
+/// 客户端广告展示失败（DisplayFailed 回调）。
++ (void)trackAdShowFailedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
+/// OxSdk 广告展示失败（DisplayFailed 回调）。
++ (void)trackAdAdapterShowFailedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
+/// 客户端广告被点击。
++ (void)trackAdClickEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
+/// OxSdk 广告被点击。
++ (void)trackAdAdapterClickEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
+/// 客户端广告被关闭。
++ (void)trackAdCloseEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
+/// OxSdk 广告被关闭。
++ (void)trackAdAdapterCloseEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
+/// 客户端获得 RV 奖励。
++ (void)trackAdGottenCredit:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
+/// OxSdk 获得 RV 奖励。
++ (void)trackAdAdapterGottenCredit:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
+
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;

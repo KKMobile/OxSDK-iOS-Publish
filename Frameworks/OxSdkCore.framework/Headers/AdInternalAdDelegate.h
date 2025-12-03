@@ -9,21 +9,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class OxAdParams;
+
 @protocol AdInternalAdDelegate <NSObject>
 
-- (void)oxAdLoaded:(nullable id)ad;
+- (void)oxAdLoaded:(OxAdParams *)adParams;
 
-- (void)oxAdLoadFailed:(NSString *)error;
+- (void)oxAdLoadFailed:(OxAdParams *)adParams errorCode:(NSInteger)errorCode error:(NSString *)error;
 
-- (void)oxAdDisplayed:(nullable id)ad;
+- (void)oxAdDisplayed:(OxAdParams *)adParams;
 
-- (void)oxAdDisplayFailed:(nullable id)ad errorInfo:(nonnull NSString *)error;
+- (void)oxAdDisplayFailed:(OxAdParams *)adParams errorInfo:(nonnull NSString *)error;
 
-- (void)oxAdClicked:(nullable id)ad;
+- (void)oxAdClicked:(OxAdParams *)adParams;
 
-- (void)oxAdOpened;
-
-- (void)oxAdClosed:(nullable id)ad;
+- (void)oxAdClosed:(OxAdParams *)adParams;
 
 @end
 

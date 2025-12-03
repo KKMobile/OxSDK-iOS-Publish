@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)oxRewardedVideoCompleted;
 
-- (void)oxUserRewarded:(AdReward *)reward ad:(nullable id)ad;
+- (void)oxUserRewarded:(AdReward *)reward adParams:(OxAdParams *)adParams;
 
 @end
 

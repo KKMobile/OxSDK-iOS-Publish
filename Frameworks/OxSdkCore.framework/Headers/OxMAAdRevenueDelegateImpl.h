@@ -9,11 +9,11 @@
 #import <AppLovinSDK/AppLovinSDK.h>
 NS_ASSUME_NONNULL_BEGIN
 
+@class OxAdParams;
+
 @interface OxMAAdRevenueDelegateImpl : NSObject<MAAdRevenueDelegate>
 
-@property (nonatomic, assign) long long mTag;
-@property (nonatomic, assign) long long mRequestTag;
-@property(nonatomic, copy) NSString* showPlacement;
+@property(nonatomic, strong) OxAdParams *mAdEventParams;
 
 @end
 

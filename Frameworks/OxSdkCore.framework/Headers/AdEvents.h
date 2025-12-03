@@ -27,13 +27,17 @@ static NSString * const AdStatus_LOADING = @"Ad is loading";
 static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
+static NSString * const AdStatus_CLOSED = @"Ad is close";
 
 typedef enum : NSUInteger {
     OxAdLoadType_Normal,
     OxAdLoadType_Closed,
     OxAdLoadType_LoadFailed,
     OxAdLoadType_DesplayFailed,
+    OxAdLoadType_NetworkChange,
 } OxAdLoadType;
+
+
 
 typedef enum : NSUInteger {
     AdUserValueErrorType_Default,
@@ -117,6 +121,8 @@ static NSString * const EVENT_TOTAL_ADS_REVENUE_01 = @"Total_Ads_Revenue_01";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
 static NSString * const EVENT_AD_MEMORY_LIMITED = @"Ad_Memory_Limited";
 static NSString * const EVENT_AD_REQUEST = @"Ad_Request";
+static NSString * const EVENT_APS_REQUEST = @"Aps_Request";
+static NSString * const EVENT_APS_FINISH = @"Aps_Finish";
 static NSString * const EVENT_AD_LOADED = @"Ad_Loaded";
 static NSString * const EVENT_AD_FAILED = @"Ad_Failed";
 static NSString * const EVENT_AD_SHOW = @"Ad_Show";
@@ -169,6 +175,7 @@ static NSString * const PARAM_WATERFALL_NAME = @"WaterfallName";
 static NSString * const PARAM_NETWORK_RESPONSES = @"NetworkResponses";
 static NSString * const PARAM_LATENCY_MILLIS = @"LatencyMillis";
 static NSString * const PARAM_CREATIVE_ID = @"CreativeId";
+static NSString * const PARAM_AD_ADAPTER_ID = @"AdAdapterId";
 static NSString * const PARAM_REVENUE = @"Revenue";
 static NSString * const PARAM_ERROR = @"Error";
 static NSString * const PARAM_FAILED_DURATION = @"FailedDuration";
@@ -182,6 +189,7 @@ static NSString * const PARAM_AD_STATUS = @"ad_status";
 static NSString * const PARAM_PRE_AD_ERROR_CODE = @"pre_ad_error_code";
 static NSString * const PARAM_IS_LOAD_FAIL_RETRY = @"is_load_fail_retry";
 static NSString * const PARAM_IS_Ready = @"is_ready";
+static NSString * const PARAM_REQUEST_NUMBER = @"RequestNumber";
 static NSString * const PARAM_REQUEST_TAG = @"Request_Tag";
 static NSString * const PARAM_AD_TAG = @"Ad_Tag";
 static NSString * const PARAM_KEY_CORE_LEVEL= @"core_level";
@@ -236,6 +244,16 @@ static NSString * const META_KEY_DEFAULT_VALUES = @"OxDefaultValues";
 
 static NSString * const FAIL_KEY_ADSDK = @"AdSdkDiscovery";
 
+#pragma mark - 消息通知
+static NSString * const OX_MAG_NETWIRKCHANGE = @"OxNetworkChangeToReachable";
+static NSString * const OX_MAG_REMOTECONFIG_CHANGE = @"OxRemoteconfigChange";
+
+#pragma mark - Eror Message
+static NSString * const LIMITATION_AD_NOT_READY = @"Ad Not Ready";
+static NSString * const LIMITATION_AD_CONTAINER_NOT_FOUND = @"Ad Container Not Found";
+static NSString * const LIMITATION_REMOVE_ADS_BY_PURCHASE = @"Remove ads by purchasing";
+static NSString * const NETWORK_UNAVAILABLE = @"unavailable";
+static NSString * const LIMITATION_MEMORY = @"Memory limit reached";
 
 static NSString * const AD_LOAD_ERROR_ADAPTER_REQUEST_TIMEOUT = @"Adapter request timeout";
 static NSString * const AD_LOAD_ERROR_ADAPTER_REQUEST_FLOOR_TIMEOUT = @"_Floor_Timeout";
@@ -243,7 +261,8 @@ static NSString * const AD_LOAD_ERROR_AD_SHOW_RESTRICT = @"Ad Show Restrict";
 static NSString * const AD_LOAD_ERROR_AD_LOAD_RESTRICT = @"Ad Load Restrict";
 static NSString * const AD_LOAD_ERROR_AD_DISABLE_ID = @"Ad Disable ID";
 
-#pragma mark - 消息通知
-static NSString * const OX_MAG_NETWIRKCHANGE = @"OxNetworkChangeToReachable";
+static NSString * const AD_LISTENER_NULL = @"listener is null";
+static NSString * const AD_LOAD_STATUS_IDLE = @"load status idle";
+
 
 #endif /* AdEvents_h */

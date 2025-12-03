@@ -8,7 +8,6 @@
 #import "OxAdHelper.h"
 #import "IBannerAd.h"
 #import "MrecAdDelegate.h"
-#import "MrecInternalAdDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxMrecAdHelper : OxAdHelper<IBannerAd>

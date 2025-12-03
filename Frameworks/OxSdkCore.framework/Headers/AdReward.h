@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AdReward : NSObject
 
-@property (nonatomic, strong) NSString  *label;
+@property (nonatomic, strong) NSString *label;
 
-@property (nonatomic, assign) NSInteger  amount;
+@property (nonatomic, assign) NSInteger amount;
 
 @end
 

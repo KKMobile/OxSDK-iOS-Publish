@@ -12,6 +12,7 @@
 #import "AdEventDelegateHelper.h"
 #import "AppUtils.h"
 #import "OXLogMoudle.h"
+#import "AdInternalAdDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -48,16 +49,16 @@ typedef enum : NSUInteger {
      */
 - (void)onClientShowingLimitation:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
 
-- (void)clientInvokingShowAd:(nullable NSString *)placement limitation:(nullable NSString *)limitation networkName:(NSString *)networkName creativeId:(NSString *)creativeId;
-
-/**
-     * 客户端调用 showAd 系列方法。
-     *
-     * @param placement  场景名称。
-     * @param limitation 空则表示，没有遇到限制，可以展示。另一种情况可能为 {@link AdEventUtil#LIMITATION_AD_NOT_READY}
-     *                   表示客户端调用 showAd 系列方法，但广告尚未准备好。
-     */
-- (void)clientInvokingShowAd:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
+//- (void)clientInvokingShowAd:(nullable NSString *)placement limitation:(nullable NSString *)limitation networkName:(NSString *)networkName creativeId:(NSString *)creativeId;
+//
+///**
+//     * 客户端调用 showAd 系列方法。
+//     *
+//     * @param placement  场景名称。
+//     * @param limitation 空则表示，没有遇到限制，可以展示。另一种情况可能为 {@link AdEventUtil#LIMITATION_AD_NOT_READY}
+//     *                   表示客户端调用 showAd 系列方法，但广告尚未准备好。
+//     */
+//- (void)clientInvokingShowAd:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
 
 /// 设置 Max 扩展属性
 /// @param key key
