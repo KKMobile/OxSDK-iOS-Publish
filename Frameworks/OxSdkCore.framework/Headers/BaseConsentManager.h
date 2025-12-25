@@ -26,9 +26,7 @@ typedef void (^ConsentDialogDismissCallback)(void);
 
 @interface BaseConsentManager : NSObject
 
-- (instancetype)init:(BOOL)reset consentCheckResultCallback:(nullable void (^)(BOOL isSubjectToGDPR,NSString * _Nullable error))consentCheckResultCallback;
-
-- (BOOL)isSubjectToGDPR;
+- (instancetype)init:(BOOL)reset consentCheckResultCallback:(nullable void (^)(NSString * _Nullable error))consentCheckResultCallback;
 
 /// 展示 GDPRUI
 /// - Parameters:

@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "DataTools.h"
 
-#define OXSDK_VERSION @"1.0-PR-GDPREvent-202511121030-1132"
+#define OXSDK_VERSION @"2.0-PPR-GDPRImp-202512251800"
 
 NS_ASSUME_NONNULL_BEGIN
 
