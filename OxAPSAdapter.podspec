@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxAPSAdapter"#SDK名称
-    spec.version      = "5.3.0.0"#版本号
+    spec.version      = "5.3.3.0"#版本号
     spec.summary      = "OxAdSdkAdapter for APS applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -28,6 +28,6 @@ Pod::Spec.new do |spec|
     spec.resource_bundles = {'OxAPSAdapter' => ['ResBundle/PrivacyInfo.xcprivacy']}
     spec.ios.vendored_frameworks = 'Frameworks/OxAPSAdapter.framework'
 
-    spec.dependency 'AmazonPublisherServicesSDK','5.3.0.0'
-    spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','5.3.0.0'
+    spec.dependency 'AmazonPublisherServicesSDK','5.3.3.0'
+    spec.dependency 'AppLovinMediationAmazonAdMarketplaceAdapter','5.3.3.0'
 end
