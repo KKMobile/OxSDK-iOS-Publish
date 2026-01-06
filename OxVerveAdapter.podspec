@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+    spec.static_framework = true
 
     spec.dependency 'AppLovinMediationVerveAdapter','3.7.1.0'
     spec.dependency 'GoogleMobileAdsMediationVerve','3.7.1.1'
