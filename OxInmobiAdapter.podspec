@@ -28,5 +28,5 @@ Pod::Spec.new do |spec|
     spec.ios.vendored_frameworks = 'Frameworks/OxInmobiAdapter.framework'
     
     spec.dependency 'AppLovinMediationInMobiAdapter', '11.0.0.0'
-    spec.dependency 'ALInMobiCustomAdapterFramework', '11.0.0.0'
+    spec.dependency 'GoogleMobileAdsMediationInMobi', '11.0.0.0'
 end
