@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxMolocoAdapter"#SDK名称
-    spec.version      = "3.13.0.0"#版本号
+    spec.version      = "4.2.0.0"#版本号
     spec.summary      = "OxAdSdkAdapter for Moloco applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -27,6 +27,6 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.static_framework = true
     
-    spec.dependency 'AppLovinMediationMolocoAdapter','3.13.0.0'
-    spec.dependency 'GoogleMobileAdsMediationMoloco', '3.13.0.0'
+    spec.dependency 'AppLovinMediationMolocoAdapter','4.2.0.0'
+    # spec.dependency 'GoogleMobileAdsMediationMoloco', '3.13.0.0'
 end
