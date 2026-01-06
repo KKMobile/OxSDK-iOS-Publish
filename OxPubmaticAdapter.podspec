@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxPubmaticAdapter"#SDK名称
-    spec.version      = "4.5.0.0"#版本号
+    spec.version      = "4.11.0.0"#版本号
     spec.summary      = "OxAdSdkAdapter for Pubmatic applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -28,7 +28,6 @@ Pod::Spec.new do |spec|
     spec.resource_bundles = {'OxPubmaticAdapter' => ['ResBundle/PrivacyInfo.xcprivacy']}
     spec.ios.vendored_frameworks = 'Frameworks/OxPubmaticAdapter.framework'
     
-    spec.dependency 'AppLovinMediationPubMaticAdapter','4.5.0.0'
-    spec.dependency 'AdMobPubMaticAdapter', '4.0.0'
-    
+    spec.dependency 'AppLovinMediationPubMaticAdapter','4.11.0.0'
+    # spec.dependency 'GoogleMobileAdsMediationPubMatic', '4.11.0.0'
 end
