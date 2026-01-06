@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "DataTools.h"
 
-#define OXSDK_VERSION @"1.0-PR-1340StaImp-202512181800"
+#define OXSDK_VERSION @"2.0-PR-1340StaImp-202601061800"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL    enableDebug;
 @property(nonatomic, assign) BOOL    enableFBEvents;
 @property(nonatomic, assign) BOOL    enableTAEvents;
+@property(nonatomic, assign,readonly) long long sessionId;
 
 + (nonnull instancetype)sharedInstance;
 
