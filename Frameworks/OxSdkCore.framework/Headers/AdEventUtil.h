@@ -29,11 +29,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 客户端打点
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
++ (void)trackInitSdkEvent;
++ (void)trackFirebaseConfigChangeLogWithExploredConfig:(nullable NSString *)exploredConfig
+                                                addIds:(nullable NSString *)addIds
+                                         native2InterIds:(nullable NSString *)native2InterIds
+                                              disableIds:(nullable NSString *)disableIds
+                                                 error:(nullable NSString *)error;
++ (void)trackGetInstallDaysErrorLog:(nullable NSString *)error;
+
 
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag loadState:(NSString *)loadState isReload:(BOOL)isReload;
-+ (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
-+ (void)trackAdAdapterLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad floorPrice:(nullable NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
++ (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestNumber:(NSInteger)requestNumber requestTag:(long long)requestTag floorPrice:(NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
 
 
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;

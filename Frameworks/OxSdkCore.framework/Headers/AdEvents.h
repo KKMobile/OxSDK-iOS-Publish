@@ -118,6 +118,7 @@ static NSString * const EVENT_TOTAL_ADS_REVENUE_001 = @"Total_Ads_Revenue_001";
 static NSString * const EVENT_TOTAL_ADS_REVENUE_01 = @"Total_Ads_Revenue_01";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
 static NSString * const EVENT_AD_MEMORY_LIMITED = @"Ad_Memory_Limited";
+static NSString * const EVENT_INIT_SDK = @"Init_Sdk";
 static NSString * const EVENT_AD_REQUEST = @"Ad_Request";
 static NSString * const EVENT_AD_LOADED = @"Ad_Loaded";
 static NSString * const EVENT_AD_FAILED = @"Ad_Failed";
@@ -140,6 +141,8 @@ static NSString * const EVENT_AD_ADAPTER_GOTTEN_CREDIT = @"Ad_Adapter_GottenCred
 static NSString * const EVENT_AD_ADAPTER_CLICK = @"Ad_Adapter_Click";
 static NSString * const EVENT_AD_ADAPTER_CLOSE = @"Ad_Adapter_Close";
 static NSString * const EVENT_LISTENER_INTERRUPT = @"Listener_Interrupt";
+static NSString * const EVENT_FIREBASE_CONFIG_CHANGE = @"Ad_Firebase_Config_Change";
+static NSString * const EVENT_GET_INSTALL_DAY_ERROR = @"Ad_Get_Install_Day_Error";
 
 
 // uservalue event
@@ -187,11 +190,15 @@ static NSString * const PARAM_AD_STATUS = @"ad_status";
 static NSString * const PARAM_PRE_AD_ERROR_CODE = @"pre_ad_error_code";
 static NSString * const PARAM_IS_LOAD_FAIL_RETRY = @"is_load_fail_retry";
 static NSString * const PARAM_IS_Ready = @"is_ready";
+static NSString * const PARAM_REQUEST_NUMBER = @"RequestNumber";
 static NSString * const PARAM_REQUEST_TAG = @"Request_Tag";
+static NSString * const PARAM_SESSION_ID = @"Session_ID";
+static NSString * const PARAM_INSTALL_DAYS = @"Install_Days";
 static NSString * const PARAM_AD_TAG = @"Ad_Tag";
 static NSString * const PARAM_KEY_CORE_LEVEL= @"core_level";
 static NSString * const PARAM_LISTENER_INTERRUPT= @"ListenerInterrupt";
 static NSString * const PARAM_LISTENER_INTERRUPT_EVENT_NAME = @"event_name";
+static NSString * const PARAM_INIT_SDK_DURATION = @"initSdkDuration";
 static NSString * const PARAM_CACHE_SIZE = @"Cache_Size";
 static NSString * const PARAM_DELETE_SIZE = @"Delete_Size";
 static NSString * const PARAM_OLD_ID = @"old_id";
@@ -247,6 +254,7 @@ static NSString * const PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
 static NSString * const META_KEY_IRONSOURCE_KEY = @"OxIronsourceKey";
 static NSString * const MAX_DISABLE_CACHE_PARAM_KEY = @"disable_b2b_ad_unit_ids";
+static NSString * const OX_MAX_DISABLE_AUTO_RETRIES = @"disable_auto_retries";
 static NSString * const META_KEY_USERVALUE_IDS = @"OxUserValueIDs";
 static NSString * const META_KEY_DEFAULT_VALUES = @"OxDefaultValues";
 
@@ -265,8 +273,6 @@ static NSString * const OX_MAG_NETWIRKCHANGE = @"OxNetworkChangeToReachable";
 static NSString * const OX_MAG_REMOTECONFIGCHANGE = @"OxRemoteConfigChange";
 
 static NSString * const OX_MAX_EXTRA_PARAMETER_KEY = @"jC7Fp";
-static NSString * const OX_MAX_DISABLE_AUTO_RETRIES = @"disable_auto_retries";
-
 
 
 #endif /* AdEvents_h */

@@ -125,11 +125,6 @@ extern NSString* const OX_CONFIG_ADSDK_RELOAD_TIME;
 extern NSString* const OX_CONFIG_ADSDK_CACHE_AD_SIZE;
 
 /**
- * 是否开启超时任务,默认开启。
- */
-extern NSString* const OX_CONFIG_ADSDK_IS_OPEN_TIME_OUT;
-
-/**
  *  超时时间
  */
 extern NSString* const OX_CONFIG_ADSDK_TIME_OUT_SECONDS;
@@ -137,7 +132,7 @@ extern NSString* const OX_CONFIG_ADSDK_TIME_OUT_SECONDS;
 /**
  * 配置BidExplored功能的RV ID和跳高百分比，先ID，后百分比，使用英文逗号链接,例如：6edc59f27f01055f,0.2
  */
-extern NSString* const OX_CONFIG_ADSDK_MAX_DYNAMIC_ID;
+extern NSString* const OX_CONFIG_ADSDK_MULTICALL_DYNAMIC_ID;
 
 /**
  * 广告缓存模式，High：保留高价，New：保留最新。
