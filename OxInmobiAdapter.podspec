@@ -27,6 +27,7 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.ios.vendored_frameworks = 'Frameworks/OxInmobiAdapter.framework'
     
+    spec.dependency 'Google-Mobile-Ads-SDK'
     spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.5.1'
     spec.dependency 'ALInMobiCustomAdapterFramework', '10.7.5.1'
 end
