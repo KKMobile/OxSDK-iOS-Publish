@@ -125,11 +125,6 @@ extern NSString* const OX_CONFIG_ADSDK_RELOAD_TIME;
 extern NSString* const OX_CONFIG_ADSDK_CACHE_AD_SIZE;
 
 /**
- * 是否开启超时任务,默认开启。
- */
-extern NSString* const OX_CONFIG_ADSDK_IS_OPEN_TIME_OUT;
-
-/**
  *  超时时间
  */
 extern NSString* const OX_CONFIG_ADSDK_TIME_OUT_SECONDS;

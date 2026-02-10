@@ -10,18 +10,9 @@
 #define OxAdHelperPrivate_h
 
 #import "OxAdHelper.h"
+#import "ThreadSafeAdStatusManager.h"
 
 @class OxAdEventModel;
-
-typedef enum : NSUInteger {
-    OxAdLoadStatus_IDLE = 0,
-    OxAdLoadStatus_RUNNING = 1,
-    OxAdLoadStatus_SUCCESS = 2,
-    OxAdLoadStatus_SHOW = 3,
-    OxAdLoadStatus_SHOWING = 4
-} OxAdLoadStatus;
-
-
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -52,18 +43,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) OxAdLoadStatus mAdLoadStatus;
 @property (nonatomic, assign) double mRevenue;
 
-@property(nonatomic, strong, readonly) NSDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
-@property (nonatomic, strong) NSMutableDictionary<NSString *,NSNumber *> *mAdUnitIdStateMap;
-@property (nonatomic, strong) NSMutableDictionary<NSString *,OxAd *> *mAdMap;
+@property (nonatomic, strong, readonly) NSDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
+@property (nonatomic, strong) ThreadSafeAdStatusManager *mAdStatusManager;
+@property (nonatomic, strong) NSString *mFloorAdunitId;
 
 
 - (instancetype)initWithCurrentVC:(UIViewController *)vc adUnitId:(NSString *)adunitId adFormat:(NSString *)adFormat;
-
-
-- (void)initializeAdUnitStates:(NSArray<NSString *> *)adUnitIds;
-- (void)updateLoadStateWithAdUnitID:(NSString *)adUnitID loadState:(OxAdLoadStatus)loadState;
-- (NSArray<NSString *> *)getIdleAdUnitIds;
-- (BOOL)isAllIdle;
 
 // 设置 segment
 - (void)setSegment;

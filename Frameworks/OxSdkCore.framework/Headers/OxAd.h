@@ -22,15 +22,17 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 
 @protocol OxAdDelegate <NSObject>
 
-- (void)onAdDisplayed:(OxAd *)ad;
-- (void)onAdDisplayFailed:(OxAd *)ad error:(NSString *)error;
-- (void)onAdClicked:(OxAd *)ad;
-- (void)onAdClosed:(OxAd *)ad;
+- (void)onAdapterAdLoadFailed:(nonnull OxAd *)ad error:(nonnull NSString *)error;
+- (void)onAdapterAdLoaded:(nonnull OxAd *)ad;
+- (void)onAdapterAdDisplayed:(OxAd *)ad;
+- (void)onAdapterAdDisplayFailed:(OxAd *)ad error:(NSString *)error;
+- (void)onAdapterAdClicked:(OxAd *)ad;
+- (void)onAdapterAdClosed:(OxAd *)ad;
 
 @optional
-- (void)onRewardedVideoStarted:(OxAd *)ad;
-- (void)onRewardedVideoCompleted:(OxAd *)ad;
-- (void)onUserRewarded:(OxAd *)ad reward:(AdReward *) reward;
+- (void)onAdapterRewardedVideoStarted:(OxAd *)ad;
+- (void)onAdapterRewardedVideoCompleted:(OxAd *)ad;
+- (void)onAdapterUserRewarded:(OxAd *)ad reward:(AdReward *) reward;
 
 @end
 
@@ -46,7 +48,7 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 @property (nonatomic, copy, readonly) NSString *mAdUnitId;
 @property (nonatomic, copy, readonly) NSString *mPlacement;
 @property (nonatomic, copy, readonly) NSString *mShowPlacement;
-@property (nonatomic, copy, readonly) NSString *mExploredID;
+@property (nonatomic, copy) NSString *mExploredID;
 @property (nonatomic, copy) NSString *mFloorPrice;
 @property (nonatomic, assign, readonly) double mRevenue;
 
@@ -57,8 +59,7 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 @property (nonatomic, assign) BOOL mIsLastLayers;
 @property (nonatomic, assign, readonly) long long mRequestTag;
 @property (nonatomic, assign, readonly) long long mTag;
-@property (nonatomic, assign, readonly) NSInteger timeoutTime;
-@property (nonatomic, assign, readonly) float mJumpHeightPer;
+@property (nonatomic, assign) float mJumpHeightPer;
 @property (nonatomic, assign, readonly) double mFloorRevenue;
 
 @property (nonatomic, strong) NSDictionary *mMaxExtraParameterMap;
@@ -81,6 +82,7 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 - (BOOL)isReady;
 
 - (void)loadAdInternal;
+- (void)loadAd;
 - (void)destroyAd;
 
 - (BOOL)isDisableID:(NSString *)disableIds;
@@ -93,9 +95,9 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 - (void)startDelayTask:(void(^)(void))callback;
 - (void)stopTimeoutTimer;
 - (void)loadTimeOut;
-- (BOOL)getIsOpenTimeout;
 - (void)updateAdTag:(long long)tag;
 - (void)updateFloorRevenue:(double)floorRevenue;
+- (void)updateRequestTag:(double)requestTag;
 
 @end
 

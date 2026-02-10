@@ -15,13 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol OxTaskControllerDelegate <NSObject>
 - (void)onSuccess:(OxAd *)ad;
 - (void)onFailure:(OxAd *)ad error:(nullable NSString *)error;
-- (void)onAllTasksFinished:(OxAd *)ad;
+- (void)onAllTasksFinished:(NSString *)adUnitId;
 @end
 
 /// 任务控制器
 @interface OxTaskController : NSObject
 
-@property (nonatomic, strong) NSOperationQueue *mOperationQueue;
+@property (nonatomic, strong, nullable) NSOperationQueue *mOperationQueue;
 
 - (instancetype)initWithMaxConcurrent:(NSInteger)maxConcurrent delegate:(id<OxTaskControllerDelegate>)delegate;
 - (void)updateMaxConcurrentOperationCount:(NSInteger)maxConcurrentOperationCount;
