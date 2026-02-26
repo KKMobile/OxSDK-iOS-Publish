@@ -19,6 +19,7 @@ typedef enum : NSUInteger {
     OxGDPRFormSteteUnknown = 0,  // 未拿到数据，可能原因 未初始化 或者初始化失败
     OxGDPRFormSteteAvailable = 1, //  GDPR 可用
     OxGDPRFormSteteUnavailable = 2, // GDPR 不可用
+    OxGDPRFormSteteError = 3, // 获取GDPR状态失败
 } OxGDPRFormStete;
 
 typedef void (^ConsentDialogDismissCallback)(void);
@@ -33,9 +34,11 @@ typedef void (^ConsentDialogDismissCallback)(void);
 ///   - viewController: 需要展示的界面
 ///   - force: 是否为设置界面 (YES=设置界面)
 ///   - dismiss: 关闭回调
-- (BOOL)showConsentDialog:(UIViewController *)viewController force:(BOOL)force consentDialogDismissCallback:(nullable ConsentDialogDismissCallback)consentDialogDismissCallback;
+- (void)showConsentDialog:(UIViewController *)viewController force:(BOOL)force consentDialogDismissCallback:(nullable ConsentDialogDismissCallback)consentDialogDismissCallback;
 
 - (OxGDPRFormStete)getState;
+
+- (BOOL)canShow:(BOOL)force;
 
 - (void)reset;
 
