@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxFacebookAdapter"#SDK名称
-    spec.version      = "6.21.0.0"#版本号
+    spec.version      = "6.21.1.0"#版本号
     spec.summary      = "OxAdSdkAdapter for Facebook applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -28,6 +28,6 @@ Pod::Spec.new do |spec|
     spec.resource_bundles = {'OxFacebookAdapter' => ['ResBundle/PrivacyInfo.xcprivacy']}
     spec.ios.vendored_frameworks = 'Frameworks/OxFacebookAdapter.framework'
     
-    spec.dependency 'AppLovinMediationFacebookAdapter', '6.21.0.0'
-    spec.dependency 'GoogleMobileAdsMediationFacebook', '6.21.0.0'
+    spec.dependency 'AppLovinMediationFacebookAdapter', '6.21.1.0'
+    spec.dependency 'Google-Mobile-Ads-SDK'
 end
