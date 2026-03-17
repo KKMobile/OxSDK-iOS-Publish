@@ -13,10 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol RewardedInternalAdDelegate <NSObject, AdInternalAdDelegate>
 
-- (void)oxRewardedVideoStarted;
-
-- (void)oxRewardedVideoCompleted;
-
 - (void)oxUserRewarded:(AdReward *)reward ad:(nullable id)ad;
 
 @end

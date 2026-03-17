@@ -30,8 +30,6 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 - (void)onAdapterAdClosed:(OxAd *)ad;
 
 @optional
-- (void)onAdapterRewardedVideoStarted:(OxAd *)ad;
-- (void)onAdapterRewardedVideoCompleted:(OxAd *)ad;
 - (void)onAdapterUserRewarded:(OxAd *)ad reward:(AdReward *) reward;
 
 @end
