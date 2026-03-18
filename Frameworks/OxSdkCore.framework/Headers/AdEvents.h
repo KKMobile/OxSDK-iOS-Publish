@@ -247,6 +247,7 @@ static NSString * const PARAM_AD_USER_VALUE_CONFIG = @"AdUserValueConfig";
 static NSString * const META_KEY_CACHE_DISABLED_IDS = @"OxCacheDisabledIds";
 static NSString * const META_KEY_IRONSOURCE_KEY = @"OxIronsourceKey";
 static NSString * const MAX_DISABLE_CACHE_PARAM_KEY = @"disable_b2b_ad_unit_ids";
+static NSString * const OX_MAX_DISABLE_AUTO_RETRIES = @"disable_auto_retries";
 static NSString * const META_KEY_USERVALUE_IDS = @"OxUserValueIDs";
 static NSString * const META_KEY_DEFAULT_VALUES = @"OxDefaultValues";
 
@@ -265,8 +266,6 @@ static NSString * const OX_MAG_NETWIRKCHANGE = @"OxNetworkChangeToReachable";
 static NSString * const OX_MAG_REMOTECONFIGCHANGE = @"OxRemoteConfigChange";
 
 static NSString * const OX_MAX_EXTRA_PARAMETER_KEY = @"jC7Fp";
-static NSString * const OX_MAX_DISABLE_AUTO_RETRIES = @"disable_auto_retries";
-
 
 
 #endif /* AdEvents_h */
