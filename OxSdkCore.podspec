@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkCore"#SDK名称
-    spec.version      = "1.3.5.0"#版本号
+    spec.version      = "1.3.5.1-Test3-202603251200"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -33,9 +33,9 @@ Pod::Spec.new do |spec|
     spec.frameworks = 'UIKit'
     spec.dependency 'PureLayout'
     spec.dependency 'AppLovinSDK', '13.2.0'
-    spec.dependency 'Google-Mobile-Ads-SDK', '12.3.0'
-    spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '12.3.0.0'
-    spec.dependency 'AppLovinMediationGoogleAdapter', '12.3.0.0'
+    spec.dependency 'Google-Mobile-Ads-SDK', '12.14.0.0'
+    spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '12.14.0.0'
+    spec.dependency 'AppLovinMediationGoogleAdapter', '12.14.0.0'
     spec.dependency 'GoogleMobileAdsMediationAppLovin','13.2.0.0'
     spec.dependency 'GoogleUserMessagingPlatform','2.6.0'
 end
