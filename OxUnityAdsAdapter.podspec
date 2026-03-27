@@ -31,5 +31,6 @@ Pod::Spec.new do |spec|
     spec.static_framework = true
 
     spec.dependency 'AppLovinMediationUnityAdsAdapter', "4.17.0.0"
+    spec.dependency 'Google-Mobile-Ads-SDK'
     #spec.dependency 'GoogleMobileAdsMediationUnity', "4.16.1.0"
 end
