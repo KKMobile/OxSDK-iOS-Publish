@@ -27,6 +27,6 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.static_framework = true
     
-    spec.dependency 'AppLovinMediationMolocoAdapter','4.2.0.0'
+    spec.dependency 'AppLovinMediationMolocoAdapter','4.5.1.0'
     # spec.dependency 'GoogleMobileAdsMediationMoloco', '3.13.0.0'
 end
