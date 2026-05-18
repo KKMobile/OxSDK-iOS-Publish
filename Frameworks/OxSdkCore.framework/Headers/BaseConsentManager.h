@@ -11,7 +11,6 @@
 #import "GDPRConsentants.h"
 #import "AppUtils.h"
 #import "OXLogMoudle.h"
-#import "OxConsentEventUtils.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
