@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getDisableRVIds;
 
 // 并行数
-+ (NSInteger)getParallelTasks:(NSInteger)defaultValue;
++ (NSInteger)getParallelTasks;
 
 // Max native id 当 Banner id
 + (NSString *)getNative2BannerId;
@@ -67,24 +67,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 广告缓存最大数量设置，等于 0 不生效
 + (int)getCacheAdSize;
-
-// 获取远端配置的超时时间
-+ (int)getTimeOutSeconds;
-
-/**
- * 配置BidExplored功能的插屏ID和跳高百分比，先ID，后百分比，使用英文逗号链接,例如：6edc59f27f01055f,0.2
- */
-+ (NSString *)getExploredConfig:(NSString *)placementName;
-
-/**
- * 广告缓存模式，High：保留高价，New：保留最新
- */
-+ (NSString *)getIsExploredCacheModel;
-
-/**
- * 是否删除RV缓存的无底价广告,0:false,1:true
- */
-+ (int)getIsExploredIsDeleteCache;
 
 
 + (int)getGdprStyle;

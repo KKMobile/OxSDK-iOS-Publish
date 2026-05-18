@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)oxAdLoaded:(nullable id)ad;
 
-- (void)oxAdLoadFailed:(NSString *)adUnitID error:(NSString *)error;
+- (void)oxAdLoadFailed:(NSString *)error;
 
 - (void)oxAdDisplayed:(nullable id)ad;
 

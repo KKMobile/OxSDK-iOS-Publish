@@ -1,5 +1,5 @@
 //
-//  GoogleConsentManager.h
+//  OxUMPConsentManager.h
 //  OxSdkCore
 //
 //  Created by Mavl_2023_100272 on 2023/7/28.
@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GoogleConsentManager : BaseConsentManager
+
+@interface OxUMPConsentManager : BaseConsentManager
+
 
 @end
 
