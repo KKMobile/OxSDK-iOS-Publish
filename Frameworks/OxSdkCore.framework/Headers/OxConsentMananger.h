@@ -11,6 +11,12 @@
 #import "BaseConsentManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
+// GdprRegion 地区
+typedef NS_ENUM(NSUInteger, OxGdprRegion) {
+    OxGdprRegionUnknown = 0,      ///< Gdpr 地区未获取到
+    OxGdprRegionSupport = 1,     ///<  是 Gdpr地区
+    OxGdprRegionNotSupport = 2,  ///<  不是 Gdpr地区
+};
 
 typedef void(^GDPRInitCompletionCallback)(void);
 typedef void(^GDPRStateChangeCallback)(void);
@@ -35,8 +41,8 @@ stateChangeCallback:(GDPRStateChangeCallback)stateChangeCallback;
 ///   - dismiss: 关闭回调
 - (BOOL)showConsentDialog:(UIViewController *)viewController force:(BOOL)force dismiss:(nullable ConsentDialogDismissCallback)dismiss;
 
-/// 是否是可以展示GDPR的地区/国家
-- (BOOL)isSubjectToGDPR;
+/// 是否是可以展示GDPR的地区/国家 
+- (OxGdprRegion)isSubjectToGDPR;
 - (NSInteger)getGdprThreeStatus;
 @end
 

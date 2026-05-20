@@ -15,10 +15,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : NSUInteger {
-    OxGDPRFormSteteUnknown = 0,  // 未拿到数据，可能原因 未初始化 或者初始化失败
-    OxGDPRFormSteteAvailable = 1, //  GDPR 可用
-    OxGDPRFormSteteUnavailable = 2, // GDPR 不可用
-    OxGDPRFormSteteError = 3, // 获取GDPR状态失败
+    OxGDPRFormSteteUnknown = 0,  // 初始化成功，拿到 未知
+    OxGDPRFormSteteAvailable = 1, //初始化成功  GDPR 可用
+    OxGDPRFormSteteUnavailable = 2, //初始化成功 GDPR 不可用
+    OxGDPRFormSteteError = 3, // 初始化失败，未拿到值
 } OxGDPRFormStete;
 
 @interface OxConsentDialogDismissResult : NSObject
