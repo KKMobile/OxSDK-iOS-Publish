@@ -19,7 +19,6 @@ typedef NS_ENUM(NSUInteger, OxGdprRegion) {
 };
 
 typedef void(^GDPRInitCompletionCallback)(void);
-typedef void(^GDPRStateChangeCallback)(void);
 
 @interface OxConsentMananger : NSObject
 
@@ -31,8 +30,7 @@ typedef void(^GDPRStateChangeCallback)(void);
 ///   - completion: 初始化完成回调
 ///   - stateChangeCallback: GDPR状态变化回调
 - (void)initializeWithPrivacyPolicyLink:(NSString *)privacyPolicyLink
-        completion:(GDPRInitCompletionCallback)completion
-stateChangeCallback:(GDPRStateChangeCallback)stateChangeCallback;
+        completion:(GDPRInitCompletionCallback)completion;
 
 /// 展示 GDPRUI  展示之前不用判断 isSubjectToGDPR
 /// - Parameters:
