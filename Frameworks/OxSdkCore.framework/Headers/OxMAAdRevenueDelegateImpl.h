@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) long long mTag;
 @property (nonatomic, assign) long long mRequestTag;
-@property(nonatomic, copy) NSString* showPlacement;
+@property (nonatomic, copy, nullable) NSString *showPlacement;
+@property (nonatomic, copy, nullable) NSString *floorPrice;
+@property (nonatomic, assign) float jumpHeightPer;
 
 @end
 

@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "DataTools.h"
 
-#define OXSDK_VERSION @"1.0-MO-ValueExplore-202606231200"
+#define OXSDK_VERSION @"1.0-MO-ValueExplore-202606231300"
 
 NS_ASSUME_NONNULL_BEGIN
 

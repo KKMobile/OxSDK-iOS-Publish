@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
 
 + (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
++ (void)logMaxImpressionRevenue:(MAAd *)ad placement:(nullable NSString *)placement tag:(long long)tag requestTag:(long long)requestTag floorPrice:(nullable NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
 + (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
 
 // uservalue
@@ -60,6 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;
 + (void)trackAdAdapterLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;
++ (void)trackAdAdapterLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration requestTag:(long long)requestTag jumpHeightPer:(float)jumpHeightPer loadStage:(nullable NSString *)loadStage ad:(nullable id)ad;
 
 + (void)trackAdLoadFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement error:(NSString *)error failedDuration:(double)failedDuration requestTag:(long long)requestTag;
 + (void)trackAdAdapterLoadFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement error:(NSString *)error failedDuration:(double)failedDuration requestTag:(long long)requestTag;
