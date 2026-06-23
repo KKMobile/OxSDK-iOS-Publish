@@ -9,6 +9,7 @@
 #import "OxAdSdkManager.h"
 #import "OxAdShowLimitation.h"
 #import "OxAdHelperPrivate.h"
+#import "OxDynamicExploreActionType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
@@ -40,7 +41,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag loadState:(NSString *)loadState isReload:(BOOL)isReload;
++ (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestNumber:(NSInteger)requestNumber requestTag:(long long)requestTag;
 + (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestNumber:(NSInteger)requestNumber requestTag:(long long)requestTag floorPrice:(NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
++ (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestNumber:(NSInteger)requestNumber requestTag:(long long)requestTag floorPrice:(NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer loadStage:(nullable NSString *)loadStage;
+
+/// Dynamic / Explore 链路关键动作上报。
++ (void)trackDynamicExploreActionEventAdformat:(NSString *)adFormat
+                                     placement:(nullable NSString *)placement
+                                      adUnitId:(nullable NSString *)adUnitId
+                                    requestTag:(long long)requestTag
+                                         stage:(nullable NSString *)stage
+                                    actionType:(nullable OxDynamicExploreActionType)actionType
+                               targetDynamicId:(nullable NSString *)targetDynamicId
+                                     exploreId:(nullable NSString *)exploreId
+                                  requestRatio:(float)requestRatio
+                                    floorPrice:(nullable NSString *)floorPrice;
 
 
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;

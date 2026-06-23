@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSString *mAdUnitId;
 @property (nonatomic, strong, readonly) NSString *mLoadPlacement;
 @property (nonatomic, strong, readonly) NSString *mAdFormat;
-@property (nonatomic, strong) NSArray<NSString *> *mExploredIDs;
+@property (nonatomic, strong) NSArray<NSString *> *mDynamicIDs;
 @property (nonatomic, strong) NSString *mExploredCacheModel;
 @property (nonatomic, assign, readonly) double mRequestTimestamp;
 @property (nonatomic, strong) NSString *mShowPlacement;
@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
                               callback:(void(^)(void))callback;
 - (void)stopTimeoutTimer;
 - (BOOL)getIsReload;
-- (BOOL)isOpenExplored;
+- (BOOL)isOpenDynamic;
 
 #pragma mark - 子类实现
 // 返回当前的类是否是MAX 用来判断是否进行无限重试

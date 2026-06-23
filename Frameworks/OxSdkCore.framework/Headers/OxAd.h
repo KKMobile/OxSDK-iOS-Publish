@@ -61,10 +61,13 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 @property (nonatomic, assign, readonly) long long mTag;
 @property (nonatomic, assign) float mJumpHeightPer;
 @property (nonatomic, assign, readonly) double mFloorRevenue;
+@property (nonatomic, copy, nullable) NSString *mLoadStage;
 
 @property (nonatomic, strong) NSDictionary *mMaxExtraParameterMap;
 
 @property (nonatomic, strong, nullable) dispatch_source_t delayTask;
+
+@property (nonatomic, assign, readonly) double loadedDuration; // 该条广告的耗时
 
 
 - (instancetype)initWithAdUnitId:(NSString *)adUnitId
@@ -84,6 +87,7 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 - (void)loadAdInternal;
 - (void)loadAd;
 - (void)destroyAd;
+- (void)recordLoadedDuration;
 
 - (BOOL)isDisableID:(NSString *)disableIds;
 - (double)getDuration:(double)latestTimestamp;
@@ -99,6 +103,10 @@ typedef void (^OxAdLoadFailureBlock)(OxAd *ad, NSString *error);
 - (void)updateFloorRevenue:(double)floorRevenue;
 - (void)updateRequestTag:(double)requestTag;
 
+- (void)setLoadStage:(nullable NSString *)stage;
+
+/// 请求耗时（从广告对象发起请求到当前时刻）。默认返回 -1，具体子类可按真实请求时序覆盖实现。
+- (long long)getLoadLatencyMs;
 @end
 
 NS_ASSUME_NONNULL_END

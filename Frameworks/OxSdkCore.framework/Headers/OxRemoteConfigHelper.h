@@ -10,6 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// Dynamic Explore 远程配置解析结果
+@interface OxDynamicExploreConfig : NSObject
+
+@property (nonatomic, copy) NSString *exploreIds;
+@property (nonatomic, assign) int nUp;
+@property (nonatomic, assign) int nDown;
+@property (nonatomic, assign) int dSeconds;
+
+- (instancetype)initWithExploreIds:(NSString *)exploreIds
+                               nUp:(int)nUp
+                             nDown:(int)nDown
+                          dSeconds:(int)dSeconds;
+
+@end
+
 @interface OxRemoteConfigHelper : NSObject
 
 + (NSArray *)getTopValuesConfig;
@@ -75,6 +90,32 @@ NS_ASSUME_NONNULL_BEGIN
  * 配置BidExplored功能的插屏ID和跳高百分比，先ID，后百分比，使用英文逗号链接,例如：6edc59f27f01055f,0.2
  */
 + (NSString *)getExploredConfig:(NSString *)placementName;
+
+/**
+ * 配置 Explored IDs
+ */
++ (NSString *)getDynamicExploreIDs:(NSString *)placementName;
+
+/**
+ * 统一解析 Dynamic Explore 配置：
+ * adsdk_dynamic_explore_[placement] = exploreId,nUp,nDown,dSeconds
+ */
++ (OxDynamicExploreConfig *)getDynamicExploreConfig:(NSString *)placementName;
+
+/**
+ * 探索模式：向上动态跳价失败后重试次数
+ */
++ (int)getExploredDynamicNUp:(NSString *)placementName;
+
+/**
+ * 探索模式：向下动态跳价失败后重试次数
+ */
++ (int)getExploredDynamicNDown:(NSString *)placementName;
+
+/**
+ * 探索模式：允许继续上探的最高成功跳价最大返回时间（秒）
+ */
++ (int)getExploredDynamicDSeconds:(NSString *)placementName;
 
 /**
  * 广告缓存模式，High：保留高价，New：保留最新

@@ -135,6 +135,11 @@ extern NSString* const OX_CONFIG_ADSDK_TIME_OUT_SECONDS;
 extern NSString* const OX_CONFIG_ADSDK_MULTICALL_DYNAMIC_ID;
 
 /**
+ * 配置Explored功能的插屏IDs，使用英文逗号链接,例如：6edc59f27f01055f
+ */
+extern NSString* const OX_CONFIG_ADSDK_DYNAMIC_EXPLORE_ID;
+
+/**
  * 广告缓存模式，High：保留高价，New：保留最新。
  */
 extern NSString* const OX_CONFIG_ADSDK_MAX_DYNAMIC_CACHE_MODEL;
