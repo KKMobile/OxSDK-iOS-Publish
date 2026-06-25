@@ -14,21 +14,39 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^ConsentDialogDismissCallback)(void);
+typedef enum : NSUInteger {
+    OxGDPRFormSteteUnknown = 0,  // 初始化成功，拿到 未知
+    OxGDPRFormSteteAvailable = 1, //初始化成功  GDPR 可用
+    OxGDPRFormSteteUnavailable = 2, //初始化成功 GDPR 不可用
+    OxGDPRFormSteteError = 3, // 初始化失败，未拿到值
+} OxGDPRFormStete;
 
+@interface OxConsentDialogDismissResult : NSObject
+
+// acceptBool值:true 表示用户点击了同意；showDialogSuccess为false时该值为nil
+@property (nonatomic, strong, nullable) NSNumber *acceptBool;
+
+@end
+
+typedef void (^ConsentDialogDismissCallback)(OxConsentDialogDismissResult *result);
 
 @interface BaseConsentManager : NSObject
 
-- (instancetype)init:(BOOL)reset consentCheckResultCallback:(void (^)(BOOL isSubjectToGDPR))consentCheckResultCallback;
-
-- (BOOL)isSubjectToGDPR;
+- (instancetype)init:(nullable void (^)(NSString * _Nullable error))consentCheckResultCallback;
 
 /// 展示 GDPRUI
 /// - Parameters:
 ///   - viewController: 需要展示的界面
 ///   - force: 是否为设置界面 (YES=设置界面)
 ///   - dismiss: 关闭回调
-- (BOOL)showConsentDialog:(UIViewController *)viewController force:(BOOL)force consentDialogDismissCallback:(nullable ConsentDialogDismissCallback)consentDialogDismissCallback;
+- (void)showConsentDialog:(UIViewController *)viewController force:(BOOL)force consentDialogDismissCallback:(nullable ConsentDialogDismissCallback)consentDialogDismissCallback;
+
+- (OxGDPRFormStete)getState;
+
+- (BOOL)canShow:(BOOL)force;
+
+/// @return nil 表示可以展示；非 nil 为不能展示的原因
+- (nullable NSString *)canNotShowReason:(BOOL)force;
 
 - (void)reset;
 

@@ -78,6 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;
++ (NSString *)getShortString:(NSString *)longStr;
 
 @end
 

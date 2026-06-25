@@ -153,14 +153,14 @@ static NSString * const EVENT_AD_USER_VALUE_NO_SEGMENT = @"Ad_User_Value_No_Segm
 static NSString * const EVENT_AD_SET_SEGMENT = @"Ad_Set_Segment";
 
 // Sdk
-static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
-static NSString * const EVENT_CLICK_SDK_CONSENT_BACK_KEY = @"click_sdk_consent_back_key";
-static NSString * const EVENT_CLICK_SDK_CONSENT_SAVE_ACCEPT = @"click_sdk_consent_save_accept";
-static NSString * const EVENT_CLICK_SDK_CONSENT_SAVE_REJECT = @"click_sdk_consent_save_reject";
-static NSString * const EVENT_CLICK_SDK_CONSENT_MORE = @"click_sdk_consent_more";
-static NSString * const EVENT_CONSENT_GDPR_YES = @"consent_gdpr_yes";
-static NSString * const EVENT_CONSENT_GDPR_NO = @"consent_gdpr_no";
-static NSString * const EVENT_SHOW_SDK_CONSENT_OPTION = @"show_sdk_consent_option";
+//static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
+//static NSString * const EVENT_CLICK_SDK_CONSENT_BACK_KEY = @"click_sdk_consent_back_key";
+//static NSString * const EVENT_CLICK_SDK_CONSENT_SAVE_ACCEPT = @"click_sdk_consent_save_accept";
+//static NSString * const EVENT_CLICK_SDK_CONSENT_SAVE_REJECT = @"click_sdk_consent_save_reject";
+//static NSString * const EVENT_CLICK_SDK_CONSENT_MORE = @"click_sdk_consent_more";
+//static NSString * const EVENT_CONSENT_GDPR_YES = @"consent_gdpr_yes";
+//static NSString * const EVENT_CONSENT_GDPR_NO = @"consent_gdpr_no";
+//static NSString * const EVENT_SHOW_SDK_CONSENT_OPTION = @"show_sdk_consent_option";
 
 // Param keys
 static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
@@ -274,5 +274,43 @@ static NSString * const OX_MAG_REMOTECONFIGCHANGE = @"OxRemoteConfigChange";
 
 static NSString * const OX_MAX_EXTRA_PARAMETER_KEY = @"jC7Fp";
 
+#pragma mark - GDPR
+static NSString * const EVENT_ADSDK_GDPR_BEGIN_INIT = @"adsdk_gdpr_begin_init";
+static NSString * const EVENT_ADSDK_GDPR_END_INIT = @"adsdk_gdpr_end_init";
+static NSString * const EVENT_ADSDK_GET_ISSUBJECTTOGDPR = @"adsdk_gdpr_get_isSubjectToGDPR";
+static NSString * const EVENT_ADSKD_GDPR_MAX_BEGIN_INIT = @"adsdk_gdpr_max_beigin_init";
+static NSString * const EVENT_ADSKD_GDPR_MAX_INIT_SUCCESS = @"adsdk_gdpr_max_init_success";
+static NSString * const EVENT_ADSKD_GDPR_GEO_CONSENT_UPDATE = @"adsdk_gdpr_geo_consent_update";
+static NSString * const EVENT_ADSKD_GDPR_SHOW = @"adsdk_gdpr_show";
+static NSString * const EVENT_ADSKD_GDPR_SHOWING = @"adsdk_gdpr_showing";
+static NSString * const EVENT_ADSKD_GDPR_DISMISS = @"adsdk_gdpr_dismiss";
+static NSString * const EVENT_ADSKD_GDPR_CMP_SHOW_PRIVACY = @"adsdk_gdpr_cmp_show_privacy";
+static NSString * const EVENT_ADSKD_GDPR_CMP_SHOW_OPTION = @"adsdk_gdpr_cmp_show_option";
+static NSString * const EVENT_ADSKD_GDPR_CMP_PRIVACY_ACCEPT = @"adsdk_gdpr_cmp_privacy_accept";
+static NSString * const EVENT_ADSKD_GDPR_CMP_PRIVACY_MORE = @"adsdk_gdpr_cmp_privacy_more";
+static NSString * const EVENT_ADSKD_GDPR_CMP_CHANGE_CONSENT_STATE = @"adsdk_gdpr_cmp_change_consent_state";
+static NSString * const EVENT_ADSKD_GDPR_CMP_OPTION_BACK = @"adsdk_gdpr_cmp_option_back";
+static NSString * const EVENT_ADSKD_GDPR_CMP_OPTION_SAVE = @"adsdk_gdpr_cmp_option_save";
+static NSString * const EVENT_ADSKD_GDPR_EXIT = @"adsdk_gdpr_exit";
 
+
+static NSString * const PARAM_GDPR_KEY_PLATFORM = @"platform";
+static NSString * const PARAM_GDPR_KEY_TAG = @"tag";
+static NSString * const PARAM_GDPR_KEY_ATT_STATE = @"att";
+static NSString * const PARAM_GDPR_KEY_GDPR_TOOL = @"gdpr_tool";
+static NSString * const PARAM_GDPR_KEY_UMP_GEO_STATE = @"ump_geo_state";
+static NSString * const PARAM_GDPR_KEY_CMP_GEO_STATE = @"cmp_geo_state";
+static NSString * const PARAM_GDPR_KEY_MAX_GEO_STATE = @"max_geo_state";
+static NSString * const PARAM_GDPR_KEY_INIT_DURATION = @"init_duration";
+static NSString * const PARAM_GDPR_KEY_IS_SUBJECT_TO_GDPR = @"isSubjectToGDPR";
+static NSString * const PARAM_GDPR_KEY_FORCE = @"force";
+static NSString * const PARAM_GDPR_KEY_CANSHOW = @"canShow";
+static NSString * const PARAM_GDPR_KEY_ERROR = @"error";
+static NSString * const PARAM_GDPR_KEY_GDPR_CONSENT_STATE = @"consent_state";
+static NSString * const PARAM_GDPR_KEY_CMP_CONSENT_STATE = @"cmp_consent_state";
+static NSString * const PARAM_GDPR_KEY_UMP_CONSENT_STATE = @"ump_consent_state";
+static NSString * const PARAM_GDPR_KEY_CMP_INTYPE = @"cmp_in_type";
+
+static NSString * const PARAM_GDPR_VALUE_CMP = @"cmp";
+static NSString * const PARAM_GDPR_VALUE_UMP = @"ump";
 #endif /* AdEvents_h */

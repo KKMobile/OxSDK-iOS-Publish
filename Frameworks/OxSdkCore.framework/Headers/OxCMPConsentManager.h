@@ -1,5 +1,5 @@
 //
-//  OxAdSdkConsentManager.h
+//  OxCMPConsentManager.h
 //  SwithMediationDemo
 //
 //  Created by BJMM100001 on 2022/5/18.
@@ -15,11 +15,8 @@ typedef enum : NSUInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MaxConsentManager : BaseConsentManager
+@interface OxCMPConsentManager : BaseConsentManager
 
-- (void)onMediationInitialized:(Platform)mediation;
-
-//
 + (BOOL)isConsentRejected;
 
 + (BOOL)isConsentAccepted;
