@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.0-MO-MolocoLatest-202606161200"#版本号
+    spec.version      = "2.0-MO-MolocoLatest-202606301200"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -37,7 +37,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxIronSourceAdapter', '9.2.0.0.0'
     spec.dependency 'OxLineAdapter', '2.9.20260303.0'
     spec.dependency 'OxMintegralAdapter', '7.7.2.1'
-    spec.dependency 'OxMolocoAdapter', '4.7.0.0'
+    spec.dependency 'OxMolocoAdapter', '4.8.0.0'
     spec.dependency 'OxMyTargetAdapter', '5.21.9.0'
     spec.dependency 'OxOguryAdapter', '5.0.1.0'
     spec.dependency 'OxPangleAdapter', '7.8.5.5.0'
