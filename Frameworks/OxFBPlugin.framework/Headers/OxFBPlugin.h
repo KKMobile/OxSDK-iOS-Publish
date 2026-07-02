@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OxFBPlugin/OxFacebookEventTracker.h>
 
 //! Project version number for OxFBPlugin.
 FOUNDATION_EXPORT double OxFBPluginVersionNumber;

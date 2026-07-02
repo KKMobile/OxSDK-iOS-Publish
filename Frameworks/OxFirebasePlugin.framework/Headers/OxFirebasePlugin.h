@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OxFirebasePlugin/OxFirebaseEventTracker.h>
 
 //! Project version number for OxFirebasePlugin.
 FOUNDATION_EXPORT double OxFirebasePluginVersionNumber;

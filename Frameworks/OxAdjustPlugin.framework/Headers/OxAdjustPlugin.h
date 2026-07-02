@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OxAdjustEventTracker.h"
 
 //! Project version number for OxAdjustPlugin.
 FOUNDATION_EXPORT double OxAdjustPluginVersionNumber;

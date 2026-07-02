@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <OxTAPlugin/OxTAEventTracker.h>
 
 //! Project version number for OxTAPlugin.
 FOUNDATION_EXPORT double OxTAPluginVersionNumber;

@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxRemoteConfigPlugin"#SDK名称
-    spec.version      = "2.0.0-202411251600"#版本号
+    spec.version      = "3.0.0-202607021800"#版本号
     spec.summary      = "OxAdSdk for Adjust applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,5 +26,6 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.resource_bundles = {'OxRemoteConfigPlugin' => ['ResBundle/PrivacyInfo.xcprivacy']}
-    spec.ios.vendored_frameworks = 'Frameworks/OxRemoteConfigPlugin.framework'
+    spec.source_files  = 'iOS/OxSDK-Game/OxRemoteConfigPlugin/**/*.{h,m}'
+    spec.dependency 'OxSdkPluginRegistry', '~> 3.0.0'
 end
