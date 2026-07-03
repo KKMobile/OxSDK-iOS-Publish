@@ -26,6 +26,6 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.resource_bundles = {'OxDiscoveryPlugin' => ['ResBundle/PrivacyInfo.xcprivacy']}
-    spec.source_files  = 'iOS/OxSDK-Game/OxDiscoveryPlugin/**/*.{h,m}'
+    spec.ios.vendored_frameworks = 'Frameworks/OxDiscoveryPlugin.framework'
     spec.dependency 'OxSdkPluginRegistry', '~> 3.0.0'
 end
