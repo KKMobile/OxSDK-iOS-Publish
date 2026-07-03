@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "OxDevelopers" => "tianci5275@gmail.com" }
   spec.platform     = :ios
   spec.ios.deployment_target = "12.0"
-  spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "a-plugin-registry-#{spec.version}" }
+  spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "a-event-registry-#{spec.version}" }
   spec.source_files = "OxSdkPluginRegistry/**/*.{h,m}"
   spec.public_header_files = "OxSdkPluginRegistry/**/*.h"
   spec.requires_arc = true
