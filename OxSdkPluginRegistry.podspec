@@ -1,7 +1,7 @@
 #
 #  OxSdkPluginRegistry.podspec
 #  Public plugin registration API for Ox SDK plugin pods.
-#
+#   
 
 Pod::Spec.new do |spec|
   spec.name         = "OxSdkPluginRegistry"
