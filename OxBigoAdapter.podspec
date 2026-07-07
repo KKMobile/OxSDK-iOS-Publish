@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxBigoAdapter"#SDK名称
-    spec.version      = "5.3.0.0"#版本号
+    spec.version      = "5.2.1.0"#版本号
     spec.summary      = "OxAdSdkAdapter for BIGO applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.static_framework = true
     
-    spec.dependency 'AppLovinMediationBigoAdsAdapter', '5.3.0.0'
+    spec.dependency 'AppLovinMediationBigoAdsAdapter', '5.2.1.0'
     # spec.dependency 'GoogleMobileAdsMediationBigo', '5.2.1.0'
 
 end
