@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdLoadFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement error:(NSString *)error failedDuration:(double)failedDuration requestTag:(long long)requestTag;
 + (void)trackAdAdapterLoadFailedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement error:(NSString *)error failedDuration:(double)failedDuration requestTag:(long long)requestTag;
 
-+ (void)trackAdShowEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement limitation:(NSString *)limitation adStatus:(NSString *)adStatus showFailedDuration:(double)showFailedDuration isReady:(BOOL)isReady requestTag:(long long)requestTag;
++ (void)trackAdShowEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement limitation:(NSString *)limitation adStatus:(NSString *)adStatus showFailedDuration:(double)showFailedDuration isReady:(BOOL)isReady requestTag:(long long)requestTag networkName:(nullable NSString *)networkName;
 
 + (void)trackAdShowingEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement networkNamee:(nullable NSString *) networkName creativeId:(nullable NSString *)creativeId requestTag:(long long)requestTag;
 
