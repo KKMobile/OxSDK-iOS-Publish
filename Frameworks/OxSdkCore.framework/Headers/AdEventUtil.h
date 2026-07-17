@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
 
 + (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
++ (void)logMaxImpressionRevenue:(MAAd *)ad placement:(nullable NSString *)placement tag:(long long)tag requestTag:(long long)requestTag floorPrice:(nullable NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
 + (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
 
 // uservalue
@@ -30,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 客户端打点
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 + (void)trackInitSdkEvent;
++ (void)trackPangleInitSdkEvent:(NSTimeInterval)initSdkDuration isInstallWebView:(BOOL)isInstallWebView error:(nullable NSString *)error;
++ (void)logPangleImpressionRevenue:(NSString *)adUnitId revenue:(double)revenue adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork placement:(nullable NSString *)placement requestTag:(long long)requestTag adTag:(long long)adTag;
++ (NSMutableDictionary *)getBasicDicWithAdFormat:(NSString *)adFormat adunitId:(NSString *)adunitId placement:(nullable NSString*)placement requestTag:(long long)requestTag ad:(nullable id)ad;
 + (void)trackFirebaseConfigChangeLogWithExploredConfig:(nullable NSString *)exploredConfig
                                                 addIds:(nullable NSString *)addIds
                                          native2InterIds:(nullable NSString *)native2InterIds

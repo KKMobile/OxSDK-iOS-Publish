@@ -135,6 +135,11 @@ extern NSString* const OX_CONFIG_ADSDK_TIME_OUT_SECONDS;
 extern NSString* const OX_CONFIG_ADSDK_MULTICALL_DYNAMIC_ID;
 
 /**
+ * 配置 Pangle 的 ID
+ */
+extern NSString* const OX_CONFIG_ADSDK_PANGLE_ID;
+
+/**
  * 广告缓存模式，High：保留高价，New：保留最新。
  */
 extern NSString* const OX_CONFIG_ADSDK_MAX_DYNAMIC_CACHE_MODEL;
@@ -171,5 +176,10 @@ extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_REWARDED;
  */
 extern NSString* const OX_CONFIG_GDPR_STYLE;
 extern NSString* const OX_CONFIG_ADSDK_GEO_CONSENT;
+
+/**
+ * 展示策略，返回字符串类型，max、pangle、price
+ */
+extern NSString* const OX_CONFIG_ADSDK_SHOW_STRATEGY;
 
 NS_ASSUME_NONNULL_END
