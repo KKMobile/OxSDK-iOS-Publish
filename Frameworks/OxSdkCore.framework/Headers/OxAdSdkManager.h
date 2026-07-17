@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "DataTools.h"
 
-#define OXSDK_VERSION @"1.3.3.2"
+#define OXSDK_VERSION @"1.0-MO-FillBooster-202607141300"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL    enableDebug;
 @property(nonatomic, assign) BOOL    enableFBEvents;
 @property(nonatomic, assign) BOOL    enableTAEvents;
+@property(nonatomic, assign,readonly) long long sessionId;
 
 + (nonnull instancetype)sharedInstance;
 
@@ -68,6 +69,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// RemoteConfig 获取完成。
 - (void)onRemoteConfigFetchCompleted;
+
+/**
+ * 设置 OxSdk 内部属性
+ */
+- (void)setOxExtraParameter:(NSString *)value forKey:(NSString *)key;
+
+/**
+ * 获取 OxSdk 内部属性
+ */
+- (NSDictionary<NSString *,NSString *> *)getOxExtraParameter;
 
 @end
 

@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (OxNativeAdHelper *)createAdWithCurrentVC:(UIViewController *)currentVC adUnitID:(NSString *)adUnitID;
 
+- (double)getHighestPrice;
+
 @end
 
 NS_ASSUME_NONNULL_END
