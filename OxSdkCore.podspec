@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkCore"#SDK名称
-    spec.version      = "1.3.5.1"#版本号
+    spec.version      = "1.0-MO-FillBooster-202607171700"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -38,4 +38,5 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationGoogleAdapter', '12.14.0.0'
     spec.dependency 'GoogleMobileAdsMediationAppLovin','13.2.0.0'
     spec.dependency 'GoogleUserMessagingPlatform','2.6.0'
+    spec.dependency 'OxPangleAdapter', '7.8.5.5.0'
 end

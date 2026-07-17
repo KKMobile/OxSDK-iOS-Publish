@@ -45,6 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
 @property (nonatomic, strong) ThreadSafeAdStatusManager *mAdStatusManager;
 @property (nonatomic, strong) NSString *mFloorAdunitId;
+@property (nonatomic, copy) NSString *mPangleID;
 
 
 - (instancetype)initWithCurrentVC:(UIViewController *)vc adUnitId:(NSString *)adunitId adFormat:(NSString *)adFormat;
@@ -83,6 +84,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 子类实现
 // 返回当前的类是否是MAX 用来判断是否进行无限重试
 - (BOOL)isMaxAd;
+- (BOOL)isAdmobAd;
+- (BOOL)isOpenPangleBidding;
 - (NSString *)getNetworkName;
 - (NSString *)getCreativeId;
 

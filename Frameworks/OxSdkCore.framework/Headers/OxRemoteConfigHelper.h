@@ -77,6 +77,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getExploredConfig:(NSString *)placementName;
 
 /**
+ * 配置 Pangle 的 ID
+ */
++ (NSString *)getPangleID:(NSString *)placementName;
+
+/**
+ * 展示策略,默认 max
+ */
++ (NSString *)getShowStrategy:(NSString *)placementName;
+
+/**
  * 广告缓存模式，High：保留高价，New：保留最新
  */
 + (NSString *)getIsExploredCacheModel;
