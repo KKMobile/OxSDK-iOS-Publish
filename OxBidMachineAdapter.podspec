@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxBidMachineAdapter"#SDK名称
-    spec.version      = "3.0.1.0"#版本号
+    spec.version      = "3.7.1.0"#版本号
     spec.summary      = "OxAdSdkAdapter for BidMachine applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,5 +26,5 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-    spec.dependency 'AppLovinMediationBidMachineAdapter', '3.0.1.0.0'
+    spec.dependency 'AppLovinMediationBidMachineAdapter', '3.7.1.0.0'
 end
