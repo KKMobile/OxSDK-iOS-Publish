@@ -29,5 +29,5 @@ Pod::Spec.new do |spec|
     
     spec.dependency 'Google-Mobile-Ads-SDK', '12.3.0'
     spec.dependency 'AppLovinMediationInMobiAdapter', '11.4.0.0'
-    spec.dependency 'ALInMobiCustomAdapterFramework', '11.4.0.0'
+    # spec.dependency 'ALInMobiCustomAdapterFramework', '11.4.0.0' # trunk 无此版本
 end
