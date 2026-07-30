@@ -1,0 +1,3 @@
+Vendored from googleads/googleads-mobile-ios-mediation
+Commit a36b254 (adapter version 13.5.1.0)
+Linked against project AppLovinSDK 13.5.0 (no CocoaPods GoogleMobileAdsMediationAppLovin)

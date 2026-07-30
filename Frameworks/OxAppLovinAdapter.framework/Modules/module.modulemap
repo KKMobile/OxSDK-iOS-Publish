@@ -1,0 +1,6 @@
+framework module OxAppLovinAdapter {
+  umbrella header "OxAppLovinAdapter.h"
+  export *
+
+  module * { export * }
+}
