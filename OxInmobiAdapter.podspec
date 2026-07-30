@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
     spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
     spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
     spec.platform     = :ios#支持平台
-    spec.ios.deployment_target = "12.0"#支持iOS最低版本
+    spec.ios.deployment_target = "13.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "a-inmobi-#{spec.version}" }
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.ios.vendored_frameworks = 'Frameworks/OxInmobiAdapter.framework'
     
-    spec.dependency 'Google-Mobile-Ads-SDK', '12.3.0'
+    spec.dependency 'Google-Mobile-Ads-SDK', '13.7.0'
     spec.dependency 'AppLovinMediationInMobiAdapter', '11.4.0.0'
-    # spec.dependency 'ALInMobiCustomAdapterFramework', '11.4.0.0' # trunk 无此版本
+    spec.dependency 'GoogleMobileAdsMediationInMobi', '11.4.0.0'
 end
