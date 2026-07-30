@@ -1,6 +1,0 @@
-framework module OxMintegralAdapter {
-  umbrella header "OxMintegralAdapter.h"
-  export *
-
-  module * { export * }
-}

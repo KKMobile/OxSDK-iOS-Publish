@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxInmobiAdapter"#SDK名称
-    spec.version      = "10.7.5.1"#版本号
+    spec.version      = "11.4.0.0"#版本号
     spec.summary      = "OxAdSdkAdapter for Inmobi applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -28,6 +28,6 @@ Pod::Spec.new do |spec|
     spec.ios.vendored_frameworks = 'Frameworks/OxInmobiAdapter.framework'
     
     spec.dependency 'Google-Mobile-Ads-SDK', '12.3.0'
-    spec.dependency 'AppLovinMediationInMobiAdapter', '10.7.5.1'
-    spec.dependency 'ALInMobiCustomAdapterFramework', '10.7.5.1'
+    spec.dependency 'AppLovinMediationInMobiAdapter', '11.4.0.0'
+    spec.dependency 'ALInMobiCustomAdapterFramework', '11.4.0.0'
 end
