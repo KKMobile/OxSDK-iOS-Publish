@@ -102,6 +102,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSArray*)getKeywords;
 
++ (NSString *)getOxSdkConfig;
+
+/// 审核态：Remote Config ADSDK_Reviewing == "1" 为审核期
++ (BOOL)isAdSdkReviewing;
+
 + (NSString *)getString:(NSString *)key defaultValue:(NSString *)defaultValue;
 + (double)getDouble:(NSString *)key defaultValue:(double)defaultValue;
 + (int)getInt:(NSString *)key defaultValue:(int)defaultValue;

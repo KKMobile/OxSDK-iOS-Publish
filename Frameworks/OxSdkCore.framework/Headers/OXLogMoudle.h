@@ -40,7 +40,7 @@
 #define OXLogTAGW(_tag, ...) [OXLogMoudle logLevel:OXLogLevelW tag:_tag className:CURRENT_CLASS_NAME logString:__VA_ARGS__]
 
 //Error
-#define OXLogTAGE(format, ...) [OXLogMoudle logLevel:OXLogLevelE tag:_tag className:CURRENT_CLASS_NAME logString:__VA_ARGS__]
+#define OXLogTAGE(_tag, ...) [OXLogMoudle logLevel:OXLogLevelE tag:_tag className:CURRENT_CLASS_NAME logString:__VA_ARGS__]
 
 
 

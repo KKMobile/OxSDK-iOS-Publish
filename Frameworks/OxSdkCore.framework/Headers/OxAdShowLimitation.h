@@ -16,6 +16,7 @@ extern NSString* const LIMITATION_REMOVE_ADS_BY_PURCHASE;
 extern NSString* const NETWORK_UNAVAILABLE;
 extern NSString* const LIMITATION_MEMORY;
 extern NSString* const LIMITATION_AD_SHOWING;
+extern NSString* const LIMITATION_GLOBAL_INTERVAL_REACHED;
 
 @end
 

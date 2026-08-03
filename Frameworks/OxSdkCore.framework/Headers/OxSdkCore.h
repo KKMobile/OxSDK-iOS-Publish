@@ -7,24 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OxAdHelper.h"
 #import "BaseAdManager.h"
 #import "AdDelegate.h"
 #import "OxKeywordType.h"
 #import "OxAdSdkManager.h"
-#import "OxRewardedAdHelper.h"
-#import "OxInterstitialAdHelper.h"
-#import "OxMrecAdHelper.h"
-#import "OxBannerAdHelper.h"
-#import "OxNativeAdHelper.h"
-#import "OxOpenAdsAdHelper.h"
+#import "OxRewardedAdManager.h"
+#import "OxInterstitialAdManager.h"
+#import "OxMrecAdManager.h"
+#import "OxBannerAdManager.h"
+#import "OxNativeAdManager.h"
+#import "OxOpenAdsAdManager.h"
 #import "OxNativeViewBinder.h"
 #import "OxConsentMananger.h"
-#import "OxAdShowLimitation.h"
 #import "AdEventDelegate.h"
 #import "OxAdjustTokensBuilder.h"
 #import "OxAdjustTokens.h"
 #import "OxRemoteConfigHelper.h"
+#import "OxAdConfigTracker.h"
 #import "OxUnitAdsGdprUtil.h"
 #import "MrecAdDelegate.h"
 #import "InterstitialAdDelegate.h"
@@ -40,7 +39,4 @@ FOUNDATION_EXPORT double OxSdkForGamesVersionNumber;
 
 //! Project version string for OxSdkForGames.
 FOUNDATION_EXPORT const unsigned char OxSdkForGamesVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import "PublicHeader.h"
-
 

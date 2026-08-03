@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ApsInterstitialAdManager : ApsBaseAdManager
 
+- (void)loadApsAdWithSlotId:(NSString *)slotId apsType:(NSInteger)apsType;
+
 @end
 
 NS_ASSUME_NONNULL_END

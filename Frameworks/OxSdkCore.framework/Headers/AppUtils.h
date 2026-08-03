@@ -32,6 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 可用内存
 + (double)getAvailableMemory;
 
++ (NSString *)getDeviceModel;
++ (NSString *)getSystemVersion;
++ (NSInteger)getAvailableProcessors;
+
 // 判断 聚合是否在枚举区域内
 + (BOOL)platformInRange:(NSInteger)platform;
 
@@ -43,6 +47,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (double)getDuration:(double)latestTimestamp;
 
 + (BOOL)isNetworkAvailable;
+
++ (long long)getCurrentHourStart;
++ (long long)getCurrentDayStart;
 
 // 获取 网络类型 + Vpn 状态。
 + (NSInteger)getNetworkTypeWithVpnState;

@@ -2,9 +2,6 @@
 //  OxNaturalDayInstallUtil.h
 //  OxSdkCore
 //
-//  Created by Mavl_2023_100272 on 2026/1/22.
-//  Copyright © 2026 耿志向. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 

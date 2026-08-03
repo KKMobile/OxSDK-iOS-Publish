@@ -7,15 +7,14 @@
 
 #import <Foundation/Foundation.h>
 #import <AppLovinSDK/AppLovinSDK.h>
+
+@class OxAdParams;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxMAAdRevenueDelegateImpl : NSObject<MAAdRevenueDelegate>
 
-@property (nonatomic, assign) long long mTag;
-@property (nonatomic, assign) long long mRequestTag;
-@property (nonatomic, copy) NSString *showPlacement;
-@property (nonatomic, copy) NSString *mFloorPrice;
-@property (nonatomic, assign) float mJumpHeightPer;
+@property (nonatomic, weak, nullable) OxAdParams *mAdEventParams;
 
 @end
 

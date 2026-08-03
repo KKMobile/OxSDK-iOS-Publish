@@ -13,6 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxMaxNativeInterstitialAd : OxInterstitialAd
 
+- (instancetype)initWithPlacementParams:(OxPlacementParams *)placementParams
+                               idConfig:(IdConfig *)idConfig
+                         viewController:(UIViewController *)viewController
+                      internalListener:(id<AdInternalListener>)listener;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)initApsSdk;
 
+- (void)enableApsDebug:(BOOL)enable;
+
 - (NSString *)getApsAppId;
 
 @end

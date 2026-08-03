@@ -172,4 +172,13 @@ extern NSString* const OX_CONFIG_ADSDK_MEMORY_LIMIT_REWARDED;
 extern NSString* const OX_CONFIG_GDPR_STYLE;
 extern NSString* const OX_CONFIG_ADSDK_GEO_CONSENT;
 
+/// OPConfig JSON from Firebase Remote Config
+extern NSString* const OX_CONFIG_ADSDK;
+
+/**
+ * 审核态开关：
+ * 1 = 审核期，2 = 非审核期。
+ */
+extern NSString* const OX_CONFIG_ADSDK_REVIEWING;
+
 NS_ASSUME_NONNULL_END

@@ -21,10 +21,11 @@ static NSString * const AdFormat_MREC = @"mrec";
 static NSString * const AdFormat_INTERSTITIAL = @"interstitial";
 static NSString * const AdFormat_NATIVE = @"native";
 static NSString * const AdFormat_REWARDED = @"rewarded";
-static NSString * const AdFormat_OPENADS = @"openads";
+static NSString * const AdFormat_OPENADS = @"openAds";
 
 static NSString * const AdStatus_IDLE = @"Ad is idle";
 static NSString * const AdStatus_LOADING = @"Ad is loading";
+static NSString * const AdStatus_CLOSE = @"Ad is close";
 static NSString * const AdStatus_LOAD_FAILED = @"Ad load failed";
 static NSString * const AdStatus_LOAD_SUCCESS = @"Ad load success";
 static NSString * const AdStatus_SHOWN = @"Ad has already shown";
@@ -119,7 +120,13 @@ static NSString * const EVENT_TOTAL_ADS_REVENUE_01 = @"Total_Ads_Revenue_01";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
 static NSString * const EVENT_AD_MEMORY_LIMITED = @"Ad_Memory_Limited";
 static NSString * const EVENT_INIT_SDK = @"Init_Sdk";
+static NSString * const EVENT_START_INIT_SDK = @"Start_Init_Sdk";
+static NSString * const EVENT_INIT_CONFIG = @"Init_Config";
+static NSString * const EVENT_CONFIG_VERSION_STATE = @"Config_Version_State";
+static NSString * const EVENT_CONFIG_REMOTE_PARSE_FAILED = @"Config_Remote_Parse_Failed";
+static NSString * const EVENT_CONFIG_LOCAL_PARSE_FAILED = @"Config_Local_Parse_Failed";
 static NSString * const EVENT_AD_REQUEST = @"Ad_Request";
+static NSString * const EVENT_SKIP_AD_REQUEST = @"Skip_Ad_Request";
 static NSString * const EVENT_AD_LOADED = @"Ad_Loaded";
 static NSString * const EVENT_AD_FAILED = @"Ad_Failed";
 static NSString * const EVENT_AD_SHOW = @"Ad_Show";
@@ -129,6 +136,7 @@ static NSString * const EVENT_AD_SHOW_FAILED = @"Ad_Show_Failed";
 static NSString * const EVENT_AD_CLICK = @"Ad_Click";
 static NSString * const EVENT_AD_GOTTEN_CREDIT = @"Ad_GottenCredit";
 static NSString * const EVENT_AD_CLOSE = @"Ad_Close";
+static NSString * const EVENT_AD_CLOSE_Destroy_TEST = @"Ad_Close_Destroy_Test";
 static NSString * const EVENT_DELETE_EXPIRE_AD = @"Delete_Expire_Ad";
 static NSString * const EVENT_DELETE_REPLACE_AD = @"Delete_Replace_Ad";
 
@@ -140,9 +148,20 @@ static NSString * const EVENT_AD_ADAPTER_SHOW_FAILED = @"Ad_Adapter_Show_Failed"
 static NSString * const EVENT_AD_ADAPTER_GOTTEN_CREDIT = @"Ad_Adapter_GottenCredit";
 static NSString * const EVENT_AD_ADAPTER_CLICK = @"Ad_Adapter_Click";
 static NSString * const EVENT_AD_ADAPTER_CLOSE = @"Ad_Adapter_Close";
+static NSString * const EVENT_APS_REQUEST = @"Aps_Request";
+static NSString * const EVENT_APS_FINISH = @"Aps_Finish";
 static NSString * const EVENT_LISTENER_INTERRUPT = @"Listener_Interrupt";
 static NSString * const EVENT_FIREBASE_CONFIG_CHANGE = @"Ad_Firebase_Config_Change";
 static NSString * const EVENT_GET_INSTALL_DAY_ERROR = @"Ad_Get_Install_Day_Error";
+static NSString * const EVENT_DEEP_LINK_LIMIT = @"Deep_Link_Limit";
+static NSString * const EVENT_ANR_CRASH = @"ANR_Crash";
+
+static NSString * const PARAM_CRASH_DEVICE_INFO = @"device_info";
+static NSString * const PARAM_CRASH_USER_ID = @"user_id";
+static NSString * const PARAM_CRASH_PLATFORM = @"platform";
+static NSString * const PARAM_CRASH_COUNTRY = @"country";
+static NSString * const PARAM_CRASH_ERROR_TYPE = @"error_type";
+static NSString * const PARAM_CRASH_ERROR = @"error";
 
 
 // uservalue event
@@ -194,11 +213,24 @@ static NSString * const PARAM_REQUEST_NUMBER = @"RequestNumber";
 static NSString * const PARAM_REQUEST_TAG = @"Request_Tag";
 static NSString * const PARAM_SESSION_ID = @"Session_ID";
 static NSString * const PARAM_INSTALL_DAYS = @"Install_Days";
+static NSString * const PARAM_INSTALL_DYA = @"installDay";
+static NSString * const PARAM_PASS_LEVEL = @"passLevel";
+static NSString * const PARAM_DEEP_LINK_URL = @"url";
+static NSString * const PARAM_DEEP_LINK_BEAN = @"bean";
 static NSString * const PARAM_AD_TAG = @"Ad_Tag";
 static NSString * const PARAM_KEY_CORE_LEVEL= @"core_level";
 static NSString * const PARAM_LISTENER_INTERRUPT= @"ListenerInterrupt";
 static NSString * const PARAM_LISTENER_INTERRUPT_EVENT_NAME = @"event_name";
 static NSString * const PARAM_INIT_SDK_DURATION = @"initSdkDuration";
+static NSString * const PARAM_CONFIG_SOURCE = @"configSource";
+static NSString * const PARAM_DEFAULT_CONFIG_VERSION = @"defaultConfigVersion";
+static NSString * const PARAM_SEGMENT_CONFIG_VERSION = @"segmentConfigVersion";
+static NSString * const PARAM_REMOTE_CONFIG_VERSION = @"remoteConfigVersion";
+static NSString * const PARAM_CONFIG_CHANGE_REASON = @"configChangeReason";
+static NSString * const PARAM_IS_REVIEWING = @"isReviewing";
+static NSString * const PARAM_TRIGGER_RULE_TYPE = @"triggerRuleType";
+static NSString * const PARAM_KEY_IS_SUCCESS = @"isSuccess";
+static NSString * const PARAM_MEDIATION = @"Mediation";
 static NSString * const PARAM_CACHE_SIZE = @"Cache_Size";
 static NSString * const PARAM_DELETE_SIZE = @"Delete_Size";
 static NSString * const PARAM_OLD_ID = @"old_id";
@@ -214,6 +246,7 @@ static NSString * const PARAM_LOAD_STATUS = @"loadStatus";
 
 
 static NSString * const PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";
+static NSString * const PARAM_KEY_AD_UNIT_NAME = @"AdUnitName";
 static NSString * const PARAM_KEY_ERROR = @"error";
 static NSString * const PARAM_KEY_VALUE = @"value";
 static NSString * const PARAM_KEY_CURRENCY = @"currency";
@@ -265,7 +298,16 @@ static NSString * const AD_LOAD_ERROR_ADAPTER_REQUEST_TIMEOUT = @"Adapter reques
 static NSString * const AD_LOAD_ERROR_ADAPTER_REQUEST_FLOOR_TIMEOUT = @"_Floor_Timeout";
 static NSString * const AD_LOAD_ERROR_AD_SHOW_RESTRICT = @"Ad Show Restrict";
 static NSString * const AD_LOAD_ERROR_AD_LOAD_RESTRICT = @"Ad Load Restrict";
+static NSString * const AD_LOAD_ERROR_AD_LOAD_URL_RESTRICT = @"URL restrict";
+static NSString * const AD_LOAD_ERROR_AD_LOAD_NO_IDS = @"Ad Load No IDs";
 static NSString * const AD_LOAD_ERROR_AD_DISABLE_ID = @"Ad Disable ID";
+static NSString * const AD_LOAD_ERROR_NO_VALID_TASKS = @"No valid tasks";
+static NSString * const AD_LOAD_ERROR_TIMEOUT_70S = @"Load timeout 70S";
+static NSString * const AD_LOAD_ERROR_EXCEPTION_IN_SUCCESS = @"Exception in success handler";
+static NSString * const AD_LOAD_ERROR_ALL_TASKS_FAILED = @"All tasks failed";
+static NSString * const AD_LOAD_ERROR_CONFIG_IS_NULL = @"The configuration for this AdUnitName is empty";
+static NSString * const AD_LOAD_ERROR_SDK_INIT_FAIL = @"SDK init fail";
+static NSString * const AD_LOAD_ERROR_IDS_SIZE_NULL = @"loadAdInternal ids size is 0";
 
 #pragma mark - 消息通知
 static NSString * const OX_MAG_NETWIRKCHANGE = @"OxNetworkChangeToReachable";

@@ -30,7 +30,9 @@ typedef void (^OnApsFailedBlock)(__nullable id errorInfo);
 @property (nonatomic, copy) OnApsFailedBlock  apsFailedBlock;
 
 - (BOOL)shouldLoadAps;
+- (BOOL)shouldLoadApsWithSlotId:(NSString *)slotId;
 - (void)loadApsAd;
+- (void)loadApsAdWithSlotId:(NSString *)slotId;
 - (void)loadApsAd:(NSString *)amazonAdSlotId adFormat:(OxAPSAdFormat)adFormat;
 - (void)checkApsInit:(void (^)(BOOL isInitialized))callback;
 

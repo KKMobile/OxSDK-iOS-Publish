@@ -9,11 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "OxRewardedAd.h"
 
+@class OxPlacementParams, IdConfig;
+@protocol AdInternalListener;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxMaxRewardedAd : OxRewardedAd
 
-@property(nonatomic, assign) BOOL mUserRewarded;
+@property (nonatomic, assign) BOOL mUserRewarded;
+
+- (instancetype)initWithPlacementParams:(OxPlacementParams *)placementParams
+                               idConfig:(IdConfig *)idConfig
+                         viewController:(nullable UIViewController *)viewController
+                      internalListener:(nullable id<AdInternalListener>)listener;
 
 @end
 

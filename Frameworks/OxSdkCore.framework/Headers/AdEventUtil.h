@@ -8,14 +8,17 @@
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
 #import "OxAdShowLimitation.h"
-#import "OxAdHelperPrivate.h"
+#import "OxAdParams.h"
+#import "OxPlacementParams.h"
+
+@class UrlParamsBean;
+@class OxAdParams, OxPlacementParams;
 
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
 
-+ (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
-+ (void)logMaxImpressionRevenue:(MAAd *)ad placement:(nullable NSString *)placement tag:(long long)tag requestTag:(long long)requestTag floorPrice:(nullable NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
-+ (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
++ (void)logMaxImpressionRevenueWithAd:(MAAd *)ad mAdEventParams:(OxAdParams *)mAdEventParams;
++ (void)logAdmobImpressionRevenueWithAd:(GADAdValue *)advalue adNetwork:(NSString *)adNetwork AdEventParams:(OxAdParams *)mAdEventParams;
 
 // uservalue
 + (void)logAdUserValueError:(NSString *)error;
@@ -31,12 +34,31 @@ NS_ASSUME_NONNULL_BEGIN
 /// 客户端打点
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 + (void)trackInitSdkEvent;
++ (void)trackStartInitSdkEvent:(NSString *)platform;
++ (void)trackInitConfigEventWithDuration:(long long)initSdkDuration
+                                 version:(NSString *)version
+                            configSource:(NSString *)configSource
+                                   error:(nullable NSString *)error
+                               isSuccess:(BOOL)isSuccess;
+/// 远程广告配置 JSON 解析失败
++ (void)trackConfigRemoteParseFailed:(nullable NSString *)error;
+/// 本地广告配置 JSON 解析失败（SP/Bundle 均不可用时）
++ (void)trackConfigLocalParseFailed:(nullable NSString *)error;
++ (void)trackConfigVersionStateEventWithDefaultVersion:(nullable NSString *)defaultVersion
+                                       segmentVersion:(nullable NSString *)segmentVersion
+                                        remoteVersion:(nullable NSString *)remoteVersion
+                                        configSource:(nullable NSString *)configSource
+                                        changeReason:(nullable NSString *)changeReason
+                                         isReviewing:(BOOL)isReviewing
+                                    triggerRuleType:(nullable NSString *)triggerRuleType;
 + (void)trackFirebaseConfigChangeLogWithExploredConfig:(nullable NSString *)exploredConfig
                                                 addIds:(nullable NSString *)addIds
                                          native2InterIds:(nullable NSString *)native2InterIds
                                               disableIds:(nullable NSString *)disableIds
                                                  error:(nullable NSString *)error;
 + (void)trackGetInstallDaysErrorLog:(nullable NSString *)error;
++ (void)trackDeepLinkEventWithAdFormat:(NSString *)adFormat bean:(nullable UrlParamsBean *)bean url:(nullable NSString *)url;
++ (void)trackCrashOrANREvent:(NSString *)errorType error:(nullable NSString *)error;
 
 
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
@@ -76,6 +98,33 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackDeleteExpireAdEvent:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag deleteSize:(NSInteger)deleteSize cacheSize:(NSInteger)cacheSize;
 + (void)trackReplaceAdEventAdformat:(NSString *)adFormat oldAdUnitId:(NSString *)oldAdUnitId newAdUnitId:(NSString *)newAdUnitId oldValue:(double)oldValue newValue:(long long)newValue tag:(long long)tag cacheModel:(NSString *)cacheModel cacheAdSize:(NSInteger)cacheAdSize;
 
++ (void)trackAdCloseDestroyEventTest:(NSString *)adUnitId;
+
++ (void)trackAdRequestEvent:(OxPlacementParams *)parmas;
++ (void)trackSkipAdRequestEvent:(OxPlacementParams *)params;
++ (void)trackAdLoadedEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
++ (void)trackAdLoadFailedEvent:(OxPlacementParams *)parmas adParams:(nullable OxAdParams *)adParams;
++ (void)trackAdShowEvent:(OxPlacementParams *)params limitation:(nullable NSString *)limitation;
++ (void)trackAdMemoryLimitedEvent:(OxPlacementParams *)params;
++ (void)trackListenerInterruptEvent:(OxPlacementParams *)parmas eventName:(NSString *)eventName errorMsg:(NSString *)errorMsg;
++ (void)trackAdShowingEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdImpressionEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdShowFailedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdClickEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdCloseEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdGottenCredit:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdapterRequestEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
++ (void)trackApsLoadRequestEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
++ (void)trackApsLoadFinishEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterLoadedEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterLoadFailedEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterImpressionEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterShowFailedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterClickEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterCloseEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterGottenCredit:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackDeleteExpireAdEvent:(OxPlacementParams *)parmas deleteSize:(NSInteger)deleteSize cacheSize:(NSInteger)cacheSize;
++ (void)trackReplaceAdEvent:(OxPlacementParams *)params oldAdUnitId:(NSString *)oldAdUnitId newAdUnitId:(nullable NSString *)newAdUnitId oldValue:(double)oldValue newValue:(double)newValue cacheModel:(NSString *)cacheModel cacheAdSize:(NSInteger)cacheAdSize;
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;

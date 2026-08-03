@@ -7,9 +7,8 @@
 
 #import "BaseAdManager.h"
 #import "AdEventDelegate.h"
-#import "DataTools.h"
 
-#define OXSDK_VERSION @"1.3.6.0" 
+#define OXSDK_VERSION @"1.0-PR-OpConfig-202608031800"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL    enableFBEvents;
 @property(nonatomic, assign) BOOL    enableTAEvents;
 @property(nonatomic, assign,readonly) long long sessionId;
+@property(nonatomic, assign,readonly) int sessionCount;
 
 + (nonnull instancetype)sharedInstance;
 
@@ -58,6 +58,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)setGameLevel:(int)level;
 
+- (void)setGamePlayMinutes:(int)minutes;
+- (void)setGamePayCounts:(int)count;
+
 - (int)getFrequencyOfEvent:(CountedEvents)event;
 
 - (double)getLtAdValue;
@@ -69,6 +72,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// RemoteConfig 获取完成。
 - (void)onRemoteConfigFetchCompleted;
+
+- (void)setDeepLinkUrl:(nullable NSString *)url;
+- (nullable NSString *)getDeepLinkUrl;
 
 /**
  * 设置 OxSdk 内部属性

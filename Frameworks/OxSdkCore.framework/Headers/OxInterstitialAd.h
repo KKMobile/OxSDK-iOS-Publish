@@ -2,15 +2,20 @@
 //  OxInterstitialAd.h
 //  OxSdkCore
 //
-//  Created by Mavl_2023_100272 on 2025/4/3.
-//  Copyright © 2025 耿志向. All rights reserved.
-//
 
 #import "OxAd.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxInterstitialAd : OxAd
+
+- (void)handleAdLoaded;
+- (void)handleAdLoadFailed:(NSString *)error;
+- (void)handleAdDisplayed;
+- (void)handleAdDisplayFailed:(NSString *)error errorCode:(NSInteger)errorCode;
+- (void)handleAdClicked;
+- (void)handleAdClosed;
+- (void)showAdWithDelay:(dispatch_block_t)showBlock;
 
 @end
 
