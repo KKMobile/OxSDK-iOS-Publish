@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxAppLovinAdapter"#SDK名称
-    spec.version      = "13.5.0.1"#版本号
+    spec.version      = "13.5.0.2"#版本号
     spec.summary      = "OxAdSdkAdapter for AppLovin applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -31,5 +31,5 @@ Pod::Spec.new do |spec|
 
     # Custom AdMob<-AppLovin adapter; do NOT depend on GoogleMobileAdsMediationAppLovin
     spec.dependency 'Google-Mobile-Ads-SDK'
-    spec.dependency 'AppLovinSDK', '13.5.0'
+    spec.dependency 'AppLovinSDK', '13.2.0'
 end
