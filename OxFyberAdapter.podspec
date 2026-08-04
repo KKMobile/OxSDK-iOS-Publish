@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxFyberAdapter"#SDK名称
-    spec.version      = "8.4.3.0.2"#版本号
+    spec.version      = "8.4.3.0.3"#版本号
     spec.summary      = "OxAdSdk for Fyber applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -31,5 +31,8 @@ Pod::Spec.new do |spec|
 
 
     spec.dependency 'AppLovinMediationFyberAdapter', '8.4.3.0'
-    # spec.dependency 'GoogleMobileAdsMediationFyber','8.3.6.0'
+    spec.dependency 'Google-Mobile-Ads-SDK'
+    # Do NOT add GoogleMobileAdsMediationFyber — would duplicate GADMediationAdapterFyber
+
+
 end
