@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxAppLovinAdapter"#SDK名称
-    spec.version      = "13.2.0.1"#版本号
+    spec.version      = "13.2.0.2"#版本号
     spec.summary      = "OxAdSdkAdapter for AppLovin applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC

@@ -2,7 +2,7 @@
 //  OxAppLovinAdapter.h
 //  OxAppLovinAdapter
 //
-//  Custom AdMob <- AppLovin mediation adapter (vendored Google 13.5.1.0 source).
+//  Custom AdMob <- AppLovin mediation adapter (vendored Google 13.2.0.0 source).
 //  Keeps class name GADMediationAdapterAppLovin for AdMob console compatibility.
 //
 
