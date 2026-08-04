@@ -1,0 +1,4 @@
+Vendored from googleads/googleads-mobile-ios-mediation (DTExchange)
+Commit cbcfba3 (adapter version 8.4.2.0)
+Linked against project Fyber/DT Exchange via AppLovinMediationFyberAdapter 8.4.2.0
+(no CocoaPods GoogleMobileAdsMediationFyber)

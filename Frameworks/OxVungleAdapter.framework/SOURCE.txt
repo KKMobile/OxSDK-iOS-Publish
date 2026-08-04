@@ -1,0 +1,4 @@
+Vendored from googleads/googleads-mobile-ios-mediation (LiftoffMonetize)
+Commit b07a0c7 (adapter version 7.4.5.0)
+Linked against project VungleAds via AppLovinMediationVungleAdapter 7.4.5.1
+(no CocoaPods GoogleMobileAdsMediationVungle)

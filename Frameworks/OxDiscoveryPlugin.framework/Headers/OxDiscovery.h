@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setDiscoveryDelegate:(id<OxDiscoveryDelegate>)delegate;
 - (void)logMaxImpressionRevenue:(NSDictionary *)params;
 - (void)logAdmobImpressionRevenue:(NSDictionary *)params;
+- (void)logImpressionRevenue:(NSDictionary *)params;
 
 #pragma mark - 内部调用
 - (void)trackEvent:(NSString *)eventName params:(nullable NSDictionary *)params;

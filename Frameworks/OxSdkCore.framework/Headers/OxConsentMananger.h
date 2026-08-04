@@ -17,7 +17,6 @@ typedef enum : NSUInteger {
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^GDPRDismiss)(void);
-typedef void(^ConsentCheckResultCallback)(BOOL isSubjectToGDPR);
 
 @interface OxConsentMananger : NSObject
 
@@ -30,7 +29,7 @@ typedef void(^ConsentCheckResultCallback)(BOOL isSubjectToGDPR);
 ///   - defaultGDPRTool: 默认使用的 GDPR 平台
 ///   - privacyPolicyLink: Max GDPR 的隐私政策链接
 ///   - consentCheckResultCallback: 是否受到GDPR影响回调
-- (void)initialize:(GDPRTool)defaultGDPRTool privacyPolicyLink:(NSString *)privacyPolicyLink consentCheckResultCallback:(ConsentCheckResultCallback)callBack;
+- (void)initialize:(GDPRTool)defaultGDPRTool privacyPolicyLink:(NSString *)privacyPolicyLink consentCheckResultCallback:(void (^)(BOOL isSubjectToGDPR))consentCheckResultCallback;
 
 /// 展示 GDPRUI  展示之前不用判断 isSubjectToGDPR
 /// - Parameters:

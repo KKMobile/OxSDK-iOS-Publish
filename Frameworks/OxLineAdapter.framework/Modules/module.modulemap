@@ -1,0 +1,6 @@
+framework module OxLineAdapter {
+  umbrella header "OxLineAdapter.h"
+  export *
+
+  module * { export * }
+}

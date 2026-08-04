@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxFyberAdapter"#SDK名称
-    spec.version      = "8.4.3.0.1"#版本号
+    spec.version      = "8.4.3.0.2"#版本号
     spec.summary      = "OxAdSdk for Fyber applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC

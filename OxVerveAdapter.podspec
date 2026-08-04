@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxVerveAdapter"#SDK名称
-    spec.version      = "3.8.1.0"#版本号
+    spec.version      = "3.8.1.1"#版本号
     spec.summary      = "OxAdSdkAdapter for Verve applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC

@@ -1,0 +1,6 @@
+framework module OxVungleAdapter {
+  umbrella header "OxVungleAdapter.h"
+  export *
+
+  module * { export * }
+}

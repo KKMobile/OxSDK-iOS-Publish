@@ -1,0 +1,4 @@
+Vendored from googleads/googleads-mobile-ios-mediation
+Commit 476da0b (adapter version 9.2.0.0.0)
+Linked against project IronSourceSDK via AppLovinMediationIronSourceAdapter 9.2.0.0.0
+(no CocoaPods GoogleMobileAdsMediationIronSource)

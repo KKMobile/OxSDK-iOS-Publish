@@ -2,8 +2,9 @@
 //  OxIronSourceAdapter.h
 //  OxIronSourceAdapter
 //
-//  Created by Mavl_2023_100272 on 2025/5/14.
-//  Copyright © 2025 耿志向. All rights reserved.
+//  Custom AdMob <- IronSource mediation adapter (vendored Google 9.2.0.0.0 source).
+//  Keeps class name GADMediationAdapterIronSource for AdMob console compatibility.
+//  Structure aligned with OxVungleAdapter (Liftoff Monetize).
 //
 
 #import <Foundation/Foundation.h>
@@ -14,6 +15,4 @@ FOUNDATION_EXPORT double OxIronSourceAdapterVersionNumber;
 //! Project version string for OxIronSourceAdapter.
 FOUNDATION_EXPORT const unsigned char OxIronSourceAdapterVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <OxIronSourceAdapter/PublicHeader.h>
-
-
+#import "IronSourceAdapter.h"

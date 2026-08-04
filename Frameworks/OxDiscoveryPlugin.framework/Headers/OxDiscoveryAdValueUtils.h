@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)logMaxImpressionRevenue:(NSDictionary *)parmas;
 + (void)logAdmobImpressionRevenue:(NSDictionary *)parmas;
++ (void)logImpressionRevenue:(NSDictionary *)parmas;
 
 @end
 

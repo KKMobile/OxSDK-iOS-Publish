@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxOguryAdapter"#SDK名称
-    spec.version      = "5.2.3.0"#版本号
+    spec.version      = "5.2.3.1"#版本号
     spec.summary      = "OxAdSdkAdapter for Ogury applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
