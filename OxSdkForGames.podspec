@@ -48,7 +48,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxVungleAdapter', '7.6.2.5'
     spec.dependency 'OxYandexAdapter', '7.18.1.0'
     spec.dependency 'OxAppLovinAdapter', '13.2.0.2'
-
+    spec.dependency 'OxBigoAdapter', '5.2.1.0'
     spec.dependency 'OxAdjustPlugin', '4.0.0-202504021600'
     spec.dependency 'OxFirebasePlugin', '2.0.0-202411251600'
     spec.dependency 'OxTAPlugin', '2.0.0-202411251600'
