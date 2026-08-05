@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
 
 
     spec.dependency 'AppLovinMediationFyberAdapter', '8.4.2.0'
-    #spec.dependency 'Google-Mobile-Ads-SDK'
+    spec.dependency 'Google-Mobile-Ads-SDK'
     # Do NOT add GoogleMobileAdsMediationFyber — would duplicate GADMediationAdapterFyber
 
 
