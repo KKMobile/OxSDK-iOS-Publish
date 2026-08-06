@@ -28,7 +28,10 @@ Pod::Spec.new do |spec|
 
     spec.dependency 'OxSdkCore', '1.3.6.0-RC01-202608051300'
     
+    spec.dependency 'OxAppLovinAdapter', '13.2.0.2'
     spec.dependency 'OxAPSAdapter', '5.2.0.0'
+
+    # spec.dependency 'OxBigoAdapter', '5.2.1.0'
     spec.dependency 'OxBidMachineAdapter', '3.7.1.1'
     spec.dependency 'OxChartboostAdapter', '9.13.0.1'
     spec.dependency 'OxFacebookAdapter', '6.21.1.0'
@@ -47,8 +50,8 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxVerveAdapter', '3.8.1.2'
     spec.dependency 'OxVungleAdapter', '7.6.2.5'
     spec.dependency 'OxYandexAdapter', '7.18.1.0'
-    spec.dependency 'OxAppLovinAdapter', '13.2.0.2'
-    # spec.dependency 'OxBigoAdapter', '5.2.1.0'
+
+
     spec.dependency 'OxAdjustPlugin', '4.0.0-202504021600'
     spec.dependency 'OxFirebasePlugin', '2.0.0-202411251600'
     spec.dependency 'OxTAPlugin', '2.0.0-202411251600'
