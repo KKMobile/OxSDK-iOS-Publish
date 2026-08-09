@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.0-PR-OpConfig-202608031800"#版本号
+    spec.version      = "1.0-PR-OpConfig-202608092200"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,34 +26,33 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-    spec.dependency 'OxSdkCore', '1.0-PR-OpConfig-202608031800'
+    spec.dependency 'OxSdkCore', '1.0-PR-OpConfig-202608092200'
     
-    #spec.dependency 'OxAPSAdapter', '5.2.0.0'
-     #spec.dependency 'OxBidMachineAdapter', '3.5.1.0.0'
-     #spec.dependency 'OxChartboostAdapter', '9.8.1.0'
-     #spec.dependency 'OxFacebookAdapter', '6.21.1.0'
-     #spec.dependency 'OxFyberAdapter', '8.4.2.1'
-     #spec.dependency 'OxInmobiAdapter', '10.7.5.2'
-    # spec.dependency 'OxIronSourceAdapter', '9.2.0.0.0'
-    # spec.dependency 'OxLineAdapter', '2.9.20260303.0'
-    # spec.dependency 'OxMintegralAdapter', '7.7.2.1'
-    # spec.dependency 'OxMolocoAdapter', '4.5.1.0'
-    # spec.dependency 'OxMyTargetAdapter', '5.21.9.0'
-    # spec.dependency 'OxOguryAdapter', '5.0.1.0'
-    # spec.dependency 'OxPangleAdapter', '7.8.5.5.0'
-    # spec.dependency 'OxPubmaticAdapter', '4.5.0.0'
-    # spec.dependency 'OxSmaatoAdapter', '22.9.3.0'
-    # spec.dependency 'OxUnityAdsAdapter', '4.17.0.0'
-   #  spec.dependency 'OxVerveAdapter', '3.7.1.0'
-    # spec.dependency 'OxVungleAdapter', '7.4.5.1'
-    # spec.dependency 'OxYandexAdapter', '7.18.1.0'
+    spec.dependency 'OxAPSAdapter', '5.2.0.0'
+    spec.dependency 'OxBidMachineAdapter', '3.5.1.0.0'
+    spec.dependency 'OxChartboostAdapter', '9.8.1.0'
+    spec.dependency 'OxFacebookAdapter', '6.21.1.0'
+    spec.dependency 'OxFyberAdapter', '8.4.2.1'
+    spec.dependency 'OxInmobiAdapter', '10.7.5.2'
+    spec.dependency 'OxIronSourceAdapter', '9.2.0.0.0'
+    spec.dependency 'OxLineAdapter', '2.9.20260303.0'
+    spec.dependency 'OxMintegralAdapter', '7.7.2.1'
+    spec.dependency 'OxMolocoAdapter', '4.5.1.0'
+    spec.dependency 'OxMyTargetAdapter', '5.21.9.0'
+    spec.dependency 'OxOguryAdapter', '5.0.1.0'
+    spec.dependency 'OxPangleAdapter', '7.8.5.5.0'
+    spec.dependency 'OxPubmaticAdapter', '4.5.0.0'
+    spec.dependency 'OxSmaatoAdapter', '22.9.3.0'
+    spec.dependency 'OxUnityAdsAdapter', '4.17.0.0'
+    spec.dependency 'OxVerveAdapter', '3.7.1.0'
+    spec.dependency 'OxVungleAdapter', '7.4.5.1'
+    spec.dependency 'OxYandexAdapter', '7.18.1.0'
     
-    spec.dependency 'OxSdkPluginRegistry', '3.0.0'
-    spec.dependency 'OxAdjustPlugin', '5.0.0-202607021800'
-    spec.dependency 'OxFirebasePlugin', '3.0.0-202607021800'
-    spec.dependency 'OxTAPlugin', '3.0.0-202607021800'
+    spec.dependency 'OxAdjustPlugin', '4.0.0-202504021600'
+    spec.dependency 'OxFirebasePlugin', '2.0.0-202411251600'
+    spec.dependency 'OxTAPlugin', '2.0.0-202411251600'
     spec.dependency 'OxFBPlugin', '3.0.0-202607021800'
-    spec.dependency 'OxRemoteConfigPlugin', '3.0.0-202607021800'
-    spec.dependency 'OxDiscoveryPlugin', '4.0.0-202607021800'
+    spec.dependency 'OxRemoteConfigPlugin', '2.0.1-202601061100'
+    spec.dependency 'OxDiscoveryPlugin', '4.0.1-202607141300'
     
 end
