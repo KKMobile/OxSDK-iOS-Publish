@@ -30,6 +30,7 @@ Pod::Spec.new do |spec|
     
     spec.dependency 'OxAPSAdapter', '5.2.0.0'
     spec.dependency 'OxBidMachineAdapter', '3.5.1.0.0'
+    spec.dependency 'OxBigoAdapter', '5.2.1.0'
     spec.dependency 'OxChartboostAdapter', '9.8.1.0'
     spec.dependency 'OxFacebookAdapter', '6.21.1.0'
     spec.dependency 'OxFyberAdapter', '8.4.2.1'
