@@ -24,6 +24,7 @@ Pod::Spec.new do |spec|
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
+    spec.static_framework = true
     spec.source_files = 'Sources/GameVersion/**/*.{h,m}'
     spec.pod_target_xcconfig = {
       'VALID_ARCHS' => 'x86_64 armv7 arm64',
