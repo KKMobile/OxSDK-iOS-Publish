@@ -24,7 +24,11 @@ Pod::Spec.new do |spec|
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "g-#{spec.version}" }
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
     spec.requires_arc = true#是否时自动内存管理
-    spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
+    spec.source_files = 'Sources/GameVersion/**/*.{h,m}'
+    spec.pod_target_xcconfig = {
+      'VALID_ARCHS' => 'x86_64 armv7 arm64',
+      'GCC_PREPROCESSOR_DEFINITIONS' => "$(inherited) OX_GAME_SDK_VERSION=\\\"#{spec.version}\\\""
+    }#支持架构配置并将Pod版本注入Game版本类
 
     spec.dependency 'OxSdkCore', '1.3.6.1-RC01-202608121500'
     
