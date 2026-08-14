@@ -159,7 +159,6 @@
 #import "OxNetworkReachabilityManager.h"
 #import "OxPreferenceManager.h"
 #import "OxPrefManager.h"
-#import "OxTAEventUtil.h"
 #import "Reachability.h"
 
 FOUNDATION_EXPORT double OxSdkCoreVersionNumber;
