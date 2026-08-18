@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxFacebookAdapter"#SDK名称
-    spec.version      = "6.20.0.0"#版本号
+    spec.version      = "6.22.0.0"#版本号
     spec.summary      = "OxAdSdkAdapter for Facebook applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
     spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
     spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
     spec.platform     = :ios#支持平台
-    spec.ios.deployment_target = "12.0"#支持iOS最低版本
+    spec.ios.deployment_target = "15.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "a-facebook-#{spec.version}" }
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
@@ -29,5 +29,6 @@ Pod::Spec.new do |spec|
     spec.ios.vendored_frameworks = 'Frameworks/OxFacebookAdapter.framework'
     
     spec.dependency 'Google-Mobile-Ads-SDK'
-    spec.dependency 'AppLovinMediationFacebookAdapter', '6.20.0.0'
+    spec.dependency 'AppLovinMediationFacebookAdapter', "6.22.0.1"  
+    spec.dependency 'GoogleMobileAdsMediationFacebook', "6.22.0.0"
 end

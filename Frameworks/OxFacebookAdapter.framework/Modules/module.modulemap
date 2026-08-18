@@ -1,6 +1,6 @@
 framework module OxFacebookAdapter {
-  umbrella header "OxFacebookAdapter.h"
-  export *
+  umbrella header "OxFacebookAdapter-umbrella.h"
 
+  export *
   module * { export * }
 }
