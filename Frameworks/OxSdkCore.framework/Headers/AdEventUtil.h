@@ -8,25 +8,40 @@
 #import <Foundation/Foundation.h>
 #import "OxAdSdkManager.h"
 #import "OxAdShowLimitation.h"
+#import "OxAdHelperPrivate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
 
 + (void)logMaxImpressionRevenue:(MAAd *)ad placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
++ (void)logMaxImpressionRevenue:(MAAd *)ad placement:(nullable NSString *)placement tag:(long long)tag requestTag:(long long)requestTag floorPrice:(nullable NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
 + (void)logAdmobImpressionRevenue:(NSString *)adUnitId adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork advalue:(GADAdValue *)advalue placement:(NSString *)placement tag:(long long)tag requestTag:(long long)requestTag;
 
 // uservalue
-+ (void)logAdUserValueDurationEvent:(NSString *)adUnitId count:(NSInteger)count ecpm:(float)ecpm function:(NSString *)function;
-+ (void)logAdUserValueError:(NSString *)order function:(NSString *)function error:(NSString *)error;
++ (void)logAdUserValueError:(NSString *)error;
++ (void)logAdUserValueError:(NSString *)error type:(AdUserValueErrorType)type;
++ (void)logAdUserValue:(NSString *)adUnitId count:(NSInteger)count value:(float)value isNewPeriod:(BOOL)isNewPeriod;
++ (void)logAdUserValueSegment:(NSString *)adUnitId value:(float)value factor:(float)factor segmentValue:(NSString *)segmentValue;
++ (void)logAdUserValueNoSegment:(NSString *)adUnitId value:(float)value factor:(float)factor;
++ (void)logAdSegment:(NSDictionary *)segmentMap;
 
 
 + (void)trackAdEventByKey:(nonnull NSString *)key paramDic:(nullable NSDictionary *)params;
 
 /// 客户端打点
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
++ (void)trackInitSdkEvent;
++ (void)trackFirebaseConfigChangeLogWithExploredConfig:(nullable NSString *)exploredConfig
+                                                addIds:(nullable NSString *)addIds
+                                         native2InterIds:(nullable NSString *)native2InterIds
+                                              disableIds:(nullable NSString *)disableIds
+                                                 error:(nullable NSString *)error;
++ (void)trackGetInstallDaysErrorLog:(nullable NSString *)error;
+
 
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
-+ (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
++ (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag loadState:(NSString *)loadState isReload:(BOOL)isReload;
++ (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestNumber:(NSInteger)requestNumber requestTag:(long long)requestTag floorPrice:(NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
 
 
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;
@@ -59,6 +74,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackListenerInterruptEvent:(NSString *)eventName adFormat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag error:(NSString *)error;
 
 + (void)trackDeleteExpireAdEvent:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag deleteSize:(NSInteger)deleteSize cacheSize:(NSInteger)cacheSize;
++ (void)trackReplaceAdEventAdformat:(NSString *)adFormat oldAdUnitId:(NSString *)oldAdUnitId newAdUnitId:(NSString *)newAdUnitId oldValue:(double)oldValue newValue:(long long)newValue tag:(long long)tag cacheModel:(NSString *)cacheModel cacheAdSize:(NSInteger)cacheAdSize;
+
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;

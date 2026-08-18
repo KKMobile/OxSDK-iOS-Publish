@@ -17,13 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class OxAd;
 
-typedef enum : NSUInteger {
-    LoadStatus_Normal = 0,
-    LoadStatus_Running
-} LoadStatus;
-
-
-
 @interface OxAdHelper : NSObject
 
 - (void)loadAd;
