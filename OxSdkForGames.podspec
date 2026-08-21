@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "1.3.6.1-RC02-202608181200"#版本号
+    spec.version      = "1.3.6.1-RC03-202608211349"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-    spec.dependency 'OxSdkCore', '1.3.6.0-RC01-202608051300'
+    spec.dependency 'OxSdkCore', '1.3.6.1-RC03-202608211349'
     
     spec.dependency 'OxAPSAdapter', '5.2.0.0'
     spec.dependency 'OxBidMachineAdapter', '3.7.1.1'
@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxFyberAdapter', '8.4.2.0.1'
     spec.dependency 'OxInmobiAdapter', '11.4.0.1'
     spec.dependency 'OxIronSourceAdapter', '9.2.0.0.3'
-    spec.dependency 'OxLineAdapter', '3.0.1.1'
+    spec.dependency 'OxLineAdapter', '3.0.1.1.0'
     spec.dependency 'OxMintegralAdapter', '8.1.5.0.2'
     spec.dependency 'OxMolocoAdapter', '4.5.1.0'
     #spec.dependency 'OxMyTargetAdapter', '5.21.9.0'
@@ -47,7 +47,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxVerveAdapter', '3.8.1.2'
     spec.dependency 'OxVungleAdapter', '7.6.2.5'
     spec.dependency 'OxYandexAdapter', '7.18.1.0'
-    spec.dependency 'OxAppLovinAdapter', '13.2.0.2'
+    #spec.dependency 'OxAppLovinAdapter', '13.2.0.2'
     # spec.dependency 'OxBigoAdapter', '5.2.1.0'
 
     spec.dependency 'OxAdjustPlugin', '4.0.0-202504021600'
