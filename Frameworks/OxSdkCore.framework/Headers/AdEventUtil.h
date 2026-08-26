@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 客户端打点
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
 + (void)trackInitSdkEvent;
++ (void)trackPangleInitSdkEvent:(NSTimeInterval)initSdkDuration isInstallWebView:(BOOL)isInstallWebView error:(nullable NSString *)error;
++ (void)logPangleImpressionRevenue:(NSString *)adUnitId revenue:(double)revenue adFormat:(NSString *)adFormat adNetwork:(NSString *)adNetwork placement:(nullable NSString *)placement requestTag:(long long)requestTag adTag:(long long)adTag;
++ (NSMutableDictionary *)getBasicDicWithAdFormat:(NSString *)adFormat adunitId:(NSString *)adunitId placement:(nullable NSString*)placement requestTag:(long long)requestTag ad:(nullable id)ad;
 + (void)trackFirebaseConfigChangeLogWithExploredConfig:(nullable NSString *)exploredConfig
                                                 addIds:(nullable NSString *)addIds
                                          native2InterIds:(nullable NSString *)native2InterIds
@@ -53,6 +56,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdShowEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement limitation:(NSString *)limitation adStatus:(NSString *)adStatus showFailedDuration:(double)showFailedDuration isReady:(BOOL)isReady requestTag:(long long)requestTag;
 
 + (void)trackAdShowingEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement networkNamee:(nullable NSString *) networkName creativeId:(nullable NSString *)creativeId requestTag:(long long)requestTag;
+
++ (void)trackAdShowingReasonEventAdformat:(NSString *)adFormat
+                                 adUnitId:(NSString *)adUnitId
+                                placement:(nullable NSString *)placement
+                                 strategy:(nullable NSString *)strategy
+                                   reason:(nullable NSString *)reason
+                                   winner:(nullable NSString *)winner
+                          readyCandidates:(nullable NSString *)readyCandidates
+                           lostCandidates:(nullable NSString *)lostCandidates
+                               requestTag:(long long)requestTag;
 
 + (void)trackAdMemoryLimitedEvent:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
 
