@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "DataTools.h"
 
-#define OXSDK_VERSION @"1.0-MO-ShowRateBooster-202608261200"
+#define OXSDK_VERSION @"1.0-MO-ShowRateBooster-202608271300"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -142,6 +142,8 @@ static NSString * const EVENT_AD_ADAPTER_SHOW_FAILED = @"Ad_Adapter_Show_Failed"
 static NSString * const EVENT_AD_ADAPTER_GOTTEN_CREDIT = @"Ad_Adapter_GottenCredit";
 static NSString * const EVENT_AD_ADAPTER_CLICK = @"Ad_Adapter_Click";
 static NSString * const EVENT_AD_ADAPTER_CLOSE = @"Ad_Adapter_Close";
+static NSString * const EVENT_APS_REQUEST = @"Aps_Request";
+static NSString * const EVENT_APS_FINISH = @"Aps_Finish";
 static NSString * const EVENT_LISTENER_INTERRUPT = @"Listener_Interrupt";
 static NSString * const EVENT_FIREBASE_CONFIG_CHANGE = @"Ad_Firebase_Config_Change";
 static NSString * const EVENT_GET_INSTALL_DAY_ERROR = @"Ad_Get_Install_Day_Error";
@@ -166,6 +168,7 @@ static NSString * const EVENT_SHOW_SDK_CONSENT_OPTION = @"show_sdk_consent_optio
 
 // Param keys
 static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
+static NSString * const PARAM_AD_ADAPTER_ID = @"AdAdapterId";
 static NSString * const PARAM_AD_FORMAT = @"AdFormat";
 static NSString * const PARAM_PLACEMENT_ID = @"Placement_ID";
 static NSString * const PARAM_PLACEMENT = @"Placement";
@@ -245,7 +248,7 @@ static NSString * const PARAM_KEY_COUNT = @"count";
 static NSString * const PARAM_KEY_ORDER = @"order";
 static NSString * const PARAM_KEY_FACTOR = @"factor";
 static NSString * const PARAM_KEY_FUNCTION = @"function";
-static NSString * const EVENT_AD_MAX_INITIALIZE = @"Ad_Max_Initialize";
+//static NSString * const EVENT_AD_MAX_INITIALIZE = @"Ad_Max_Initialize";
 static NSString * const EVENT_KEY_BEGIN_SEGMENT = @"begin_segment";
 static NSString * const EVENT_KEY_SEGMENT_INITIALIZE_SUCCESS = @"segment_initialize_Success";
 static NSString * const EVENT_KEY_SEGMENTED = @"isSegment";
