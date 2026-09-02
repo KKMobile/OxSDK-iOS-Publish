@@ -1,0 +1,19 @@
+[2026-09-02 16:55:37] Pod: OxAdjustPlugin 4.0.1-202609021600
+[2026-09-02 16:55:37] Log file: /Users/yuxueer/Desktop/Company/A_IOS_NewProject/OxSDK-iOS-Publish2/logs/check_game_until_available_20260902_165537.log
+[2026-09-02 16:55:37] Checking OxAdjustPlugin 4.0.1-202609021600 with CHECK_MODE=search...
+[2026-09-02 16:55:37] Command: pod search OxAdjustPlugin --simple --no-ansi 
+[2026-09-02 16:55:38] Updating CocoaPods repo before check...
+[2026-09-02 16:55:38] Command: pod repo update
+Updating spec repo `trunk`
+[2026-09-02 16:55:55] CocoaPods repo update finished.
+
+-> OxAdjustPlugin (5.0.0-202607021800)
+   OxAdSdk for Adjust applications.
+   pod 'OxAdjustPlugin', '~> 5.0.0-202607021800'
+   - Homepage: https://github.com/KKMobile/OxSDK-iOS-Publish.git
+   - Source:   https://github.com/KKMobile/OxSDK-iOS-Publish.git
+   - Versions: 5.0.0-202607021800, 4.0.1-202609021600, 4.0.0-202504021600, 3.0.0-202502182000, 2.0.0-202502182000, 2.0.0-202411252000, 2.0.0-202411251600, 2.0.0-202410311700, 1.0.6-202503281600, 1.0.5-202503131500, 1.0.4-202503131430, 1.0.3-202503101900, 1.0.2-202312041600, 1.0.2-UA-DMA-20240325, 1.0.2-UA-DMA-20240311, 1.0.1-202308041200, 1.0.0-202306291800 [trunk repo]
+[2026-09-02 16:55:57] ============================================================
+[2026-09-02 16:55:57] OxAdjustPlugin 4.0.1-202609021600 可以使用 pod 了。
+[2026-09-02 16:55:57] ============================================================
+[2026-09-02 16:55:57] OxAdjustPlugin 4.0.1-202609021600 可以使用 pod 了。

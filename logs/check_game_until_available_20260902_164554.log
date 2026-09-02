@@ -1,0 +1,6 @@
+[2026-09-02 16:45:54] Pod: OxAdjustPlugin 4.0.1-202609021600
+[2026-09-02 16:45:54] Log file: /Users/yuxueer/Desktop/Company/A_IOS_NewProject/OxSDK-iOS-Publish2/logs/check_game_until_available_20260902_164554.log
+[2026-09-02 16:45:54] DRY_RUN=1, repo update command preview:
+[2026-09-02 16:45:54] Command: pod repo update
+[2026-09-02 16:45:54] DRY_RUN=1, check command preview:
+[2026-09-02 16:45:54] Command: pod search OxAdjustPlugin --simple --no-ansi 
