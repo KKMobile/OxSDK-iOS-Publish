@@ -42,6 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag loadState:(NSString *)loadState isReload:(BOOL)isReload;
 + (void)trackAdAdapterRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestNumber:(NSInteger)requestNumber requestTag:(long long)requestTag floorPrice:(NSString *)floorPrice jumpHeightPer:(float)jumpHeightPer;
++ (void)trackApsRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement requestTag:(long long)requestTag;
++ (void)trackApsFinishEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(nullable NSString *)placement requestTag:(long long)requestTag adStatus:(NSString *)adStatus error:(nullable id)error failedDuration:(double)failedDuration;
 
 
 + (void)trackAdLoadedEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement loadedDuration:(double)loadedDuration  requestTag:(long long)requestTag ad:(nullable id)ad;
@@ -53,6 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdShowEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement limitation:(NSString *)limitation adStatus:(NSString *)adStatus showFailedDuration:(double)showFailedDuration isReady:(BOOL)isReady requestTag:(long long)requestTag;
 
 + (void)trackAdShowingEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement networkNamee:(nullable NSString *) networkName creativeId:(nullable NSString *)creativeId requestTag:(long long)requestTag;
++ (void)trackAdShowingEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement networkNamee:(nullable NSString *)networkName creativeId:(nullable NSString *)creativeId adAdapterId:(nullable NSString *)adAdapterId requestTag:(long long)requestTag;
 
 + (void)trackAdMemoryLimitedEvent:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
 

@@ -42,6 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onClientShowingLimitation:(nullable NSString*)placement limitation:(nullable NSString*)limitation;
 
 - (void)clientInvokingShowAd:(nullable NSString *)placement limitation:(nullable NSString *)limitation networkName:(NSString *)networkName creativeId:(NSString *)creativeId;
+- (void)clientInvokingShowAd:(nullable NSString *)placement limitation:(nullable NSString *)limitation networkName:(NSString *)networkName creativeId:(NSString *)creativeId adAdapterId:(nullable NSString *)adAdapterId;
 
 /**
      * 客户端调用 showAd 系列方法。
