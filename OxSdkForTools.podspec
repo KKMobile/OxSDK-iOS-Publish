@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "OxSdkForTools"#SDK名称
-  spec.version      = "1.4.1.0-RC01-202609111200"#版本号
+  spec.version      = "1.4.1.0-RC01-202609111201"#版本号
   spec.summary      = "OxAdSdk for tools applications."#概要
   #描述  （描述一定要比概要多一些,不然会有警告!）
   spec.description  = <<-DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
   spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
   spec.platform     = :ios#支持平台
-  spec.ios.deployment_target = "15.0"#支持iOS最低版本
+  spec.ios.deployment_target = "13.0"#支持iOS最低版本
   spec.swift_version = '4.0'
   spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "t-#{spec.version}" }
   spec.requires_arc = true#是否时自动内存管理
@@ -34,13 +34,15 @@ Pod::Spec.new do |spec|
   spec.dependency 'PureLayout'
 
   #Core Max Mediation
-  spec.dependency 'AppLovinSDK', '13.6.3'
+  spec.dependency 'AppLovinSDK', '13.2.0'
   spec.dependency 'Google-Mobile-Ads-SDK', '13.7.0'
   spec.dependency 'AppLovinMediationGoogleAdManagerAdapter', '13.7.0.0'
   spec.dependency 'AppLovinMediationGoogleAdapter', '13.7.0.0'
-  spec.dependency 'GoogleMobileAdsMediationAppLovin','13.6.3.0'
+   #spec.dependency 'GoogleMobileAdsMediationAppLovin','13.6.3.0'
   spec.dependency 'GoogleUserMessagingPlatform','2.6.0'
 
+
+  spec.dependency 'OxAppLovinAdapter', '13.2.0.2'
 
   spec.dependency 'OxAPSAdapter', '5.2.0.0'
   spec.dependency 'OxFacebookAdapter', '6.22.0.0'
@@ -53,5 +55,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'OxRemoteConfigPlugin', '2.0.0-202411251600'
   spec.dependency 'OxDiscoveryPlugin', '3.0.2-202509042130'
   spec.dependency 'OxFirebasePlugin', '2.0.0-202411251600'
+
     
 end
