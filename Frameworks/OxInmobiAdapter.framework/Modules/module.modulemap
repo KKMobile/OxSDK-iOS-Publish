@@ -1,6 +1,6 @@
 framework module OxInmobiAdapter {
-  umbrella header "OxInmobiAdapter.h"
-  export *
+  umbrella header "OxInmobiAdapter-umbrella.h"
 
+  export *
   module * { export * }
 }
