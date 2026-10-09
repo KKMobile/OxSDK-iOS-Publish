@@ -56,6 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (OxPlacementParams *)oxPlacementParams;
 - (BOOL)isOpenDynamic;
+- (BOOL)isOpenPostBidding;
 - (nullable OxAd *)createOxAdWithAdFormat:(NSString *)adFormat idConfig:(IdConfig *)idConfig;
 - (void)onBackOxAd:(OxAd *)ad;
 - (void)setReturnFlag:(BOOL)isReturn;
@@ -72,6 +73,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isNotMaxAd;
 /// 是否为 Banner 或 Mrec（两者共用一套“不通过 AdLoadManager 收口成功/失败回调”的逻辑）
 - (BOOL)isBannerOrMrec;
+/// 取消当前展示并清理展示态广告；默认空实现，Banner/Mrec 覆盖。
+- (void)cancelShow;
 - (void)removeFromAdHelpers:(NSString *)adUnitName;
 - (void)callOnAdDisplayFailedForCheck:(NSString *)error;
 

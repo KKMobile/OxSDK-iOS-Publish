@@ -31,9 +31,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (OxPlacementParams *)oxPlacementParams;
 - (nullable NSString *)floorID;
 - (NSArray<NSString *> *)dynamicIDs;
+- (NSArray<NSString *> *)postBiddingIDs;
+- (NSSet<NSNumber *> *)mediationPlatforms;
 - (NSString *)adUnitName;
 - (NSString *)adFormat;
 - (BOOL)isDynamicEnabled;
+- (BOOL)isPostBiddingEnabled;
 
 @property (nonatomic, weak, nullable) id<IOnConfigChangedListener> onConfigChangedListener;
 

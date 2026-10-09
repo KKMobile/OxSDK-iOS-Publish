@@ -13,12 +13,14 @@
 
 @class UrlParamsBean;
 @class OxAdParams, OxPlacementParams;
+@class GADResponseInfo;
 
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
 
 + (void)logMaxImpressionRevenueWithAd:(MAAd *)ad mAdEventParams:(OxAdParams *)mAdEventParams;
 + (void)logAdmobImpressionRevenueWithAd:(GADAdValue *)advalue adNetwork:(NSString *)adNetwork AdEventParams:(OxAdParams *)mAdEventParams;
++ (void)logAdmobImpressionRevenueWithAd:(GADAdValue *)advalue responseInfo:(nullable GADResponseInfo *)responseInfo AdEventParams:(OxAdParams *)mAdEventParams;
 
 // uservalue
 + (void)logAdUserValueError:(NSString *)error;
@@ -33,7 +35,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 客户端打点
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
-+ (void)trackInitSdkEvent;
++ (void)trackInitSdkEventWithDuration:(long long)initSdkDuration
+                            localInfo:(nullable NSString *)localInfo
+                           maxCountry:(nullable NSString *)maxCountry;
 + (void)trackStartInitSdkEvent:(NSString *)platform;
 + (void)trackInitConfigEventWithDuration:(long long)initSdkDuration
                                  version:(NSString *)version
@@ -56,9 +60,14 @@ NS_ASSUME_NONNULL_BEGIN
                                          native2InterIds:(nullable NSString *)native2InterIds
                                               disableIds:(nullable NSString *)disableIds
                                                  error:(nullable NSString *)error;
++ (void)trackConfigChangeEvent:(OxPlacementParams *)params oldID:(nullable NSString *)oldID newID:(nullable NSString *)newID;
 + (void)trackGetInstallDaysErrorLog:(nullable NSString *)error;
 + (void)trackDeepLinkEventWithAdFormat:(NSString *)adFormat bean:(nullable UrlParamsBean *)bean url:(nullable NSString *)url;
 + (void)trackCrashOrANREvent:(NSString *)errorType error:(nullable NSString *)error;
++ (void)trackExceptionFallbackEvent:(nullable NSString *)exceptionPoint
+                       exceptionType:(nullable NSString *)exceptionType
+                              reason:(nullable NSString *)reason
+                      fallbackAction:(nullable NSString *)fallbackAction;
 
 
 + (void)trackAdRequestEventAdformat:(NSString *)adFormat adUnitId:(NSString *)adUnitId placement:(NSString *)placement requestTag:(long long)requestTag;
@@ -108,6 +117,15 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdMemoryLimitedEvent:(OxPlacementParams *)params;
 + (void)trackListenerInterruptEvent:(OxPlacementParams *)parmas eventName:(NSString *)eventName errorMsg:(NSString *)errorMsg;
 + (void)trackAdShowingEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackBannerShowStateEvent:(OxPlacementParams *)params
+                          adParams:(nullable OxAdParams *)adParams
+                            reason:(NSString *)reason
+                   currentShowType:(NSString *)currentShowType
+                        shouldShow:(BOOL)shouldShow
+                      hasContainer:(BOOL)hasContainer
+                      hasShowingAd:(BOOL)hasShowingAd
+                       bannerReady:(BOOL)bannerReady
+                      adapterReady:(BOOL)adapterReady;
 + (void)trackAdImpressionEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 + (void)trackAdShowFailedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 + (void)trackAdClickEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
@@ -128,6 +146,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (int)getFrequencyOfEvent:(CountedEvents)event;
 + (void)countEventIfShould:(NSString *)name;
++ (NSString *)getShortString:(NSString *)longStr;
 
 @end
 

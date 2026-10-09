@@ -8,46 +8,27 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, CustomConsentStatus) {
-    CustomConsentStatusUnknown = -1,
-    CustomConsentStatusReject = 0,
-    CustomConsentStatusAccept = 1,
-};
-
-@protocol CustomConsentStatusListener <NSObject>
-- (void)onConsentAccept;
-- (void)onConsentReject;
-- (void)onConsentUnknown;
-@end
-
-typedef void (^CustomConsentDismissBlock)(void);
+typedef void (^CustomConsentDismissCallback)(void);
 
 @interface CustomConsentManager : NSObject
 
-@property (nonatomic, assign) BOOL showConsentDialog;
-@property (nonatomic, assign, readonly) BOOL isShowDialog;
+extern NSString * const CustomConsentManagerGDPRStatusKey;
 
 + (instancetype)sharedInstance;
 
-- (void)initIsShowValue:(BOOL)isShow;
-- (void)addStatusListener:(id<CustomConsentStatusListener>)listener;
-- (void)removeStatusListener:(id<CustomConsentStatusListener>)listener;
-- (void)removeAllListener;
+@property (nonatomic, assign, getter=isShowDialog) BOOL showDialog;
+@property (nonatomic, assign) BOOL showConsentDialog;
 
-- (void)showConsentDialogFromViewController:(UIViewController *)viewController onDismiss:(nullable CustomConsentDismissBlock)onDismiss;
-- (void)showPrivacyDialogFromViewController:(UIViewController *)viewController onDismiss:(nullable CustomConsentDismissBlock)onDismiss;
-- (void)onDismiss;
+- (void)initIsShowValue:(BOOL)isShow;
+- (void)showConsentDialog:(UIViewController *)viewController dismiss:(nullable CustomConsentDismissCallback)dismiss;
+- (void)showPrivacyDialog:(UIViewController *)viewController dismiss:(nullable CustomConsentDismissCallback)dismiss;
 
 - (BOOL)isConsentReject;
 - (BOOL)isConsentAccept;
 - (BOOL)isConsentUnset;
-
-- (void)setConsentAccepted;
-- (void)setConsentRejected;
-- (void)setConsentUnknown;
-- (void)resetConsent;
-
-+ (nullable NSString *)privacyPolicyLink;
+- (NSInteger)getConsentStatus;
+- (void)setConsentStatus:(NSInteger)status;
+- (BOOL)hasClosedGDPRDialog;
 
 @end
 

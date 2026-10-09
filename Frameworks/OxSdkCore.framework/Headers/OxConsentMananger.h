@@ -7,45 +7,61 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "OxAdSdkManager.h"
-
-typedef enum : NSUInteger {
-    GDPRTool_Max = 0,
-    GDPRTool_Admob = 1,
-} GDPRTool;
+#import "AdEvents.h"
+#import "BaseConsentManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^GDPRDismiss)(void);
-typedef void(^ConsentCheckResultCallback)(BOOL isSubjectToGDPR);
+typedef NS_ENUM(NSUInteger, OxGdprRegion) {
+    OxGdprRegionUnknown = 0,
+    OxGdprRegionSupport = 1,
+    OxGdprRegionNotSupport = 2,
+};
+
+typedef void(^GDPRInitCompletionCallback)(void);
+typedef void(^OxConsentCheckResultCallback)(BOOL isSubjectToGDPR);
 
 @interface OxConsentMananger : NSObject
 
-@property(nonatomic, copy)NSString *privacyPolicyLink;
+@property(nonatomic, copy, nullable) NSString *privacyPolicyLink;
+@property(nonatomic, assign, readonly) NSInteger tag;
 
 + (nonnull instancetype)sharedInstance;
 
 /// 初始化GDPR
 /// - Parameters:
-///   - defaultGDPRTool: 默认使用的 GDPR 平台
 ///   - privacyPolicyLink: Max GDPR 的隐私政策链接
-///   - consentCheckResultCallback: 是否受到GDPR影响回调
-- (void)initialize:(GDPRTool)defaultGDPRTool privacyPolicyLink:(NSString *)privacyPolicyLink consentCheckResultCallback:(ConsentCheckResultCallback)callBack;
+///   - completion: 初始化完成回调
+///   - stateChangeCallback: GDPR状态变化回调
+- (void)initializeWithPrivacyPolicyLink:(NSString *)privacyPolicyLink
+        completion:(GDPRInitCompletionCallback)completion;
+
+- (void)initializeWithViewController:(nullable UIViewController *)viewController
+                   privacyPolicyLink:(nullable NSString *)privacyPolicyLink
+               consentResultCallback:(nullable OxConsentCheckResultCallback)callback;
+
+- (void)setPrivacyPolicyLink:(nullable NSString *)privacyPolicyLink;
+
+/// 添加 GDPR 结果监听；若结果已解析完成，会立即回调。
+- (void)addConsentResultListener:(OxConsentCheckResultCallback)listener;
+
+/// 移除 GDPR 结果监听。
+- (void)removeConsentResultListener:(OxConsentCheckResultCallback)listener;
 
 /// 展示 GDPRUI  展示之前不用判断 isSubjectToGDPR
 /// - Parameters:
 ///   - viewController: 需要展示的界面
 ///   - force: 是否为设置界面 (YES=设置界面)
 ///   - dismiss: 关闭回调
-- (BOOL)showConsentDialog:(UIViewController *)viewController force:(BOOL)force dismiss:(nullable GDPRDismiss)dismiss;
+- (BOOL)showConsentDialog:(UIViewController *)viewController force:(BOOL)force dismiss:(nullable ConsentDialogDismissCallback)dismiss;
 
-/// 是否是可以展示GDPR的地区/国家
-- (BOOL)isSubjectToGDPR;
+/// 是否是可以展示GDPR的地区/国家 
+- (OxGdprRegion)isSubjectToGDPR;
+- (BOOL)hasClosedGDPRDialog;
+- (NSInteger)getGdprThreeStatus;
 
-/// Max 下 SDK 初始化成功
+/// 聚合 SDK 初始化完成后刷新 GDPR 平台兜底状态
 - (void)onMediationInitialized:(Platform)mediation;
-
-
 @end
 
 NS_ASSUME_NONNULL_END

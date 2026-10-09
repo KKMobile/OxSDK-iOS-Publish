@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) AdNetworkConfig * admob;
 @property (nonatomic, strong) AdNetworkConfig * max;
+@property (nonatomic, strong) AdNetworkConfig * crackle;
 
 @end
 

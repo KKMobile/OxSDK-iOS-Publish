@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, nullable) NSString *mBannerSize;
 @property (nonatomic, copy, nullable) NSString *mNetworkName;
+@property (nonatomic, copy, nullable) NSString *mNetworkPlacement;
 @property (nonatomic, copy, nullable) NSString *mWaterfallName;
 @property (nonatomic, assign) NSInteger mNetworkResponses;
 @property (nonatomic, assign) long long mLatencyMillis;

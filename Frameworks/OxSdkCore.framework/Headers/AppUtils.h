@@ -57,6 +57,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取网络连接状态。
 + (NSInteger)getNetworkState;
 
+// 获取设置中的国家-SIM卡运营商国家码-。
++ (NSString *)getLocalInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

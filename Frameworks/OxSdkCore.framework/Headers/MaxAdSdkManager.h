@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updateSegment;
 
 - (ALSdkConfiguration *)getSdkConfiguration;
+- (NSString *)getCountryCode;
+- (ALConsentFlowUserGeography)getConsentState;
 
 
 @end

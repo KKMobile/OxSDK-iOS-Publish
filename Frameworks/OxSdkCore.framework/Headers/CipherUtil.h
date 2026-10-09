@@ -10,8 +10,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CipherUtil : NSObject
 
 + (nullable NSString *)decrypt:(NSString *)data;
++ (nullable NSString *)decryptIfNeeded:(NSString *)data;
 + (nullable NSString *)encrypt:(NSString *)data;
-+ (BOOL)validateKeyAndIV;
++ (BOOL)isEncryptedPayload:(NSString *)data;
 
 @end
 

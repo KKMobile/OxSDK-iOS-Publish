@@ -67,6 +67,9 @@ NS_ASSUME_NONNULL_BEGIN
                                             unitName:(NSString *)unitName
                                            idAdType:(NSString *)idAdType
                                             platform:(NSString *)platform;
+- (NSArray<IdConfig *> *)idsByAdConfigQueryForFormat:(NSString *)adFormat
+                                            unitName:(NSString *)unitName
+                                           idAdType:(NSString *)idAdType;
 - (BOOL)isAdUnitValidForType:(NSString *)adType unitName:(NSString *)unitName;
 - (NSArray<NSString *> *)supportedAdTypes;
 - (NSArray<IdConfig *> *)queryIdConfigs:(AdConfigQuery *)query;
@@ -91,8 +94,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (AdapterConfig *)adapterConfig;
 - (AdNetworkConfig *)adMobConfig;
 - (AdNetworkConfig *)maxConfig;
+- (AdNetworkConfig *)crackleConfig;
 - (NSString *)adMobAppId;
 - (NSString *)maxAppId;
+- (NSString *)crackleAppId;
 
 @end
 

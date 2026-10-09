@@ -86,6 +86,7 @@ typedef NS_ENUM(NSInteger, Platform) {
     PlatForm_Default = 0,
     PlatForm_Admob = 1,
     PlatForm_Max = 2,
+    PlatForm_Crackle = 3,
     PlatForm_None = 999
 };
 
@@ -114,7 +115,6 @@ static NSString * const EVENT_TOP30 = @"AdLTV_OneDay_Top30Percent";
 static NSString * const EVENT_TOP40 = @"AdLTV_OneDay_Top40Percent";
 static NSString * const EVENT_TOP50 = @"AdLTV_OneDay_Top50Percent";
 static NSString * const EVENT_TOP60 = @"AdLTV_OneDay_Top60Percent";
-static NSString * const EVENT_SHOW_SDK_CONSENT_INIT = @"show_sdk_consent_init";
 static NSString * const EVENT_TOTAL_ADS_REVENUE_001 = @"Total_Ads_Revenue_001";
 static NSString * const EVENT_TOTAL_ADS_REVENUE_01 = @"Total_Ads_Revenue_01";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
@@ -125,6 +125,7 @@ static NSString * const EVENT_INIT_CONFIG = @"Init_Config";
 static NSString * const EVENT_CONFIG_VERSION_STATE = @"Config_Version_State";
 static NSString * const EVENT_CONFIG_REMOTE_PARSE_FAILED = @"Config_Remote_Parse_Failed";
 static NSString * const EVENT_CONFIG_LOCAL_PARSE_FAILED = @"Config_Local_Parse_Failed";
+static NSString * const EVENT_CONFIG_CHANGE = @"Config_Change_Tips";
 static NSString * const EVENT_AD_REQUEST = @"Ad_Request";
 static NSString * const EVENT_SKIP_AD_REQUEST = @"Skip_Ad_Request";
 static NSString * const EVENT_AD_LOADED = @"Ad_Loaded";
@@ -155,6 +156,8 @@ static NSString * const EVENT_FIREBASE_CONFIG_CHANGE = @"Ad_Firebase_Config_Chan
 static NSString * const EVENT_GET_INSTALL_DAY_ERROR = @"Ad_Get_Install_Day_Error";
 static NSString * const EVENT_DEEP_LINK_LIMIT = @"Deep_Link_Limit";
 static NSString * const EVENT_ANR_CRASH = @"ANR_Crash";
+static NSString * const EVENT_SDK_EXCEPTION_FALLBACK = @"Sdk_Exception_Fallback";
+static NSString * const EVENT_BANNER_SHOW_STATE = @"Banner_Show_State";
 
 static NSString * const PARAM_CRASH_DEVICE_INFO = @"device_info";
 static NSString * const PARAM_CRASH_USER_ID = @"user_id";
@@ -171,15 +174,6 @@ static NSString * const EVENT_AD_USER_VALUE_SEGMENT = @"Ad_User_Value_Segment";
 static NSString * const EVENT_AD_USER_VALUE_NO_SEGMENT = @"Ad_User_Value_No_Segment";
 static NSString * const EVENT_AD_SET_SEGMENT = @"Ad_Set_Segment";
 
-// Sdk
-static NSString * const EVENT_SHOW_SDK_CONSENT_PRIVACY = @"show_sdk_consent_privacy";
-static NSString * const EVENT_CLICK_SDK_CONSENT_BACK_KEY = @"click_sdk_consent_back_key";
-static NSString * const EVENT_CLICK_SDK_CONSENT_SAVE_ACCEPT = @"click_sdk_consent_save_accept";
-static NSString * const EVENT_CLICK_SDK_CONSENT_SAVE_REJECT = @"click_sdk_consent_save_reject";
-static NSString * const EVENT_CLICK_SDK_CONSENT_MORE = @"click_sdk_consent_more";
-static NSString * const EVENT_CONSENT_GDPR_YES = @"consent_gdpr_yes";
-static NSString * const EVENT_CONSENT_GDPR_NO = @"consent_gdpr_no";
-static NSString * const EVENT_SHOW_SDK_CONSENT_OPTION = @"show_sdk_consent_option";
 
 // Param keys
 static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
@@ -222,6 +216,8 @@ static NSString * const PARAM_KEY_CORE_LEVEL= @"core_level";
 static NSString * const PARAM_LISTENER_INTERRUPT= @"ListenerInterrupt";
 static NSString * const PARAM_LISTENER_INTERRUPT_EVENT_NAME = @"event_name";
 static NSString * const PARAM_INIT_SDK_DURATION = @"initSdkDuration";
+static NSString * const PARAM_LOCAL_INFO = @"locolInfo";
+static NSString * const PARAM_MAX_COUNTRY = @"maxCountry";
 static NSString * const PARAM_CONFIG_SOURCE = @"configSource";
 static NSString * const PARAM_DEFAULT_CONFIG_VERSION = @"defaultConfigVersion";
 static NSString * const PARAM_SEGMENT_CONFIG_VERSION = @"segmentConfigVersion";
@@ -241,8 +237,20 @@ static NSString * const PARAM_CACHE_MODEL = @"cache_model";
 static NSString * const PARAM_CACHE_AD_SIZE = @"cache_ad_size";
 static NSString * const PARAM_FLOOR_PRICE = @"floorPrice";
 static NSString * const PARAM_JUMP_HEIGHT_PER = @"jumpHeightPer";
+static NSString * const PARAM_IS_FIRST_AD = @"isFirstAd";
 static NSString * const PARAM_IS_RELOAD = @"isReload";
 static NSString * const PARAM_LOAD_STATUS = @"loadStatus";
+static NSString * const PARAM_EXCEPTION_POINT = @"exceptionPoint";
+static NSString * const PARAM_EXCEPTION_REASON = @"exceptionReason";
+static NSString * const PARAM_EXCEPTION_TYPE = @"exceptionType";
+static NSString * const PARAM_FALLBACK_ACTION = @"fallbackAction";
+static NSString * const PARAM_BANNER_SHOW_REASON = @"bannerShowReason";
+static NSString * const PARAM_BANNER_SHOW_TYPE = @"bannerShowType";
+static NSString * const PARAM_BANNER_SHOULD_SHOW = @"bannerShouldShow";
+static NSString * const PARAM_BANNER_HAS_CONTAINER = @"bannerHasContainer";
+static NSString * const PARAM_BANNER_HAS_SHOWING_AD = @"bannerHasShowingAd";
+static NSString * const PARAM_BANNER_READY = @"bannerReady";
+static NSString * const PARAM_BANNER_ADAPTER_READY = @"bannerAdapterReady";
 
 
 static NSString * const PARAM_KEY_AD_UNIT_IDENTIFIER = @"adUnitIdentifier";
@@ -270,7 +278,6 @@ static NSString * const PARAM_KEY_COUNT = @"count";
 static NSString * const PARAM_KEY_ORDER = @"order";
 static NSString * const PARAM_KEY_FACTOR = @"factor";
 static NSString * const PARAM_KEY_FUNCTION = @"function";
-static NSString * const EVENT_AD_MAX_INITIALIZE = @"Ad_Max_Initialize";
 static NSString * const EVENT_KEY_BEGIN_SEGMENT = @"begin_segment";
 static NSString * const EVENT_KEY_SEGMENT_INITIALIZE_SUCCESS = @"segment_initialize_Success";
 static NSString * const EVENT_KEY_SEGMENTED = @"isSegment";
@@ -316,5 +323,40 @@ static NSString * const OX_MAG_REMOTECONFIGCHANGE = @"OxRemoteConfigChange";
 
 static NSString * const OX_MAX_EXTRA_PARAMETER_KEY = @"jC7Fp";
 
+#pragma mark - GDPR
+// Sdk
+static NSString * const EVENT_ADSDK_GET_IS_SUBJECT_TO_GDPR = @"adsdk_get_is_subject_to_gdpr";
+static NSString * const EVENT_ADSDK_GDPR_BEGIN_INIT = @"adsdk_gdpr_begin_init";
+static NSString * const EVENT_ADSDK_GDPR_END_INIT = @"adsdk_gdpr_end_init";
+static NSString * const EVENT_ADSKD_GDPR_MAX_BEGIN_INIT = @"adsdk_gdpr_max_beigin_init";
+static NSString * const EVENT_ADSKD_GDPR_MAX_INIT_SUCCESS = @"adsdk_gdpr_max_init_success";
+static NSString * const EVENT_ADSKD_GDPR_SHOW = @"adsdk_gdpr_show";
+static NSString * const EVENT_ADSKD_GDPR_SHOWING = @"adsdk_gdpr_showing";
+static NSString * const EVENT_ADSKD_GDPR_DISMISS = @"adsdk_gdpr_dismiss";
+static NSString * const EVENT_ADSKD_GDPR_CMP_SHOW_PRIVACY = @"adsdk_gdpr_cmp_show_privacy";
+static NSString * const EVENT_ADSKD_GDPR_CMP_SHOW_OPTION = @"adsdk_gdpr_cmp_show_option";
+static NSString * const EVENT_ADSKD_GDPR_CMP_PRIVACY_ACCEPT = @"adsdk_gdpr_cmp_privacy_accept";
+static NSString * const EVENT_ADSKD_GDPR_CMP_PRIVACY_MORE = @"adsdk_gdpr_cmp_privacy_more";
+static NSString * const EVENT_ADSKD_GDPR_CMP_CHANGE_CONSENT_STATE = @"adsdk_gdpr_cmp_change_consent_state";
+static NSString * const EVENT_ADSKD_GDPR_CMP_OPTION_BACK = @"adsdk_gdpr_cmp_option_back";
+static NSString * const EVENT_ADSKD_GDPR_CMP_OPTION_SAVE = @"adsdk_gdpr_cmp_option_save";
+static NSString * const PARAM_GDPR_KEY_PLATFORM = @"platform";
+static NSString * const PARAM_GDPR_KEY_TAG = @"tag";
+static NSString * const PARAM_GDPR_KEY_ATT_STATE = @"att";
+static NSString * const PARAM_GDPR_KEY_GDPR_TOOL = @"gdpr_tool";
+static NSString * const PARAM_GDPR_KEY_UMP_GEO_STATE = @"ump_geo_state";
+static NSString * const PARAM_GDPR_KEY_CMP_GEO_STATE = @"cmp_geo_state";
+static NSString * const PARAM_GDPR_KEY_MAX_GEO_STATE = @"max_geo_state";
+static NSString * const PARAM_GDPR_KEY_INIT_DURATION = @"init_duration";
+static NSString * const PARAM_GDPR_KEY_IS_SUBJECT_TO_GDPR = @"isSubjectToGDPR";
+static NSString * const PARAM_GDPR_KEY_FORCE = @"force";
+static NSString * const PARAM_GDPR_KEY_CANSHOW = @"canShow";
+static NSString * const PARAM_GDPR_KEY_ERROR = @"error";
+static NSString * const PARAM_GDPR_KEY_GDPR_CONSENT_STATE = @"consent_state";
+static NSString * const PARAM_GDPR_KEY_CMP_CONSENT_STATE = @"cmp_consent_state";
+static NSString * const PARAM_GDPR_KEY_UMP_CONSENT_STATE = @"ump_consent_state";
+static NSString * const PARAM_GDPR_KEY_CMP_INTYPE = @"cmp_in_type";
 
+static NSString * const PARAM_GDPR_VALUE_CMP = @"cmp";
+static NSString * const PARAM_GDPR_VALUE_UMP = @"ump";
 #endif /* AdEvents_h */

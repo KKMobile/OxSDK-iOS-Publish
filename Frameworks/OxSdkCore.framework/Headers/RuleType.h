@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)isVariableRule:(NSString *)fieldName;
 
-/** 判断字段名是否为不可变规则（安装后不再变化，如 session/appVersion/channel/campaign/deviceModule） */
+/** 判断字段名是否为不可变规则（安装后不再变化，如 session/appVersion/deviceModule） */
 + (BOOL)isImmutableRule:(NSString *)fieldName;
 
 @end

@@ -11,6 +11,7 @@
 #import "AdDelegate.h"
 #import "OxKeywordType.h"
 #import "OxAdSdkManager.h"
+#import "OxAdSdkInitOptions.h"
 #import "OxRewardedAdManager.h"
 #import "OxInterstitialAdManager.h"
 #import "OxMrecAdManager.h"
@@ -39,4 +40,3 @@ FOUNDATION_EXPORT double OxSdkForGamesVersionNumber;
 
 //! Project version string for OxSdkForGames.
 FOUNDATION_EXPORT const unsigned char OxSdkForGamesVersionString[];
-

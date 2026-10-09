@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @import GoogleMobileAds;
 
 typedef void (^OnSdkInitComplete)(void);
+typedef void (^OnSdkInitFailed)(NSString *error);
 
 @interface BaseAdManager : NSObject
 
@@ -22,8 +23,9 @@ typedef void (^OnSdkInitComplete)(void);
 
 /// 广告初始化
 /// @param successBlock 初始化成功回调
+/// @param failedBlock 初始化失败回调
 /// 当取到firebase的值后，先调用updateMediationType，然后需要调用该方法，监测是否需要初始化另外一个广告平台，
-- (void)initialize:(OnSdkInitComplete)successBlock;
+- (void)initializeWithSuccessBlock:(OnSdkInitComplete)successBlock failedBlock:(nullable OnSdkInitFailed)failedBlock;
 
 - (BOOL)isSdkInitialed;
 

@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isReadyForCacheAd;
 /// 缓存或 adMap 中第一个可用广告（供成功回调使用）
 - (nullable OxAd *)firstReadyOxAd;
+/// 打印当前 ready 缓存池快照，便于排查最终可展示广告列表
+- (void)logCacheAdsSnapshot:(NSString *)reason;
 - (void)destroy;
 
 @end
