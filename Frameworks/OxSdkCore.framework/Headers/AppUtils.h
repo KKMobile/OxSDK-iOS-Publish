@@ -44,6 +44,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)isNetworkAvailable;
 
++ (BOOL)isDouble:(NSString *)str;
++ (BOOL)isWebViewInstalled;
++ (CGFloat)getScreenWidthInDp;
+
 // 获取 网络类型 + Vpn 状态。
 + (NSInteger)getNetworkTypeWithVpnState;
 

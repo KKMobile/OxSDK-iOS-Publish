@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *mAdStatus;
 @property (nonatomic, weak, readonly) UIViewController *mViewController;
-@property (nonatomic, assign, readonly) NSString *mAdUnitId;
+@property (nonatomic, copy, readonly) NSString *mAdUnitId;
 @property (nonatomic, strong, readonly) NSString *mLoadPlacement;
 @property (nonatomic, strong, readonly) NSString *mAdFormat;
 @property (nonatomic, strong) NSArray<NSString *> *mExploredIDs;
@@ -45,6 +45,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSDictionary<NSString*, NSString*>* mMaxExtraParameterMap;
 @property (nonatomic, strong) ThreadSafeAdStatusManager *mAdStatusManager;
 @property (nonatomic, strong) NSString *mFloorAdunitId;
+@property (nonatomic, copy) NSString *mPangleID;
+@property (nonatomic, strong) NSArray<NSString *> *mAlternateIDs;
+@property (nonatomic, copy) NSString *mAlternatePlacement;
 
 
 - (instancetype)initWithCurrentVC:(UIViewController *)vc adUnitId:(NSString *)adunitId adFormat:(NSString *)adFormat;
@@ -83,6 +86,10 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 子类实现
 // 返回当前的类是否是MAX 用来判断是否进行无限重试
 - (BOOL)isMaxAd;
+- (BOOL)isAdmobAd;
+- (BOOL)isOpenPangleBidding;
+- (BOOL)isOpenAlternate;
+- (void)loadAlternateAd:(NSString *)placement;
 - (NSString *)getNetworkName;
 - (NSString *)getCreativeId;
 
