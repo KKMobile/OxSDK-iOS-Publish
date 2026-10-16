@@ -14,7 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (nonnull instancetype)sharedInstance;
 
+- (void)addDisableCache:(NSString *)adUnitId;
+
+- (void)updateSegment;
+
 - (ALSdkConfiguration *)getSdkConfiguration;
+
 
 @end
 
