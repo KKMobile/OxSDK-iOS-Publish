@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getNetwork;
 + (NSString *)getCampaign;
 + (NSString *)getAdID;
++ (void)setAttributionChangedHandler:(void (^ _Nullable)(NSString * _Nullable channel, NSString * _Nullable campaign))handler;
 
 
 @end
