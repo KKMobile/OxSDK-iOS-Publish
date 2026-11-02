@@ -13,14 +13,12 @@
 
 @class UrlParamsBean;
 @class OxAdParams, OxPlacementParams;
-@class GADResponseInfo;
 
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
 
 + (void)logMaxImpressionRevenueWithAd:(MAAd *)ad mAdEventParams:(OxAdParams *)mAdEventParams;
 + (void)logAdmobImpressionRevenueWithAd:(GADAdValue *)advalue adNetwork:(NSString *)adNetwork AdEventParams:(OxAdParams *)mAdEventParams;
-+ (void)logAdmobImpressionRevenueWithAd:(GADAdValue *)advalue responseInfo:(nullable GADResponseInfo *)responseInfo AdEventParams:(OxAdParams *)mAdEventParams;
 
 // uservalue
 + (void)logAdUserValueError:(NSString *)error;
@@ -55,6 +53,12 @@ NS_ASSUME_NONNULL_BEGIN
                                         changeReason:(nullable NSString *)changeReason
                                          isReviewing:(BOOL)isReviewing
                                     triggerRuleType:(nullable NSString *)triggerRuleType;
++ (void)trackAdjustAttributionStateEvent:(NSString *)state
+                                  source:(NSString *)source
+                               timestamp:(long long)timestamp
+                       durationMillis:(long long)durationMillis
+                              channel:(nullable NSString *)channel
+                             campaign:(nullable NSString *)campaign;
 + (void)trackFirebaseConfigChangeLogWithExploredConfig:(nullable NSString *)exploredConfig
                                                 addIds:(nullable NSString *)addIds
                                          native2InterIds:(nullable NSString *)native2InterIds

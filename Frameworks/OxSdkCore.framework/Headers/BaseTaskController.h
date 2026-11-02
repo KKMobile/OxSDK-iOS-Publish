@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) OxAd *ad;
 @property (nonatomic, assign, readonly) NSTimeInterval timeoutMillis;
 @property (nonatomic, assign, readonly) NSInteger weight;
+/// 本轮选中的任务控制器模式。
+@property (nonatomic, copy, nullable) NSString *taskModel;
+/// 本轮 weight 降序分组的下标，从 0 开始；未经过分组时为空。
+@property (nonatomic, copy, nullable) NSNumber *stageIndex;
 
 @end
 

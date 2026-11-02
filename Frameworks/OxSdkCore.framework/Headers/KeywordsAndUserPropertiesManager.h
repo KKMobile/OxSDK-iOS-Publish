@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)initialize;
 
+/// 配置解析完成后开始接收 Adjust 归因更新，并在有效归因变更时重评配置分群。
+- (void)startAttributionUpdates;
+
+/// 宿主通知归因更新时，主动从 Adjust/插件缓存读取当前 channel 与 campaign。
+- (void)refreshAttributionWithInitializationElapsedMillis:(long long)initializationElapsedMillis;
+
 - (void)setDailyLevel:(int)dailyLevel;
 
 - (void)setDeepUser:(bool)isDeepUser;

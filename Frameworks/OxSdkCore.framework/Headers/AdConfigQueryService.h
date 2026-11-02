@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  * 广告配置查询服务
  *
  * 基于 AdConfigSnapshotProvider 中的运行时快照（只读），提供广告位、广告 ID 等配置的查询能力。
- * 内部维护 idConfigCache / adUnitsCache 查询缓存；配置刷新或分群切换后需调用 clearCaches 再 preload。
+ * 内部维护线程安全的 idConfigCache / adUnitsCache 查询缓存；配置刷新或分群切换后需调用 clearCaches 再 preload。
  *
  * 典型调用方：OxAdConfigManager → AdLoadManager / OxAdManager
  */
@@ -40,11 +40,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 根据 AdConfigQuery 组合条件查询 ID 列表（支持 platform、idAdType 等过滤） */
 - (NSArray<IdConfig *> *)queryIdConfigs:(AdConfigQuery *)query;
-
-/** 按广告格式、广告位和 ID 广告类型查询，并按 weight 降序排列。 */
-- (NSArray<IdConfig *> *)idsByAdConfigQueryForFormat:(NSString *)adFormat
-                                            unitName:(NSString *)unitName
-                                           idAdType:(NSString *)idAdType;
 
 /** 在 ID 配置数组中按 adType 查找第一个匹配项 */
 - (IdConfig * _Nullable)idConfigByAdType:(NSArray<IdConfig *> *)idConfigs adType:(NSString *)adType;

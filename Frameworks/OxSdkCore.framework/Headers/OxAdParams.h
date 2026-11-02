@@ -23,11 +23,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSString *mApsLoadFailError;
 @property (nonatomic, copy, nullable) NSString *mDynamicFloorECPM;
 @property (nonatomic, copy, nullable) NSString *mJumpHeightPer;
+/// 原始请求实际采用的任务模式；仅在真正发起新加载时更新，缓存展示继续沿用。
+@property (nonatomic, copy, nullable) NSString *mTaskModel;
+/// 原始加载在 weight 降序分组中的下标（从 0 开始），缓存展示继续沿用；未知时为空。
+@property (nonatomic, copy, nullable) NSNumber *mStageIndex;
 @property (nonatomic, assign) float mUserValueSegment;
 
 @property (nonatomic, copy, nullable) NSString *mBannerSize;
 @property (nonatomic, copy, nullable) NSString *mNetworkName;
-@property (nonatomic, copy, nullable) NSString *mNetworkPlacement;
 @property (nonatomic, copy, nullable) NSString *mWaterfallName;
 @property (nonatomic, assign) NSInteger mNetworkResponses;
 @property (nonatomic, assign) long long mLatencyMillis;

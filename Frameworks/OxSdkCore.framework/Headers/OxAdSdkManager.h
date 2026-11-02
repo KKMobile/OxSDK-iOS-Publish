@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "OxAdSdkInitOptions.h"
 
-#define OXSDK_VERSION @"1.2-PR-OpConfig-202610091903"
+#define OXSDK_VERSION @"4.4-PR-OpConfig-202611021300"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -62,15 +62,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isMediationInitialized:(Platform)mediation;
 
-/// 判断一组聚合平台是否都已初始化，用于广告位混合 MAX/AdMob 请求前校验。
-- (BOOL)areSdkInitialized:(nullable NSSet<NSNumber *> *)platforms;
 
 /// 获取当前的sdk 聚合平台
 - (Platform)getMediationPlatform;
 
 - (Platform)getDefaultMediationPlatform;
-
-- (Platform)platformFromMediationString:(nullable NSString *)mediation;
 
 - (void)enableDebug:(BOOL)enable;
 
@@ -83,6 +79,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// App 主动检查所有可变规则。
 - (void)activeRefresh;
+
+/// 宿主发现 campaign 或 channel 变更时调用，SDK 会重新读取归因并按需刷新分群配置。
+- (void)notifyCampaignAndChannelChanged;
 
 - (void)setGamePlayMinutes:(int)minutes;
 - (void)setGamePayCounts:(int)count;

@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)getVersionName;
 + (NSString *)getChannel;
 + (NSString *)getCampaign;
+/// 仅供广告配置分群使用：空归因统一按 unknown 参与规则匹配。
++ (NSString *)getChannelForRule;
++ (NSString *)getCampaignForRule;
 + (NSInteger)getInstallDays;
 + (NSInteger)getInstallHours;
 + (NSInteger)getSessionCount;

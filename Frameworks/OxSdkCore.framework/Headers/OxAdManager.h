@@ -56,7 +56,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (OxPlacementParams *)oxPlacementParams;
 - (BOOL)isOpenDynamic;
-- (BOOL)isOpenPostBidding;
 - (nullable OxAd *)createOxAdWithAdFormat:(NSString *)adFormat idConfig:(IdConfig *)idConfig;
 - (void)onBackOxAd:(OxAd *)ad;
 - (void)setReturnFlag:(BOOL)isReturn;

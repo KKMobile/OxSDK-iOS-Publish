@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable OxAd *)createOxAdByReflectionWithAdFormat:(NSString *)adFormat
                                              idConfig:(IdConfig *)idConfig
                                       placementParams:(OxPlacementParams *)placementParams
-                                       viewController:(UIViewController *)viewController
+                                       viewController:(nullable UIViewController *)viewController
                                              listener:(id<AdInternalListener>)listener;
 
 @end

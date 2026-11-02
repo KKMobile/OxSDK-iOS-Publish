@@ -7,6 +7,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void (^OxAdjustAttributionChangedHandler)(NSString * _Nullable channel, NSString * _Nullable campaign);
+
 @interface OxAdjustEventLogger : NSObject
 
 + (instancetype)sharedInstance;
@@ -16,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString *)getNetworkByAttribution;
 - (nullable NSString *)getCampaignByAttribution;
 - (nullable NSString *)getAdidByAttribution;
+- (void)setAttributionChangedHandler:(OxAdjustAttributionChangedHandler _Nullable)handler;
 
 @end
 
