@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "4.5-PR-OpConfig-202611051800"#版本号
+    spec.version      = "4.5-PR-OpConfig-test-202611061300"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
