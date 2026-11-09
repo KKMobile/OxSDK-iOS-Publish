@@ -1,0 +1,8 @@
+[
+  {"url": "https://github.com/PureLayout/PureLayout.git", "version": "3.1.9", "product": "PureLayout"},
+  {"url": "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", "version": "13.7.0", "product": "GoogleMobileAds"},
+  {"url": "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git", "version": "2.6.0", "product": "GoogleUserMessagingPlatform"},
+  {"url": "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", "version": "13.2.0", "product": "AppLovinSDK"},
+  {"url": "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Google.git", "version": "13070000.0.0", "product": "AppLovinMediationGoogleAdapter"},
+  {"url": "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-GoogleAdsManager.git", "version": "13070000.0.0", "product": "AppLovinMediationGoogleAdManagerAdapter"}
+]
