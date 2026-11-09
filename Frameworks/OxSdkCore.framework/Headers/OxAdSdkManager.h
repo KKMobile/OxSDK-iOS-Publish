@@ -9,7 +9,7 @@
 #import "AdEventDelegate.h"
 #import "OxAdSdkInitOptions.h"
 
-#define OXSDK_VERSION @"4.5-PR-OpConfig-202611051800"
+#define OXSDK_VERSION @"4.5-PR-OpConfig-202611051801"
 
 NS_ASSUME_NONNULL_BEGIN
 
