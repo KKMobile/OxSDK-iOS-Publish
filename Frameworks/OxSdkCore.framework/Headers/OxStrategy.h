@@ -42,6 +42,9 @@ typedef NS_ENUM(NSInteger, OxStrategyLoadType) {
                           placementParams:(OxPlacementParams *)placementParams
                                   isReady:(BOOL)isReady;
 
+/** 全屏广告关闭时记录 showInterval 起点，在业务关闭回调之前调用。 */
+- (void)recordAdClosed;
+
 - (void)resetRetry;
 - (void)destroy;
 

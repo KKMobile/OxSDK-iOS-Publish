@@ -9,6 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OxNaturalDayInstallUtil : NSObject
 
+/// 兼容旧入口，内部转发至 RulesUtils.getInstallDays。
 + (NSInteger)getNaturalInstallDays;
 
 @end
