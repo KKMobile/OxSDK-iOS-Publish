@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class MAAd;
+@class GADAdValue;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OxDiscoveryAdValueUtils : NSObject
@@ -15,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)logMaxImpressionRevenue:(NSDictionary *)parmas;
 + (void)logAdmobImpressionRevenue:(NSDictionary *)parmas;
++ (void)logImpressionRevenue:(NSDictionary *)params;
 
++ (BOOL)isGoogleAttribution;
 @end
 
 NS_ASSUME_NONNULL_END
