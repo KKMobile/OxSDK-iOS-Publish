@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
     spec.license      = { :type => "MIT", :file => "LICENSE" }#创建GitHub仓库时使用的license类型
     spec.author             = { "OxDevelopers" => "tianci5275@gmail.com" }#作者
     spec.platform     = :ios#支持平台
-    spec.ios.deployment_target = "13.0"#支持iOS最低版本
+    spec.ios.deployment_target = "15.0"#支持iOS最低版本
     spec.swift_version = '4.0'
     spec.source       = { :git => "https://github.com/KKMobile/OxSDK-iOS-Publish.git", :tag => "a-pangle-#{spec.version}" }
     spec.frameworks = "UIKit", "Foundation"#SDK依赖的系统库文件
@@ -32,7 +32,7 @@ Pod::Spec.new do |spec|
 
     spec.dependency 'AppLovinMediationByteDanceAdapter', "8.1.1.1.0"
     spec.dependency 'GoogleMobileAdsMediationPangle', "8.1.1.1.0"  
-    
+
     spec.dependency 'OxSdkCore', '5.5-PR-OpConfig-202611231800'
 
 end
