@@ -41,6 +41,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** 根据 AdConfigQuery 组合条件查询 ID 列表（支持 platform、idAdType 等过滤） */
 - (NSArray<IdConfig *> *)queryIdConfigs:(AdConfigQuery *)query;
 
+/** 按广告格式、广告位和 ID 广告类型查询，并按 weight 降序排列。 */
+- (NSArray<IdConfig *> *)idsByAdConfigQueryForFormat:(NSString *)adFormat
+                                            unitName:(NSString *)unitName
+                                           idAdType:(NSString *)idAdType;
+
 /** 在 ID 配置数组中按 adType 查找第一个匹配项 */
 - (IdConfig * _Nullable)idConfigByAdType:(NSArray<IdConfig *> *)idConfigs adType:(NSString *)adType;
 
@@ -56,8 +61,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 从 ID 列表中提取 dynamic > 0 的动态底价广告 ID 字符串数组 */
 - (NSArray<NSString *> * _Nullable)dynamicIdsFromIds:(NSArray<IdConfig *> *)ids;
 
-/** 收集全配置中 disabledCache 为 YES 的 adId，以逗号拼接返回 */
+/** 收集全配置中 MAX dynamic > 0 的 adId，以逗号拼接返回 */
 - (NSString *)disabledCacheIdsString;
+- (NSString *)maxDynamicSettingsSignature;
 
 /** 收集配置了全局展示间隔（interval）的所有广告单元基础配置 */
 - (NSArray<AdUnitBaseConfig *> *)allAdUnitBaseConfigsWithInterval;

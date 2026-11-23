@@ -15,12 +15,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/** Native 视图绑定基类；LayoutBinder 传入素材视图，ClassBinder 传入对应网络的原生广告视图。视图需由宿主保持有效。 */
 @interface OxNativeViewBinder : NSObject
 
 @end
 
 
+/** 将标题、图标、媒体、广告标识、正文与 CTA 等素材绑定到宿主 UIKit 视图。 */
 @interface OxNativeViewLayoutBinder : OxNativeViewBinder
+
+/// Default assets for direct networks when the host supplies no layout binder.
++ (instancetype)defaultBinderForBounds:(CGRect)bounds;
 
 @property(nonatomic, strong) UIView *mediaView;
 @property(nonatomic, strong) UIImageView *icon;
@@ -35,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/** 直接使用 MAX MANativeAdView 或 AdMob GADNativeAdView；不同网络的视图不可混用。 */
 @interface OxNativeViewClassBinder : OxNativeViewBinder
 
 @property(nonatomic, strong) MANativeAdView *mMaxView;

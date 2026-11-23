@@ -5,12 +5,13 @@
 
 #import "OxAd.h"
 #import "IViewAd.h"
+#import "NativeViewBinderAware.h"
 
 @class OxNativeViewBinder;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxNativeAd : OxAd <IViewAd>
+@interface OxNativeAd : OxAd <IViewAd, NativeViewBinderAware>
 
 @property (nonatomic, strong, nullable, readonly) OxNativeViewBinder *mViewBinder;
 

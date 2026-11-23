@@ -35,4 +35,9 @@ FOUNDATION_EXPORT NSTimeInterval const OxConstantsDisplayCheckDelayMs;
 FOUNDATION_EXPORT NSString * const OxConstantsAmazonAdResponseKey;
 FOUNDATION_EXPORT NSString * const OxConstantsAmazonAdErrorKey;
 
+/// 备用广告位名称，与 Android OxConstants.BackupAdUnit 保持一致
+FOUNDATION_EXPORT NSString * const OxConstantsBackupInterstitialAdUnit;
+FOUNDATION_EXPORT NSString * const OxConstantsBackupRewardedAdUnit;
+FOUNDATION_EXPORT NSString * const OxConstantsBackupNativeAdUnit;
+
 NS_ASSUME_NONNULL_END

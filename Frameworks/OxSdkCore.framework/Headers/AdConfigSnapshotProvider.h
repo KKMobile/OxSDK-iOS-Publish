@@ -11,8 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AdConfigSnapshotProvider : NSObject
-@property (nonatomic, weak, nullable) id<OxAdConfigParseListener> parseListener;
-@property (nonatomic, assign) BOOL parseCompleted;
 - (void)updateSnapshotWithMergedConfig:(AdConfig *)mergedConfig
                        defaultConfig:(AdConfig *)defaultConfig
                        configVersion:(NSString *)configVersion

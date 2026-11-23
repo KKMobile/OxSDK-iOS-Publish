@@ -18,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger depthUserLevel;
 @property (nonatomic, assign) NSInteger eventLevel;
 @property (nonatomic, assign) NSInteger geoConsent;
+@property (nonatomic, copy) NSString *extraParameters;
 @property (nonatomic, strong) AppUserValueConfig * userValue;
+- (NSString *)getExtraParameters;
 
 @end
 

@@ -9,13 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OxAdParams : NSObject
+@interface OxAdParams : NSObject <NSCopying>
 
 @property (nonatomic, copy, nullable) NSString *mAdUnitID;
 @property (nonatomic, strong, nullable) IdConfig *idConfig;
 @property (nonatomic, copy, nullable) NSString *mAdUnitName;
 @property (nonatomic, copy, nullable) NSString *mAdFormat;
 @property (nonatomic, assign) long long mRequestTag;
+@property (nonatomic, copy, nullable) NSString *auctionId;
+- (nullable NSString *)getAuctionId;
 
 @property (nonatomic, assign) long long mAdRequestTimestamp;
 @property (nonatomic, assign) long long mApsRequestTimestamp;
@@ -23,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSString *mApsLoadFailError;
 @property (nonatomic, copy, nullable) NSString *mDynamicFloorECPM;
 @property (nonatomic, copy, nullable) NSString *mJumpHeightPer;
+/// AdMob/Adapter 档位标识。Android 最终契约使用 adapterSegment。
+@property (nonatomic, copy, nullable) NSString *mAdapterSegment;
+/// 旧字段保留供已有内部调用兼容，事件不再使用 priceSegment。
+@property (nonatomic, copy, nullable) NSString *mPriceSegment;
 /// 原始请求实际采用的任务模式；仅在真正发起新加载时更新，缓存展示继续沿用。
 @property (nonatomic, copy, nullable) NSString *mTaskModel;
 /// 原始加载在 weight 降序分组中的下标（从 0 开始），缓存展示继续沿用；未知时为空。
@@ -31,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, nullable) NSString *mBannerSize;
 @property (nonatomic, copy, nullable) NSString *mNetworkName;
+@property (nonatomic, copy, nullable) NSString *mNetworkPlacement;
 @property (nonatomic, copy, nullable) NSString *mWaterfallName;
 @property (nonatomic, assign) NSInteger mNetworkResponses;
 @property (nonatomic, assign) long long mLatencyMillis;

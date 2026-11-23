@@ -13,12 +13,18 @@
 
 @class UrlParamsBean;
 @class OxAdParams, OxPlacementParams;
+@class GADResponseInfo;
 
 NS_ASSUME_NONNULL_BEGIN
 @interface AdEventUtil : NSObject
++ (void)logCustomNetworkImpressionRevenue:(double)revenue adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterBidEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackAdAdapterBidSuccessEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams revenue:(double)revenue;
++ (void)trackAdAdapterBidFailedEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams error:(NSString *)error;
 
 + (void)logMaxImpressionRevenueWithAd:(MAAd *)ad mAdEventParams:(OxAdParams *)mAdEventParams;
 + (void)logAdmobImpressionRevenueWithAd:(GADAdValue *)advalue adNetwork:(NSString *)adNetwork AdEventParams:(OxAdParams *)mAdEventParams;
++ (void)logAdmobImpressionRevenueWithAd:(GADAdValue *)advalue responseInfo:(nullable GADResponseInfo *)responseInfo AdEventParams:(OxAdParams *)mAdEventParams;
 
 // uservalue
 + (void)logAdUserValueError:(NSString *)error;
@@ -33,15 +39,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 客户端打点
 + (void)trackClientEvent:(NSString *)eventName params:(nullable NSDictionary *)params;
-+ (void)trackInitSdkEventWithDuration:(long long)initSdkDuration
-                            localInfo:(nullable NSString *)localInfo
-                           maxCountry:(nullable NSString *)maxCountry;
-+ (void)trackStartInitSdkEvent:(NSString *)platform;
-+ (void)trackInitConfigEventWithDuration:(long long)initSdkDuration
++ (void)trackStartInitSdkEvent:(NSString *)networkName;
++ (void)trackEndInitSdkEvent:(NSString *)networkName duration:(long long)initSdkDuration isSuccess:(BOOL)isSuccess error:(nullable NSString *)error isInstallWebView:(BOOL)isInstallWebView;
++ (void)trackStartInitConfigEvent:(NSString *)platform;
++ (void)trackEndInitConfigEvent:(long long)initSdkDuration
                                  version:(NSString *)version
                             configSource:(NSString *)configSource
                                    error:(nullable NSString *)error
                                isSuccess:(BOOL)isSuccess;
++ (void)trackEndInitConfigEvent:(long long)initSdkDuration
+                                 version:(NSString *)version
+                            configSource:(NSString *)configSource
+                                   error:(nullable NSString *)error
+                               isSuccess:(BOOL)isSuccess
+                                traceId:(nullable NSString *)traceId;
++ (void)trackInitConfigStageEventWithTraceId:(nullable NSString *)traceId
+                                      stage:(NSString *)stage
+                              durationMillis:(long long)durationMillis;
 /// 远程广告配置 JSON 解析失败
 + (void)trackConfigRemoteParseFailed:(nullable NSString *)error;
 /// 本地广告配置 JSON 解析失败（SP/Bundle 均不可用时）
@@ -59,11 +73,6 @@ NS_ASSUME_NONNULL_BEGIN
                        durationMillis:(long long)durationMillis
                               channel:(nullable NSString *)channel
                              campaign:(nullable NSString *)campaign;
-+ (void)trackFirebaseConfigChangeLogWithExploredConfig:(nullable NSString *)exploredConfig
-                                                addIds:(nullable NSString *)addIds
-                                         native2InterIds:(nullable NSString *)native2InterIds
-                                              disableIds:(nullable NSString *)disableIds
-                                                 error:(nullable NSString *)error;
 + (void)trackConfigChangeEvent:(OxPlacementParams *)params oldID:(nullable NSString *)oldID newID:(nullable NSString *)newID;
 + (void)trackGetInstallDaysErrorLog:(nullable NSString *)error;
 + (void)trackDeepLinkEventWithAdFormat:(NSString *)adFormat bean:(nullable UrlParamsBean *)bean url:(nullable NSString *)url;
@@ -135,6 +144,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)trackAdClickEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 + (void)trackAdCloseEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 + (void)trackAdGottenCredit:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
++ (void)trackSkipAdAdapterRequestEvent:(OxPlacementParams *)params adParams:(OxAdParams *)adParams;
 + (void)trackAdapterRequestEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
 + (void)trackApsLoadRequestEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
 + (void)trackApsLoadFinishEvent:(OxPlacementParams *)parmas adParams:(OxAdParams *)adParams;
@@ -152,6 +162,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)countEventIfShould:(NSString *)name;
 + (NSString *)getShortString:(NSString *)longStr;
 
++ (void)trackSkipAdShowEvent:(OxPlacementParams *)params;
 @end
 
 NS_ASSUME_NONNULL_END

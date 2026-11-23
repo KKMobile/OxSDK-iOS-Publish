@@ -29,6 +29,11 @@ typedef NS_ENUM(NSInteger, OxStrategyLoadType) {
                       loadAdAction:(dispatch_block_t)loadAdAction
                            isReady:(BOOL)isReady;
 
+/// YES 表示已安排失败重试；NO 表示本次失败应结束加载，不再等待重试。
+- (BOOL)scheduleLoadFailureRetryWithConfigManager:(nullable AdHelperConfigManager *)configManager
+                                     isNotMaxAd:(BOOL)isNotMaxAd
+                                   loadAdAction:(dispatch_block_t)loadAdAction;
+
 - (BOOL)canNotLoadAdWithConfigManager:(AdHelperConfigManager *)configManager
                              listener:(nullable id<AdDelegate>)listener;
 
@@ -42,8 +47,15 @@ typedef NS_ENUM(NSInteger, OxStrategyLoadType) {
                           placementParams:(OxPlacementParams *)placementParams
                                   isReady:(BOOL)isReady;
 
-/** 全屏广告关闭时记录 showInterval 起点，在业务关闭回调之前调用。 */
+- (BOOL)canNotShowBackupAd:(OxPlacementParams *)placementParams
+                 adIsReady:(BOOL)adIsReady
+                  listener:(nullable id<AdDelegate>)listener
+        adInternalListener:(nullable id<AdInternalListener>)adInternalListener;
+- (BOOL)isShowAllowed:(OxPlacementParams *)placementParams;
+- (void)populateShowFrequencyInfo:(OxPlacementParams *)placementParams;
 - (void)recordAdClosed;
+- (void)recordAdClosed:(long long)closeTime;
+- (void)onFullScreenAdClosed:(long long)closeTime;
 
 - (void)resetRetry;
 - (void)destroy;

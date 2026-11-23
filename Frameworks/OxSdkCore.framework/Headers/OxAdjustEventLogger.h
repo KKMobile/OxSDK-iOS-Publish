@@ -19,6 +19,7 @@ typedef void (^OxAdjustAttributionChangedHandler)(NSString * _Nullable channel, 
 - (nullable NSString *)getCampaignByAttribution;
 - (nullable NSString *)getAdidByAttribution;
 - (void)setAttributionChangedHandler:(OxAdjustAttributionChangedHandler _Nullable)handler;
+- (void)refreshAttribution;
 
 @end
 
