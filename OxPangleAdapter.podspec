@@ -33,6 +33,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationByteDanceAdapter', "8.1.1.1.0"
     spec.dependency 'GoogleMobileAdsMediationPangle', "8.1.1.1.0"  
 
-    spec.dependency 'OxSdkCore', '5.5-PR-OpConfig-202611231800'
+    # spec.dependency 'OxSdkCore', '5.5-PR-OpConfig-202611231800'
 
 end
