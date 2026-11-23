@@ -10,6 +10,13 @@
 #endif
 #endif
 
+#import "FacebookAnBidSession.h"
+#import "OxFacebookBannerAd.h"
+#import "OxFacebookInterstitialAd.h"
+#import "OxFacebookMrecAd.h"
+#import "OxFacebookNativeAd.h"
+#import "OxFacebookRewardedAd.h"
+#import "OxFacebookSdkManager.h"
 #import "OxFacebookAd.h"
 #import "OxFacebookAdapter.h"
 

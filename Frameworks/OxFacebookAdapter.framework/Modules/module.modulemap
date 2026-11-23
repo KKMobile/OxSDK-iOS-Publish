@@ -4,3 +4,8 @@ framework module OxFacebookAdapter {
   export *
   module * { export * }
 }
+
+module OxFacebookAdapter.Swift {
+  header "OxFacebookAdapter-Swift.h"
+  requires objc
+}
