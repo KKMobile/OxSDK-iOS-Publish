@@ -1,6 +1,6 @@
 framework module OxPangleAdapter {
-  umbrella header "OxPangleAdapter.h"
-  export *
+  umbrella header "OxPangleAdapter-umbrella.h"
 
+  export *
   module * { export * }
 }
