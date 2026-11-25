@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxAPSAdapter', '5.2.0.0'
     spec.dependency 'OxBidMachineAdapter', '3.7.1.1'
     spec.dependency 'OxChartboostAdapter', '9.13.0.1'
-    spec.dependency 'OxFacebookAdapter', '6.22.0.4'
+    spec.dependency 'OxFacebookAdapter', '6.22.0.0'
     spec.dependency 'OxFyberAdapter', '8.4.2.0.1'
     spec.dependency 'OxInmobiAdapter', '11.4.1.3'
     spec.dependency 'OxIronSourceAdapter', '9.2.0.0.3'
@@ -42,7 +42,7 @@ Pod::Spec.new do |spec|
     #spec.dependency 'OxMyTargetAdapter', '5.21.9.0'
     spec.dependency 'OxOguryAdapter', '5.2.3.1'
     
-    spec.dependency 'OxPangleAdapter', '8.1.1.1.3'
+    spec.dependency 'OxPangleAdapter', '8.1.0.9.1'
     spec.dependency 'OxPubmaticAdapter', '4.5.0.1'
     spec.dependency 'OxSmaatoAdapter', '22.9.3.0'
     spec.dependency 'OxUnityAdsAdapter', '4.17.0.0'
@@ -52,9 +52,9 @@ Pod::Spec.new do |spec|
     spec.dependency 'OxAppLovinAdapter', '13.2.0.2'
     spec.dependency 'OxBigoAdapter', '5.2.1.0'
 
-    spec.dependency 'OxAdjustPlugin', '4.0.5-202611191800'
-    spec.dependency 'OxFirebasePlugin', '3.0.1-202611191800'
+    spec.dependency 'OxAdjustPlugin', '4.0.2-202610191600'
+    spec.dependency 'OxFirebasePlugin', '2.0.0-202411251600'
     spec.dependency 'OxTAPlugin', '2.0.0-202411251600'
     spec.dependency 'OxRemoteConfigPlugin', '2.0.1-202601061100'
-    spec.dependency 'OxDiscoveryPlugin', '3.0.4-202611191800'
+    spec.dependency 'OxDiscoveryPlugin', '4.0.1-202607141300'
 end
