@@ -11,7 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (void)logCustomNetworkImpressionRevenue:(NSDictionary *)params;
 - (void)logMaxImpressionRevenue:(nullable NSDictionary *)params;
 - (void)logAdmobImpressionRevenue:(nullable NSDictionary *)params;
 - (void)handlerEventValue:(NSString *)eventName params:(nullable NSDictionary *)params;

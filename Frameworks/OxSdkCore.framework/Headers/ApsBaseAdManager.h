@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^OnApsSuccessBlock)(id response);
 
-typedef void (^OnApsFailedBlock)(__nullable id rawError, NSString *errorMessage);
+typedef void (^OnApsFailedBlock)(__nullable id errorInfo);
 
 @interface ApsBaseAdManager : NSObject
 

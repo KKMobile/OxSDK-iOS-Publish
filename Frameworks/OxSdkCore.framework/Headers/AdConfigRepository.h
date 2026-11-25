@@ -10,15 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol LoadStageListener <NSObject>
-- (void)onStageChanged:(NSString *)stage;
-@end
-
-@interface LoadFailure : NSObject
-- (instancetype)initWithErrorCode:(NSString *)errorCode;
-- (NSString *)getErrorCode;
-@end
-
 @interface OxAdConfigLoadResult : NSObject
 @property (nonatomic, strong, nullable) AdConfig *mergedConfig; // 最终生效的配置（已合并）
 @property (nonatomic, strong, nullable) AdConfig *defaultConfig;// default 段原始配置
@@ -32,8 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AdConfigRepository : NSObject
 - (instancetype)initWithCache:(OxAdConfigCache *)cache;
 - (nullable OxAdConfigLoadResult *)load;
-- (nullable OxAdConfigLoadResult *)load:(nullable id<LoadStageListener>)stageListener;
-- (nullable LoadFailure *)getLastLoadFailure;
 - (BOOL)hasRemoteSegments;
 - (AdConfig * _Nullable)mergeWithSegment:(AdConfig *)defaultConfig segment:(nullable ConfigSegment *)segment;
 - (void)releaseRepository;

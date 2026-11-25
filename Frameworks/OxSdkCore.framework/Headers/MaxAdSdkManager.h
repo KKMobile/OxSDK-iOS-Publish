@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (nonnull instancetype)sharedInstance;
 
 - (void)disableAdCache:(NSString *)adUnitId;
-- (void)disableAdCacheFromConfig;
 
 - (void)updateSegment;
 

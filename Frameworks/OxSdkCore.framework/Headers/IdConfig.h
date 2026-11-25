@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger weight;
 @property (nonatomic, assign) NSInteger timeout;
 @property (nonatomic, assign) BOOL enable;
+@property (nonatomic, assign) BOOL disabledCache;
+@property (nonatomic, assign) BOOL disabledRetry;
 @property (nonatomic, assign) double dynamic;
-@property (nonatomic, assign) NSInteger type;
 @property (nonatomic, copy) NSString *maxApsId;
 @property (nonatomic, assign) NSInteger apsType;
 @property (nonatomic, copy) NSString *adId;
@@ -28,9 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL hasAdType;
 @property (nonatomic, assign) BOOL hasWeight;
 @property (nonatomic, assign) BOOL hasTimeout;
+@property (nonatomic, assign) BOOL hasDisabledCache;
 @property (nonatomic, assign) BOOL hasEnable;
+@property (nonatomic, assign) BOOL hasDisabledRetry;
 @property (nonatomic, assign) BOOL hasDynamic;
-@property (nonatomic, assign) BOOL hasType;
 @property (nonatomic, assign) BOOL hasMaxApsId;
 @property (nonatomic, assign) BOOL hasApsType;
 @property (nonatomic, assign) BOOL hasId;
@@ -43,8 +45,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setId:(NSString *)adId;
 
 - (BOOL)hasUserValue;
-- (BOOL)isWaterfall;
-- (BOOL)isPostBidding;
 
 @end
 

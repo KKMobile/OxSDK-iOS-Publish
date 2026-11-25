@@ -22,8 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, nullable) NSString *mShowPlacement;
 @property (nonatomic, copy, nullable) NSString *mPlacement;
-/// 当前一次展示采用的优先策略，仅用于 Ad_Show 事件。
-@property (nonatomic, copy, nullable) NSString *mShowStrategy;
 
 @property (nonatomic, assign) long long mLastShowFailedTimestamp;
 @property (nonatomic, assign) BOOL mIsReady;
@@ -37,8 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL mIsReload;
 @property (nonatomic, strong, nullable) AdUnitBaseConfig *adUnitConfig;
 @property (nonatomic, copy, nullable) NSString *mAdUserValueConfig;
-/// BackUp 请求触发时机，仅用于 Ad_Request 事件。
-@property (nonatomic, copy, nullable) NSString *mBackupLoadTiming;
 
 - (instancetype)initWithAdFormat:(NSString *)adFormat adUnitName:(NSString *)adUnitName;
 
@@ -53,13 +49,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (long long)getLoadFailedDuration;
 - (long long)getShowingDuration;
 
-- (void)setShowFrequencyInfo:(long long)lastCloseTime showIntervalSec:(NSInteger)showIntervalSec;
-- (long long)getLastCloseTime;
-- (NSInteger)getShowIntervalSec;
-
-- (void)resetShowEventTracking;
-- (BOOL)tryMarkAdShowTracked;
-- (BOOL)tryMarkAdShowFailedTracked;
 @end
 
 NS_ASSUME_NONNULL_END

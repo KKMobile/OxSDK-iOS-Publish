@@ -4,7 +4,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdConfigRepository.h"
 
 @class AdConfig;
 @class ConfigSegment;
@@ -46,8 +45,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// Remote Config 拉取完成后统一失效，下次重新按当前审核态/线上态重建。
 - (void)invalidateAllCaches;
 
-- (nullable AdConfig *)loadConfigWithThreeLevelCache:(nullable NSString *)assetsFileName stageListener:(nullable id<LoadStageListener>)stageListener;
-- (nullable LoadFailure *)getLastLoadFailure;
 @end
 
 NS_ASSUME_NONNULL_END

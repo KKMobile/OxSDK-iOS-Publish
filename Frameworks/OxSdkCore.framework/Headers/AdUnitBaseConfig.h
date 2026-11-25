@@ -31,8 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger expirationTimeSeconds;// DashBoard配置的名称叫 placementTimeOut
 @property (nonatomic, strong, nullable) IntervalConfig *interval;
 @property (nonatomic, strong) NSArray<IdConfig *> *ids;
-@property (nonatomic, copy) NSString *showStrategy;
-@property (nonatomic, assign) BOOL hasShowStrategy;
 
 @property (nonatomic, assign) BOOL hasExtraParameters;
 @property (nonatomic, assign) BOOL hasParallelCount;

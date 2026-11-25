@@ -9,11 +9,10 @@
 #import "AdEventDelegate.h"
 #import "OxAdSdkInitOptions.h"
 
-#define OXSDK_VERSION @"5.5-PR-OpConfig-202611231900"
+#define OXSDK_VERSION @"4.4-PR-OpConfig-202611161201"
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** SDK 总入口：初始化聚合平台，管理隐私、用户属性、会话与事件。广告加载和展示使用各格式 Manager。 */
 @interface OxAdSdkManager : BaseAdManager
 
 @property (nonatomic, assign) BOOL       tachiEnable; // 设置tachi是否启用，主要用于部分不需要打点的iOS的工具
@@ -23,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) BOOL    enableDebug;
 @property(nonatomic, assign) BOOL    enableFBEvents;
 @property(nonatomic, assign) BOOL    enableTAEvents;
-@property(nonatomic, assign, getter=isLogFirebaseAdImpressionEvent) BOOL logFirebaseAdImpressionEvent;
 @property(nonatomic, assign,readonly) long long sessionId;
 @property(nonatomic, assign,readonly) int sessionCount;
 /// 宿主传入的 SDK appId。初始化时必须由宿主传入，用于配置加解密 key 派生。
@@ -64,19 +62,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)isMediationInitialized:(Platform)mediation;
 
-/// Whether this build has a registered adapter for the supplied mediation name.
-- (BOOL)isMediationSupported:(nullable NSString *)platform;
-- (nullable NSString *)getUserId;
-
-/// 判断一组聚合平台是否都已初始化，用于广告位混合 MAX/AdMob 请求前校验。
-- (BOOL)areSdkInitialized:(nullable NSSet<NSNumber *> *)platforms;
 
 /// 获取当前的sdk 聚合平台
 - (Platform)getMediationPlatform;
 
 - (Platform)getDefaultMediationPlatform;
-
-- (Platform)platformFromMediationString:(nullable NSString *)mediation;
 
 - (void)enableDebug:(BOOL)enable;
 

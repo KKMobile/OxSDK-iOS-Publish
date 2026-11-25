@@ -86,7 +86,6 @@ typedef NS_ENUM(NSInteger, Platform) {
     PlatForm_Default = 0,
     PlatForm_Admob = 1,
     PlatForm_Max = 2,
-    PlatForm_Crackle = 3,
     PlatForm_None = 999
 };
 
@@ -119,19 +118,15 @@ static NSString * const EVENT_TOTAL_ADS_REVENUE_001 = @"Total_Ads_Revenue_001";
 static NSString * const EVENT_TOTAL_ADS_REVENUE_01 = @"Total_Ads_Revenue_01";
 static NSString * const EVENT_AD_IMPRESSION_REVENUE = @"Ad_Impression_Revenue";
 static NSString * const EVENT_AD_MEMORY_LIMITED = @"Ad_Memory_Limited";
-static NSString * const EVENT_END_INIT_SDK = @"End_Init_Sdk";
-static NSString * const EVENT_START_INIT_CONFIG = @"Start_Init_Config";
+static NSString * const EVENT_INIT_SDK = @"Init_Sdk";
 static NSString * const EVENT_START_INIT_SDK = @"Start_Init_Sdk";
-static NSString * const EVENT_END_INIT_CONFIG = @"End_Init_Config";
-static NSString * const EVENT_CONFIG_PARSE_FAILED = @"OxConfigParseFailed";
-static NSString * const EVENT_INIT_CONFIG_STAGE = @"Init_Config_Stage";
+static NSString * const EVENT_INIT_CONFIG = @"Init_Config";
 static NSString * const EVENT_CONFIG_VERSION_STATE = @"Config_Version_State";
 static NSString * const EVENT_ADJUST_ATTRIBUTION_STATE = @"Adjust_Attribution_State";
 static NSString * const EVENT_CONFIG_REMOTE_PARSE_FAILED = @"Config_Remote_Parse_Failed";
 static NSString * const EVENT_CONFIG_LOCAL_PARSE_FAILED = @"Config_Local_Parse_Failed";
 static NSString * const EVENT_CONFIG_CHANGE = @"Config_Change_Tips";
 static NSString * const EVENT_AD_REQUEST = @"Ad_Request";
-static NSString * const EVENT_SKIP_AD_SHOW = @"Skip_Ad_Show";
 static NSString * const EVENT_SKIP_AD_REQUEST = @"Skip_Ad_Request";
 static NSString * const EVENT_AD_LOADED = @"Ad_Loaded";
 static NSString * const EVENT_AD_FAILED = @"Ad_Failed";
@@ -146,7 +141,6 @@ static NSString * const EVENT_AD_CLOSE_Destroy_TEST = @"Ad_Close_Destroy_Test";
 static NSString * const EVENT_DELETE_EXPIRE_AD = @"Delete_Expire_Ad";
 static NSString * const EVENT_DELETE_REPLACE_AD = @"Delete_Replace_Ad";
 
-static NSString * const EVENT_SKIP_AD_ADAPTER_REQUEST = @"Skip_Ad_Adapter_Request";
 static NSString * const EVENT_AD_ADAPTER_REQUEST = @"Ad_Adapter_Request";
 static NSString * const EVENT_AD_ADAPTER_LOADED = @"Ad_Adapter_Loaded";
 static NSString * const EVENT_AD_ADAPTER_FAILED = @"Ad_Adapter_Failed";
@@ -158,6 +152,7 @@ static NSString * const EVENT_AD_ADAPTER_CLOSE = @"Ad_Adapter_Close";
 static NSString * const EVENT_APS_REQUEST = @"Aps_Request";
 static NSString * const EVENT_APS_FINISH = @"Aps_Finish";
 static NSString * const EVENT_LISTENER_INTERRUPT = @"Listener_Interrupt";
+static NSString * const EVENT_FIREBASE_CONFIG_CHANGE = @"Ad_Firebase_Config_Change";
 static NSString * const EVENT_GET_INSTALL_DAY_ERROR = @"Ad_Get_Install_Day_Error";
 static NSString * const EVENT_DEEP_LINK_LIMIT = @"Deep_Link_Limit";
 static NSString * const EVENT_ANR_CRASH = @"ANR_Crash";
@@ -185,7 +180,6 @@ static NSString * const PARAM_AD_UNIT_ID = @"AdUnitId";
 static NSString * const PARAM_AD_FORMAT = @"AdFormat";
 static NSString * const PARAM_PLACEMENT_ID = @"Placement_ID";
 static NSString * const PARAM_PLACEMENT = @"Placement";
-static NSString * const PARAM_SHOW_STRATEGY = @"showStrategy";
 static NSString * const PARAM_VERSION = @"Version";
 static NSString * const PARAM_NETWORK_TYPE = @"NetworkType";
 static NSString * const PARAM_NETWORK_STATE = @"NetworkState";
@@ -231,9 +225,6 @@ static NSString * const PARAM_INSTALL_DYA = @"installDay";
 static NSString * const PARAM_PASS_LEVEL = @"passLevel";
 static NSString * const PARAM_DEEP_LINK_URL = @"url";
 static NSString * const PARAM_DEEP_LINK_BEAN = @"bean";
-static NSString * const PARAM_AUCTION_ID = @"auctionId";
-static NSString * const PARAM_LAST_CLOSE_TIME = @"lastCloseTime";
-static NSString * const PARAM_SHOW_INTERVAL_SEC = @"showIntervalSec";
 static NSString * const PARAM_AD_TAG = @"Ad_Tag";
 static NSString * const PARAM_KEY_CORE_LEVEL= @"core_level";
 static NSString * const PARAM_LISTENER_INTERRUPT= @"ListenerInterrupt";
@@ -263,11 +254,6 @@ static NSString * const PARAM_CACHE_MODEL = @"cache_model";
 static NSString * const PARAM_CACHE_AD_SIZE = @"cache_ad_size";
 static NSString * const PARAM_FLOOR_PRICE = @"floorPrice";
 static NSString * const PARAM_JUMP_HEIGHT_PER = @"jumpHeightPer";
-static NSString * const PARAM_ID_TYPE = @"idType";
-static NSString * const PARAM_BACKUP_LOAD_TIMING = @"backupLoadTiming";
-static NSString * const PARAM_PRICE_SEGMENT = @"priceSegment";
-static NSString * const PARAM_ADAPTER_SEGMENT = @"adapterSegment";
-static NSString * const PARAM_USER_VALUE_SEGMENT = @"userValueSegment";
 static NSString * const PARAM_TASK_MODEL = @"taskModel";
 static NSString * const PARAM_STAGE_INDEX = @"stageIndex";
 static NSString * const PARAM_SDK_VERSION = @"sdk_version";
@@ -394,9 +380,3 @@ static NSString * const PARAM_GDPR_KEY_CMP_INTYPE = @"cmp_in_type";
 static NSString * const PARAM_GDPR_VALUE_CMP = @"cmp";
 static NSString * const PARAM_GDPR_VALUE_UMP = @"ump";
 #endif /* AdEvents_h */
-
-static NSString * const EVENT_AD_ADAPTER_BID = @"Ad_Adapter_Bid";
-
-static NSString * const EVENT_AD_ADAPTER_BID_SUCCESS = @"Ad_Adapter_BidSuccess";
-
-static NSString * const EVENT_AD_ADAPTER_BID_FAILED = @"Ad_Adapter_BidFailed";

@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
-- (void)logCustomNetworkImpressionRevenue:(NSDictionary *)params;
 - (void)logMaxImpressionRevenue:(NSDictionary *)parmas;
 - (void)logAdmobImpressionRevenue:(NSDictionary *)parmas;
 

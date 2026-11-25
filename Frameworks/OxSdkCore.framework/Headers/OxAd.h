@@ -110,8 +110,6 @@ FOUNDATION_EXPORT const NSInteger OxAdDefaultShowDelayMs;
 
 - (NSString *)getAdUnitId;
 - (double)getRevenue;
-- (double)getLocalRevenue:(double)networkRevenue;
-- (nullable NSString *)getPlacement;
 - (void)setRevenue:(double)revenue;
 - (nullable IdConfig *)getIdConfig;
 - (nullable OxPlacementParams *)getOxPlacementParams;
@@ -134,7 +132,6 @@ FOUNDATION_EXPORT const NSInteger OxAdDefaultShowDelayMs;
 
 /// 子类 / 适配器回调桥接
 - (void)onOxAdRequest;
-- (void)onOxAdBidRequest;
 - (void)onOxAdLoaded;
 - (void)onOxAdLoadFail:(NSString *)errorMsg;
 - (void)handleAdLoadedBridge;
@@ -145,18 +142,11 @@ FOUNDATION_EXPORT const NSInteger OxAdDefaultShowDelayMs;
 - (void)runOnMainThreadDelayed:(dispatch_block_t)block delayMs:(NSInteger)delayMs;
 - (BOOL)shouldApplyDynamicFloor:(double)jumpHeightPer floorRevenue:(double)floorRevenue;
 - (void)calculateDynamicFloorECPM:(double)jumpHeightPer floorRevenue:(double)floorRevenue;
-- (BOOL)shouldApplyFloor:(double)jumpHeightPer floorRevenue:(double)floorRevenue;
-- (void)calculateFloorECPM:(double)jumpHeightPer floorRevenue:(double)floorRevenue;
 - (NSString *)double2String:(double)ecpm;
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-- (BOOL)updateIdConfig:(IdConfig *)newIdConfig;
-- (nullable OxAdParams *)getImpressionParams;
-- (void)cancelLoadAndApplyPendingConfig;
-@property (atomic, strong, nullable) IdConfig *mRequestIdConfig;
-@property (atomic, strong, nullable) IdConfig *mLoadedIdConfig;
 @end
 
 NS_ASSUME_NONNULL_END

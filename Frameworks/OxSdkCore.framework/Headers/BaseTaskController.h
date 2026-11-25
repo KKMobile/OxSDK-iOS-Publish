@@ -26,27 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol OxTaskCallback <NSObject>
 - (void)onSuccess:(OxAd *)ad;
 - (void)onFailure:(OxAd *)ad error:(nullable NSString *)error;
-- (void)onAllTasksFinished:(nullable OxAd *)ad msg:(nullable NSString *)msg;
-@end
-
-@interface TaskFailure : NSObject
-@property (nonatomic, strong, nullable) OxAd *ad;
-@property (nonatomic, copy, nullable) NSString *error;
-@end
-
-@interface TaskFailureTracker : NSObject <OxTaskCallback>
-- (instancetype)initWithCallback:(id<OxTaskCallback>)callback;
-- (void)record:(OxAd *)ad error:(nullable NSString *)error;
-- (void)complete:(id<OxTaskCallback>)callback;
-- (void)complete;
+- (void)onAllTasksFinished:(nullable OxAd *)ad msg:(NSString *)msg;
 @end
 
 @interface BaseTaskController : NSObject
-@property (nonatomic, readonly) BOOL destroyed;
 
 - (instancetype)initWithMaxConcurrent:(NSInteger)maxConcurrent;
 - (void)executeTasks:(NSArray<OxRunnableTask *> *)tasks callback:(id<OxTaskCallback>)callback;
-- (void)executeRawTasks:(NSArray<OxRunnableTask *> *)tasks callback:(id<OxTaskCallback>)callback;
 - (void)destroy;
 
 @end

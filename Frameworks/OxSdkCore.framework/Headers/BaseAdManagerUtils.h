@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseAdManagerUtils : NSObject
 
-+ (NSString *)buildAdClassPath:(NSString *)adFormat idConfig:(IdConfig *)idConfig;
-
 + (void)handleNetworkChangeWithConnectivity:(BOOL)connectivity
                                     isReady:(BOOL)isReady
                                    isReload:(BOOL)isReload
@@ -29,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable OxAd *)createOxAdByReflectionWithAdFormat:(NSString *)adFormat
                                              idConfig:(IdConfig *)idConfig
                                       placementParams:(OxPlacementParams *)placementParams
-                                       viewController:(UIViewController *)viewController
+                                       viewController:(nullable UIViewController *)viewController
                                              listener:(id<AdInternalListener>)listener;
 
 @end

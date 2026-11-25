@@ -4,7 +4,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ConfigInitializationState.h"
 
 @class AdConfig;
 @class AdUnitBaseConfig;
@@ -17,7 +16,6 @@
 @class OxAdConfigCacheInfo;
 @class ConfigSegment;
 @class UserValueConfig;
-@class InitConfigDurationTracker;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -35,11 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedInstance NS_SWIFT_NAME(shared());
 + (void)initManager;
 + (void)initManagerWithListener:(nullable id<OxAdConfigParseListener>)listener;
-+ (void)initManagerWithListener:(nullable id<OxAdConfigParseListener>)listener
-                 durationTracker:(nullable InitConfigDurationTracker *)durationTracker;
 + (BOOL)isInitialized;
-+ (ConfigInitializationStateValue)getInitializationState;
-+ (BOOL)isConfigReady;
 + (void)releaseManager;
 
 @property (nonatomic, weak, nullable) id<OxAdConfigParseListener> configParseListener;
@@ -75,9 +69,6 @@ NS_ASSUME_NONNULL_BEGIN
                                             unitName:(NSString *)unitName
                                            idAdType:(NSString *)idAdType
                                             platform:(NSString *)platform;
-- (NSArray<IdConfig *> *)idsByAdConfigQueryForFormat:(NSString *)adFormat
-                                            unitName:(NSString *)unitName
-                                           idAdType:(NSString *)idAdType;
 - (BOOL)isAdUnitValidForType:(NSString *)adType unitName:(NSString *)unitName;
 - (NSArray<NSString *> *)supportedAdTypes;
 - (NSArray<IdConfig *> *)queryIdConfigs:(AdConfigQuery *)query;
@@ -102,12 +93,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (AdapterConfig *)adapterConfig;
 - (AdNetworkConfig *)adMobConfig;
 - (AdNetworkConfig *)maxConfig;
-- (AdNetworkConfig *)crackleConfig;
 - (NSString *)adMobAppId;
 - (NSString *)maxAppId;
-- (NSString *)crackleAppId;
 
-- (NSString *)getAppExtraParameters;
 @end
 
 NS_ASSUME_NONNULL_END
