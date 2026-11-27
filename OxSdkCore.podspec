@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkCore"#SDK名称
-    spec.version      = "5.5-PR-OpConfig-202611231900"#版本号
+    spec.version      = "5.5-PR-OpConfig-test-202611231900"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -27,8 +27,10 @@ Pod::Spec.new do |spec|
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
     spec.resources = ["ResBundle/Games/OxSdkRes.bundle","ResBundle/Games/Language.bundle"]
     spec.resource_bundles = {'OxSdkCore' => ['ResBundle/PrivacyInfo.xcprivacy']}
-  
+    
     spec.ios.vendored_frameworks = 'Frameworks/OxSdkCore.framework'
+    spec.weak_frameworks = 'AdServices'
+
 
     spec.frameworks = 'UIKit'
     spec.dependency 'PureLayout'

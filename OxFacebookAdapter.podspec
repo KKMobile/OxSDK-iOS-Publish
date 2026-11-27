@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxFacebookAdapter"#SDK名称
-    spec.version      = "6.22.0.4"#版本号
+    spec.version      = "6.22.0.5"#版本号
     spec.summary      = "OxAdSdkAdapter for Facebook applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -34,6 +34,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'AppLovinMediationFacebookAdapter', "6.22.0.1"  
     spec.dependency 'GoogleMobileAdsMediationFacebook', "6.22.0.0"
 
-    spec.dependency 'OxSdkCore', '5.5-PR-OpConfig-202611231900'
+    spec.dependency 'OxSdkCore'
 
 end

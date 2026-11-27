@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "OxSdkForGames"#SDK名称
-    spec.version      = "5.5-PR-OpConfig-202611231900"#版本号
+    spec.version      = "5.5-PR-OpConfig-Test-202611231900"#版本号
     spec.summary      = "OxAdSdk for game applications."#概要
     #描述  （描述一定要比概要多一些,不然会有警告!）
     spec.description  = <<-DESC
@@ -26,12 +26,12 @@ Pod::Spec.new do |spec|
     spec.requires_arc = true#是否时自动内存管理
     spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64'}#支持架构配置
 
-    spec.dependency 'OxSdkCore', '5.5-PR-OpConfig-202611231900'
+    spec.dependency 'OxSdkCore', '5.5-PR-OpConfig-test-202611231900'
     
     spec.dependency 'OxAPSAdapter', '5.2.0.0'
     spec.dependency 'OxBidMachineAdapter', '3.7.1.1'
     spec.dependency 'OxChartboostAdapter', '9.13.0.1'
-    spec.dependency 'OxFacebookAdapter', '6.22.0.4'
+    spec.dependency 'OxFacebookAdapter', '6.22.0.5'
     spec.dependency 'OxFyberAdapter', '8.4.2.0.1'
     spec.dependency 'OxInmobiAdapter', '11.4.1.3'
     spec.dependency 'OxIronSourceAdapter', '9.2.0.0.3'
@@ -42,7 +42,7 @@ Pod::Spec.new do |spec|
     #spec.dependency 'OxMyTargetAdapter', '5.21.9.0'
     spec.dependency 'OxOguryAdapter', '5.2.3.1'
     
-    spec.dependency 'OxPangleAdapter', '8.1.1.1.3'
+    spec.dependency 'OxPangleAdapter', '8.1.1.1.4'
     spec.dependency 'OxPubmaticAdapter', '4.5.0.1'
     spec.dependency 'OxSmaatoAdapter', '22.9.3.0'
     spec.dependency 'OxUnityAdsAdapter', '4.17.0.0'
